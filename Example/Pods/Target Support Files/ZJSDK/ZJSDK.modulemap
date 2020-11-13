@@ -1,0 +1,6 @@
+framework module ZJSDK {
+  umbrella header "ZJSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
