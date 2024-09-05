@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  ZJSDKDemo
+//
+//  Created by Robin on 2020/10/17.
+//  Copyright © 2020 zj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIDevice+Kit.h"
+#import "UIButton+Event.h"
+
+#import "Masonry.h"
+#import "SDWebImage.h"
+#import "ZJADIDS.h"
+
+
+//Macro
+#define kMainColor [UIColor colorWithRed:33/255.0 green:152/255.0 blue:217/255.0 alpha:1.0f];
+
+#define kIsIphoneX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
+//#define kNavigationBarHeight (kIsIphoneX ? 88 : 64)
+#define kNavigationBarHeight ([UIApplication sharedApplication].statusBarFrame.size.height+44.0)
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+/*底部安全区域高度*/
+#define kSafeBottomMargin (kIsIphoneX ? 34.0 : 0)
+
+
+
+#endif /* PrefixHeader_pch */

@@ -12,7 +12,7 @@ print_background: true
 ## <span id="jump1">版本更新日志</span>
 | 最新版本更新日志 | 修订日期  | 修订说明       |
 | ---------------- | --------- | -------------- |
-|v2.5.8.10|2024-08-08|已知问题修复|
+|v2.5.8.11|2024-09-05|集成穿山甲信息流自渲染功能，已知问题修复|
 <!-- #### <span id="jump1.2.4">1.2.4、scheme列表添加以下内容</span> -->
 
 历史版本信息见 [历史版本更新日志](#历史版本更新日志)
@@ -140,6 +140,16 @@ pod 'KSAdSDK',:path => '../ZJSDK/ZJSDKModuleKS'#指定快手库为本地内容�
 - Security.framework
 
 - libc++abi.tbd
+
+- libiconv.tbd<font color="#FF0000">（新增）</font>
+
+- AppTrackingTransparency.framework<font color="#FF0000">（新增）</font>
+
+- CoreText.framework<font color="#FF0000">（新增）</font>
+
+- MapKit.framework<font color="#FF0000">（新增）</font>
+
+- CoreImage.framework<font color="#FF0000">（新增）</font>
 
   如果以上依赖库增加完仍旧报错，请添加ImageIO.framework。
 
@@ -367,7 +377,8 @@ e36a75f610d3ea9e905c2cdff9720635b37f8c13
 @property(nonatomic,weak) id<ZJSplashAdDelegate> delegate;
 /**
 * 拉取广告超时时间，默认为3秒
-* 详解：拉取广告超时时间，开发者调用loadAd方法以后会立即展示backgroundImage，然后在该超时时间内，如果广告拉取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
+* 详解：拉取广告超时时间，开发者调用loadAd方法以后会立即展示backgroundImage，然后在该超时时间内，如果广告拉取成功，
+* 则立马展示开屏广告，否则放弃此次广告展示机会。
 */
 @property (nonatomic, assign) CGFloat fetchDelay;
 
@@ -933,7 +944,9 @@ _feedAd.delegate = self;
 //加载广告
 self.nativeAd = [[ZJNativeAd alloc] initWithPlacementId:self.adId];
 self.nativeAd.delegate = self;
-[self.nativeAd loadAdWithCount:8];
+// 联盟使用到imgSize，用来获取自渲染图片资源大小，枚举值，默认为0, (新增)
+self.nativeAd.imgSize = ZJProposalSize_DrawFullScreen;
+[self.nativeAd loadAdWithCount:3];
 
 ///广告回调
 - (void)zj_nativeAdLoaded:(NSArray<ZJNativeAdObject *> * _Nullable)nativeAdObjects error:(NSError * _Nullable)error{
@@ -1073,7 +1086,7 @@ ZJContentPageTabBarController
 ZJFeedPageViewController  //瀑布流
 ZJHorizontalFeedPageVC    //横版
 
-#### 2.8.4、加载短剧
+#### 2.8.3、加载短剧
 ```
     self.tubePage = [[ZJTubePage alloc]initWithPlacementId:self.contentId];
     self.tubePage.videoStateDelegate = self;
@@ -1300,7 +1313,7 @@ self.floatingAd.hiddenH5CloseButton = YES;
 
 | 历史版本更新日志 | 修订日期  | 修订说明       |
 | ---------------- | --------- | -------------- |
-|v2.5.8.10|2024-08-08|已知问题修复|
+|v2.5.8.11|2024-09-04|集成穿山甲信息流自渲染功能|
 |v2.5.8.9|2024-07-25|自渲染类型自定点击事件视图优化|
 |v2.5.8.8|2024-07-11|自渲染类型增加百度。增加resize接口，在设置ZJNativeAdView.videoAdView.frame后调用。|
 |v2.5.8.7|2024-07-10|隐私协议文件更新|
@@ -1428,7 +1441,7 @@ self.floatingAd.hiddenH5CloseButton = YES;
     - [2.8.1、ZJContentPage、ZJTubePage接入注意事项](#281-font-colorredzjcontentpage-zjtubepage接入注意事项font)
     - [2.8.2、ZJContentPage说明](#282-zjcontentpage说明)
     - [2.8.3、加载视频内容](#283-加载视频内容)
-    - [2.8.4、加载短剧](#283-加载短剧)
+    - [2.8.3、加载短剧](#283-加载短剧)
   - [2.9、接入新闻资讯广告(ZJNewsAdView)](#span-idjump2929-接入新闻资讯广告zjnewsadviewspan)
     - [2.9.1、ZJNewsAdView说明](#span-idjump291291-zjnewsadview说明span)
     - [2.9.2、ZJNewsAdViewDelegate说明](#span-idjump292292-zjnewsadviewdelegate说明span)
