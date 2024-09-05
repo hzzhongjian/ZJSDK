@@ -945,7 +945,7 @@ _feedAd.delegate = self;
 self.nativeAd = [[ZJNativeAd alloc] initWithPlacementId:self.adId];
 self.nativeAd.delegate = self;
 // 联盟使用到imgSize，用来获取自渲染图片资源大小，枚举值，默认为0, (新增)
-self.nativeAd.imgSize = ZJProposalSize_DrawFullScreen;
+self.nativeAd.imgSize = ZJProposalSize_Feed690_388;
 [self.nativeAd loadAdWithCount:3];
 
 ///广告回调
