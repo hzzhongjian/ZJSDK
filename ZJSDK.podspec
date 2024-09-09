@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.8.11'
+  s.version          = '2.5.8.12'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT', 'ZJSDKModuleCSJ', 'ZJSDKModuleKS', 'ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX'
+  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX'
 
   s.subspec 'ZJAdSDK' do |ss|
     ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
@@ -61,17 +61,17 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleCSJ' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'Ads-CN-Beta', '~> 6.4.0.1'
+    ss.dependency 'Ads-CN-Beta', '6.4.0.1'
     ss.dependency 'Ads-CN-Beta/CSJMediation'
     ss.dependency 'Ads-CN-Beta/BUAdSDK'
   end
   
-  s.subspec 'ZJSDKModuleKS' do |ss|
-    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
-    ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'KSAdSDK', '~> 3.3.64.8'
-#   3.3.61 以上注册方法与旧版本不一致，最低支持3.3.61，内容包版本号也为3.3.61
-  end
+#   s.subspec 'ZJSDKModuleKS' do |ss|
+#     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
+#     ss.dependency 'ZJSDK/ZJAdSDK'
+#     ss.dependency 'KSAdSDK', '3.3.64.8'
+# #   3.3.61 以上注册方法与旧版本不一致，最低支持3.3.61，内容包版本号也为3.3.61
+#   end
 
   s.subspec 'ZJSDKModuleMTG' do |ss|
 
@@ -121,26 +121,26 @@ TODO: Add long description of the pod here.
  s.subspec 'ZJSDKModuleBeiZi' do |ss|
    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
    ss.dependency 'ZJSDK/ZJAdSDK'
-   ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~>4.90'
+   ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~> 4.90'
  end
  
-  s.subspec 'ZJSDKModuleWM' do |ss|
-    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleWM/*.a'
-    ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'ToBid-iOS', '2.6.0'
-    ss.dependency 'BaiduMobAdSDK', '5.11'
+#   s.subspec 'ZJSDKModuleWM' do |ss|
+#     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleWM/*.a'
+#     ss.dependency 'ZJSDK/ZJAdSDK'
+#     ss.dependency 'ToBid-iOS', '2.6.0'
+#     ss.dependency 'BaiduMobAdSDK', '5.11'
    
-    ss.dependency 'MintegralAdSDK', '7.2.9'
-    ss.dependency 'MintegralAdSDK/RewardVideoAd'
-    ss.dependency 'MintegralAdSDK/BannerAd'
-    ss.dependency 'MintegralAdSDK/SplashAd'
-    ss.dependency 'MintegralAdSDK/InterstitialAd'
-    ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
-    ss.dependency 'KSAdSDK', '~>3.3.64.8'
-    ss.dependency 'Google-Mobile-Ads-SDK' , '10.0.0'
-    ss.dependency 'GDTMobSDK', '4.14.10'
-    ss.dependency 'Ads-CN', '5.0.0.5'
- end
+#     ss.dependency 'MintegralAdSDK', '7.2.9'
+#     ss.dependency 'MintegralAdSDK/RewardVideoAd'
+#     ss.dependency 'MintegralAdSDK/BannerAd'
+#     ss.dependency 'MintegralAdSDK/SplashAd'
+#     ss.dependency 'MintegralAdSDK/InterstitialAd'
+#     ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
+#     ss.dependency 'KSAdSDK', '3.3.64.8'
+#     ss.dependency 'Google-Mobile-Ads-SDK' , '10.0.0'
+#     ss.dependency 'GDTMobSDK', '4.14.10'
+#     ss.dependency 'Ads-CN', '5.0.0.5'
+#  end
   s.subspec 'ZJSDKModuleTanX' do |ss|
  
    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
@@ -160,9 +160,17 @@ TODO: Add long description of the pod here.
    # ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
  end
  ###趣盟SDK
+#  s.subspec 'ZJSDKModuleQM' do |ss|
+#        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
+#        ss.vendored_frameworks = 'ZJSDK/QMAdSDK/*.xcframework'
+#        ss.dependency 'AFNetworking'
+#        ss.dependency 'YYWebImage'
+#        ss.dependency 'YYImage/WebP'
+#  end
+ ###章鱼SDK
  #s.subspec 'ZJSDKModuleQM' do |ss|
  #      ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
- #      ss.dependency 'QMAdSDK', :path => 'ZJSDK/QMAdSDK'
+ #      ss.vendored_frameworks = 'ZJSDK/QMAdSDK/*.xcframework'
  #      ss.dependency 'AFNetworking'
  #      ss.dependency 'YYWebImage'
  #      ss.dependency 'YYImage/WebP'

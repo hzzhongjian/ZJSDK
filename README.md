@@ -12,7 +12,7 @@ print_background: true
 ## <span id="jump1">版本更新日志</span>
 | 最新版本更新日志 | 修订日期  | 修订说明       |
 | ---------------- | --------- | -------------- |
-|v2.5.8.11|2024-09-05|集成穿山甲信息流自渲染功能，已知问题修复|
+|v2.5.8.12|2024-09-09|移除KSAdSDK依赖，解决苹果上架问题|
 <!-- #### <span id="jump1.2.4">1.2.4、scheme列表添加以下内容</span> -->
 
 历史版本信息见 [历史版本更新日志](#历史版本更新日志)
@@ -40,7 +40,7 @@ pod 'ZJSDK'
 pod 'ZJSDK/ZJSDKModuleDSP'#依赖库，引入任何模块都需要依赖此模块，默认引入
 pod 'ZJSDK/ZJSDKModuleGDT'#优量汇广告
 pod 'ZJSDK/ZJSDKModuleCSJ'#穿山甲广告
-pod 'ZJSDK/ZJSDKModuleKS'#快手广告
+#pod 'ZJSDK/ZJSDKModuleKS'#快手广告
 pod 'ZJSDK/ZJSDKModuleSIG'#Sigmob广告
 pod 'ZJSDK/ZJSDKModuleBD'#百度广告
 pod 'ZJSDK/ZJSDKModuleBeiZi'#倍孜广告
@@ -1313,6 +1313,7 @@ self.floatingAd.hiddenH5CloseButton = YES;
 
 | 历史版本更新日志 | 修订日期  | 修订说明       |
 | ---------------- | --------- | -------------- |
+|v2.5.8.12|2024-09-09|移除KSAdSDK依赖，解决苹果上架问题|
 |v2.5.8.11|2024-09-04|集成穿山甲信息流自渲染功能|
 |v2.5.8.9|2024-07-25|自渲染类型自定点击事件视图优化|
 |v2.5.8.8|2024-07-11|自渲染类型增加百度。增加resize接口，在设置ZJNativeAdView.videoAdView.frame后调用。|
