@@ -1,4 +1,0 @@
-framework module QMAdSDK {
-  header "QMAdSDK-Swift.h"
-  requires objc
-}

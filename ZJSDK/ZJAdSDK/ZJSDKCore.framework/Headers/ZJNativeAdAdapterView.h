@@ -75,6 +75,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *adContentView;
 
+/**
+ 用来标记广告媒体View的 视频/图片 的大小，比如videoAdView的frame大小
+ */
+//@property (nonatomic, assign) CGRect videoOrImageFrame;
+
 
 //广告曝光回调
 -(void)zjAdapter_nativeAdViewWillExpose;

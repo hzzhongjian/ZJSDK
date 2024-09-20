@@ -48,6 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, readonly) UIView *logoView;
 
+/**
+ 用来标记广告媒体View的 视频/图片 的大小，比如videoAdView的frame大小
+ 自渲染，如果加载的是视频，这个属性可以不设置，如果是图片，是必须设置的，如果是多张图片则要设置所有图片整体占用的frame
+ */
+//@property (nonatomic, assign) CGRect videoOrImageFrame;
+
 
 - (void)registerDataObject:(ZJNativeAdObject *)dataObject;
 

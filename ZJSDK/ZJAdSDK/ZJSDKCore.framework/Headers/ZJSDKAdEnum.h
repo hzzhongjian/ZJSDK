@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, ZJAdPlatformType) {
     ZJAdPlatform_Pangle,
     ZJAdPlatform_TANX,
     ZJAdPlatform_QM,
+    ZJAdPlatform_OCTOPUS,
 };
 
 typedef NS_ENUM(NSInteger, ZJAdType){
@@ -85,6 +86,18 @@ typedef NS_ENUM(NSInteger, ZJProposalSize) {
     ZJProposalSize_Interstitial600_600,
     ZJProposalSize_Interstitial600_900,
     ZJProposalSize_DrawFullScreen
+};
+
+// 设置个性化推荐广告
+typedef NS_ENUM(NSInteger, ZJSDKPersionalizedState) {
+    ZJSDKPersionalizedState_OFF, // 关闭
+    ZJSDKPersionalizedState_ON, // 开启
+};
+
+// 是否允许开启广告的程序化推荐
+typedef NS_ENUM(NSInteger, ZJSDKProgrammaticRecommend) {
+    ZJSDKProgrammaticRecommend_OFF,
+    ZJSDKProgrammaticRecommend_ON,
 };
 
 #endif /* ZJSDKAdEnum_h */

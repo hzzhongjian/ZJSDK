@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)registerSDK:(nullable NSDictionary *)config;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

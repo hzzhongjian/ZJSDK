@@ -42,6 +42,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)appId;
 
 
+/**
+ 个性化推荐广告开关，看到的广告数量不变，相关度降低
+ 默认为ON打开
+ */
++ (void)persionalizedState:(ZJSDKPersionalizedState)persionalizedState;
+
+/**
+ 程序化推荐开关，关闭后，看到的广告数量不变，但将不会为你推荐程序化广告
+ 是否允许开启广告的程序化推荐 OFF 关闭，ON开启，默认为ON开启
+ 默认打开
+ */
++ (void)programmaticRecommend:(ZJSDKProgrammaticRecommend)enableProgrammaticRecommend;
+
 @end
 
 NS_ASSUME_NONNULL_END
