@@ -8,21 +8,13 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-extension QMAdSDK.QMDialog {
-  @_Concurrency.MainActor(unsafe) public func showDialog<T>(view: T, direction: QMAdSDK.QMDialogDirection? = nil, completion: (() -> Swift.Void)? = nil) where T : UIKit.UIView, T : QMAdSDK.QMDialogProtocol
-  @_Concurrency.MainActor(unsafe) public func showDialog<T>(controller: T, direction: QMAdSDK.QMDialogDirection? = nil, completion: (() -> Swift.Void)? = nil) where T : UIKit.UIViewController, T : QMAdSDK.QMDialogProtocol
-  @_Concurrency.MainActor(unsafe) public func showDialog(proto: any QMAdSDK.QMDialogProtocol, direction: QMAdSDK.QMDialogDirection? = nil, completion: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func updateLayoutAnimate(proto: any QMAdSDK.QMDialogProtocol)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissDialog()
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissDialog(view: UIKit.UIView)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissDialog(controller: UIKit.UIViewController)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func dismissAllDialog()
-}
 @objc public enum QMMaterialType : Swift.UInt, @unchecked Swift.Sendable {
   case imageSmall = 1
   case imageLarge = 2
   case imageAtlas = 3
   case video = 4
+  case splash = 6
+  case rewardedVideo = 12
   public init?(rawValue: Swift.UInt)
   public typealias RawValue = Swift.UInt
   public var rawValue: Swift.UInt {
@@ -84,30 +76,42 @@ extension QMAdSDK.QMDialog {
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class QMAdSDKManager : ObjectiveC.NSObject {
   @objc public class func sdkVersion() -> Swift.String
+  @objc public class func checkIDFA() -> Swift.String
   @objc public class func sdkState() -> QMAdSDK.QMAdSDKInitializationState
   @objc public class func setupSDK(with config: QMAdSDK.QMAdSDKConfiguration)
   @objc override dynamic public init()
   @objc deinit
 }
 @objc public protocol QMNativeAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func qm_nativeAdLoadSuccess(_ nativeAd: QMAdSDK.QMNativeAd)
-  @objc func qm_nativeAdLoadFail(_ nativeAd: QMAdSDK.QMNativeAd, error: any Swift.Error)
-  @objc func qm_nativeAdDidShow(_ nativeAd: QMAdSDK.QMNativeAd)
-  @objc func qm_nativeAdDidClick(_ nativeAd: QMAdSDK.QMNativeAd)
-  @objc func qm_nativeAdDidCloseOtherController(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc optional func qm_nativeAdLoadSuccess(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc optional func qm_nativeAdLoadFail(_ nativeAd: QMAdSDK.QMNativeAd, error: any Swift.Error)
+  @objc optional func qm_nativeAdDidShow(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc optional func qm_nativeAdDidClick(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc optional func qm_nativeAdDidCloseOtherController(_ nativeAd: QMAdSDK.QMNativeAd)
 }
 @objc @objcMembers public class QMNativeAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any QMAdSDK.QMNativeAdDelegate)?
-  @objc public var ecpm: Swift.Int {
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var ecpm: Swift.Int {
     @objc get
   }
-  @objc public var metaDic: [Swift.String : Any] {
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var metaDic: [Swift.String : Any] {
     @objc get
   }
   @objc public var slotID: Swift.String {
     @objc get
   }
-  @objc public var materialMeta: QMAdSDK.QMNativeMaterial? {
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var materialMeta: QMAdSDK.QMNativeMaterial? {
     @objc get
   }
   @objc public init(slot slotID: Swift.String)
@@ -127,21 +131,35 @@ extension QMAdSDK.QMDialog {
   }
 }
 @objc public protocol QMInterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func qm_interstitialAdLoadSuccess(_ interstitialAd: QMAdSDK.QMInterstitialAd)
-  @objc func qm_interstitialAdLoadFail(_ interstitialAd: QMAdSDK.QMInterstitialAd, error: (any Swift.Error)?)
-  @objc func qm_interstitialAdDidShow(_ interstitialAd: QMAdSDK.QMInterstitialAd)
-  @objc func qm_interstitialAdDidClick(_ interstitialAd: QMAdSDK.QMInterstitialAd)
-  @objc func qm_interstitialAdDidClose(_ interstitialAd: QMAdSDK.QMInterstitialAd, closeType type: QMAdSDK.QMInterstitialAdCloseType)
-  @objc func qm_interstitialAdDidCloseOtherController(_ interstitialAd: QMAdSDK.QMInterstitialAd)
-  @objc func qm_interstitialAdVideoDidPlayComplection(_ interstitialAd: QMAdSDK.QMInterstitialAd)
-  @objc func qm_interstitialAdVideoDidPlayFinished(_ interstitialAd: QMAdSDK.QMInterstitialAd, didFailWithError error: any Swift.Error)
+  @objc optional func qm_interstitialAdLoadSuccess(_ interstitialAd: QMAdSDK.QMInterstitialAd)
+  @objc optional func qm_interstitialAdLoadFail(_ interstitialAd: QMAdSDK.QMInterstitialAd, error: (any Swift.Error)?)
+  @objc optional func qm_interstitialAdDidShow(_ interstitialAd: QMAdSDK.QMInterstitialAd)
+  @objc optional func qm_interstitialAdDidClick(_ interstitialAd: QMAdSDK.QMInterstitialAd)
+  @objc optional func qm_interstitialAdDidClose(_ interstitialAd: QMAdSDK.QMInterstitialAd, closeType type: QMAdSDK.QMInterstitialAdCloseType)
+  @objc optional func qm_interstitialAdDidCloseOtherController(_ interstitialAd: QMAdSDK.QMInterstitialAd)
+  @objc optional func qm_interstitialAdVideoDidPlayComplection(_ interstitialAd: QMAdSDK.QMInterstitialAd)
+  @objc optional func qm_interstitialAdVideoDidPlayFinished(_ interstitialAd: QMAdSDK.QMInterstitialAd, didFailWithError error: any Swift.Error)
 }
 @objc @objcMembers public class QMInterstitialAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any QMAdSDK.QMInterstitialAdDelegate)?
-  @objc public var ecpm: Swift.Int {
+  @objc public var adClickToCloseAutomatically: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var ecpm: Swift.Int {
     @objc get
   }
-  @objc public var metaDic: [Swift.String : Any] {
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var metaDic: [Swift.String : Any] {
     @objc get
   }
   @objc public var slotID: Swift.String {
@@ -156,9 +174,35 @@ extension QMAdSDK.QMInterstitialAd {
   @objc @discardableResult
   public static func loadData(slot: Swift.String, registerObserver: any QMAdSDK.QMInterstitialAdDelegate) -> QMAdSDK.QMInterstitialAd
 }
-extension QMAdSDK.QMDialog : UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+@objc public protocol QMSplashNativeAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func qm_splashAdLoadSuccess(_ splashAd: QMAdSDK.QMSplashNativeAd)
+  @objc optional func qm_splashAdLoadFail(_ splashAd: QMAdSDK.QMSplashNativeAd, error: (any Swift.Error)?)
+  @objc optional func qm_splashAdDidShow(_ splashAd: QMAdSDK.QMSplashNativeAd)
+  @objc optional func qm_splashAdDidClick(_ splashAd: QMAdSDK.QMSplashNativeAd)
+  @objc optional func qm_splashAdDidClose(_ splashAd: QMAdSDK.QMSplashNativeAd, closeType type: QMAdSDK.QMSplashAdCloseType)
+}
+@objc @objcMembers public class QMSplashNativeAd : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any QMAdSDK.QMSplashNativeAdDelegate)?
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc public init(slot slotID: Swift.String)
+  @objc public func loadAdData()
+  @objc public func registerContainer(_ containerView: UIKit.UIView, withClickableViews clickableViews: [UIKit.UIView]?)
+  @objc public func unregisterView()
+  @objc deinit
+}
+extension QMAdSDK.QMSplashNativeAd : QMAdSDK.QMNativeAdDelegate {
+  @objc dynamic public func qm_nativeAdLoadSuccess(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc dynamic public func qm_nativeAdLoadFail(_ nativeAd: QMAdSDK.QMNativeAd, error: any Swift.Error)
+  @objc dynamic public func qm_nativeAdDidShow(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc dynamic public func qm_nativeAdDidClick(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc dynamic public func qm_nativeAdDidCloseOtherController(_ nativeAd: QMAdSDK.QMNativeAd)
 }
 public enum QMDialogDirection : Swift.Int {
   case top, left, bottom, right, center
@@ -192,29 +236,6 @@ public protocol QMDialogProtocol : AnyObject {
   func centerDismissAnimate(animations: (Swift.Bool) -> Swift.Void, completion: () -> Swift.Void)
   func layoutParameter() -> ((width: CoreFoundation.CGFloat, screenRatio: Swift.Bool), (height: CoreFoundation.CGFloat, screenRatio: Swift.Bool))
 }
-extension QMAdSDK.QMDialogProtocol {
-  public var dialog: QMAdSDK.QMDialog? {
-    get
-  }
-  public func dialogContainer() -> UIKit.UIView
-  public func willAppear()
-  public func didAppear()
-  public func dismissAppear()
-  public func dialogBackgroundColor() -> UIKit.UIColor
-  public func dialogLevel() -> QMAdSDK.QMDialogLevel
-  public func dialogDirection() -> QMAdSDK.QMDialogDirection
-  public func slidingDisappearance() -> Swift.Bool
-  public func clickFloatingLayerToCancel() -> Swift.Bool
-  public func dialogGesturePenetration() -> Swift.Bool
-  public func mayBeConflictingGestures() -> Swift.Array<UIKit.UIGestureRecognizer>
-  public func centerShowAnimate(animations: (Swift.Bool) -> Swift.Void, completion: () -> Swift.Void)
-  public func centerDismissAnimate(animations: (Swift.Bool) -> Swift.Void, completion: () -> Swift.Void)
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class QMDialog : UIKit.UIControl {
-  @objc @_Concurrency.MainActor(unsafe) dynamic weak public var container: UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) public init(containerView: UIKit.UIView)
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @objcMembers public class QMNativeAdRelatedView : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc public var adLabel: UIKit.UILabel? {
@@ -224,22 +245,93 @@ extension QMAdSDK.QMDialogProtocol {
     @objc get
   }
   @objc public func refreshData(_ nativeAd: QMAdSDK.QMNativeAd)
+  @objc public func refreshData(splashNativeAd: QMAdSDK.QMSplashNativeAd)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class QMAdMeta : ObjectiveC.NSObject {
+  @objc public var getRequestId: Swift.String {
+    @objc get
+  }
+  @objc public var getIdeaId: Swift.String {
+    @objc get
+  }
+  @objc public var getECPM: Swift.Int {
+    @objc get
+  }
+  @objc public var getTitle: Swift.String {
+    @objc get
+  }
+  @objc public var getDesc: Swift.String {
+    @objc get
+  }
+  @objc public var logoUrl: Swift.String {
+    @objc get
+  }
+  @objc public var getLandingPageUrl: Swift.String {
+    @objc get
+  }
+  @objc public var getInteractionType: Swift.Int {
+    @objc get
+  }
+  @objc public var getInteractionTitle: Swift.String {
+    @objc get
+  }
+  @objc public var getMediaUrl: Swift.String {
+    @objc get
+  }
+  @objc public var getMediaMute: Swift.Bool {
+    @objc get
+  }
+  @objc public var getAppLogoUrl: Swift.String {
+    @objc get
+  }
+  @objc public var getAppName: Swift.String {
+    @objc get
+  }
+  @objc public var getAppPackageName: Swift.String {
+    @objc get
+  }
+  @objc public var getAppInformation: [Swift.String : Any] {
+    @objc get
+  }
+  @objc public var getMediaSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc public var getExtUrls: [Swift.String] {
+    @objc get
+  }
+  @objc public var getMaterialType: Swift.Int {
+    @objc get
+  }
+  @objc public var getVideoDuration: Swift.Int {
+    @objc get
+  }
   @objc deinit
 }
 @objc public protocol QMFeedAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func qm_feedAdLoadSuccess(_ feedAd: QMAdSDK.QMFeedAd?)
-  @objc func qm_feedAdLoadFail(_ feedAd: QMAdSDK.QMFeedAd?, error: any Swift.Error)
-  @objc func qm_feedAdDidShow(_ feedAd: QMAdSDK.QMFeedAd?)
-  @objc func qm_feedAdDidClick(_ feedAd: QMAdSDK.QMFeedAd?)
-  @objc func qm_feedAdDidClose(_ feedAd: QMAdSDK.QMFeedAd?)
-  @objc func qm_feedAdDidCloseOtherController(_ feedAd: QMAdSDK.QMFeedAd?)
+  @objc optional func qm_feedAdLoadSuccess(_ feedAd: QMAdSDK.QMFeedAd?)
+  @objc optional func qm_feedAdLoadFail(_ feedAd: QMAdSDK.QMFeedAd?, error: any Swift.Error)
+  @objc optional func qm_feedAdDidShow(_ feedAd: QMAdSDK.QMFeedAd?)
+  @objc optional func qm_feedAdDidClick(_ feedAd: QMAdSDK.QMFeedAd?)
+  @objc optional func qm_feedAdDidClose(_ feedAd: QMAdSDK.QMFeedAd?)
+  @objc optional func qm_feedAdDidCloseOtherController(_ feedAd: QMAdSDK.QMFeedAd?)
 }
 @objc @objcMembers public class QMFeedAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any QMAdSDK.QMFeedAdDelegate)?
-  @objc public var ecpm: Swift.Int {
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var ecpm: Swift.Int {
     @objc get
   }
-  @objc public var metaDic: [Swift.String : Any] {
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var metaDic: [Swift.String : Any] {
     @objc get
   }
   @objc public var slotID: Swift.String {
@@ -265,19 +357,33 @@ extension QMAdSDK.QMDialogProtocol {
   }
 }
 @objc public protocol QMSplashAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func qm_splashAdLoadSuccess(_ splashAd: QMAdSDK.QMSplashAd)
-  @objc func qm_splashAdLoadFail(_ splashAd: QMAdSDK.QMSplashAd, error: (any Swift.Error)?)
-  @objc func qm_splashAdDidShow(_ splashAd: QMAdSDK.QMSplashAd)
-  @objc func qm_splashAdDidClick(_ splashAd: QMAdSDK.QMSplashAd)
-  @objc func qm_splashAdDidClose(_ splashAd: QMAdSDK.QMSplashAd, closeType type: QMAdSDK.QMSplashAdCloseType)
-  @objc func qm_splashAdVideoDidPlayFinished(_ splashAd: QMAdSDK.QMSplashAd, didFailWithError error: any Swift.Error)
+  @objc optional func qm_splashAdLoadSuccess(_ splashAd: QMAdSDK.QMSplashAd)
+  @objc optional func qm_splashAdLoadFail(_ splashAd: QMAdSDK.QMSplashAd, error: (any Swift.Error)?)
+  @objc optional func qm_splashAdDidShow(_ splashAd: QMAdSDK.QMSplashAd)
+  @objc optional func qm_splashAdDidClick(_ splashAd: QMAdSDK.QMSplashAd)
+  @objc optional func qm_splashAdDidClose(_ splashAd: QMAdSDK.QMSplashAd, closeType type: QMAdSDK.QMSplashAdCloseType)
+  @objc optional func qm_splashAdVideoDidPlayFinished(_ splashAd: QMAdSDK.QMSplashAd, didFailWithError error: any Swift.Error)
 }
 @objc @objcMembers public class QMSplashAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any QMAdSDK.QMSplashAdDelegate)?
-  @objc public var ecpm: Swift.Int {
+  @objc public var adClickToCloseAutomatically: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var ecpm: Swift.Int {
     @objc get
   }
-  @objc public var metaDic: [Swift.String : Any] {
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var metaDic: [Swift.String : Any] {
     @objc get
   }
   @objc public var slotID: Swift.String {
@@ -301,10 +407,6 @@ extension QMAdSDK.QMSplashAd {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class QMAdSDKConfiguration : ObjectiveC.NSObject {
   @objc public static let shareConfiguration: QMAdSDK.QMAdSDKConfiguration
   @objc public var appId: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc public var userId: Swift.String? {
     @objc get
     @objc set
   }
@@ -357,22 +459,36 @@ extension QMAdSDK.QMSplashAd {
   }
 }
 @objc public protocol QMRewardedVideoAdDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func qm_rewardedVideoAdLoadSuccess(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
-  @objc func qm_rewardedVideoAdLoadFail(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, error: (any Swift.Error)?)
-  @objc func qm_rewardedVideoAdDidShow(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
-  @objc func qm_rewardedVideoAdDidClick(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
-  @objc func qm_rewardedVideoAdDidClose(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, closeType type: QMAdSDK.QMRewardedVideoAdCloseType)
-  @objc func qm_rewardedVideoAdDidCloseOtherController(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
-  @objc func qm_rewardedVideoAdDidRewarded(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
-  @objc func qm_rewardedVideoAdVideoDidPlayComplection(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, rewarded isRewarded: Swift.Bool)
-  @objc func qm_rewardedVideoAdVideoDidPlayFinished(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, didFailWithError error: any Swift.Error, rewarded isRewarded: Swift.Bool)
+  @objc optional func qm_rewardedVideoAdLoadSuccess(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
+  @objc optional func qm_rewardedVideoAdLoadFail(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, error: (any Swift.Error)?)
+  @objc optional func qm_rewardedVideoAdDidShow(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
+  @objc optional func qm_rewardedVideoAdDidClick(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
+  @objc optional func qm_rewardedVideoAdDidClose(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, closeType type: QMAdSDK.QMRewardedVideoAdCloseType)
+  @objc optional func qm_rewardedVideoAdDidCloseOtherController(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
+  @objc optional func qm_rewardedVideoAdDidRewarded(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd)
+  @objc optional func qm_rewardedVideoAdVideoDidPlayComplection(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, rewarded isRewarded: Swift.Bool)
+  @objc optional func qm_rewardedVideoAdVideoDidPlayFinished(_ rewardedVideoAd: QMAdSDK.QMRewardedVideoAd, didFailWithError error: any Swift.Error, rewarded isRewarded: Swift.Bool)
 }
 @objc @objcMembers open class QMRewardedVideoAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any QMAdSDK.QMRewardedVideoAdDelegate)?
-  @objc public var ecpm: Swift.Int {
+  @objc public var adClickToCloseAutomatically: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var ecpm: Swift.Int {
     @objc get
   }
-  @objc public var metaDic: [Swift.String : Any] {
+  @objc weak public var viewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var meta: QMAdSDK.QMAdMeta? {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use meta.")
+  public var metaDic: [Swift.String : Any] {
     @objc get
   }
   @objc public var slotID: Swift.String {

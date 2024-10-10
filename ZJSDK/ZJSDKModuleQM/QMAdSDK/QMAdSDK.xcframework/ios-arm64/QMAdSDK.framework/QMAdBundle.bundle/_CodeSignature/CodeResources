@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		+qjQlHIPVOspanU7QpDeM/p5++s=
+		IKX6mMIsTTuTyKUcQWqlSWrm3GE=
 		</data>
 		<key>qm_arrow_white.png</key>
 		<data>
@@ -71,6 +71,10 @@
 		<key>qm_video_sound.png</key>
 		<data>
 		OsJ1CsFiixcSn+p7ITxA2lbcymk=
+		</data>
+		<key>sdk_info</key>
+		<data>
+		ZjoPIq8qcZbIpc8G4JVrQUMJ/iw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -185,6 +189,13 @@
 			<key>hash2</key>
 			<data>
 			NNEv8483c+8d6dBx2WI5WJz34g4Ybx08Twn5+KAruuA=
+			</data>
+		</dict>
+		<key>sdk_info</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3oogiQEd7P7kuNHTs+fJDeUu66/Iu1CnvfVXj0Wjvgo=
 			</data>
 		</dict>
 	</dict>

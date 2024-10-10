@@ -280,7 +280,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
 #endif
 
 #endif
@@ -304,14 +303,67 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+SWIFT_CLASS("_TtC7QMAdSDK8QMAdMeta")
+@interface QMAdMeta : NSObject
+/// 广告唯一id
+@property (nonatomic, readonly, copy) NSString * _Nonnull getRequestId;
+/// 创意ID
+@property (nonatomic, readonly, copy) NSString * _Nonnull getIdeaId;
+/// 广告价格(分)
+@property (nonatomic, readonly) NSInteger getECPM;
+/// 广告标题
+@property (nonatomic, readonly, copy) NSString * _Nonnull getTitle;
+/// 广告描述
+@property (nonatomic, readonly, copy) NSString * _Nonnull getDesc;
+/// 广告封面
+@property (nonatomic, readonly, copy) NSString * _Nonnull logoUrl;
+/// 落地页地址
+@property (nonatomic, readonly, copy) NSString * _Nonnull getLandingPageUrl;
+/// 广告交互类型
+/// 1：落地页类型
+/// 2：下载类型（包含拉新和拉活）
+/// 3:   小程序
+/// 4:   快应用
+@property (nonatomic, readonly) NSInteger getInteractionType;
+/// 广告事件交互标题
+@property (nonatomic, readonly, copy) NSString * _Nonnull getInteractionTitle;
+/// 广告资源链接、单图或者视频
+@property (nonatomic, readonly, copy) NSString * _Nonnull getMediaUrl;
+/// 广告资源视频静音
+@property (nonatomic, readonly) BOOL getMediaMute;
+/// 广告创意应用logo
+@property (nonatomic, readonly, copy) NSString * _Nonnull getAppLogoUrl;
+/// 广告创意应用名称
+@property (nonatomic, readonly, copy) NSString * _Nonnull getAppName;
+/// 广告创意应用包名
+@property (nonatomic, readonly, copy) NSString * _Nonnull getAppPackageName;
+/// 广告六要素信息
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull getAppInformation;
+/// 素材宽高
+@property (nonatomic, readonly) CGSize getMediaSize;
+/// 组图
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull getExtUrls;
+/// 广告物料的类型
+/// 1：小图
+/// 2：大图
+/// 3:   组图
+/// 4：视频
+/// 6:   开屏
+/// 12: 激励视频
+@property (nonatomic, readonly) NSInteger getMaterialType;
+/// 视频播放时长
+@property (nonatomic, readonly) NSInteger getVideoDuration;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC7QMAdSDK20QMAdSDKConfiguration")
 @interface QMAdSDKConfiguration : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) QMAdSDKConfiguration * _Nonnull shareConfiguration;)
 + (QMAdSDKConfiguration * _Nonnull)shareConfiguration SWIFT_WARN_UNUSED_RESULT;
 /// 应用id
 @property (nonatomic, copy) NSString * _Nullable appId;
-/// 用户id
-@property (nonatomic, copy) NSString * _Nullable userId;
 /// 自定义IDFA
 @property (nonatomic, copy) NSString * _Nullable customIdfa;
 /// 广协CAID方案线上算法生成的CAID
@@ -326,7 +378,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) QMAdSDKConfi
 @property (nonatomic, copy) NSString * _Nullable longitude;
 /// 纬度
 @property (nonatomic, copy) NSString * _Nullable latitude;
-/// 是否可以嗅探安装列表 默认 YES
+/// 检查 Scheme 列表 默认 YES
 @property (nonatomic) BOOL canSniffingInstalls;
 /// 异常保护 默认 YES
 @property (nonatomic) BOOL exceptionGuard;
@@ -344,6 +396,8 @@ SWIFT_CLASS("_TtC7QMAdSDK14QMAdSDKManager")
 @interface QMAdSDKManager : NSObject
 /// 版本号
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+/// 检查 idfa
++ (NSString * _Nonnull)checkIDFA SWIFT_WARN_UNUSED_RESULT;
 /// The  initialization state
 + (enum QMAdSDKInitializationState)sdkState SWIFT_WARN_UNUSED_RESULT;
 /// The  initialization method
@@ -354,50 +408,23 @@ SWIFT_CLASS("_TtC7QMAdSDK14QMAdSDKManager")
 
 SWIFT_CLASS("_TtC7QMAdSDK15QMCrashReporter")
 @interface QMCrashReporter : NSObject
-/// 异常拦截
-/// \param reportBlock 异常信息，堆栈信息
-///
 + (void)setAbnormalReportCallback:(void (^ _Nonnull)(NSString * _Nonnull, NSArray<NSString *> * _Nonnull))reportBlock;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIView;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC7QMAdSDK8QMDialog")
-@interface QMDialog : UIControl
-@property (nonatomic, weak) UIView * _Nullable container;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-@class UIViewController;
-
-@interface QMDialog (SWIFT_EXTENSION(QMAdSDK))
-- (void)dismissDialog;
-- (void)dismissDialogWithView:(UIView * _Nonnull)view;
-- (void)dismissDialogWithController:(UIViewController * _Nonnull)controller;
-- (void)dismissAllDialog;
-@end
-
-@class UIGestureRecognizer;
-
-@interface QMDialog (SWIFT_EXTENSION(QMAdSDK)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer * _Nonnull)otherGestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @protocol QMFeedAdDelegate;
+@class UIViewController;
+@class UIView;
 
 SWIFT_CLASS("_TtC7QMAdSDK8QMFeedAd")
 @interface QMFeedAd : NSObject
 @property (nonatomic, weak) id <QMFeedAdDelegate> _Nullable delegate;
 /// 单位：分
-@property (nonatomic, readonly) NSInteger ecpm;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic;
+@property (nonatomic, readonly) NSInteger ecpm SWIFT_DEPRECATED_MSG("Use meta.");
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic SWIFT_DEPRECATED_MSG("Use meta.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull slotID;
 @property (nonatomic, readonly, strong) UIView * _Nullable feedView;
 /// 获取广告高度
@@ -412,6 +439,7 @@ SWIFT_CLASS("_TtC7QMAdSDK8QMFeedAd")
 
 SWIFT_PROTOCOL("_TtP7QMAdSDK16QMFeedAdDelegate_")
 @protocol QMFeedAdDelegate <NSObject>
+@optional
 /// 信息流广告加载成功
 - (void)qm_feedAdLoadSuccess:(QMFeedAd * _Nullable)feedAd;
 /// 信息流广告加载失败
@@ -447,9 +475,14 @@ SWIFT_CLASS("_TtC7QMAdSDK7QMImage")
 SWIFT_CLASS("_TtC7QMAdSDK16QMInterstitialAd")
 @interface QMInterstitialAd : NSObject
 @property (nonatomic, weak) id <QMInterstitialAdDelegate> _Nullable delegate;
+/// 广告点击自动关闭
+@property (nonatomic) BOOL adClickToCloseAutomatically;
 /// 单位：分
-@property (nonatomic, readonly) NSInteger ecpm;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic;
+@property (nonatomic, readonly) NSInteger ecpm SWIFT_DEPRECATED_MSG("Use meta.");
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic SWIFT_DEPRECATED_MSG("Use meta.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull slotID;
 /// 初始化
 /// @param slotID  栏位id
@@ -477,6 +510,7 @@ typedef SWIFT_ENUM(NSInteger, QMInterstitialAdCloseType, open) {
 
 SWIFT_PROTOCOL("_TtP7QMAdSDK24QMInterstitialAdDelegate_")
 @protocol QMInterstitialAdDelegate <NSObject>
+@optional
 /// 插屏广告加载成功
 - (void)qm_interstitialAdLoadSuccess:(QMInterstitialAd * _Nonnull)interstitialAd;
 /// 插屏广告加载失败
@@ -500,6 +534,8 @@ typedef SWIFT_ENUM(NSUInteger, QMMaterialType, open) {
   QMMaterialTypeImageLarge = 2,
   QMMaterialTypeImageAtlas = 3,
   QMMaterialTypeVideo = 4,
+  QMMaterialTypeSplash = 6,
+  QMMaterialTypeRewardedVideo = 12,
 };
 
 @protocol QMNativeAdDelegate;
@@ -509,10 +545,13 @@ SWIFT_CLASS("_TtC7QMAdSDK10QMNativeAd")
 @interface QMNativeAd : NSObject
 @property (nonatomic, weak) id <QMNativeAdDelegate> _Nullable delegate;
 /// 单位：分
-@property (nonatomic, readonly) NSInteger ecpm;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic;
+@property (nonatomic, readonly) NSInteger ecpm SWIFT_DEPRECATED_MSG("Use meta.");
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic SWIFT_DEPRECATED_MSG("Use meta.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull slotID;
-@property (nonatomic, readonly, strong) QMNativeMaterial * _Nullable materialMeta;
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, readonly, strong) QMNativeMaterial * _Nullable materialMeta SWIFT_DEPRECATED_MSG("Use meta.");
 /// 初始化
 /// @param slotID  栏位id
 - (nonnull instancetype)initWithSlot:(NSString * _Nonnull)slotID OBJC_DESIGNATED_INITIALIZER;
@@ -531,6 +570,7 @@ SWIFT_CLASS("_TtC7QMAdSDK10QMNativeAd")
 
 SWIFT_PROTOCOL("_TtP7QMAdSDK18QMNativeAdDelegate_")
 @protocol QMNativeAdDelegate <NSObject>
+@optional
 /// 信息流广告加载成功
 - (void)qm_nativeAdLoadSuccess:(QMNativeAd * _Nonnull)nativeAd;
 /// 信息流广告加载失败
@@ -544,6 +584,7 @@ SWIFT_PROTOCOL("_TtP7QMAdSDK18QMNativeAdDelegate_")
 @end
 
 @class UILabel;
+@class QMSplashNativeAd;
 
 SWIFT_CLASS("_TtC7QMAdSDK21QMNativeAdRelatedView")
 @interface QMNativeAdRelatedView : NSObject
@@ -554,6 +595,7 @@ SWIFT_CLASS("_TtC7QMAdSDK21QMNativeAdRelatedView")
 @property (nonatomic, readonly, strong) UIView * _Nullable videoAdView;
 /// Refresh the data every time you get new datas in order to show ad perfectly.
 - (void)refreshData:(QMNativeAd * _Nonnull)nativeAd;
+- (void)refreshDataWithSplashNativeAd:(QMSplashNativeAd * _Nonnull)splashNativeAd;
 @end
 
 
@@ -580,9 +622,14 @@ SWIFT_CLASS("_TtC7QMAdSDK16QMNativeMaterial")
 SWIFT_CLASS("_TtC7QMAdSDK17QMRewardedVideoAd")
 @interface QMRewardedVideoAd : NSObject
 @property (nonatomic, weak) id <QMRewardedVideoAdDelegate> _Nullable delegate;
+/// 广告点击自动关闭
+@property (nonatomic) BOOL adClickToCloseAutomatically;
 /// 单位：分
-@property (nonatomic, readonly) NSInteger ecpm;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic;
+@property (nonatomic, readonly) NSInteger ecpm SWIFT_DEPRECATED_MSG("Use meta.");
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic SWIFT_DEPRECATED_MSG("Use meta.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull slotID;
 /// 初始化
 /// @param slotID  栏位id
@@ -610,6 +657,7 @@ typedef SWIFT_ENUM(NSUInteger, QMRewardedVideoAdCloseType, open) {
 
 SWIFT_PROTOCOL("_TtP7QMAdSDK25QMRewardedVideoAdDelegate_")
 @protocol QMRewardedVideoAdDelegate <NSObject>
+@optional
 /// 激励视频广告加载成功
 - (void)qm_rewardedVideoAdLoadSuccess:(QMRewardedVideoAd * _Nonnull)rewardedVideoAd;
 /// 激励视频广告加载失败
@@ -635,9 +683,14 @@ SWIFT_PROTOCOL("_TtP7QMAdSDK25QMRewardedVideoAdDelegate_")
 SWIFT_CLASS("_TtC7QMAdSDK10QMSplashAd")
 @interface QMSplashAd : NSObject
 @property (nonatomic, weak) id <QMSplashAdDelegate> _Nullable delegate;
+/// 广告点击自动关闭
+@property (nonatomic) BOOL adClickToCloseAutomatically;
 /// 单位：分
-@property (nonatomic, readonly) NSInteger ecpm;
-@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic;
+@property (nonatomic, readonly) NSInteger ecpm SWIFT_DEPRECATED_MSG("Use meta.");
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, id> * _Nonnull metaDic SWIFT_DEPRECATED_MSG("Use meta.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull slotID;
 /// 初始化
 /// @param slotID  栏位id
@@ -678,6 +731,7 @@ typedef SWIFT_ENUM(NSUInteger, QMSplashAdCloseType, open) {
 
 SWIFT_PROTOCOL("_TtP7QMAdSDK18QMSplashAdDelegate_")
 @protocol QMSplashAdDelegate <NSObject>
+@optional
 /// 开屏广告加载成功
 - (void)qm_splashAdLoadSuccess:(QMSplashAd * _Nonnull)splashAd;
 /// 开屏广告加载失败
@@ -690,6 +744,54 @@ SWIFT_PROTOCOL("_TtP7QMAdSDK18QMSplashAdDelegate_")
 - (void)qm_splashAdDidClose:(QMSplashAd * _Nonnull)splashAd closeType:(enum QMSplashAdCloseType)type;
 /// 开屏广告视频播放结束回调
 - (void)qm_splashAdVideoDidPlayFinished:(QMSplashAd * _Nonnull)splashAd didFailWithError:(NSError * _Nonnull)error;
+@end
+
+@protocol QMSplashNativeAdDelegate;
+
+SWIFT_CLASS("_TtC7QMAdSDK16QMSplashNativeAd")
+@interface QMSplashNativeAd : NSObject
+@property (nonatomic, weak) id <QMSplashNativeAdDelegate> _Nullable delegate;
+/// 使用 controller present 落地页，默认获取当前window最上层控制器
+@property (nonatomic, weak) UIViewController * _Nullable viewController;
+@property (nonatomic, strong) QMAdMeta * _Nullable meta;
+/// 初始化
+/// @param slotID  栏位id
+- (nonnull instancetype)initWithSlot:(NSString * _Nonnull)slotID OBJC_DESIGNATED_INITIALIZER;
+/// 加载广告
+- (void)loadAdData;
+/// 注册可点击区域
+/// @param containerView :  requried  广告展示区域
+/// @param clickableViews : optional  其他可点击区域
+- (void)registerContainer:(UIView * _Nonnull)containerView withClickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
+/// Unregister ad view from the native ad.
+- (void)unregisterView;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface QMSplashNativeAd (SWIFT_EXTENSION(QMAdSDK)) <QMNativeAdDelegate>
+- (void)qm_nativeAdLoadSuccess:(QMNativeAd * _Nonnull)nativeAd;
+- (void)qm_nativeAdLoadFail:(QMNativeAd * _Nonnull)nativeAd error:(NSError * _Nonnull)error;
+- (void)qm_nativeAdDidShow:(QMNativeAd * _Nonnull)nativeAd;
+- (void)qm_nativeAdDidClick:(QMNativeAd * _Nonnull)nativeAd;
+- (void)qm_nativeAdDidCloseOtherController:(QMNativeAd * _Nonnull)nativeAd;
+@end
+
+
+SWIFT_PROTOCOL("_TtP7QMAdSDK24QMSplashNativeAdDelegate_")
+@protocol QMSplashNativeAdDelegate <NSObject>
+@optional
+/// 开屏广告加载成功
+- (void)qm_splashAdLoadSuccess:(QMSplashNativeAd * _Nonnull)splashAd;
+/// 开屏广告加载失败
+- (void)qm_splashAdLoadFail:(QMSplashNativeAd * _Nonnull)splashAd error:(NSError * _Nullable)error;
+/// 开屏广告曝光
+- (void)qm_splashAdDidShow:(QMSplashNativeAd * _Nonnull)splashAd;
+/// 开屏广告点击
+- (void)qm_splashAdDidClick:(QMSplashNativeAd * _Nonnull)splashAd;
+/// 开屏广告关闭
+- (void)qm_splashAdDidClose:(QMSplashNativeAd * _Nonnull)splashAd closeType:(enum QMSplashAdCloseType)type;
 @end
 
 

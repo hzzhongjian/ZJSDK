@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'QMAdSDK'
-  s.version          = '1.0.6.01'
+  s.version          = '1.0.9.14'
   s.summary          = 'QMAdSDK  includes three graphic ads, group ads, graphic ads, banner ads, Video ads and Launch ads.'
   s.description      = '趣盟'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -22,8 +22,5 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
-  s.dependency 'AFNetworking'
-  s.dependency 'YYWebImage'
-  s.dependency 'YYImage/WebP'
   
 end
