@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIViewController *)getCurrentVC;
 //获取时间戳（毫秒）
 + (NSString *)getTimestampSince1970;
+
+// 字典转字符串，去除字符串中的特殊字符
++ (NSString *)mapToString:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)registerSDK:(nullable NSDictionary *)config;
 
++ (NSDictionary *)sdkVersionDict;
+
++ (void)registerSDKVersionWithPlatform:(NSString *)platform sdkVersion:(NSString *)sdkVersion;
 
 @end
 

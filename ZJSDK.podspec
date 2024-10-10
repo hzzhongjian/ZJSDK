@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText'
+  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook'
 
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
@@ -52,7 +52,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleGDT' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'GDTMobSDK', '4.15.00'
+    ss.dependency 'GDTMobSDK', '<= 4.15.02', '>= 4.14.62'
   end
 ### 穿山甲SDK
   s.subspec 'ZJSDKModuleCSJ' do |ss|
@@ -66,13 +66,15 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleKS' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'KSAdSDK', '3.3.69'
+#    ss.dependency 'KSAdSDK', '3.3.69'
+    ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
+    ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
   end
 
   s.subspec 'ZJSDKModuleMTG' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'MintegralAdSDK', '~> 7.0'
+    ss.dependency 'MintegralAdSDK', '>= 7.0', '<=7.7.2'
     ss.dependency 'MintegralAdSDK/RewardVideoAd'
     ss.dependency 'MintegralAdSDK/BannerAd'
     ss.dependency 'MintegralAdSDK/SplashAd'
@@ -89,7 +91,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleSIG' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleSIG/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'SigmobAd-iOS', '~> 4.7'
+    ss.dependency 'SigmobAd-iOS', '<= 4.13.0', '>= 4.7'
 #   sig更新日志要找运营看，或者自己注册一个账号看一下
   end
   
@@ -103,7 +105,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleBD' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '5.370'
+    ss.dependency 'BaiduMobAdSDK', '<= 5.370', '>= 5.36'
     ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
   end
  
@@ -116,7 +118,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleBeiZi' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~> 4.90.4.19'
+    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '<= 4.90.4.19', '>= 4.90'
   end
  
 #   s.subspec 'ZJSDKModuleWM' do |ss|
@@ -141,7 +143,7 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
     # 可以把TanX的依赖更换为pod管理
-    ss.dependency 'TanxSDK', '3.5.7'
+    ss.dependency 'TanxSDK', '<= 3.5.7', '>= 3.5.3'
     #ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
     #ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
     #ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
@@ -163,7 +165,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleOCTOPUS' do |ss|
       ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
       ss.dependency 'ZJSDK/ZJAdSDK'
-      ss.dependency 'OctopusSDK'
+      ss.dependency 'OctopusSDK', '<= 1.6.1.7', '>= 1.6.1.5'
   end
  
 end

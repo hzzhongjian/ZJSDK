@@ -82,7 +82,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (NSString*)getAdapterClass:(NSString *)platform adType:(NSString *)adType;
+
+
 -(void)reportWithEvent:(ZJEventString)event supplementMsg:(nullable NSString *)supplementMsg;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
