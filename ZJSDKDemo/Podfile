@@ -26,6 +26,8 @@ target 'ZJSDKDemo' do
   #pod 'ZJSDK/ZJSDKModuleBD'#百度广告
   #pod 'ZJSDK/ZJSDKModuleBeiZi'#倍孜广告
   #pod 'ZJSDK/ZJSDKModuleTanX'#TanX广告
+  #pod 'ZJSDK/ZJSDKModuleQM'#趣盟广告
+  #pod 'ZJSDK/ZJSDKModuleOCTOPUS'#章鱼广告
   
 ##mark 3，默认不引入的广告模块
   #pod 'ZJSDK/ZJSDKModuleGoogle'#Google广告
