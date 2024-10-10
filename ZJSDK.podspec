@@ -143,11 +143,11 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
     # 可以把TanX的依赖更换为pod管理
-    ss.dependency 'TanxSDK', '<= 3.5.4', '>= 3.5.3'
-    #ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
-    #ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
-    #ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
-    #ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+    # ss.dependency 'TanxSDK', '<= 3.5.4', '>= 3.5.3'
+    ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
+    ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+    ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
+    ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
   end
  
 ##趣盟SDK
