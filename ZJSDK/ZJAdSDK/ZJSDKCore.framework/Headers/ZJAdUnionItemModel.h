@@ -105,6 +105,10 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 ///权重 在params中获取
 @property (nonatomic, assign) NSInteger weight;
+
+/// Bid底价 在params中获取
+@property (nonatomic, assign) NSInteger bid_floor;
+
 ///其它参数
 @property (nonatomic, strong) NSDictionary *params;
 
@@ -147,6 +151,7 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
  * 容错区间 (0-8)
  */
 @property (nonatomic, copy) NSString* lv_sd;
+
 @end
 
 
