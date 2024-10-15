@@ -142,7 +142,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleTanX' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.ios.deployment_target = '12.0'
+#    ss.ios.deployment_target = '12.0'
     # 可以把TanX的依赖更换为pod管理
 #    ss.dependency 'TanxSDK', '3.5.3'
     ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
