@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.8.15'
+  s.version          = '2.5.8.16'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -69,6 +69,11 @@ TODO: Add long description of the pod here.
 #    ss.dependency 'KSAdSDK', '3.3.69'
     ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
     ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
+  end
+#  提供给本地已经有ks依赖使用
+  s.subspec 'ZJSDKModuleKSCompatible' do |ss|
+    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
+    ss.dependency 'ZJSDK/ZJAdSDK'
   end
 
   s.subspec 'ZJSDKModuleMTG' do |ss|
@@ -150,6 +155,11 @@ TODO: Add long description of the pod here.
     ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
     ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
   end
+#  提供给本地已经有Tanx相关依赖使用
+  s.subspec 'ZJSDKModuleTanXCompatible' do |ss|
+    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
+    ss.dependency 'ZJSDK/ZJAdSDK'
+  end
  
 ##趣盟SDK
   s.subspec 'ZJSDKModuleQM' do |ss|
@@ -168,5 +178,15 @@ TODO: Add long description of the pod here.
       ss.dependency 'ZJSDK/ZJAdSDK'
       ss.dependency 'OctopusSDK', '<= 1.6.1.7', '>= 1.6.1.5'
   end
+  
+##章鱼SDK
+#    s.subspec 'ZJSDKModuleYK' do |ss|
+#        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
+#        ss.dependency 'ZJSDK/ZJAdSDK'
+#        ss.source_files         = 'ZJSDK/ZJSDKModuleYK/*.h'
+#        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleYK/*.framework'
+#        ss.resource             = 'ZJSDK/ZJSDKModuleYK/*.bundle'
+#        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
+#    end
  
 end
