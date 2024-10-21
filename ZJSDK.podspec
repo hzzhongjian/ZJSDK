@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS'
-
+  
   s.subspec 'ZJAdSDK' do |ss|
     ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
     ss.preserve_paths = 'ZJSDK/ZJAdSDK/*.framework'
@@ -52,34 +52,36 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleGDT' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'GDTMobSDK', '<= 4.15.02', '>= 4.14.62'
+    ss.dependency 'GDTMobSDK', '~> 4.14.62'
   end
 ### 穿山甲SDK
   s.subspec 'ZJSDKModuleCSJ' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'Ads-CN-Beta', '6.4.0.1'
+    ss.dependency 'Ads-CN-Beta', '~> 6.4.0.1'
     ss.dependency 'Ads-CN-Beta/CSJMediation'
     ss.dependency 'Ads-CN-Beta/BUAdSDK'
   end
   
+#  提供给本地已经有ks依赖使用ZJSDKModuleKSCompatible
+    s.subspec 'ZJSDKModuleKSCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'KSAdSDK', '~> 3.3.61'
+    end
+  
   s.subspec 'ZJSDKModuleKS' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-#    ss.dependency 'KSAdSDK', '3.3.69'
+##    ss.dependency 'KSAdSDK', '3.3.69'
     ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
     ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
-  end
-#  提供给本地已经有ks依赖使用
-  s.subspec 'ZJSDKModuleKSCompatible' do |ss|
-    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
-    ss.dependency 'ZJSDK/ZJAdSDK'
   end
 
   s.subspec 'ZJSDKModuleMTG' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'MintegralAdSDK', '>= 7.0', '<=7.7.2'
+    ss.dependency 'MintegralAdSDK', '~> 7.0'
     ss.dependency 'MintegralAdSDK/RewardVideoAd'
     ss.dependency 'MintegralAdSDK/BannerAd'
     ss.dependency 'MintegralAdSDK/SplashAd'
@@ -109,7 +111,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleBD' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '<= 5.370', '>= 5.36'
+    ss.dependency 'BaiduMobAdSDK', '~> 5.36'
     ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
   end
  
@@ -122,7 +124,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleBeiZi' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '<= 4.90.4.19', '>= 4.90'
+    ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~> 4.90'
   end
  
 #   s.subspec 'ZJSDKModuleWM' do |ss|
@@ -148,16 +150,11 @@ TODO: Add long description of the pod here.
     ss.dependency 'ZJSDK/ZJAdSDK'
 #    ss.ios.deployment_target = '12.0'
     # 可以把TanX的依赖更换为pod管理
-#    ss.dependency 'TanxSDK', '3.5.3'
+#    ss.dependency 'TanxSDK', '~> 3.5.3'
     ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
     ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
     ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
     ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
-  end
-#  提供给本地已经有Tanx相关依赖使用
-  s.subspec 'ZJSDKModuleTanXCompatible' do |ss|
-    ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
-    ss.dependency 'ZJSDK/ZJAdSDK'
   end
  
 ##趣盟SDK
@@ -175,10 +172,10 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleOCTOPUS' do |ss|
       ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
       ss.dependency 'ZJSDK/ZJAdSDK'
-      ss.dependency 'OctopusSDK', '<= 1.6.1.7', '>= 1.6.1.5'
+      ss.dependency 'OctopusSDK'
   end
   
-##章鱼SDK
+##移卡SDK
 #    s.subspec 'ZJSDKModuleYK' do |ss|
 #        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
 #        ss.dependency 'ZJSDK/ZJAdSDK'
