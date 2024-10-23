@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.8.16'
+  s.version          = '2.5.8.17'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -67,7 +67,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'KSAdSDK', '~> 3.3.61'
+#        ss.dependency 'KSAdSDK', '~> 3.3.61'
     end
   
   s.subspec 'ZJSDKModuleKS' do |ss|
@@ -148,7 +148,6 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJSDKModuleTanX' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-#    ss.ios.deployment_target = '12.0'
     # 可以把TanX的依赖更换为pod管理
 #    ss.dependency 'TanxSDK', '~> 3.5.3'
     ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
