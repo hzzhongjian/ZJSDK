@@ -152,6 +152,12 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
  */
 @property (nonatomic, copy) NSString* lv_sd;
 
+/// 本地激励浏览广告位ID
+@property (nonatomic, copy) NSString *lrp_id;
+
+/// 本地激励浏览标题
+@property (nonatomic, copy) NSString *lrp_title;
+
 @end
 
 

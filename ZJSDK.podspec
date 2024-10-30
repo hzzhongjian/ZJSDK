@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.8.17'
+  s.version          = '2.5.8.18'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -47,6 +47,7 @@ TODO: Add long description of the pod here.
   s.subspec 'ZJAdSDK' do |ss|
     ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
     ss.preserve_paths = 'ZJSDK/ZJAdSDK/*.framework'
+    ss.resource = 'ZJSDK/ZJAdSDK/*.bundle'
   end
   
   s.subspec 'ZJSDKModuleGDT' do |ss|
@@ -54,20 +55,20 @@ TODO: Add long description of the pod here.
     ss.dependency 'ZJSDK/ZJAdSDK'
     ss.dependency 'GDTMobSDK', '~> 4.14.62'
   end
+  
 ### 穿山甲SDK
   s.subspec 'ZJSDKModuleCSJ' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
-    ss.dependency 'Ads-CN-Beta', '~> 6.4.0.1'
-    ss.dependency 'Ads-CN-Beta/CSJMediation'
-    ss.dependency 'Ads-CN-Beta/BUAdSDK'
+    ss.dependency 'Ads-CN'
+    ss.dependency 'Ads-CN/CSJMediation'
+    ss.dependency 'Ads-CN/BUAdSDK'
   end
   
 #  提供给本地已经有ks依赖使用ZJSDKModuleKSCompatible
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-#        ss.dependency 'KSAdSDK', '~> 3.3.61'
     end
   
   s.subspec 'ZJSDKModuleKS' do |ss|
@@ -145,15 +146,21 @@ TODO: Add long description of the pod here.
 #     ss.dependency 'Ads-CN', '5.0.0.5'
 #  end
 
+#  提供给本地已经有TanxSDK依赖使用ZJSDKModuleTanXCompatible
+    s.subspec 'ZJSDKModuleTanXCompatible' do |ss|
+      ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
+      ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
   s.subspec 'ZJSDKModuleTanX' do |ss|
     ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
     ss.dependency 'ZJSDK/ZJAdSDK'
     # 可以把TanX的依赖更换为pod管理
-#    ss.dependency 'TanxSDK', '~> 3.5.3'
-    ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
-    ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
-    ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
-    ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+    ss.dependency 'TanxSDK', '~> 3.5.3'
+#    ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
+#    ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+#    ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
+#    ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
   end
  
 ##趣盟SDK
@@ -175,13 +182,11 @@ TODO: Add long description of the pod here.
   end
   
 ##移卡SDK
-#    s.subspec 'ZJSDKModuleYK' do |ss|
-#        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
-#        ss.dependency 'ZJSDK/ZJAdSDK'
-#        ss.source_files         = 'ZJSDK/ZJSDKModuleYK/*.h'
-#        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleYK/*.framework'
-#        ss.resource             = 'ZJSDK/ZJSDKModuleYK/*.bundle'
-#        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
-#    end
+    s.subspec 'ZJSDKModuleYK' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleYK/*.framework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
+    end
  
 end

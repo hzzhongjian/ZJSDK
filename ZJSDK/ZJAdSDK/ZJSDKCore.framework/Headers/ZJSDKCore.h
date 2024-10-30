@@ -22,8 +22,8 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJDeviceHelper.h>
 #import <ZJSDKCore/ZJProjectHelper.h>
 #import <ZJSDKCore/ZJAdBaseNetworking.h>
-#import <ZJSDKCore/ZJSDKInitConfig.h>
-
-
+#import <ZJSDKCore/ZJSDKGlobalAdConfig.h>
+#import <ZJSDKCore/ZJLocalAdRewardVideoAd.h>
+#import <ZJSDKCore/ZJLocalAdFullScreenVideoAd.h>
 
 
