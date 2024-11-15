@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSString *categoryId;
 @property(nonatomic,strong) NSString *content_app_id;
 @property (nonatomic, strong) NSString *subChannelId;
+@property (nonatomic, assign) BOOL show_video;
 @property(nonatomic,strong) UIView <SliderSwitchProtocol>* pageView;
 @end
 

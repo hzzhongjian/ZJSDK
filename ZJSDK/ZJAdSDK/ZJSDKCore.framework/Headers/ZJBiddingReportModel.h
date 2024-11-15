@@ -34,8 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 其他信息
 @property (nonatomic, strong, nullable) NSMutableDictionary *extraDic;
 
-/////竞败原因，具体值的映射关系见附表4    
-//@property (nonatomic, assign) NSInteger reason;
+///竞败原因，具体值的映射关系见附表4    
+@property (nonatomic, assign) NSInteger reason;
 
 @end
 

@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerPlatform:(NSString *)platform;
 
+// 记录每次加载，随机生成的唯一设备标识
+@property (nonatomic, strong) NSString *uniqueDeviceID;
+
 @end
 
 NS_ASSUME_NONNULL_END

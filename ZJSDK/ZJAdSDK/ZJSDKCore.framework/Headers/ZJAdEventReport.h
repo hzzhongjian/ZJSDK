@@ -30,6 +30,8 @@ FOUNDATION_EXPORT NSString * const ZJEvent_Other;//其他信息
 
 + (NSString *)getTimestampSince1970;
 
++ (NSNumber *)adPlatformTypeConvertPmType:(ZJAdPlatformType)adPlatformType;
+
 @end
 
 NS_ASSUME_NONNULL_END

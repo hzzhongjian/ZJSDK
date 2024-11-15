@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///获取运营商信息 eg:@"中国电信"
 + (NSString *)carrierInfo;
 
+/// 用来标识唯一设备ID的, 使用场景是，一次请求，追踪用户操作流程，再次请求就会生成新的uuid
++ (NSString *)uniqueUUID;
+
 @end
 
 NS_ASSUME_NONNULL_END
