@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSString *categoryId;
 @property(nonatomic,strong) NSString *content_app_id;
 @property (nonatomic, strong) NSString *subChannelId;
+/// 新增参数，用来配置百度资讯是否屏蔽视频，不配置为不屏蔽，后台配置就是屏蔽
 @property (nonatomic, assign) BOOL show_video;
 @property(nonatomic,strong) UIView <SliderSwitchProtocol>* pageView;
 @end

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJSDKAdEnum.h>
-
+#import <ZJSDKCore/ZJBiddingLossRelease.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJBiddingReportModel : NSObject
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSMutableDictionary *extraDic;
 
 ///竞败原因，具体值的映射关系见附表4    
-@property (nonatomic, assign) NSInteger reason;
+@property (nonatomic, assign) ZJBiddingLossReason reason;
 
 @end
 
