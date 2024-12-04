@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.1'
+  s.version          = '2.5.9.2'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook'
-
+  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook'
+  s.weak_frameworks = 'AppTrackingTransparency'
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
   s.libraries = 'resolv.9','c++','z','sqlite3','bz2','xml2','c++abi','sqlite3.0','iconv'
@@ -204,6 +204,14 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleYK/*.framework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
+    end
+    
+##奇运SDK
+    s.subspec 'ZJSDKModuleJiaJi' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJiaJi/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
     end
  
 end

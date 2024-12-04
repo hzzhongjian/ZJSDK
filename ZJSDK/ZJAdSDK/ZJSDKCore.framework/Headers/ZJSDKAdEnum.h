@@ -46,7 +46,8 @@ typedef NS_ENUM(NSInteger, ZJAdPlatformType) {
     ZJAdPlatform_TANX,
     ZJAdPlatform_QM,
     ZJAdPlatform_OCTOPUS,
-    ZJAdPlatform_YIKA
+    ZJAdPlatform_YIKA,
+    ZJAdPlatform_QIYUN,
 };
 
 typedef NS_ENUM(NSInteger, ZJAdType){
@@ -99,6 +100,15 @@ typedef NS_ENUM(NSInteger, ZJSDKPersionalizedState) {
 typedef NS_ENUM(NSInteger, ZJSDKProgrammaticRecommend) {
     ZJSDKProgrammaticRecommend_OFF,
     ZJSDKProgrammaticRecommend_ON,
+};
+
+// 自渲染广告点击跳转类型
+typedef NS_ENUM(NSInteger, ZJSDKAdInteractionType) {
+    ZJSDKAdInteractionType_Unknown,        //unknown type
+    ZJSDKAdInteractionType_App,            //open downlaod page in app
+    ZJSDKAdInteractionType_Web,            //open webpage in app
+    ZJSDKAdInteractionType_DeepLink,       //open deeplink
+    ZJSDKAdInteractionType_AppStore,       //open appstore
 };
 
 #endif /* ZJSDKAdEnum_h */

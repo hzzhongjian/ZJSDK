@@ -1,0 +1,6 @@
+framework module JLAdSDK {
+  umbrella header "JLAdSDK.h"
+  export *
+
+  module * { export * }
+}

@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) ZJSDKProgrammaticRecommend programmaticRecommend;
 
 
-
 @end
 
 NS_ASSUME_NONNULL_END
