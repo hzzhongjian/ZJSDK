@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ZJSDKAdEnum.h"
+
+@class ZJSDKInitModel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJSDKManager : NSObject
@@ -14,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shared;
 
 - (void)registerAppId:(NSString*)appId;
+
+- (void)registerSDK:(ZJSDKInitModel *)initData;
 
 @property (nonatomic, copy) void(^registrationCompleted)(BOOL completed, NSDictionary *info);
 

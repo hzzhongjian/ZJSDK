@@ -66,6 +66,12 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 //辅助
 @property (nonatomic, assign) NSInteger currentLevel;
 @property (nonatomic, assign) NSInteger totalLevels;
+
+/// 流量组分组
+@property (nonatomic, copy) NSString *title;
+/// 流量组id
+@property (nonatomic, assign) long pos_template_id;
+
 @end
 
 @interface ZJAdUnitModel : NSObject
@@ -161,8 +167,11 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 /// 本地激励浏览标题
 @property (nonatomic, copy) NSString *lrp_title;
 
+/// 流量组分组
+@property (nonatomic, copy) NSString *title;
+/// 流量组id
+@property (nonatomic, assign) long pos_template_id;
+
 @end
-
-
 
 NS_ASSUME_NONNULL_END

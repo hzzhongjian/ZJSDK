@@ -35,6 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completeBlk: 获取完成（成功或者失败）
 - (void)getPositionWithAdid:(NSString *)adid completeBlk:(nullable void (^)(BOOL success ,  NSError * _Nullable error))completeBlk;
 
+/// 获取广告位配置 v2
+- (void)getV2PositionWithAdid:(NSString *)adid 
+                       userId:(NSString *)userId
+                  completeBlk:(nullable void (^)(BOOL success ,  NSError * _Nullable error))completeBlk;
+
 ///判断是否有下一个层广告 并刷新到下移除
 - (BOOL)hasNextLevelAndRefresh;
 
@@ -49,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 //广告类型获取广告位id
 +(NSString *)getAdDefaultPlacementId:(NSString *)adType;
 
++ (NSDictionary *)decryptionZJSDKMediaConfig:(NSString *)dataString;
 
 @end
 

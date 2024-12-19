@@ -37,6 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 字典转字符串，去除字符串中的特殊字符
 + (NSString *)mapToString:(NSDictionary *)dict;
+
+// 判断当前时间是否是当天的时间
++ (NSNumber *)isCurrentDateOfDay;
+
+// JSON字符串转字典
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_FullScreenVideo1,AdId_FullScreenVideo2,AdId_FullScreenVideo3,AdId_FullScreenVideo4,AdId_FullScreenVideo5,AdId_FullScreenVideo6]];
+    [self.loadAdView appendAdID:@[AdId_FullScreenVideo1]];
 }
 
 -(void)loadAd:(NSString*) adId{
