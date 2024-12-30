@@ -86,6 +86,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)reportWithEvent:(ZJEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 
+// 广告来源
+- (ZJAdPlatformType)platformType;
 
 @end
 

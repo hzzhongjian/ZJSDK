@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.4'
+  s.version          = '2.5.9.5'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook'
+  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos'
   s.weak_frameworks = 'AppTrackingTransparency'
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
@@ -71,9 +71,9 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleCSJ' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'Ads-CN'
-        ss.dependency 'Ads-CN/CSJMediation'
-        ss.dependency 'Ads-CN/BUAdSDK'
+        ss.dependency 'Ads-CN-Beta'
+        ss.dependency 'Ads-CN-Beta/CSJMediation'
+        ss.dependency 'Ads-CN-Beta/BUAdSDK'
     end
   
 #  提供给本地已经有ks依赖使用ZJSDKModuleKSCompatible

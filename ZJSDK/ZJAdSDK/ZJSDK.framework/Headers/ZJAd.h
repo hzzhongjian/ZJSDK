@@ -33,6 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
  * @return 成功返回一个大于等于0的值，
  */
 - (NSInteger)eCPM;
+
+// 展示广告来源，枚举类型
+- (ZJAdPlatformType)platformType;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

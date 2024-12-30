@@ -1,18 +1,22 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '12.0'
 #-source 'https://github.com/CocoaPods/Specs.git'
 target 'ZJSDKDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  post_install do |installer|
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-      end
-    end
-  end
+#  post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#      target.build_configurations.each do |config|
+#        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+#      end
+#    end
+#  end
+
+#pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
+
+
 ##mark 1，直接导入方式,一般打开此注释即可
-   pod 'ZJSDK', :path => '../'
+   pod 'ZJSDK', :path => '../' #'~> 2.5.9.4' 
 #如需接入内容包，需要制定本地，公共仓库的不支持内容包
 #   pod 'KSAdSDK', :path => '../ZJSDK/ZJSDKModuleKS/KS'
    
@@ -40,6 +44,8 @@ target 'ZJSDKDemo' do
 
   
   # Pods for ZJSDKDemo
+  
+#  pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
 
 end
  
