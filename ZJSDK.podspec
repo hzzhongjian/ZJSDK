@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.6'
+  s.version          = '2.5.9.7'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -49,25 +49,27 @@ TODO: Add long description of the pod here.
         ss.preserve_paths = 'ZJSDK/ZJAdSDK/*.framework'
         ss.resource = 'ZJSDK/ZJAdSDK/*.bundle'
     end
-  ### GDTSDK兼容版
+
+    ### GDT适配器兼容版
     s.subspec 'ZJSDKModuleGDTCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
     end
   
+    ### GDT适配器
     s.subspec 'ZJSDKModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'GDTMobSDK', '~> 4.14.62'
     end
   
-    ### 穿山甲SDK兼容版
+    ### 穿山甲适配器兼容版
     s.subspec 'ZJSDKModuleCSJCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
     end
   
-### 穿山甲SDK
+    ### 穿山甲适配器
     s.subspec 'ZJSDKModuleCSJ' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -76,12 +78,13 @@ TODO: Add long description of the pod here.
         ss.dependency 'Ads-CN-Beta/BUAdSDK'
     end
   
-#  提供给本地已经有ks依赖使用ZJSDKModuleKSCompatible
+    ### 快手适配器兼容版
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
     end
   
+    ### 快手适配器
     s.subspec 'ZJSDKModuleKS' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -90,6 +93,13 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
     end
 
+    ### MTG适配器兼容版
+    s.subspec 'ZJSDKModuleMTGCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ### MTG适配器
     s.subspec 'ZJSDKModuleMTG' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -101,18 +111,27 @@ TODO: Add long description of the pod here.
         ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
     end
 
+    ### DSP适配器
     s.subspec 'ZJSDKModuleDSP' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleDSP/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'DSPSDK'
     end
-  
+ 
+    ### SIG适配器兼容版
+    s.subspec 'ZJSDKModuleSIGCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleSIG/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ### SIG适配器
     s.subspec 'ZJSDKModuleSIG' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleSIG/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'SigmobAd-iOS', '~> 4.7'
     end
 
+    ### 谷歌适配器
     s.subspec 'ZJSDKModuleGoogle' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGoogle/*.a'
         ss.source_files       = 'ZJSDK/ZJSDKModuleGoogle/*.h'
@@ -120,6 +139,14 @@ TODO: Add long description of the pod here.
         ss.dependency 'Google-Mobile-Ads-SDK'
     end
  
+    ### 百度适配器兼容版   
+    s.subspec 'ZJSDKModuleBDCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
+    end
+
+    ### 百度适配器   
     s.subspec 'ZJSDKModuleBD' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -127,12 +154,20 @@ TODO: Add long description of the pod here.
         ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
     end
  
+    ### 穿山甲海外适配器
     s.subspec 'ZJSDKModulePangle' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModulePangle/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'Ads-Global'
     end
 
+    ### 倍孜适配器兼容版
+    s.subspec 'ZJSDKModuleBeiZiCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ### 倍孜适配器
     s.subspec 'ZJSDKModuleBeiZi' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -157,12 +192,14 @@ TODO: Add long description of the pod here.
 #     ss.dependency 'Ads-CN', '5.0.0.5'
 #  end
 
-#  提供给本地已经有TanxSDK依赖使用ZJSDKModuleTanXCompatible
+    ###Tanx适配器兼容版  
     s.subspec 'ZJSDKModuleTanXCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
     end
 
+    ### Tanx适配器
     s.subspec 'ZJSDKModuleTanX' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -173,8 +210,14 @@ TODO: Add long description of the pod here.
         ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
     end
- 
-##趣盟SDK
+
+    ###趣盟适配器兼容版
+    s.subspec 'ZJSDKModuleQMCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###趣盟适配器
     s.subspec 'ZJSDKModuleQM' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -185,20 +228,26 @@ TODO: Add long description of the pod here.
         ss.dependency 'YYImage/WebP'
     end
 
-##章鱼SDK兼容版
+    ###章鱼适配器兼容版
     s.subspec 'ZJSDKModuleOCTOPUSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
     end
   
-##章鱼SDK
+    ###章鱼适配器
     s.subspec 'ZJSDKModuleOCTOPUS' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'OctopusSDK'
     end
-  
-##移卡SDK
+
+    ###移卡适配器兼容版
+    s.subspec 'ZJSDKModuleYKCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###移卡适配器
     s.subspec 'ZJSDKModuleYK' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
@@ -206,7 +255,13 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
     end
     
-##奇运SDK
+    ###奇运适配器兼容版
+    s.subspec 'ZJSDKModuleJiaJiCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJiaJi/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###奇运适配器
     s.subspec 'ZJSDKModuleJiaJi' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJiaJi/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
