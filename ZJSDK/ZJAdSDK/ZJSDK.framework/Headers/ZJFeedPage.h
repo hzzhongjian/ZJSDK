@@ -10,6 +10,8 @@
 #import "ZJContentPageStateDelegate.h"
 #import <ZJSDKCore/ZJContentInfo.h>
 
+/// 视频内容瀑布流
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJFeedPage : ZJAd <ZJContentInfo>

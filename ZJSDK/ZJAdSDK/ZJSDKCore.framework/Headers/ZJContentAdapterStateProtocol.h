@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ZJTubePageAdapter;
+
 @protocol ZJAdapterContentAdapterVideoStateProtocol <NSObject>
 /**
  * 视频开始播放
@@ -62,6 +64,17 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)zjAdapter_contentDidResume:(id<ZJContentInfo>)content;
 
+
+@end
+
+
+@protocol ZJContentAdapterLoadCallBackProtocol <NSObject>
+
+/// 加载成功
+- (void)zjAdapter_contentLoadSuccess:(ZJTierAdAdapter *)adapter;
+
+/// 请求开失败回调
+- (void)zjAdapter_contentLoadFail:(ZJTierAdAdapter *)adapter error:(NSError *)error;
 
 @end
 

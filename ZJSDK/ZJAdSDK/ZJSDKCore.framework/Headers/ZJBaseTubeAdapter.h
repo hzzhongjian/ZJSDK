@@ -6,16 +6,17 @@
 //
 
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
+#import <ZJSDKCore/ZJTierAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface ZJBaseTubeAdapter : ZJCoreAdAdapter
+//ZJCoreAdAdapter是继承ZJCoreAdAdapter 改成 ZJTierAdAdapter
+@interface ZJBaseTubeAdapter : ZJTierAdAdapter
 @property (nonatomic, strong) UIViewController *viewController;
 -(void)reportWithEvent:(ZJEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 
 - (void)loadContentPageWithDeeplink:(NSString *)deepLink;
 
--(void)loadAd NS_UNAVAILABLE;
+-(void)loadAd;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,8 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJContentInfo.h>
+#import <ZJSDKCore/ZJTierAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class ZJTubePageAdapter;
 
 @protocol ZJAdapterContentAdapterVideoStateDelegate <NSObject>
 @optional
@@ -69,6 +72,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 任务完成回调
 - (void)zjAdapter_contentTaskComplete:(id<ZJContentInfo>)content;
+@end
+
+
+@protocol ZJContentAdapterLoadCallBackDelegate <NSObject>
+
+/// 加载成功
+- (void)zjAdapter_contentLoadSuccess:(ZJTierAdAdapter *)adapter;
+
+/// 请求开失败回调
+- (void)zjAdapter_contentLoadFail:(ZJTierAdAdapter *)adapter error:(NSError *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

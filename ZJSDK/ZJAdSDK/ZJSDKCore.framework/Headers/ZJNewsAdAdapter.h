@@ -6,6 +6,7 @@
 //
 
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
+#import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <ZJSDKCore/ZJNewsAdProtocol.h>
 NS_ASSUME_NONNULL_BEGIN
 @class ZJNewsAdAdapter;
@@ -43,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ZJNewsAdAdapter : ZJCoreAdAdapter <ZJNewsAdProtocol>
+@interface ZJNewsAdAdapter : ZJTierAdAdapter <ZJNewsAdProtocol>
 @property(nonatomic,weak) id<ZJNewsAdAdapterDelegate> delegate;
 @property (nonatomic,strong)UIView *adView;
 - (instancetype)initWithAdItemConfig:(ZJAdUnitModel *)adItemConfig frame:(CGRect)frame;

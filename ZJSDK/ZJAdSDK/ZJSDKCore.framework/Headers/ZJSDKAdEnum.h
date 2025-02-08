@@ -51,10 +51,8 @@ typedef NS_ENUM(NSInteger, ZJAdPlatformType) {
 };
 
 typedef NS_ENUM(NSInteger, ZJAdType){
-    
     ZJAdType_Unknow                 = 0,
     ZJAdType_SPLASH                 = 1,
-    
     ZJAdType_REWARD                 = 3,
     ZJAdType_H5                     = 4,
     ZJAdType_Banner                 = 5,//banner
@@ -62,11 +60,8 @@ typedef NS_ENUM(NSInteger, ZJAdType){
     ZJAdType_ExpressFullVideoFeed   = 7,//视频流 
     ZJAdType_ContentVideo           = 8,//视频内容 
     ZJAdType_Native                 = 9,//原生渲染 
-    
     ZJAdType_NativeExpress          = 11,//信息流 
     ZJAdType_FullScreenVideo        = 12,//全屏视频
-    
-    
     ZJAdType_News                   = 21,//新闻资讯
     ZJAdType_WXMiniProgram          = 22
 };

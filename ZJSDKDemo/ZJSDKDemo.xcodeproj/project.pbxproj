@@ -1087,8 +1087,8 @@
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
 				574AA8FC25E517EE00098DCA /* Copy Files */,
-				EABECB6B5C61AECDD4FE297F /* [CP] Embed Pods Frameworks */,
 				A2BB58F4F3FAAF188B4F4F6D /* [CP] Copy Pods Resources */,
+				A3B036355C3F04D01CAE3DCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1202,7 +1202,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EABECB6B5C61AECDD4FE297F /* [CP] Embed Pods Frameworks */ = {
+		A3B036355C3F04D01CAE3DCB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

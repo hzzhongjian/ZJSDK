@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)eCPM;
 
 // 展示广告来源，枚举类型
+// zj广告位id
 - (ZJAdPlatformType)platformType;
 
 

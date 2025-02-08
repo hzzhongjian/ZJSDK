@@ -7,6 +7,8 @@
 
 #import "ZJCoreAdAdapter.h"
 #import "ZJMiniParamAdProtocol.h"
+#import <ZJSDKCore/ZJTierAdAdapter.h>
+
 NS_ASSUME_NONNULL_BEGIN
 @class ZJMiniParamAdAdapter;
 @protocol ZJMiniParamAdAdapterDelegate <NSObject>
@@ -24,8 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_miniParamAdAdapter:(ZJMiniParamAdAdapter *)miniParamAdAdapter onResp:(id)resp;
 @end
-@interface ZJMiniParamAdAdapter : ZJCoreAdAdapter<ZJMiniParamAdProtocol>
+
+// 修改之前，是继承ZJCoreAdAdapter这个类的
+
+@interface ZJMiniParamAdAdapter : ZJTierAdAdapter <ZJMiniParamAdProtocol>
+
 @property (nonatomic, weak) id <ZJMiniParamAdAdapterDelegate> delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

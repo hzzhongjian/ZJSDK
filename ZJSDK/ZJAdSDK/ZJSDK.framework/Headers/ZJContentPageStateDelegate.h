@@ -42,6 +42,25 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)zj_videoDidFailedToPlay:(id<ZJContentInfo>)videoContent withError:(NSError *)error;
 
+/// 一下四个代理方法只在横板视频里面调用
+/// 进入横版视频详情页
+/// @param viewController 详情页VC
+/// @param content 视频信息
+- (void)zj_horizontalFeedVideoDetailDidEnter:(UIViewController *)viewController contentInfo:(id<ZJContentInfo>)content;
+
+/// 离开横版视频详情页
+/// @param viewController 详情页VC
+- (void)zj_horizontalFeedVideoDetailDidLeave:(UIViewController *)viewController;
+
+/// 视频详情页appear
+/// @param viewController 详情页VC
+- (void)zj_horizontalFeedVideoDetailDidAppear:(UIViewController *)viewController;
+
+/// 详情页disappear
+/// @param viewController 详情页VC
+- (void)zj_horizontalFeedVideoDetailDidDisappear:(UIViewController *)viewController;
+
+
 @end
 
 
@@ -73,5 +92,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zjAdapter_contentTaskComplete:(id<ZJContentInfo>)content;
 @end
 
+/// 处理内容加载成功和失败的代理方法
+@protocol ZJContentPageLoadCallBackDelegate <NSObject>
+
+@optional
+/// 内容加载成功
+- (void)zj_contentPageLoadSuccess;
+
+/// 内容加载失败
+- (void)zj_contentPageLoadFailure:(NSError *)error;
+
+@end
 
 NS_ASSUME_NONNULL_END

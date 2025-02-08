@@ -17,9 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *userId;
 
 
-@property (nonatomic, readonly) CGRect adFrame;
+@property (nonatomic, assign) CGRect adFrame;
 
 - (void)loadAdAndShow;
+
+- (void)loadAd;
+
 @end
 
 NS_ASSUME_NONNULL_END

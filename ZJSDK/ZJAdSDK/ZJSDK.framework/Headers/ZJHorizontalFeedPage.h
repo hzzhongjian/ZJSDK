@@ -10,6 +10,8 @@
 #import "ZJContentPageHorizontalFeedCallBackDelegate.h"
 #import <ZJSDKCore/ZJContentInfo.h>
 
+// 视频内容横板
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJHorizontalFeedPage : ZJAd <ZJContentInfo>

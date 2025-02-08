@@ -16,9 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZJHorizontalFeedAdapter : ZJBaseContentAdapter<
 ZJContentAdapterStateProtocol,
 ZJAdapterContentAdapterVideoStateProtocol,
-ZJContentAdapterHorizontalFeedCallBackProtocol
+ZJContentAdapterHorizontalFeedCallBackProtocol,
+ZJContentAdapterLoadCallBackProtocol
 >
 @property (nonatomic, weak, nullable) id<ZJContentAdapterHorizontalFeedCallBackDelegate> zjAdapter_callBackDelegate;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

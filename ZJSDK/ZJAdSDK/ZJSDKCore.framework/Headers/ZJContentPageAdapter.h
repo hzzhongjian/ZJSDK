@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJContentPageAdapter : ZJBaseContentAdapter<
 ZJContentAdapterStateProtocol,
-ZJAdapterContentAdapterVideoStateProtocol
+ZJAdapterContentAdapterVideoStateProtocol,
+ZJContentAdapterLoadCallBackProtocol
 >
 
 /// 任务完成回调
@@ -27,6 +28,9 @@ ZJAdapterContentAdapterVideoStateProtocol
 ///  页面状态代理
 @property (nonatomic, weak) id <ZJContentAdapterStateDelegate> zjAdapter_stateDelegate;
 
+@property (nonatomic, weak) id <ZJContentAdapterLoadCallBackDelegate>zjAdapter_loadCallbackDelegate;
+
+/// 刷新页面数据
 - (void)tryToRefresh;
 
 @end

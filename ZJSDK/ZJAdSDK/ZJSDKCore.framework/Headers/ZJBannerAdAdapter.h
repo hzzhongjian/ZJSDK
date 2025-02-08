@@ -5,6 +5,7 @@
 //  Created by Robin on 2021/1/23.
 //
 
+#import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
 #import "ZJBannerAdProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
@@ -43,9 +44,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zjad_bannerAdViewDidCloseOtherController:(ZJBannerAdAdapter *)bannerAd;
 
 @end
+// ZJBannerAdAdapter是继承ZJCoreAdAdapter，
+@interface ZJBannerAdAdapter : ZJTierAdAdapter <ZJBannerAdProtocol>
 
-@interface ZJBannerAdAdapter : ZJCoreAdAdapter<ZJBannerAdProtocol>
 @property(nonatomic,weak) id<ZJBannerAdAdapterDelegate> delegate;
+
 @property (nonatomic,weak)UIView *adView;
 
 

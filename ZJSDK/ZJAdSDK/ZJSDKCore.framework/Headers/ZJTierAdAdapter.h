@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)loadAd;
 
 @end
+
 @interface ZJTierAdAdapter : ZJCoreAdAdapter<ZJTierAdapterProtocol>
 
 @end

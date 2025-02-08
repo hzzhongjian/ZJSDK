@@ -9,7 +9,7 @@
 #import <ZJSDKCore/ZJContentAdapterStateDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ZJContentAdapterHorizontalFeedCallBackDelegate <ZJAdapterContentAdapterVideoStateDelegate, ZJContentAdapterStateDelegate>
+@protocol ZJContentAdapterHorizontalFeedCallBackDelegate <ZJAdapterContentAdapterVideoStateDelegate, ZJContentAdapterStateDelegate, ZJContentAdapterLoadCallBackDelegate>
 @optional
 /// 进入横版视频详情页
 /// @param viewController 详情页VC
