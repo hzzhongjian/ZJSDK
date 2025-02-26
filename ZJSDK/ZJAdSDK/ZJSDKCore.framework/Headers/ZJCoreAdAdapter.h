@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong ,readonly) ZJAdUnitModel *config;
 ///结算价格
 @property (nonatomic, strong) NSString *secondPrice;
+
 @property (nonatomic, strong) NSString *cacheTime;
 
 /// 记录加载广告成功的时间戳

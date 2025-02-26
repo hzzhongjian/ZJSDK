@@ -8,12 +8,16 @@
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZJMultipleAdAdapterProtocol <NSObject>
--(void)loadAdWithCount:(NSUInteger)count;
+
+- (void)loadAdWithCount:(NSUInteger)count;
 
 @end
+
 @interface ZJMultipleAdAdapter : ZJCoreAdAdapter<ZJMultipleAdAdapterProtocol>
-@property (nonatomic,strong,readonly)NSArray *multipleResultObject;
+
+@property (nonatomic, strong, readonly) NSArray *multipleResultObject;
 
 @end
 

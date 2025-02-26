@@ -8,8 +8,13 @@
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZJTierAdapterProtocol <NSObject>
--(void)loadAd;
+
+- (void)loadAd;
+
+@optional
+- (void)loadAdWithCount:(NSUInteger)count;
 
 @end
 

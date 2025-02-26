@@ -12,8 +12,11 @@
 
 // 信息流广告
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJNativeExpressFeedAdManager ,ZJNativeExpressFeedAd;
+
 @protocol ZJNativeExpressFeedAdManagerDelegate <NSObject>
+
 @optional
 ///加载成功
 - (void)ZJ_nativeExpressFeedAdManagerSuccessToLoad:(ZJNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<ZJNativeExpressFeedAd *> *_Nullable)multipleResultObject;
