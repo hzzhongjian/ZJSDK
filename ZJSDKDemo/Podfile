@@ -14,9 +14,28 @@ target 'ZJSDKDemo' do
 
 #pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
 
+#pod 'BaiduMobAdSDK', '5.371'
+##mark 1，直接导入方式,一般打开此注释即可, :path => '../'
 
-##mark 1，直接导入方式,一般打开此注释即可
-   pod 'ZJSDK', :path => '../' #'~> 2.5.9.4' 
+#2.5.9.6 ---- 2.5.8.
+#   pod 'ZJSDK', '2.5.9.1'
+#  pod 'ZJSDK', '2.5.9.0'
+
+
+#pod 'ZJSDK', '2.5.8.20' 2.5.8.18
+
+#pod 'ZJSDK', '2.5.8.18' 优量汇激励视频id写死了
+
+
+
+#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.17'
+
+##################
+#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.16' ---- 2.5.8.15
+#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.14'
+#pod 'ZJSDK', '2.5.8.12'
+#pod 'ZJSDK', '2.5.8.11'
+  
 #如需接入内容包，需要制定本地，公共仓库的不支持内容包
 #   pod 'KSAdSDK', :path => '../ZJSDK/ZJSDKModuleKS/KS'
    
@@ -45,13 +64,13 @@ target 'ZJSDKDemo' do
   
   # Pods for ZJSDKDemo
   
-#  pod 'ZJSDK', :path => '../'
+  pod 'ZJSDK', :path => '../'
 #  pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
 
 #  pod 'ZJSDK/ZJSDKModuleJiaJi', :path => '../'
   
   
-#  pod 'BaiduMobAdSDK', '5.371'
+  
 
 end
  

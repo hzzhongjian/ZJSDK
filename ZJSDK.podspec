@@ -81,10 +81,10 @@ TODO: Add long description of the pod here.
     ### 穿山甲短剧SDK依赖
     ### source 'https://github.com/CocoaPods/Specs.git'
     ### source 'https://github.com/volcengine/volcengine-specs.git'
-    s.subspec 'ZJSDKModuleCSJDJSDK' do |ss|
-        ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
-        ss.dependency 'PangrowthX/shortplay', '2.7.0.0'
-    end    
+    # s.subspec 'ZJSDKModuleCSJDJSDK' do |ss|
+    #     ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
+    #     ss.dependency 'PangrowthX/shortplay', '2.7.0.0'
+    # end    
   
     ### 快手适配器兼容版
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|

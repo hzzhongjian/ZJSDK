@@ -82,7 +82,7 @@
         NSArray *section1 = @[@"开屏",@"激励视频",@"插屏",@"全屏视频",@"Banner"];
         NSArray *section2 = @[@"视频流",@"信息流",@"自渲染"];
         NSArray *section3 = @[@"视频内容列表",@"视频内容瀑布流",@"视频内容横版",@"视频内容图文"];
-        NSArray *section4 = @[@"短剧"];
+        NSArray *section4 = @[@"短剧",@"短剧-新对接方式(推荐)"];
         NSArray *section5 = @[@"新闻资讯",@"H5页面",@"悬浮广告",@"H5页面JS交互"];
         NSArray *section6 = @[@"微信小程序广告"];
         _adTypes = [NSArray arrayWithObjects:section1, section2, section3,section4,section5,section6, nil];
@@ -109,6 +109,8 @@
         [_demoVCDictionary setValue:@"ZJImageTextLoadVC" forKey:@"视频内容图文"];
 
         [_demoVCDictionary setValue:@"ZJTubePageVC" forKey:@"短剧"];
+        
+        [_demoVCDictionary setValue:@"ZJNewTubePageVC" forKey:@"短剧-新对接方式(推荐)"];
 
         [_demoVCDictionary setValue:@"ZJNewsAdViewController" forKey:@"新闻资讯"];
         [_demoVCDictionary setValue:@"ZJH5ViewController" forKey:@"H5页面"];

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -164,6 +164,8 @@
 		AB7A38DE28FFD4DB004629FD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */; };
 		AB7A38E028FFD4FD004629FD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DF28FFD4FD004629FD /* SafariServices.framework */; };
 		AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38E128FFD517004629FD /* ImageIO.framework */; };
+		AB8D73162D641B2E00C8CE22 /* ZJNewTubePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D73152D641B2E00C8CE22 /* ZJNewTubePageVC.m */; };
+		AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */ = {isa = PBXBuildFile; fileRef = AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */; };
 		ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */; };
 		ABCFD8392B453DC400D2449D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD7DD2B453DC400D2449D /* ViewController.m */; };
 		ABCFD85E2B453DC400D2449D /* ZJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8312B453DC400D2449D /* ZJHomeViewController.m */; };
@@ -495,6 +497,9 @@
 		AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AB7A38DF28FFD4FD004629FD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AB7A38E128FFD517004629FD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		AB8D73142D641B2E00C8CE22 /* ZJNewTubePageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNewTubePageVC.h; sourceTree = "<group>"; };
+		AB8D73152D641B2E00C8CE22 /* ZJNewTubePageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewTubePageVC.m; sourceTree = "<group>"; };
+		AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDK_Setting_5434885.json; sourceTree = "<group>"; };
 		AB9272712A33192B00139D33 /* ZJADIDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJADIDS.h; sourceTree = "<group>"; };
 		ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ZJSDK.podspec; path = ../ZJSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABCFD7DC2B453DC400D2449D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -691,6 +696,7 @@
 		0077470D24E182A200C30636 /* ZJSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */,
 				00619497251357B700E09415 /* lib */,
 				0061948D25133E5900E09415 /* Kits */,
 				AB04E5CD2C1AF47D0050C68B /* AdControllers */,
@@ -948,6 +954,8 @@
 				AB04E5D22C1AF47D0050C68B /* ZJTubePageStyle1VC.m */,
 				AB04E5D32C1AF47D0050C68B /* ZJTubePageVC.h */,
 				AB04E5D12C1AF47D0050C68B /* ZJTubePageVC.m */,
+				AB8D73142D641B2E00C8CE22 /* ZJNewTubePageVC.h */,
+				AB8D73152D641B2E00C8CE22 /* ZJNewTubePageVC.m */,
 			);
 			path = ZJTubePage;
 			sourceTree = "<group>";
@@ -1087,8 +1095,8 @@
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
 				574AA8FC25E517EE00098DCA /* Copy Files */,
-				A2BB58F4F3FAAF188B4F4F6D /* [CP] Copy Pods Resources */,
-				A3B036355C3F04D01CAE3DCB /* [CP] Embed Pods Frameworks */,
+				EA81A66FAFC6B773AB15265D /* [CP] Embed Pods Frameworks */,
+				04ED433A4C5374E713943000 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1140,6 +1148,7 @@
 				0077471E24E182A200C30636 /* LaunchScreen.storyboard in Resources */,
 				0077471B24E182A200C30636 /* Assets.xcassets in Resources */,
 				ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */,
+				AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1172,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
+		04ED433A4C5374E713943000 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4BF79167CC7928C6DDEE9AA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1185,24 +1211,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2BB58F4F3FAAF188B4F4F6D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3B036355C3F04D01CAE3DCB /* [CP] Embed Pods Frameworks */ = {
+		EA81A66FAFC6B773AB15265D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1306,6 +1315,7 @@
 				57EB05592635632F005DBA03 /* UIImage+MemoryCacheCost.m in Sources */,
 				001E72A1253AAC760086A93F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				57EB05652635632F005DBA03 /* SDImageAssetManager.m in Sources */,
+				AB8D73162D641B2E00C8CE22 /* ZJNewTubePageVC.m in Sources */,
 				AB04E6352C1AF47D0050C68B /* ZJNativeExpressAdTableViewCell.m in Sources */,
 				57EB05402635632F005DBA03 /* SDMemoryCache.m in Sources */,
 				57EB055A2635632F005DBA03 /* SDImageCacheConfig.m in Sources */,
