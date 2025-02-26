@@ -68,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 需要展示的bannerView
 - (UIView *)bannerView;
 
+- (void)showAd;
+
 @end
 
 NS_ASSUME_NONNULL_END

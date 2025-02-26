@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
-- (void)registerAppId:(NSString*)appId;
+- (void)registerAppId:(NSString *)appId;
 
 - (void)registerSDK:(ZJSDKInitModel *)initData;
 

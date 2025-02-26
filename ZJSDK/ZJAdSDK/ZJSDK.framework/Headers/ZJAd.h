@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <ZJSDKCore/ZJAdDebugLog.h>
 #import <ZJSDKCore/NSError+ZJAd.h>
-
+#import <ZJSDKCore/ZJAdInfo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,9 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSInteger)eCPM;
 
-// 展示广告来源，枚举类型
-// zj广告位id
-- (ZJAdPlatformType)platformType;
+// 返回广告相关信息，例如：广告ID，广告名字，广告平台类型
+- (ZJAdInfo *)adInfo;
 
 
 

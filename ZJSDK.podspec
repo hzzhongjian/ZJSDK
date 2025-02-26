@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.8'
+  s.version          = '2.5.9.9'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -77,6 +77,14 @@ TODO: Add long description of the pod here.
         ss.dependency 'Ads-CN-Beta/CSJMediation'
         ss.dependency 'Ads-CN-Beta/BUAdSDK'
     end
+
+    ### 穿山甲短剧SDK依赖
+    ### source 'https://github.com/CocoaPods/Specs.git'
+    ### source 'https://github.com/volcengine/volcengine-specs.git'
+    s.subspec 'ZJSDKModuleCSJDJSDK' do |ss|
+        ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
+        ss.dependency 'PangrowthX/shortplay', '2.7.0.0'
+    end    
   
     ### 快手适配器兼容版
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|

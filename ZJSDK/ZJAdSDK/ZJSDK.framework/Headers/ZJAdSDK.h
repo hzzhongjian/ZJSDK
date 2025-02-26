@@ -42,13 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param appId - 媒体ID
  @param callback 初始化信息
 */
-+ (void)registerAppId:(NSString*)appId callback:(void(^)(BOOL completed, NSDictionary *info))callback;
++ (void)registerAppId:(NSString *)appId callback:(void(^)(BOOL completed, NSDictionary *info))callback;
 
 /**
  日志打印设置
  */
 + (void)setLogLevel:(ZJAdSDKLogLevel)level;
-
 
 /**
  SDK版本号
