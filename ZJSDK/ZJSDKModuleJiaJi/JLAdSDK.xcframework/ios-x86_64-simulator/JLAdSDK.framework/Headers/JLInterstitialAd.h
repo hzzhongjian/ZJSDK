@@ -22,23 +22,27 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)jl_interstitialAdDidExpose:(JLInterstitialAd *)interstitialAd;
 - (void)jl_interstitialAdDidClick:(JLInterstitialAd *)interstitialAd;
 - (void)jl_interstitialAdDidClose:(JLInterstitialAd *)interstitialAd;
+- (void)jl_interstitialAdDidCloseOtherController:(JLInterstitialAd *)interstitialAd;
+- (void)jl_interstitialAdDidPresentFullScreenModal:(JLInterstitialAd *)interstitialAd;
 
 @end
 
 @interface JLInterstitialAd : NSObject <JLAdProtocol>
+
 @property (nonatomic, weak, nullable) id<JLInterstitialAdDelegate> delegate;
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
-/**
- *  自动播放时，是否静音。默认 YES。loadAd 前设置。
- */
+
+/// 自动播放时，是否静音。默认 YES。loadAd 前设置。
 @property (nonatomic, assign) BOOL videoMuted;
-- (instancetype)initWithSlotId:(NSString *) slotId adSize:(CGSize) adSize;
+
+- (instancetype)initWithSlotId:(NSString *)slotId adSize:(CGSize)adSize;
 - (void)loadAd;
-- (void)showAdFromRootViewController:(UIViewController *) viewController;
+- (void)showAdFromRootViewController:(UIViewController *)viewController;
 - (BOOL)isValid;
 - (NSInteger)eCPM;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

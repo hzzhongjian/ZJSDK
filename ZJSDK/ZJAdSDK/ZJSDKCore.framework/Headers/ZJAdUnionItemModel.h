@@ -26,6 +26,8 @@ FOUNDATION_EXPORT NSString * const ZJ_ADType_FeedPage;
 FOUNDATION_EXPORT NSString * const ZJ_ADType_HorizontalFeed;
 FOUNDATION_EXPORT NSString * const ZJ_ADType_ImageTextPage;
 FOUNDATION_EXPORT NSString * const ZJ_ADType_MiniParam;
+// 信息流和banner融合
+FOUNDATION_EXPORT NSString * const ZJ_ADType_NativeExpress_Banner;
 
 typedef NS_ENUM(NSInteger,ZJAdShowPriority){
     ZJAdShowPriority_normal, // 返回快

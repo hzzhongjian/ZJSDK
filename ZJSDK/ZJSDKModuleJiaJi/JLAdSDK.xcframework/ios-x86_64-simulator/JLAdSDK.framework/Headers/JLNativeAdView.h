@@ -13,15 +13,20 @@ NS_ASSUME_NONNULL_BEGIN
 @class JLNativeAdView;
 
 @protocol JLNativeAdViewDelegate <NSObject>
+
 @optional
+
 - (void)jl_nativeAdViewDidExpose:(JLNativeAdView *)nativeAdView;
 - (void)jl_nativeAdViewDidClick:(JLNativeAdView *)nativeAdView;
 - (void)jl_nativeAdViewDidCloseOtherController:(JLNativeAdView *)nativeAdView;
+- (void)jl_nativeAdViewDidPresentFullScreenModal:(JLNativeAdView *)nativeAdView;
 - (void)jl_nativeAdViewMediaDidPlayFinish:(JLNativeAdView *)nativeAdView;
 - (void)jl_nativeAdViewDislike:(JLNativeAdView *)nativeAdView;
+
 @end
 
 @interface JLNativeAdView : UIView
+
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, weak, nullable) id<JLNativeAdViewDelegate> delegate;
 @property (nonatomic, weak, readonly) UIView *mediaView;

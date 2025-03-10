@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)jl_bannerAdViewDidExpose:(JLBannerAdView *)bannerAd;
 - (void)jl_bannerAdViewDidClick:(JLBannerAdView *)bannerAd;
 - (void)jl_bannerAdViewDidClose:(JLBannerAdView *)bannerAd;
+- (void)jl_bannerAdViewDidCloseOtherController:(JLBannerAdView *)bannerAd;
+- (void)jl_bannerAdViewDidPresentFullScreenModal:(JLBannerAdView *)bannerAd;
 
 @end
 
@@ -29,17 +31,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<JLBannerAdViewDelegate> delegate;
 @property (nonatomic, assign) BOOL videoMuted;
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
-/**
- *  广告刷新间隔，范围 [30, 120] 秒，默认值 30 秒。设 0 则不刷新。 [可选，只对广点通、穿山甲有效]
- */
+
+/// 广告刷新间隔，范围 [30, 120] 秒，默认值 30 秒。设 0 则不刷新。 [可选，只对广点通、穿山甲有效]
 @property (nonatomic, assign) NSInteger autoSwitchInterval;
 
-- (instancetype)initWithFrame:(CGRect) frame slotId:(NSString *) slotId viewController:(UIViewController *) viewController;
+- (instancetype)initWithFrame:(CGRect)frame slotId:(NSString *)slotId viewController:(UIViewController *)viewController;
 
 - (void)loadAd;
 - (NSInteger)eCPM;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

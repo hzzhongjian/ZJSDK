@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.10'
+  s.version          = '2.5.9.11'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -101,12 +101,6 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
     end
 
-    ### MTG适配器兼容版
-    s.subspec 'ZJSDKModuleMTGCompatible' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-    end
-
     ### MTG适配器
     s.subspec 'ZJSDKModuleMTG' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
@@ -142,7 +136,6 @@ TODO: Add long description of the pod here.
     ### 谷歌适配器
     s.subspec 'ZJSDKModuleGoogle' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGoogle/*.a'
-        ss.source_files       = 'ZJSDK/ZJSDKModuleGoogle/*.h'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'Google-Mobile-Ads-SDK'
     end
@@ -204,7 +197,6 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleTanXCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
     end
 
     ### Tanx适配器
@@ -213,7 +205,6 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         # 可以把TanX的依赖更换为pod管理
         #    ss.dependency 'TanxSDK', '~> 3.5.3'
-        ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
         ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'

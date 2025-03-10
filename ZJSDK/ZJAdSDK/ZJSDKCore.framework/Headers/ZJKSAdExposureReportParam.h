@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, ZJKSAdExposureAdnMaterialType) {
 @property (nonatomic, copy) NSString *adnMaterialUrl;
 // 竞胜方的广告主标题
 @property (nonatomic, copy) NSString *adTitle;
-// 媒体侧的请求id
+// 竞胜方媒体侧的请求id
 @property (nonatomic, copy) NSString *adRequestId;
 // 竞胜方dsp本次请求是否展示
 @property (nonatomic, assign) ZJKSAdBiddingActionType isShow;
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger, ZJKSAdExposureAdnMaterialType) {
 @property (nonatomic, assign) ZJKSAdBiddingActionType isClick;
 
 // 广告类型
-@property (nonatomic, assign) ZJAdType adType;
+@property (nonatomic, assign) NSString *adType;
 
 @end
 

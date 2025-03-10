@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJBiddingReportModel : NSObject
+
 @property (nonatomic, assign) NSInteger firstPrice;
+
 @property (nonatomic, assign) NSInteger secondPrice;
 
 /// adn
@@ -36,6 +38,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///竞败原因，具体值的映射关系见附表4    
 @property (nonatomic, assign) ZJBiddingLossReason reason;
+
+/// 竞胜方请求ID
+@property (nonatomic, copy) NSString *adRequestId;
+
+/// 竞胜广告主名称
+@property (nonatomic, copy) NSString *adUserName;
+
+/// 竞胜广告标题
+@property (nonatomic, copy) NSString *adTitle;
+
+/// 竞胜广告物料类型
+@property (nonatomic, copy) NSString *adnMaterialType;
+
+
 
 @end
 

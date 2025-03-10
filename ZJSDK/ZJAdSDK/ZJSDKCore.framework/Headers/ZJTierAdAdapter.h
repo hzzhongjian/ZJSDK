@@ -13,9 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)loadAd;
 
-@optional
-- (void)loadAdWithCount:(NSUInteger)count;
-
 @end
 
 @interface ZJTierAdAdapter : ZJCoreAdAdapter<ZJTierAdapterProtocol>

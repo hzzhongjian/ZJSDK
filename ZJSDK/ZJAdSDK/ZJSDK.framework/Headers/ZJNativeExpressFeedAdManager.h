@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id <ZJNativeExpressFeedAdManagerDelegate> delegate;
 
+
 @property (nonatomic) CGSize adSize;
 
 ///视频静音， 默认：NO
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong ,readonly) NSArray <ZJNativeExpressFeedAd *> *data;
 
-
+// 部分联盟需要设置size [必选]
 - (instancetype)initWithPlacementId:(NSString *)placementId size:(CGSize)size;
 
 /**

@@ -14,13 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 @class JLNativeExpressAdRelatedView;
 
 @protocol JLNativeExpressAdRelatedViewDelegate <NSObject>
+
 @optional
+
 - (void)jl_nativeExpressAdRelatedViewDidRenderSuccess:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
 - (void)jl_nativeExpressAdRelatedViewDidRenderFail:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
 - (void)jl_nativeExpressAdRelatedViewDidExpose:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
 - (void)jl_nativeExpressAdRelatedViewDidClick:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
 - (void)jl_nativeExpressAdRelatedViewDidCloseOtherController:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
+- (void)jl_nativeExpressAdRelatedViewDidPresentFullScreenModal:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
 - (void)jl_nativeExpressAdRelatedViewDislike:(JLNativeExpressAdRelatedView *)nativeExpressAdRelatedView;
+
 @end
 
 @class JLInnerNativeExpressAdRelatedView;

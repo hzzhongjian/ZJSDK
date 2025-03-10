@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, JLVideoAutoPlayPolicy) {
 };
 
 @interface JLVideoConfig : NSObject
+
 @property (nonatomic, assign) JLVideoAutoPlayPolicy autoPlayPolicy;
 
 @property (nonatomic, assign) BOOL videoMuted;
@@ -31,6 +32,7 @@ typedef NS_ENUM(NSInteger, JLVideoAutoPlayPolicy) {
 @property (nonatomic, assign) BOOL progressViewEnable;
 
 @property (nonatomic, assign) BOOL coverImageEnable;
+
 @end
 
 NS_ASSUME_NONNULL_END

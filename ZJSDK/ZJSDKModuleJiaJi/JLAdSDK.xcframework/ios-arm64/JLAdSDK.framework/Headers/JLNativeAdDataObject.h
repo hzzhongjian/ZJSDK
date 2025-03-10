@@ -90,6 +90,8 @@ typedef NS_ENUM(NSInteger, JLNativeAdInteractionType) {
 @property (nonatomic, copy, readonly) NSString *imageUrl;
 @property (nonatomic, readonly) NSInteger imageWidth;
 @property (nonatomic, readonly) NSInteger imageHeight;
+@property (nonatomic, readonly) NSInteger videoWidth;
+@property (nonatomic, readonly) NSInteger videoHeight;
 @property (nonatomic, copy, readonly) NSString *iconUrl;
 @property (nonatomic, copy, readonly) NSArray *imageUrls;
 @property (nonatomic, readonly) JLNativeAdCreativeType creativeType;
@@ -97,9 +99,14 @@ typedef NS_ENUM(NSInteger, JLNativeAdInteractionType) {
 
 @property (nonatomic, strong) JLVideoConfig *videoConfig;
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
+
 - (NSInteger)eCPM;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
+
+/// 判断当前返回的广告素材是：图片/视频
+- (BOOL)isVideoMaterial;
+
 @end
 
 NS_ASSUME_NONNULL_END
