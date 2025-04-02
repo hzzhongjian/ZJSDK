@@ -8,9 +8,11 @@
 //#import "ZJMultipleAdAdapter.h"
 #import <ZJSDKCore/ZJMultipleAdAdapter.h>
 #import <ZJSDKCore/ZJNativeAdObject.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJNativeAdAdapter;
+
 @protocol ZJNativeAdAdapterDelegate <NSObject>
 /**
  广告数据回调
@@ -42,7 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
--(void)loadAdWithCount:(NSInteger)adCount;
+- (void)loadAdWithCount:(NSInteger)adCount;
+
 
 
 @end

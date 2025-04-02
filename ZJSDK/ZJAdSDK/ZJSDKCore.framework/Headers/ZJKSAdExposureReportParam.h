@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define kZJ_KSADBiddingFailureExposureReport @"ZJ_KSADBiddingFailureExposureReport"
+
 typedef NS_ENUM(NSUInteger, ZJKSAdBiddingActionType) {
     ZJKSAdBiddingActionTypeNone         = 0,    // 未点击&未曝光
     ZJKSAdBiddingActionTypeSuccess      = 1,    // 点击&曝光
@@ -39,7 +41,7 @@ typedef NS_ENUM(NSUInteger, ZJKSAdExposureAdnMaterialType) {
 // 竞胜平台类型
 @property (nonatomic, assign) ZJKSAdExposureAdnType adnType;
 // 竞胜平台名称，adnType=KSAdExposureAdnTypeOther时可以设置
-// Chuanshanjia/Guangdiantong/Baidu/Other
+// CSJ/GDT/BD/Other
 @property (nonatomic, copy) NSString *adnName;
 
 // 竞胜方dsp的广告主名称
@@ -59,6 +61,18 @@ typedef NS_ENUM(NSUInteger, ZJKSAdExposureAdnMaterialType) {
 
 // 广告类型
 @property (nonatomic, assign) NSString *adType;
+
+- (instancetype)initWithWinEcpm:(NSUInteger)winEcpm
+                        adnType:(ZJKSAdExposureAdnType)adnType
+                        adnName:(NSString *)adnName
+                     adUserName:(NSString *)adUserName
+                adnMaterialType:(ZJKSAdExposureAdnMaterialType)adnMaterialType
+                 adnMaterialUrl:(NSString *)adnMaterialUrl
+                        adTitle:(NSString *)adTitle
+                    adRequestId:(NSString *)adRequestId
+                         isShow:(ZJKSAdBiddingActionType)isShow
+                        isClick:(ZJKSAdBiddingActionType)isClick
+                         adType:(NSString *)adType;
 
 @end
 

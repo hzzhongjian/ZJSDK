@@ -11,11 +11,14 @@
 #import <ZJSDKCore/ZJInterstitialAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJInterstitialAd;
+
 @protocol ZJInterstitialAdDelegate <NSObject>
+
 @optional
 ///插屏广告加载成功
-- (void)zj_interstitialAdDidLoad:(ZJInterstitialAd*)ad;
+- (void)zj_interstitialAdDidLoad:(ZJInterstitialAd *)ad;
 
 ///插屏广告加载失败
 - (void)zj_interstitialAdDidLoadFail:(ZJInterstitialAd*)ad error:(nullable NSError *)error;
@@ -42,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,weak) id<ZJInterstitialAdDelegate>delegate;
 
 @property (nonatomic,strong,nullable)ZJInterstitialAdAdapter *currentAdapter;
+
 @end
 
 NS_ASSUME_NONNULL_END

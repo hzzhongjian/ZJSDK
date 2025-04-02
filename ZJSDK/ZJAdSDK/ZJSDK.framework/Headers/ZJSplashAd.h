@@ -9,10 +9,13 @@
 #import <ZJSDK/ZJTierAd.h>
 #import <ZJSDKCore/ZJSplashAdProtocol.h>
 #import <ZJSDKCore/ZJSplashAdAdapter.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJSplashAd;
+
 @protocol ZJSplashAdDelegate <NSObject>
+
 @optional
 /**
  *  开屏广告素材加载成功
@@ -62,12 +65,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 奖励触发
 - (void)zj_splashAdDidRewardEffective:(ZJSplashAd *)splashAd withInfo:(nullable NSDictionary *)info;
+
 @end
 
 
 @interface ZJSplashAd : ZJTierAd<ZJSplashAdProtocol>
 
 @property (nonatomic, weak) id <ZJSplashAdDelegate> delegate;
+
 @property (nonatomic, strong,nullable) ZJSplashAdAdapter *currentAdapter;
 
 @end

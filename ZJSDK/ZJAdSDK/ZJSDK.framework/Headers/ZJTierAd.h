@@ -14,17 +14,23 @@
 #import "ZJTierAdLoader.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZJBiddingProtocol <NSObject>
+
 @required
+
 /// 广告数据和联盟素材加载处理成功，但是没有加载
--(void)dealSuccessResult;
+- (void)dealSuccessResult;
+
 /// 广告数据和联盟素材加载失败
--(void)dealFailResultWithError:(NSError*)error;
+- (void)dealFailResultWithError:(NSError *)error;
+
 /// 创建Tier的加载器，处理ad适配器
--(ZJTierAdLoader *)createTierLoader:(NSArray <ZJAdUnitModel *>*)tiers showPriority:(ZJAdShowPriority)showPriority;
+- (ZJTierAdLoader *)createTierLoader:(NSArray <ZJAdUnitModel *> *)tiers showPriority:(ZJAdShowPriority)showPriority;
 
 @optional
 - (NSInteger)getCountDownInterval;
+
 @end
 
 

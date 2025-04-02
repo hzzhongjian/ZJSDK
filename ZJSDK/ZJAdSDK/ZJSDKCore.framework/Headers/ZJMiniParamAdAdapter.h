@@ -10,8 +10,11 @@
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJMiniParamAdAdapter;
+
 @protocol ZJMiniParamAdAdapterDelegate <NSObject>
+
 @optional
 /**
  *  小程序唤起成功
@@ -25,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zj_miniParamAdAdapterAwakeFail:(ZJMiniParamAdAdapter *)miniParamAdAdapter error:(NSError *)error;
 
 - (void)zj_miniParamAdAdapter:(ZJMiniParamAdAdapter *)miniParamAdAdapter onResp:(id)resp;
+
 @end
 
 // 修改之前，是继承ZJCoreAdAdapter这个类的

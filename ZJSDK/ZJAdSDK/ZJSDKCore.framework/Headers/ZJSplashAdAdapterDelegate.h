@@ -8,19 +8,21 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJSplashAdAdapter;
+
 @protocol ZJSplashAdAdapterDelegate <NSObject>
 
 @optional
 /**
  *  开屏广告素材加载成功
  */
--(void)zj_splashAdAdapterDidLoad:(ZJSplashAdAdapter *)splashAdAdapter;
+- (void)zj_splashAdAdapterDidLoad:(ZJSplashAdAdapter *)splashAdAdapter;
 
 /**
  *  开屏广告成功展示
  */
--(void)zj_splashAdAdapterSuccessPresentScreen:(ZJSplashAdAdapter *)splashAdAdapter;
+- (void)zj_splashAdAdapterSuccessPresentScreen:(ZJSplashAdAdapter *)splashAdAdapter;
 
 /**
  *  开屏广告点击回调
@@ -61,6 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 奖励触发
 - (void)zj_splashAdAdapterDidRewardEffective:(ZJSplashAdAdapter *)splashAdAdapter withInfo:(nullable NSDictionary *)info;
+
 @end
 
 NS_ASSUME_NONNULL_END

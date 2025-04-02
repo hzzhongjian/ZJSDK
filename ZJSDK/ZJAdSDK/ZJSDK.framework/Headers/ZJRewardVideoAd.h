@@ -11,8 +11,11 @@
 #import <ZJSDKCore/ZJRewardVideoAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class  ZJRewardVideoAd;
+
 @protocol ZJRewardVideoAdDelegate <NSObject>
+
 @optional
 /**
 广告数据加载成功回调

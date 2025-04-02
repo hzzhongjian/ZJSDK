@@ -11,10 +11,11 @@
 #import <ZJSDKCore/ZJAdDebugLog.h>
 #import <ZJSDKCore/NSError+ZJAd.h>
 #import <ZJSDKCore/ZJAdInfo.h>
+#import <ZJSDKCore/ZJAdProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJAd : NSObject
+@interface ZJAd : NSObject <ZJAdProtocol>
 
 // 广告位ID
 @property(nonatomic,copy,readonly) NSString *placementId;
@@ -37,7 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 返回广告相关信息，例如：广告ID，广告名字，广告平台类型
 - (ZJAdInfo *)adInfo;
 
+// 判断广告是否有效，默认从广告加载成功到广告过期，30分钟的时效
+- (BOOL)pmAdValid;
 
+// 获取本条广告一些额外信息
+- (NSDictionary *)getExtraInfo;
 
 @end
 

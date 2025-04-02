@@ -126,6 +126,9 @@ NS_ASSUME_NONNULL_BEGIN
 /*! @abstract 解锁流程取消 */
 - (void)zjTubePageTierLoader_shortplayPlayletDetailUnlockFlowCancel:(id<ZJContentInfo>)content;
 
+/*! 自定义解锁弹窗 cancelUnlockCallback取消回调，unlockCallback确认的回调 */
+- (void)zjTubePageTierLoader_shortplayPlayletDetailUnlockFlowCancelUnlock:(void (^)(void))cancelUnlockCallback
+                                                unlockCallback:(void(^)(void))unlockCallback;
 
 /*! @abstract 解锁流程结束，回调解锁结果
  *  - success: 是否解锁成功

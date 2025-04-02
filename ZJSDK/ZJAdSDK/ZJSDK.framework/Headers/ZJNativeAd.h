@@ -10,9 +10,11 @@
 #import <ZJSDKCore/ZJNativeAdObject.h>
 #import <ZJSDKCore/ZJNativeAdView.h>
 #import "ZJMultipleAd.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJNativeAdDelegate <NSObject>
+
 @optional
 /**自渲染广告加载回调*/
 - (void)zj_nativeAdLoaded:(NSArray<ZJNativeAdObject *> * _Nullable)multipleResultObject error:(NSError * _Nullable)error;

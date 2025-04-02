@@ -8,6 +8,7 @@
 #import "ZJTierAdAdapter.h"
 #import "ZJSplashAdProtocol.h"
 #import "ZJSplashAdAdapterDelegate.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJSplashAdAdapter : ZJTierAdAdapter<ZJSplashAdProtocol>
@@ -65,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zj_splashAdDisplayError:(NSError *)error;
 
 /// 事件上报
--(void)reportWithEvent:(ZJEventString)event supplementMsg:(nullable NSString *)supplementMsg;
+- (void)reportWithEvent:(ZJEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 
 
 /// 奖励触发

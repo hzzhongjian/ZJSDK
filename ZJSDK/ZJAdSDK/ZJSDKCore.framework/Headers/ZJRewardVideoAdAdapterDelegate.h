@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJRewardVideoAdAdapter;
+
 @protocol ZJRewardVideoAdAdapterDelegate <NSObject>
 
 - (void)zj_rewardVideoAdAdapterDidLoad:(ZJRewardVideoAdAdapter *)adapter;

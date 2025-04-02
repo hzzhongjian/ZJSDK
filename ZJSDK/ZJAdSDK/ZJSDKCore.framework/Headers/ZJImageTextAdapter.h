@@ -23,7 +23,9 @@ ZJContentAdapterImageTextDetailProtocol
 >
 
 @property (nonatomic, weak, nullable) id<ZJContentAdapterHorizontalFeedCallBackDelegate> zjAdapter_callBackDelegate;
+
 @property (nonatomic, weak, nullable) id<ZJContentAdapterImageTextDetailDelegate> zjAdapter_imageTextDelegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

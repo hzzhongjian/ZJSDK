@@ -11,7 +11,9 @@
 #import <ZJSDKCore/ZJFullScreenVideoAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJFullScreenVideoAd;
+
 @protocol ZJFullScreenVideoAdDelegate <NSObject>
 
 //广告加载成功

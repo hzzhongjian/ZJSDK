@@ -10,11 +10,14 @@
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZJTierProtocol <NSObject>
 
 @required
--(ZJTierAdAdapter *)createTierAdapterForUnit:(ZJAdUnitModel *)unit;
--(void)setCacheAdapter:(ZJTierAdAdapter *)cacheAdapter;
+- (ZJTierAdAdapter *)createTierAdapterForUnit:(ZJAdUnitModel *)unit;
+
+- (void)setCacheAdapter:(ZJTierAdAdapter *)cacheAdapter;
+
 @end
 
 @interface ZJTierAdLoader : NSObject <ZJTierProtocol>
@@ -22,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nullable successAdapters, NSMutableArray <NSError *>*_Nullable tierFailArray);
 
 @property (nonatomic,strong)dispatch_semaphore_t semaphore;
+
 @property (nonatomic, strong) dispatch_queue_t semaphoreQueue;
 
 @property (nonatomic, nullable, copy) RequestLevelCompleteBlk completeBlk;
@@ -47,12 +51,12 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nul
                      timeoutInterval:(CGFloat)timeoutInterval
                         showPriority:(ZJAdShowPriority)showPriority;
 
--(void)startLoad;
+- (void)startLoad;
 
 /// 联盟适配器素材加载成功
--(void)unitAdapterDidLoad:(ZJTierAdAdapter *)adapter;
+- (void)unitAdapterDidLoad:(ZJTierAdAdapter *)adapter;
 /// 联盟适配器素材加载失败
--(void)unitAdapterLoadFail:(ZJTierAdAdapter *)adapter error:(NSError *)error;
+- (void)unitAdapterLoadFail:(ZJTierAdAdapter *)adapter error:(NSError *)error;
 
 @end
 

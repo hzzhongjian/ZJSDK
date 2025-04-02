@@ -6,8 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 NS_ASSUME_NONNULL_BEGIN
+
 @class UIViewController;
+
 @protocol ZJRewardVideoAdProtocol <NSObject>
 /** required.
  由接入方提供urseId

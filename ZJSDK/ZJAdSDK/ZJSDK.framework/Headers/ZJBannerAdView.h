@@ -10,8 +10,11 @@
 #import <ZJSDKCore/ZJBannerAdProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJBannerAdView;
+
 @protocol ZJBannerAdViewDelegate <NSObject>
+
 @optional
 /**
  banner广告加载成功
@@ -76,6 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSArray *)getFillFailureMessages;
+
 @end
 
 NS_ASSUME_NONNULL_END

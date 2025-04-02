@@ -7,22 +7,28 @@
 
 #import <UIKit/UIKit.h>
 #import "ZJNativeAdObject.h"
+#import <ZJSDKCore/ZJKSAdExposureReportParam.h>
+#import <ZJSDKCore/ZJAdUnionItemModel.h>
+
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJNativeAdAdapterView;
+
 @protocol ZJNativeAdAdapterViewDelegate <NSObject>
 
 @optional
 //广告曝光回调
--(void)zjAdapter_nativeAdViewWillExpose:(ZJNativeAdAdapterView *)nativeAdView;
+- (void)zjAdapter_nativeAdViewWillExpose:(ZJNativeAdAdapterView *)nativeAdView;
 //广告点击回调
--(void)zjAdapter_nativeAdViewDidClick:(ZJNativeAdAdapterView *)nativeAdView;
+- (void)zjAdapter_nativeAdViewDidClick:(ZJNativeAdAdapterView *)nativeAdView;
 //广告详情页关闭回调
--(void)zjAdapter_nativeAdDetailViewClosed:(ZJNativeAdAdapterView *)nativeAdView;
+- (void)zjAdapter_nativeAdDetailViewClosed:(ZJNativeAdAdapterView *)nativeAdView;
 //广告详情页面即将展示回调
--(void)zjAdapter_nativeAdDetailViewWillPresentScreen:(ZJNativeAdAdapterView *)nativeAdView;
-
+- (void)zjAdapter_nativeAdDetailViewWillPresentScreen:(ZJNativeAdAdapterView *)nativeAdView;
 //当点击应用下载或者广告调用系统程序打开时调用
--(void)zjAdapter_NativeAdViewApplicationWillEnterBackground:(ZJNativeAdAdapterView *)nativeAdView;
+- (void)zjAdapter_NativeAdViewApplicationWillEnterBackground:(ZJNativeAdAdapterView *)nativeAdView;
+//广告曝光错误
+- (void)zjAdapter_nativeAdViewShowError:(ZJNativeAdAdapterView *)nativeAdView error:(NSError *)error;
 
 @end
 
@@ -82,16 +88,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //广告曝光回调
--(void)zjAdapter_nativeAdViewWillExpose;
+- (void)zjAdapter_nativeAdViewWillExpose;
+
 //广告点击回调
--(void)zjAdapter_nativeAdViewDidClick;
+- (void)zjAdapter_nativeAdViewDidClick;
+
 //广告详情页关闭回调
--(void)zjAdapter_nativeAdDetailViewClosed;
+- (void)zjAdapter_nativeAdDetailViewClosed;
+
 //广告详情页面即将展示回调
--(void)zjAdapter_nativeAdDetailViewWillPresentScreen;
+- (void)zjAdapter_nativeAdDetailViewWillPresentScreen;
 
 //当点击应用下载或者广告调用系统程序打开时调用
--(void)zjAdapter_NativeAdViewApplicationWillEnterBackground;
+- (void)zjAdapter_NativeAdViewApplicationWillEnterBackground;
+
+// 广告曝光错误
+- (void)zjAdapter_nativeAdViewShowError:(NSError *)error;
 
 
 @property (nonatomic, strong) UIView *superRenderView;
@@ -100,7 +112,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readwrite) BOOL mutedIfCan;
 
 /// 部分联盟设置了视频视图后需要重绘UI
--(void)resizeIfNeed;
+- (void)resizeIfNeed;
+
+// bidding失败，上报给快手平台的回调
+@property (nonatomic, copy) void(^ksBiddingFailureExposureReportBlock)(ZJKSAdExposureReportParam *param);
+
+@property (nonatomic, assign) BOOL hasShown;
+
 @end
 
 NS_ASSUME_NONNULL_END

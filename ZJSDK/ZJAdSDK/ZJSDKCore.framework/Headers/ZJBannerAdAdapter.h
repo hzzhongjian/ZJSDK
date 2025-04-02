@@ -8,9 +8,12 @@
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
 #import "ZJBannerAdProtocol.h"
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJBannerAdAdapter;
+
 @protocol ZJBannerAdAdapterDelegate <NSObject>
 /**
  banner广告加载成功

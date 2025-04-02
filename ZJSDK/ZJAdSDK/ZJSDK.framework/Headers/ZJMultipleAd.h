@@ -15,14 +15,21 @@
 #import  <ZJSDK/ZJMultipleTierAdLoader.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZJMultipleProtocol <NSObject>
+
 @required
--(void)dealSuccessResult;
--(void)dealFailResultWithError:(NSError*)error;
--(ZJMultipleTierAdLoader *)createTierLoader:(NSArray <ZJAdUnitModel *>*)tiers showPriority:(ZJAdShowPriority)showPriority;
+- (void)dealSuccessResult;
+
+- (void)dealFailResultWithError:(NSError*)error;
+
+- (ZJMultipleTierAdLoader *)createTierLoader:(NSArray <ZJAdUnitModel *>*)tiers showPriority:(ZJAdShowPriority)showPriority;
 
 @optional
+
 - (NSInteger)getCountDownInterval;
+
+
 @end
 
 
@@ -57,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong,nullable)ZJMultipleAdAdapter *currentAdapter;
 
--(void)loadAdWithCount:(NSUInteger)count;
+- (void)loadAdWithCount:(NSUInteger)count;
 
 @end
 

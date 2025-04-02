@@ -106,6 +106,4 @@ typedef NS_ENUM(NSInteger, ZJSDKAdInteractionType) {
     ZJSDKAdInteractionType_AppStore,       //open appstore
 };
 
-
-
 #endif /* ZJSDKAdEnum_h */

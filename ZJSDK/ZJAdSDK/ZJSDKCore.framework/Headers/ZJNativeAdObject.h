@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, ZJAdMaterialType) {
     ZJAdMaterialTypeSingle      =       2,      // 单图
     ZJAdMaterialTypeAtlas       =       3,      // 多图
 };
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJNativeAdObject : NSObject
@@ -101,16 +102,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 返回广告的eCPM，广告加载成功后调用有效，单位：分
  
  * @return 成功返回一个大于等于0的值，
- *
- * @Discussion 返回信息说明：
- *
- * -1表示无权限或后台出现异常，
- *
- * -2表示当前广告类型暂不支持实时竞价。
- *
- * -3表示实时竞价二价获取失败，请在收到广告加载成功之后的回调后获取
- *
- * -4表示pd价格获取失败，请在收到广告加载成功之后的回调后获取
  *
  */
 - (NSInteger)eCPM;

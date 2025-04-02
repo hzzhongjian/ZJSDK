@@ -51,6 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)ZJFeed_feedAdsManagerSuccessToLoad:(ZJNativeExpressFeedAdManagerAdapter *)adsManager nativeAds:(NSArray<ZJNativeExpressFeedAd *> *_Nullable)multipleResultObject;
 
 - (void)ZJFeed_feedAdsManager:(ZJNativeExpressFeedAdManagerAdapter *)adsManager didFailWithError:(NSError *_Nullable)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

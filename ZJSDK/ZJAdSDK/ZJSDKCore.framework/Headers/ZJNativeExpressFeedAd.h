@@ -31,6 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
  *广告即将展示
  */
 - (void)ZJ_nativeExpressFeedAdViewWillShow:(ZJNativeExpressFeedAd *)feedAd;
+
+/**
+ *广告展示错误
+ */
+- (void)ZJ_nativeExpressFeedAdViewShowError:(ZJNativeExpressFeedAd *)feedAd error:(NSError *)error;
+
 /**
  *广告点击
  */
@@ -60,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Whether render is ready
  */
-@property (nonatomic, assign,readonly) BOOL isReady;
+@property (nonatomic, assign, readonly) BOOL isReady;
 
 @property (nonatomic, copy) NSString *adId;
 
@@ -68,9 +74,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *platform;
 
+@property (nonatomic, strong) ZJAdUnitModel *config;
+
 @property (nonatomic, assign) ZJAdPlatformType platformType;
 
-@property(nonatomic,weak) id<ZJNativeExpressFeedAdDelegate> delegate;
+@property(nonatomic, weak) id<ZJNativeExpressFeedAdDelegate> delegate;
 
 /*
  *required.[必选]
@@ -96,6 +104,10 @@ NS_ASSUME_NONNULL_BEGIN
  * @return 成功返回一个大于等于0的值，
  */
 - (NSInteger)eCPM;
+
+
+// 广告是否有效，一般广告从加载到展示，默认30分钟的有效期，过了有效期请重新加载广告
+- (BOOL)pmAdValid;
 
 @end
 

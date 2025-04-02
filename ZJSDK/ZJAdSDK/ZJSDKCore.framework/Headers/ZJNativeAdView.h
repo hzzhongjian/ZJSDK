@@ -11,16 +11,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJNativeAdView;
+
 @protocol ZJNativeAdViewDelegate <NSObject>
+
 @optional
 //广告曝光回调
--(void)zj_nativeAdViewWillExpose:(ZJNativeAdView *)nativeAdView;
+- (void)zj_nativeAdViewWillExpose:(ZJNativeAdView *)nativeAdView;
 //广告点击回调
--(void)zj_nativeAdViewDidClick:(ZJNativeAdView *)nativeAdView;
+- (void)zj_nativeAdViewDidClick:(ZJNativeAdView *)nativeAdView;
 //广告详情页关闭回调
--(void)zj_nativeAdDetailViewClosed:(ZJNativeAdView *)nativeAdView;
+- (void)zj_nativeAdDetailViewClosed:(ZJNativeAdView *)nativeAdView;
 //广告详情页面即将展示回调
--(void)zj_nativeAdDetailViewWillPresentScreen:(ZJNativeAdView *)nativeAdView;
+- (void)zj_nativeAdDetailViewWillPresentScreen:(ZJNativeAdView *)nativeAdView;
+// 广告曝光错误
+- (void)zj_nativeAdViewShowError:(ZJNativeAdView *)nativeAdView error:(NSError *)error;
 
 @end
 
@@ -85,6 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 部分联盟设置了视频视图后需要重绘UI
 -(void)resizeIfNeed;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

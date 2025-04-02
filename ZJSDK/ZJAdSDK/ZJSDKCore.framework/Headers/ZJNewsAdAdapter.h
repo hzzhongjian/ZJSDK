@@ -8,8 +8,11 @@
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <ZJSDKCore/ZJNewsAdProtocol.h>
+
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJNewsAdAdapter;
+
 @protocol ZJNewsAdAdapterDelegate <NSObject>
 /**
  news广告加载成功
@@ -45,15 +48,25 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ZJNewsAdAdapter : ZJTierAdAdapter <ZJNewsAdProtocol>
+
 @property(nonatomic,weak) id<ZJNewsAdAdapterDelegate> delegate;
+
 @property (nonatomic,strong)UIView *adView;
-- (instancetype)initWithAdItemConfig:(ZJAdUnitModel *)adItemConfig frame:(CGRect)frame;
+
 @property (nonatomic, readonly) BOOL canGoBack;
+
 @property (nonatomic, readonly) BOOL canGoForward;
+
 @property (nonatomic, assign) BOOL enableGoBackGesture;
+
 @property (nonatomic, assign) BOOL enableSlide;
+
+- (instancetype)initWithAdItemConfig:(ZJAdUnitModel *)adItemConfig frame:(CGRect)frame;
+
 - (BOOL)goBack;
+
 - (BOOL)goForward;
+
 - (void)removeTimer;
 
 //- (void)reload;
@@ -89,6 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
  canGoBack状态监听
  */
 - (void)zjad_newsAdCanGoBackStateChange:(BOOL)canGoBack;
+
 @end
 
 NS_ASSUME_NONNULL_END

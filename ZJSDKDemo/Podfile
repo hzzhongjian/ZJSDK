@@ -64,8 +64,10 @@ target 'ZJSDKDemo' do
   
   # Pods for ZJSDKDemo
   
-  pod 'DSPSDK', '1.0.1.10'
+  pod 'DSPSDK', '1.0.1.13'
+  pod 'Ads-CN-Beta', '6.7.0.3'
   pod 'ZJSDK', :path => '../'
+  
 #  pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
 
 #  pod 'ZJSDK/ZJSDKModuleJiaJi', :path => '../'

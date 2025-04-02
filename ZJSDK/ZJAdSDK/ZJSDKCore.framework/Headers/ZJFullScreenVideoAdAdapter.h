@@ -8,8 +8,11 @@
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <UIKit/UIKit.h>
 #import "ZJSDKAdEnum.h"
+
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJFullScreenVideoAdAdapter;
+
 @protocol ZJfullScreenVideoAdAdapterDelegate <NSObject>
 
 - (void)zj_fullScreenVideoAdapterDidLoad:(ZJFullScreenVideoAdAdapter*)adapter;
@@ -41,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;
 
--(void)presentAdFromRootViewController:(UIViewController*)viewController;
+- (void)presentAdFromRootViewController:(UIViewController*)viewController;
 
 - (void)zj_fullScreenVideoDidLoad;
 
@@ -57,9 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_fullScreenVideoDidFail:(NSError * __nullable)error;
 
--(void)zj_fullScreenVideoPlayerStatus:(ZJMediaPlayerStatus)status;
+- (void)zj_fullScreenVideoPlayerStatus:(ZJMediaPlayerStatus)status;
 
--(void)zj_fullScreenVideoDetailDidPresent;
+- (void)zj_fullScreenVideoDetailDidPresent;
+
 @end
 
 NS_ASSUME_NONNULL_END

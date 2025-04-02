@@ -18,6 +18,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface ZJCoreAdAdapter : NSObject
 
 @property(nonatomic, strong ,readonly) ZJAdUnitModel *config;
@@ -29,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 记录加载广告成功的时间戳
 @property (nonatomic, assign) NSTimeInterval hasAdTimeInterval;
 
-/// 平台判断广告是否已过期（如有）
+/// 平台判断广告是否已过期（如有）,默认值yes，代表广告合法
 - (BOOL)pmAdValid;
 
 - (instancetype)initWithAdItemConfig:(ZJAdUnitModel *)adItemConfig;
@@ -43,7 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (Class)getAdapterClass:(ZJAdUnitModel *)adItemConfig;
-
 
 /**
  返回广告的eCPM，单位：分
@@ -98,6 +98,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // bidding失败，上报给快手平台的回调
 @property (nonatomic, copy) void(^ksBiddingFailureExposureReportBlock)(ZJKSAdExposureReportParam *param);
+
+// 曝光标识，避免重复上报曝光事件
+@property (nonatomic, assign) BOOL hasReportExposure;
 
 @end
 

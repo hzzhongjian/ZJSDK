@@ -174,6 +174,12 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 /// 流量组id
 @property (nonatomic, assign) long pos_template_id;
 
+/// 每次请求随机生成的唯一id
+@property (nonatomic, copy) NSString *uniqueDeviceID;
+
+/// 联盟提供的广告唯一标识
+@property (nonatomic, copy) NSString *adn_extra;
+
 @end
 
 NS_ASSUME_NONNULL_END

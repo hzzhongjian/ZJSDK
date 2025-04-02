@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJInterstitialAdAdapter;
+
 @protocol ZJInterstitialAdAdapterDelegate <NSObject>
 
 - (void)zj_interstitialAdAdapterDidLoad:(ZJInterstitialAdAdapter *)adapter;
@@ -24,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zj_interstitialAdAdapterDetailDidClose:(ZJInterstitialAdAdapter *)adapter;
 
 - (void)zj_interstitialAdAdapterDidFail:(ZJInterstitialAdAdapter *)adapter error:(NSError * __nullable)error;
+
 @end
 
 NS_ASSUME_NONNULL_END
