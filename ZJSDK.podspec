@@ -84,8 +84,8 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleCSJPlayletSDK' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/playlet/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
-        ss.dependency 'PangrowthX/shortplay', '2.7.0.1'
+        # ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
+        # ss.dependency 'PangrowthX/shortplay', '2.7.0.1'
     end    
   
     ### 快手适配器兼容版
