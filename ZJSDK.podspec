@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.12'
+  s.version          = '2.5.9.13'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -81,10 +81,12 @@ TODO: Add long description of the pod here.
     ### 穿山甲短剧SDK依赖
     ### source 'https://github.com/CocoaPods/Specs.git'
     ### source 'https://github.com/volcengine/volcengine-specs.git'
-    # s.subspec 'ZJSDKModuleCSJDJSDK' do |ss|
-    #     ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
-    #     ss.dependency 'PangrowthX/shortplay', '2.7.0.0'
-    # end    
+    s.subspec 'ZJSDKModuleCSJPlayletSDK' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/playlet/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
+        ss.dependency 'PangrowthX/shortplay', '2.7.0.1'
+    end    
   
     ### 快手适配器兼容版
     s.subspec 'ZJSDKModuleKSCompatible' do |ss|
@@ -266,6 +268,19 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
+    end
+
+    ###TaKu适配器兼容版
+    s.subspec 'ZJSDKModuleTaKuCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTaKu/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###TaKu适配器
+    s.subspec 'ZJSDKModuleTaKu' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTaKu/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'AnyThinkiOS', '~> 6.4.75'
     end
  
 end

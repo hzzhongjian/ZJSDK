@@ -54,6 +54,8 @@ typedef NS_ENUM(int, KSAdSourceLogoType) {
 @property (nonatomic, copy) NSString *appName;
 // product name (for h5)
 @property (nonatomic, copy) NSString *productName;
+// whether the ad has the rotate ability
+@property (nonatomic, assign) BOOL enableRotate;
 
 @end
 

@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJAdUnionItemModel.h"
+#import <ZJSDKCore/ZJAdUnionItemModel.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJAdPreferenceManager : NSObject

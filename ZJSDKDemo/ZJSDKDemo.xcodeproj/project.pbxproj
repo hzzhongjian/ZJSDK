@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -160,7 +160,6 @@
 		AB5ADDC52959AD22000495B7 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC42959AD22000495B7 /* QuickLook.framework */; };
 		AB5ADDC72959AD2F000495B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC62959AD2F000495B7 /* MessageUI.framework */; };
 		AB5ADDC92959AD3E000495B7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC82959AD3E000495B7 /* AVKit.framework */; };
-		AB7A38DC28FFD4D4004629FD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38B528FF9C1F004629FD /* StoreKit.framework */; };
 		AB7A38DE28FFD4DB004629FD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */; };
 		AB7A38E028FFD4FD004629FD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DF28FFD4FD004629FD /* SafariServices.framework */; };
 		AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38E128FFD517004629FD /* ImageIO.framework */; };
@@ -493,7 +492,6 @@
 		AB5ADDC42959AD22000495B7 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		AB5ADDC62959AD2F000495B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AB5ADDC82959AD3E000495B7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		AB7A38B528FF9C1F004629FD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AB7A38DF28FFD4FD004629FD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AB7A38E128FFD517004629FD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -530,7 +528,6 @@
 				AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */,
 				AB7A38E028FFD4FD004629FD /* SafariServices.framework in Frameworks */,
 				AB7A38DE28FFD4DB004629FD /* CFNetwork.framework in Frameworks */,
-				AB7A38DC28FFD4D4004629FD /* StoreKit.framework in Frameworks */,
 				576F37AA27698161000CEEE8 /* AdSupport.framework in Frameworks */,
 				57A7EC192681DC6C003C10E5 /* libc++abi.tbd in Frameworks */,
 				006193312512376300E09415 /* AVFoundation.framework in Frameworks */,
@@ -603,7 +600,6 @@
 				AB7A38E128FFD517004629FD /* ImageIO.framework */,
 				AB7A38DF28FFD4FD004629FD /* SafariServices.framework */,
 				AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */,
-				AB7A38B528FF9C1F004629FD /* StoreKit.framework */,
 				578A7B4727BB50F8004D86F4 /* libZJSDKModuleBD.a */,
 				57BD41FD279E40FC00C01CF6 /* libZJSDKModuleGoogle.a */,
 				57BD40142799584F00C01CF6 /* libZJSDKModuleGG.a */,
@@ -1095,8 +1091,8 @@
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
 				574AA8FC25E517EE00098DCA /* Copy Files */,
-				4F2FD0574FBA5F1DF1A7FAC5 /* [CP] Copy Pods Resources */,
-				E6CB773AD2F6C9519D5EAAF4 /* [CP] Embed Pods Frameworks */,
+				E012B98C99853420045530CC /* [CP] Copy Pods Resources */,
+				ACDBB47C092637F44263716E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1194,24 +1190,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F2FD0574FBA5F1DF1A7FAC5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6CB773AD2F6C9519D5EAAF4 /* [CP] Embed Pods Frameworks */ = {
+		ACDBB47C092637F44263716E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1226,6 +1205,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E012B98C99853420045530CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1525,7 +1521,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -1547,7 +1543,7 @@
 					"-ObjC",
 					"-l\"ObjC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zj.shop.towmall.hwxsx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.pangrowth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1583,7 +1579,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -1605,7 +1601,7 @@
 					"-ObjC",
 					"-l\"ObjC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zj.shop.towmall.hwxsx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.pangrowth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

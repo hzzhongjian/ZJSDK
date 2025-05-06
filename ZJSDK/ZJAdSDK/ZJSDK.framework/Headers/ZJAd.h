@@ -18,7 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZJAd : NSObject <ZJAdProtocol>
 
 // 广告位ID
-@property(nonatomic,copy,readonly) NSString *placementId;
+@property (nonatomic, copy, readonly) NSString *placementId;
+
+/// bidding广告竞价成功是否回传，由sdk内部使用
+@property (nonatomic, assign, readonly) BOOL isBiddingSuccessReport;
+
 /**
 *  构造方法
 *  详解：placementId - 广告位 ID
@@ -43,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 获取本条广告一些额外信息
 - (NSDictionary *)getExtraInfo;
+
+/// 竞胜成功的事件回调，由sdk内部使用。
+- (void)biddingSuccessCallbackEvent;
 
 @end
 

@@ -6,12 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ZJSDKCore/ZJKSAdExposureReportParam.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJMediaBidResult : NSObject
 
-//@property (nonatomic, strong)
++ (instancetype)sharedInstance;
+
+// -------------------回调给快手的曝光/点击事件----------------
+// bidding失败，上报给快手平台的回调
+@property (nonatomic, copy) void(^ksBiddingFailureExposureReportBlock)(ZJKSAdExposureReportParam *param);
 
 @end
 

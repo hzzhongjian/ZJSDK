@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_rewardVideoAdDisplayFailWithError:(NSError *)error;
 
+- (void)zj_rewardedVideoAdDidClickSkip;
+
 @end
 
 NS_ASSUME_NONNULL_END

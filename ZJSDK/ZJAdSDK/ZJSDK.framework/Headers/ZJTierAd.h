@@ -13,12 +13,12 @@
 #import <ZJSDKCore/ZJStrategyManager.h>
 #import "ZJTierAdLoader.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJBiddingProtocol <NSObject>
 
 @required
-
 /// 广告数据和联盟素材加载处理成功，但是没有加载
 - (void)dealSuccessResult;
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //ZJTierAd为刚开始重构时思路不清晰，命名有误，特此标注。应理解为ZJSingleAd，与ZJMultipleAd对应
-@interface ZJTierAd : ZJAd<ZJBiddingProtocol>{
+@interface ZJTierAd : ZJAd <ZJBiddingProtocol> {
     BOOL _needDelayLoadAd;
     BOOL _takeFastReturnAd;
     NSInteger eCPM1;
@@ -47,24 +47,23 @@ NS_ASSUME_NONNULL_BEGIN
 //倒计时器
 //@property (nonatomic,strong)ZJAdCountdown *countdown;
 //数据管理
-@property (nonatomic,strong)ZJAdPreferenceManager *adManager;
+@property (nonatomic, strong) ZJAdPreferenceManager *adManager;
 
 //错误信息数组
-@property (nonatomic,strong)NSMutableArray <NSError *>*adFailArray;
+@property (nonatomic, strong) NSMutableArray <NSError *>*adFailArray;
 
-@property (nonatomic,strong)NSMutableString *logString;
-
+@property (nonatomic, strong) NSMutableString *logString;
 
 //pd广告请求成功数组
-@property (nonatomic,strong)NSMutableArray <ZJTierAdAdapter *>*successAdaptersPD;
+@property (nonatomic, strong) NSMutableArray <ZJTierAdAdapter *> *successAdaptersPD;
 
 //bd广告请求成功数组
-@property (nonatomic,strong)NSMutableArray <ZJTierAdAdapter *>*successAdaptersBD;
+@property (nonatomic, strong) NSMutableArray <ZJTierAdAdapter *> *successAdaptersBD;
 
 
-@property (nonatomic,strong)ZJTierAdAdapter *ecpm1Adapter;
+@property (nonatomic, strong) ZJTierAdAdapter *ecpm1Adapter;
 
-@property (nonatomic,strong,nullable)ZJTierAdAdapter *currentAdapter;
+@property (nonatomic, strong, nullable)ZJTierAdAdapter *currentAdapter;
 
 - (void)loadAd;
 

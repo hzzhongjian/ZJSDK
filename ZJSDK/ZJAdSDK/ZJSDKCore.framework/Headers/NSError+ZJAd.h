@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJAdUnionItemModel.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 #define kZJTANXErrorDomain @"COM.ZJ.TANX.SDK"
@@ -24,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define kZJOCTOPUSErrorDomain @"COM.ZJ.OCTOPUS.SDK"
 #define kZJYKErrorDomain @"COM.ZJ.YK.SDK"
 #define kZJQIYUNErrorDomain @"COM.ZJ.QIYUN.SDK"
+#define kZJTAKUErrorDomain @"COM.ZJ.TAKU.SDK"
 
 typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
 {
@@ -31,8 +33,8 @@ typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
     ZJErrorCodeAd_Unregistered = 100101, // 未注册
     ZJErrorCodeAd_Timeout = 100200, // 请求超时
     ZJErrorCodeAd_LackLibraries = 100201, // 缺少依赖库
-    ZJErrorCodeAd_AllAdReturnError = 100203, // 广告返回错误
     ZJErrorCodeAd_AdId = 100202, // adid错误
+    ZJErrorCodeAd_AllAdReturnError = 100203, // 广告返回错误
     ZJErrorCodeAd_is_being_limit = 100301, // 广告被限制
     ZJErrorCodeAd_WXLibrarieMissed = 100403, // 微信OpenSDK依赖缺失
     ZJErrorCodeAd_WXLibrarieRegistFail = 100404, // 微信注册失败

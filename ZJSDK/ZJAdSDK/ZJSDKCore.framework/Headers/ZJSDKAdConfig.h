@@ -6,8 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJSDKAdEnum.h"
-#import "ZJAdsModel.h"
+#import <ZJSDKCore/ZJSDKAdEnum.h>
+#import <ZJSDKCore/ZJAdsModel.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJSDKAdConfig : NSObject

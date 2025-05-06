@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJSDKAdEnum.h>
 #import <ZJSDKCore/ZJBiddingLossRelease.h>
+#import <ZJSDKCore/ZJAdExposureReportParam.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJBiddingReportModel : NSObject
@@ -42,6 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 竞胜方请求ID
 @property (nonatomic, copy) NSString *adRequestId;
 
+// 竞胜平台类型
+@property (nonatomic, assign) ZJAdExposureAdnType adnType;
+
+// 竞胜平台名称
+@property (nonatomic, copy) ZJAdADNName adnName;
+
 /// 竞胜广告主名称
 @property (nonatomic, copy) NSString *adUserName;
 
@@ -49,9 +57,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *adTitle;
 
 /// 竞胜广告物料类型
-@property (nonatomic, copy) NSString *adnMaterialType;
+@property (nonatomic, assign) ZJAdExposureAdnMaterialType adnMaterialType;
 
+// 竞胜方广告素材url
+@property (nonatomic, copy) NSString *adnMaterialUrl;
 
+/// 竞胜方dsp本次请求是否展示
+@property (nonatomic, assign) ZJAdBiddingActionType isShow;
+
+/// 竞胜方dsp本次pv是否被点击
+@property (nonatomic, assign) ZJAdBiddingActionType isClick;
+
+/// 该字段用来标识这些数据用于传哪里的，如果为YES，代表是上传到暴露给媒体的接口使用
+@property (nonatomic, assign) BOOL biddingFailureFlag;
 
 @end
 

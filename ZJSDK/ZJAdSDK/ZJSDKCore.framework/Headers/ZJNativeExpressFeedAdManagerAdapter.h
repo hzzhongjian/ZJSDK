@@ -6,7 +6,7 @@
 //
 
 #import <ZJSDKCore/ZJMultipleAdAdapter.h>
-#import "ZJNativeExpressFeedAd.h"
+#import <ZJSDKCore/ZJNativeExpressFeedAd.h>
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

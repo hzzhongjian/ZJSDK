@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///自渲染广告是否允许摇一摇
 @property (nonatomic, assign) BOOL enableShake;
+///自渲染广告是否允许扭一扭
+@property (nonatomic, assign) BOOL enableRotate;
 
 @end
 

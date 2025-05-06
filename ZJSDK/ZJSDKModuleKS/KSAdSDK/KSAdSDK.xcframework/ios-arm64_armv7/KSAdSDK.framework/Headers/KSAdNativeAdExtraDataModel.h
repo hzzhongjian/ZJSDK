@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否开启摇一摇，false或者不赋值，不开启，true开启
 @property (nonatomic, assign) BOOL enableShake;
+/// 是否开启扭一扭，不赋值默认true
+@property (nonatomic, assign) BOOL enableRotate;
 
 @end
 

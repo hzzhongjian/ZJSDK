@@ -6,8 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZJNativeAdObject.h"
-#import "ZJAdEventReport.h"
+#import <ZJSDKCore/ZJNativeAdObject.h>
+#import <ZJSDKCore/ZJAdEventReport.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJNativeAdView;

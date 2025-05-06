@@ -82,6 +82,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)zj_rewardVideoAd:(ZJRewardVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error;
 
+/**
+ 用户点击视频跳过按钮
+ @param rewardedVideoAd ZJRewardVideoAd 实例
+ */
+- (void)zj_rewardVideoAdDidClickSkip:(ZJRewardVideoAd *)rewardedVideoAd;
+
 @end
 
 

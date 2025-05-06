@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJSDKAdEnum.h"
+#import <ZJSDKCore/ZJSDKAdEnum.h>
 
 @class ZJSDKInitModel;
 
@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)registerSDK:(ZJSDKInitModel *)initData;
 
 @property (nonatomic, copy) void(^registrationCompleted)(BOOL completed, NSDictionary *info);
+
+/// sdk初始化完成
+@property (nonatomic, assign, readonly) BOOL sdkInitComplete;
 
 @property (nonatomic, assign, readonly) BOOL registerAppIdEnd;
 
@@ -39,8 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerPlatform:(NSString *)platform;
 
-// 记录每次加载，随机生成的唯一设备标识
-@property (nonatomic, strong) NSString *uniqueDeviceID;
 
 @end
 

@@ -5,9 +5,9 @@
 //  Created by Robin on 2020/12/22.
 //
 
-#import "ZJTierAdAdapter.h"
-#import "ZJSplashAdProtocol.h"
-#import "ZJSplashAdAdapterDelegate.h"
+#import <ZJSDKCore/ZJTierAdAdapter.h>
+#import <ZJSDKCore/ZJSplashAdProtocol.h>
+#import <ZJSDKCore/ZJSplashAdAdapterDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

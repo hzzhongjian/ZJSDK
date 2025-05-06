@@ -7,7 +7,7 @@
 
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <UIKit/UIKit.h>
-#import "ZJSDKAdEnum.h"
+#import <ZJSDKCore/ZJSDKAdEnum.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

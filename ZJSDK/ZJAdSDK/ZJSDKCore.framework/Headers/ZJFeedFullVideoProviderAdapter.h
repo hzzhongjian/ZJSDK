@@ -6,9 +6,9 @@
 //
 
 #import <ZJSDKCore/ZJMultipleAdAdapter.h>
-#import "ZJFeedFullVideoProviderProtocol.h"
-#import "ZJFeedFullVideoProviderAdapterDelegate.h"
-#import "ZJFeedFullVideoAdAdapterView.h"
+#import <ZJSDKCore/ZJFeedFullVideoProviderProtocol.h>
+#import <ZJSDKCore/ZJFeedFullVideoProviderAdapterDelegate.h>
+#import <ZJSDKCore/ZJFeedFullVideoAdAdapterView.h>
 
 
 NS_ASSUME_NONNULL_BEGIN

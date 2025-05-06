@@ -36,12 +36,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)showAdInViewController:(UIViewController *)viewController;
 
+// 为了适配插屏转激励
+- (void)presentAdFromRootViewController:(UIViewController*)viewController;
+// 为了适配插屏转激励
+@property (nonatomic) BOOL mutedIfCan;
+
 ///交易ID 需开启服务端校验才能获取交易ID
 @property (nonatomic, copy, readonly) NSString *trade_id;
 ///验证dic
 @property (nonatomic, copy, readonly) NSDictionary *validationDictionary;
-
-
 ///交易ID
 @property (nonatomic, copy, readonly) NSString *trans_id DEPRECATED_MSG_ATTRIBUTE("use trade_id instead.");
 

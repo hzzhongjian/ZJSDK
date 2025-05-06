@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "KSNativeAd.h"
 #import "KSVideoAdView.h"
+#import "KSNativeAdRotateView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
  Video ad view. Need to actively add to the view.
  */
 @property (nonatomic, strong, readonly, nullable) KSVideoAdView *videoAdView;
+
+/**
+ Rotate view. Need to actively add to the view.
+ */
+@property (nonatomic, strong) KSNativeAdRotateView *rotateView;
 
 /**
  Refresh the data every time you get new datas in order to show ad perfectly.

@@ -5,7 +5,7 @@
 //  Created by 麻明康 on 2022/8/1.
 //
 
-#import "ZJSplashAdAdapter.h"
+#import <ZJSDKCore/ZJSplashAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

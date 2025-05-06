@@ -72,6 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)ksad_splashAdDidAutoDismiss:(KSSplashAdView *)splashAdView;
 
+/**
+ * splash 广告关闭  ( 自动dismiss关闭 & 点击跳过关闭   关闭行为统一走这个回调 )
+ */
+- (void)ksad_splashAdDidClose:(KSSplashAdView *)splashAdView;
+
 @end
 
 @interface KSSplashAdView : UIView<KSAdProtocol>
@@ -88,6 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable) KSAdInfoData *adInfoData;
 
 @property (nonatomic, assign) KSAdShowDirection direction;
+
+@property (nonatomic, copy) void (^callbackAfterHandleClickBlock)(void);
 
 - (id)initWithPosId:(NSString *)posId;
 - (void)setExtraData:(KSAdSplashAdExtraDataModel *)extraDataModel;

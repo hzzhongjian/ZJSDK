@@ -6,9 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJAdBaseNetworking.h"
-#import "NSError+ZJAd.h"
+#import <ZJSDKCore/ZJAdBaseNetworking.h>
+#import <ZJSDKCore/NSError+ZJAd.h>
 #import <ZJSDKCore/ZJSDKAdEnum.h>
+#import <ZJSDKCore/ZJAdExposureReportParam.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString *ZJEventString NS_STRING_ENUM;
@@ -19,6 +22,7 @@ FOUNDATION_EXPORT NSString * const ZJEvent_Finish;//触发激励
 FOUNDATION_EXPORT NSString * const ZJEvent_Click;//点击
 FOUNDATION_EXPORT NSString * const ZJEvent_Error;//错误
 FOUNDATION_EXPORT NSString * const ZJEvent_Other;//其他信息
+FOUNDATION_EXPORT NSString * const ZJEvent_Start_Show; // 媒体调用我们激励视频的展示方法
 
 
 @interface ZJAdEventReport : ZJAdBaseNetworking
@@ -39,6 +43,10 @@ FOUNDATION_EXPORT NSString * const ZJEvent_Other;//其他信息
 + (NSString *)getTimestampSince1970;
 
 + (NSNumber *)adPlatformTypeConvertPmType:(ZJAdPlatformType)adPlatformType;
+
++ (NSNumber *)adADNNameConvertPmType:(ZJAdADNName)adADNName;
+
++ (NSString *)adPlatformTypeConvertPmName:(ZJAdPlatformType)adPlatformType;
 
 @end
 

@@ -13,8 +13,9 @@
 #import <ZJSDKCore/ZJAdEventReport.h>
 #import <ZJSDKCore/ZJSDKManager.h>
 #import <ZJSDKCore/ZJBiddingReportModel.h>
-#import <ZJSDKCore/ZJKSAdExposureReportParam.h>
 #import <ZJSDKCore/ZJAdInfo.h>
+#import <ZJSDKCore/ZJKSAdExposureReportParam.h>
+#import <ZJSDKCore/ZJMediaBidResult.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -92,15 +93,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 广告来源
 - (ZJAdInfo *)adInfo;
-
-// 记录用户操作，根据adRequestId去区分,
-@property (nonatomic, strong) NSMutableDictionary <NSString *, ZJKSAdExposureReportParam *>*recordDic;
-
-// bidding失败，上报给快手平台的回调
-@property (nonatomic, copy) void(^ksBiddingFailureExposureReportBlock)(ZJKSAdExposureReportParam *param);
-
-// 曝光标识，避免重复上报曝光事件
-@property (nonatomic, assign) BOOL hasReportExposure;
 
 @end
 

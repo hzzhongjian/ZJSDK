@@ -28,6 +28,24 @@ FOUNDATION_EXPORT NSString * const ZJ_ADType_ImageTextPage;
 FOUNDATION_EXPORT NSString * const ZJ_ADType_MiniParam;
 // 信息流和banner融合
 FOUNDATION_EXPORT NSString * const ZJ_ADType_NativeExpress_Banner;
+// 信息流实现的开屏
+FOUNDATION_EXPORT NSString * const ZJ_ADType_NativeExpress_Splash;
+// 信息流实现的插屏
+FOUNDATION_EXPORT NSString * const ZJ_ADType_NativeExpress_Interstitial;
+// 信息流实现的激励
+FOUNDATION_EXPORT NSString * const ZJ_ADType_NativeExpress_RewardVideo;
+// 自渲染实现的开屏
+FOUNDATION_EXPORT NSString * const ZJ_ADType_Native_Splash;
+// 自渲染实现的插屏
+FOUNDATION_EXPORT NSString * const ZJ_ADType_Native_Interstitial;
+// 自渲染实现的激励
+FOUNDATION_EXPORT NSString * const ZJ_ADType_Native_RewardVideo;
+// 自渲染实现的信息流
+FOUNDATION_EXPORT NSString * const ZJ_ADType_Native_NativeExpress;
+// 自渲染实现的Banner
+FOUNDATION_EXPORT NSString * const ZJ_ADType_Native_Banner;
+
+
 
 typedef NS_ENUM(NSInteger,ZJAdShowPriority){
     ZJAdShowPriority_normal, // 返回快
@@ -141,6 +159,12 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 ///开屏样式：普通开屏  0，奖励式开屏 1，全屏视频开屏 2
 @property (nonatomic, assign) NSInteger splash_type;
 
+/// 激励样式：激励视频 0，插屏全屏 1
+@property (nonatomic, assign) NSInteger reward_type;
+
+/// 插屏样式：插屏半屏 0，插屏全屏 1，激励视频 3
+@property (nonatomic, assign) NSInteger interstitial_type;
+
 ///屏蔽开屏摇一摇  仅GDT
 @property (nonatomic, copy) NSNumber* shakable;
 
@@ -179,6 +203,9 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 /// 联盟提供的广告唯一标识
 @property (nonatomic, copy) NSString *adn_extra;
+
+/// 记录当前广告是否已经曝光
+@property (nonatomic, assign) BOOL hasReportExposure;
 
 @end
 

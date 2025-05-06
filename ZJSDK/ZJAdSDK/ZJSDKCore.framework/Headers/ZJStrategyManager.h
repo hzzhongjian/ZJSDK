@@ -7,8 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJCacheManager.h>
-#import "ZJAdEventReport.h"
+#import <ZJSDKCore/ZJAdEventReport.h>
 #import <ZJSDKCore/ZJAdUnionItemModel.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, ZJStrategy) {

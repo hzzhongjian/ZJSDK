@@ -40,4 +40,7 @@ typedef NS_ENUM(NSUInteger, KSAdPrivateDataErrorCode) {
     KSAdPrivateDataErrorOthers               = 5,    //其他错误
 };
 
+// 自定义的换卡消息通知
+OBJC_EXTERN NSString *const KSAdSIMCardDidChangeNotification;
+
 #endif /* KSAdDeviceInfoEnum_h */

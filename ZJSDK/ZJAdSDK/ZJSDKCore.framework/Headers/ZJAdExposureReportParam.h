@@ -44,10 +44,15 @@ typedef NS_ENUM(NSUInteger, ZJAdBiddingActionType) {
 
 typedef NSString* ZJAdADNName;
 //平台定义
-extern ZJAdADNName const ZJAdADNNameChuanshanjia;
-extern ZJAdADNName const ZJAdADNNameGuangdiantong;
-extern ZJAdADNName const ZJAdADNNameBaidu;
-extern ZJAdADNName const ZJAdADNNameOther;
+extern ZJAdADNName const ZJAdADNNameChuanshanjia; // 穿山甲
+extern ZJAdADNName const ZJAdADNNameGuangdiantong; // 优量汇
+extern ZJAdADNName const ZJAdADNNameBaidu; // 百度
+extern ZJAdADNName const ZJAdADNNameKS; // 快手
+extern ZJAdADNName const ZJAdADNNameSIGMOB; // sigmob
+extern ZJAdADNName const ZJAdADNNameOCTOPUS; // 章鱼
+extern ZJAdADNName const ZJAdADNNameQuMeng; // 趣盟
+extern ZJAdADNName const ZJAdADNNameBeiZi; // 倍孜
+extern ZJAdADNName const ZJAdADNNameOther; // 其他
 
 @interface ZJAdExposureReportParam : NSObject
 

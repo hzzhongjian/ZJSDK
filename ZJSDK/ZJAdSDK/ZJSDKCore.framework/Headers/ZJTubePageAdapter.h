@@ -5,7 +5,7 @@
 //  Created by 麻明康 on 2024/6/12.
 //
 
-#import "ZJBaseTubeAdapter.h"
+#import <ZJSDKCore/ZJBaseTubeAdapter.h>
 #import <ZJSDKCore/ZJContentInfo.h>
 #import <ZJSDKCore/ZJContentAdapterStateDelegate.h>
 #import <ZJSDKCore/ZJContentAdapterStateProtocol.h>

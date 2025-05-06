@@ -45,6 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)registerAppId:(NSString *)appId callback:(void(^)(BOOL completed, NSDictionary *info))callback;
 
 /**
+ * sdk是否初始化完成
+ */
++ (BOOL)SDKInitComplete;
+
+/**
  日志打印设置
  */
 + (void)setLogLevel:(ZJAdSDKLogLevel)level;

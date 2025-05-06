@@ -19,6 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 // CoverView是否显示appIcon和appName
 @property (nonatomic, assign, readwrite) BOOL isShowAppInfo;
 
+// 开始播放视频或恢复播放视频
+- (void)startVideo;
+// 暂停播放视频
+- (void)pauseVideo;
+// 停止播放视频
+- (void)stopVideo;
+
 @end
 
 NS_ASSUME_NONNULL_END

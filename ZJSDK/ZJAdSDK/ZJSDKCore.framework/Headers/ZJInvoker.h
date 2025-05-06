@@ -11,7 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJInvoker : NSObject
 
-+ (id)safePerformAction:(SEL)action 
+// 此处object参数，只支持对象类型，切NSValue类型不能转换
++ (id)safePerformAction:(SEL)action
                  target:(NSObject *)target
              withObject:(nullable id)object,...NS_REQUIRES_NIL_TERMINATION;
 
@@ -29,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 判断类是否拥有某个属性
 + (BOOL)className:(NSString *)className propertyName:(NSString *)propertyName;
+
+// 此方法支持任意类型的参数，可以自动转换NSValue类型
+- (id)performSelector:(SEL)selector withTarget:(NSObject *)target withArguments:(NSArray *)arguments;
 
 @end
 

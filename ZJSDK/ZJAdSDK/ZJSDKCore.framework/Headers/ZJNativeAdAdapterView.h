@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZJNativeAdObject.h"
+#import <ZJSDKCore/ZJNativeAdObject.h>
 #import <ZJSDKCore/ZJKSAdExposureReportParam.h>
 #import <ZJSDKCore/ZJAdUnionItemModel.h>
 
@@ -113,9 +113,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 部分联盟设置了视频视图后需要重绘UI
 - (void)resizeIfNeed;
-
-// bidding失败，上报给快手平台的回调
-@property (nonatomic, copy) void(^ksBiddingFailureExposureReportBlock)(ZJKSAdExposureReportParam *param);
 
 @property (nonatomic, assign) BOOL hasShown;
 

@@ -6,10 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJDiskCache.h"
-#import "ZJMemoryCache.h"
-#import "ZJCacheOperation.h"
+#import <ZJSDKCore/ZJDiskCache.h>
+#import <ZJSDKCore/ZJMemoryCache.h>
+#import <ZJSDKCore/ZJCacheOperation.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
+
 #define KEY_CACHE_DIRECTORY  @"ZJCacheData"
 
 typedef void(^ZJNoParamsBlock)(void);

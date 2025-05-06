@@ -7,7 +7,7 @@
 
 #import <ZJSDKCore/ZJTierAdAdapter.h>
 #import <ZJSDKCore/ZJCoreAdAdapter.h>
-#import "ZJBannerAdProtocol.h"
+#import <ZJSDKCore/ZJBannerAdProtocol.h>
 
 
 NS_ASSUME_NONNULL_BEGIN

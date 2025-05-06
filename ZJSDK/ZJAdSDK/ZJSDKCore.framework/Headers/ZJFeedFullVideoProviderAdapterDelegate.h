@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJSDKAdEnum.h"
+#import <ZJSDKCore/ZJSDKAdEnum.h>
 
 @class ZJFeedFullVideoProviderAdapter,ZJFeedFullVideoView;
 

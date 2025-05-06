@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJCache.h"
+#import <ZJSDKCore/ZJCache.h>
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ZJCacheCompletionBlock)(NSDictionary* _Nullable dic,NSError *_Nullable error , NSString *key);

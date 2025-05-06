@@ -34,6 +34,50 @@ NS_ASSUME_NONNULL_BEGIN
 /// 收否允许获取手机DeviceId，默认为YES
 @property (nonatomic, assign) BOOL canUseDeviceId;
 
+/// 是否允许获取手机系统版本名，默认为YES
+@property (nonatomic, assign) BOOL canUseOSVersionName;
+
+/// 是否允许获取手机系统版本号，默认为YES
+@property (nonatomic, assign) BOOL canUseOSVersionCode;
+
+/// 是否允许获取手机应用包名，默认为YES
+@property (nonatomic, assign) BOOL canUsePackageName;
+
+/// 是否允许获取手机应用版本名，默认为YES
+@property (nonatomic, assign) BOOL canUseAppVersionName;
+
+/// 是否允许获取手机应用版本号，默认为YES
+@property (nonatomic, assign) BOOL canUseAppVersionCode;
+
+/// 是否允许获取手机设备品牌，默认为YES
+@property (nonatomic, assign) BOOL canUseBrand;
+
+/// 是否允许获取手机设备型号，默认为YES
+@property (nonatomic, assign) BOOL canUseModel;
+
+/// 是否允许获取手机屏幕分辨率，默认为YES
+@property (nonatomic, assign) BOOL canUseScreen;
+
+/// 是否允许获取手机屏幕方向，默认为YES
+@property (nonatomic, assign) BOOL canUseOrient;
+
+/// 是否允许获取手机网络类型，默认为YES
+@property (nonatomic, assign) BOOL canUseNetworkType;
+
+/// 是否允许获取手机移动网络代码，默认为YES
+@property (nonatomic, assign) BOOL canUseMNC;
+
+/// 是否允许获取手机移动国家代码，默认为YES
+@property (nonatomic, assign) BOOL canUseMCC;
+
+/// 是否允许获取手机系统语言，默认为YES
+@property (nonatomic, assign) BOOL canUseOSLanguage;
+
+/// 是否允许获取手机时区，默认为YES
+@property (nonatomic, assign) BOOL canUseTimeZone;
+
+/// 是否允许获取手机User Agent，默认为YES
+@property (nonatomic, assign) BOOL canUseUserAgent;
 
 @end
 

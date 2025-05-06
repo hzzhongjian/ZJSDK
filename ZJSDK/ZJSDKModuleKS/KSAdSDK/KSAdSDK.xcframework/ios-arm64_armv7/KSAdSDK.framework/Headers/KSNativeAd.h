@@ -39,8 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak, readwrite, nullable) id<KSNativeAdDelegate> delegate;
 
-
-
 /**
  required.
  Root view controller for handling ad actions.
