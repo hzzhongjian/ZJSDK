@@ -80,3 +80,4 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJSDKAdConfig.h>
 #import <ZJSDKCore/ZJSDKInitModel.h>
 #import <ZJSDKCore/ZJSDKInitConfig.h>
+#import <ZJSDKCore/ZJNativeSplashAdView.h>

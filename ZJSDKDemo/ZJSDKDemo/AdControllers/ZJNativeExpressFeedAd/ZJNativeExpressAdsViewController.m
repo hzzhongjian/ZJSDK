@@ -61,6 +61,7 @@
         _feedAdManager = [[ZJNativeExpressFeedAdManager alloc] initWithPlacementId:self.adId size:CGSizeMake(self.tableView.frame.size.width, 0)];
         _feedAdManager.delegate = self;
         _feedAdManager.mutedIfCan = YES;
+        _feedAdManager.rootViewController = self;
     }
     [_feedAdManager loadAdDataWithCount:3];
 }

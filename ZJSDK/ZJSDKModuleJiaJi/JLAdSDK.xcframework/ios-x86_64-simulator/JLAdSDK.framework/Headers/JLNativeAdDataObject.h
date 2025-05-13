@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JLVideoConfig.h"
+#import "JLAdViewActionConfig.h"
 #import <JLAdSDK/JLAdSDKConfig.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -98,6 +99,7 @@ typedef NS_ENUM(NSInteger, JLNativeAdInteractionType) {
 @property (nonatomic, readonly) JLNativeAdInteractionType interactionType;
 
 @property (nonatomic, strong) JLVideoConfig *videoConfig;
+@property (nonatomic, strong) JLAdViewActionConfig *actionConfig;
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
 
 - (NSInteger)eCPM;

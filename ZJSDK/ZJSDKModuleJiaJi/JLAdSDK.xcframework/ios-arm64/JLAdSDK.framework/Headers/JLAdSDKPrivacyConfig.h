@@ -14,6 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 
+/**
+ * 返回当前位置信息的属性值字典
+ *
+ * @return 包含当前实例所有属性值的 NSDictionary 对象
+ */
+- (NSDictionary *)toDictionary;
+
 @end
 
 @interface JLAdSDKPrivacyConfig : NSObject
@@ -36,6 +43,13 @@ NS_ASSUME_NONNULL_BEGIN
  * 仅对，快手、京东，有效
  */
 @property (nonatomic, strong, nullable) JLAdSDKLocation * location;
+
+/**
+ * 返回当前隐私配置的属性值字典
+ *
+ * @return 包含当前实例所有属性值的 NSDictionary 对象
+ */
+- (NSDictionary *)toDictionary;
 
 @end
 

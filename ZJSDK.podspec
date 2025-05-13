@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.14'
+  s.version          = '2.5.9.15'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos'
+  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','CoreHaptics'
   s.weak_frameworks = 'AppTrackingTransparency'
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleOCTOPUS'
+  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleOCTOPUS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi'
   
     s.subspec 'ZJAdSDK' do |ss|
         ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
@@ -60,7 +60,8 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'GDTMobSDK', '~> 4.14.62'
+        ss.dependency 'GDTMobSDK', '~> 4.15.22'
+        # 以下版本可以导入4.15.10
     end
   
     ### 穿山甲适配器兼容版

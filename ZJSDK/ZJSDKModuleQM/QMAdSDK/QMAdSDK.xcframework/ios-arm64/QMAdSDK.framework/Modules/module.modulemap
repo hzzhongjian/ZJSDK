@@ -1,4 +1,6 @@
 framework module QMAdSDK {
-  header "QMAdSDK-Swift.h"
-  requires objc
+  umbrella header "QMAdSDK.h"
+  export *
+
+  module * { export * }
 }

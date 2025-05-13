@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZJSplashAdAdapter : ZJTierAdAdapter<ZJSplashAdProtocol>
 
 
-@property(nonatomic,weak) id<ZJSplashAdAdapterDelegate> delegate;
+@property (nonatomic, weak) id <ZJSplashAdAdapterDelegate> delegate;
 
-@property(nonatomic,strong,readonly)UIView *splashAdapterView;
+@property(nonatomic, strong, readonly) UIView *splashAdapterView;
 
 
 /**

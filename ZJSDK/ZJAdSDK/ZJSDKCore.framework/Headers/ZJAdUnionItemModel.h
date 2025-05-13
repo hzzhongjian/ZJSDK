@@ -156,7 +156,10 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 ///辅助
 @property (nonatomic, copy) NSString *adType;
 
-///开屏样式：普通开屏  0，奖励式开屏 1，全屏视频开屏 2
+/// 开屏样式 原生模板 0, 自渲染 1, 全屏视频开屏 2
+@property (nonatomic, assign) NSInteger splash_native;
+
+///IPD 开屏样式：普通开屏  0，奖励式开屏 1，全屏视频开屏 2，目前使用的是这个字段
 @property (nonatomic, assign) NSInteger splash_type;
 
 /// 激励样式：激励视频 0，插屏全屏 1
