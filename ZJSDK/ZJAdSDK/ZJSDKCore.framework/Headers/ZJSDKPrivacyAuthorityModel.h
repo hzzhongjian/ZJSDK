@@ -79,6 +79,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否允许获取手机User Agent，默认为YES
 @property (nonatomic, assign) BOOL canUseUserAgent;
 
+/// 是否允许SDK主动使用互动组件能力（摇一摇、扭一扭等），默认为YES
+@property (nonatomic, assign) BOOL isCanUseMotionManager;
+
 @end
 
 NS_ASSUME_NONNULL_END

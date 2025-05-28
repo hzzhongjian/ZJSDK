@@ -1,0 +1,6 @@
+framework module WanjaCore {
+  umbrella header "WanjaCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

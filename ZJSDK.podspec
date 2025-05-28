@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.17'
+  s.version          = '2.5.9.18'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleOCTOPUS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi'
+  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia'
   
     s.subspec 'ZJAdSDK' do |ss|
         ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
@@ -133,7 +133,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleSIG' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleSIG/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'SigmobAd-iOS', '~> 4.7'
+        ss.dependency 'SigmobAd-iOS', '~> 4.19.0'
     end
 
     ### 谷歌适配器
@@ -154,7 +154,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleBD' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'BaiduMobAdSDK', '~> 5.36'
+        ss.dependency 'BaiduMobAdSDK', '~> 5.37'
         ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
     end
  
@@ -241,6 +241,15 @@ TODO: Add long description of the pod here.
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'OctopusSDK'
+    end
+
+    ###章鱼定制包适配器
+    s.subspec 'ZJSDKModuleWanJia' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleWanJia/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleWanJia/WanJiaAdSDK/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleWanJia/WanJiaAdSDK/*.xcframework'
+        ss.resource             = 'ZJSDK/ZJSDKModuleWanJia/WanJiaAdSDK/Assets/*.bundle'
     end
 
     ###移卡适配器兼容版

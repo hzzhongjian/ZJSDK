@@ -1,0 +1,6 @@
+framework module WanjaAdSDK {
+  umbrella header "WanjaAdSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

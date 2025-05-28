@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJNativeExpressFeedAdManagerAdapter : ZJMultipleAdAdapter
 
-@property (nonatomic)CGSize adSize;
+@property (nonatomic) CGSize adSize;
 
 ///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;
