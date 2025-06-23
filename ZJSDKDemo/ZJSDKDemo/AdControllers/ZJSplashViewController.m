@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_Splash1]];
+    [self.loadAdView appendAdID:@[AdId_Splash]];
 }
 
 

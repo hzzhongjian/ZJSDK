@@ -7,103 +7,92 @@
 //
 
 #import "ZJBannerViewController.h"
-#import <ZJSDK/ZJBannerAdView.h>
+#import <ZJSDK/ZJBannerAd.h>
 
 #define ZJBannerHeight 200
-@interface ZJBannerViewController ()<ZJBannerAdViewDelegate>
+@interface ZJBannerViewController ()<ZJBannerAdDelegate>
 
+@property (nonatomic, strong) ZJBannerAd *bannerAd;
 
-@property(nonatomic,strong) ZJBannerAdView *bannerView;
 @end
 
 @implementation ZJBannerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_Banner1]];
-    self.loadAdView.showButton.hidden = YES;
+    [self.loadAdView appendAdID:@[AdId_Banner]];
+    self.loadAdView.showButton.hidden = NO;
 }
 
 -(void)loadAd:(NSString*) adId{
     [super loadAd:adId];
-    if (_bannerView) {
-        [_bannerView removeFromSuperview];
-        _bannerView = nil;
-    }
     CGFloat width = self.view.frame.size.width;
-    self.bannerView = [[ZJBannerAdView alloc] initWithPlacementId:adId viewController:self adSize:CGSizeMake(width, ZJBannerHeight)];
-    self.bannerView.delegate = self;
-    [self.bannerView loadAdAndShow];
-    [self addBannerView];
+    self.bannerAd = [[ZJBannerAd alloc] initWithPlacementId:adId rootViewController:self adSize:CGSizeMake(width, ZJBannerHeight)];
+    self.bannerAd.delegate = self;
+    [self.bannerAd loadAd];
+    
 }
 
-
-
--(void)addBannerView{
-    if(self.bannerView&&![self.view.subviews containsObject:self.bannerView]){
-        CGFloat y = self.view.frame.size.height -ZJBannerHeight-kSafeBottomMargin-50;
-        CGRect frame = CGRectMake(0, y, self.view.frame.size.width, ZJBannerHeight);
-
-        self.bannerView.frame = frame;
-        [self.view addSubview:self.bannerView];
-    }
+- (void)showAd
+{
+    [self.bannerAd showAd];
+    UIView *bannerView = [self.bannerAd bannerView];
+    CGFloat y = self.view.frame.size.height - bannerView.frame.size.height -kSafeBottomMargin-50;
+    CGRect frame = CGRectMake(0, y, bannerView.frame.size.width, bannerView.frame.size.height);
+    bannerView.frame = frame;
+    [self.view addSubview:bannerView];
 }
 
-
-#pragma mark ZJBannerAdViewDelegate
+#pragma mark - ZJBannerAdDelegate
 /**
  banner广告加载成功
  */
-- (void)zj_bannerAdViewDidLoad:(ZJBannerAdView *)bannerAdView{
-    [self logMessage:@"bannerAdViewDidLoad"];
+- (void)zj_bannerAdDidLoad:(ZJBannerAd *)bannerAd
+{
+    self.loadAdView.showButton.backgroundColor = kMainColor;
+    [self logMessage:[NSString stringWithFormat:@"zj_bannerAdDidLoad"]];
+    [self logMessage:[bannerAd valueForKey:@"logString"]];
 }
 
 /**
  banner广告加载失败
  */
-- (void)zj_bannerAdView:(ZJBannerAdView *)bannerAdView didLoadFailWithError:(NSError *_Nullable)error{
-    NSArray *errors =  [self.bannerView getFillFailureMessages];
-    [self logMessage:[NSString stringWithFormat:@"报错信息:%@",errors.count > 0?errors:@"无"]];
+- (void)zj_bannerAd:(ZJBannerAd *)bannerAd didLoadFailWithError:(NSError * _Nullable)error
+{
     [self logMessage:[NSString stringWithFormat:@"bannerAdViewError:%@",error]];
 }
-
 
 /**
  bannerAdView曝光回调
  */
-- (void)zj_bannerAdViewWillBecomVisible:(ZJBannerAdView *)bannerAdView{
-    [self logMessage:@"bannerAdShow"];
+- (void)zj_bannerAdWillBecomVisible:(ZJBannerAd *)bannerAd
+{
+    [self logMessage:[NSString stringWithFormat:@"zj_bannerAdWillBecomVisible"]];
 }
 
 /**
  关闭banner广告回调
  */
-- (void)zj_bannerAdViewDislike:(ZJBannerAdView *)bannerAdView{
-    [self logMessage:@"bannerAdDislike"];
+- (void)zj_bannerAdDislike:(ZJBannerAd *)bannerAd
+{
+    [self logMessage:[NSString stringWithFormat:@"zj_bannerAdDislike"]];
 }
 
 /**
  点击banner广告回调
  */
-- (void)zj_bannerAdViewDidClick:(ZJBannerAdView *)bannerAdView{
-    
+- (void)zj_bannerAdDidClick:(ZJBannerAd *)bannerAd
+{
+    [self logMessage:[NSString stringWithFormat:@"zj_bannerAdDidClick"]];
 }
 
 /**
  关闭banner广告详情页回调
  */
-- (void)zj_bannerAdViewDidCloseOtherController:(ZJBannerAdView *)bannerAdView{
-    
+- (void)zj_bannerAdDidCloseOtherController:(ZJBannerAd *)bannerAd
+{
+    [self logMessage:[NSString stringWithFormat:@"zj_bannerAdDidCloseOtherController"]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

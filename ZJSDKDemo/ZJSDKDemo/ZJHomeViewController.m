@@ -81,13 +81,13 @@
     if(!_adTypes){
         NSArray *section1 = @[@"开屏",@"激励视频",@"插屏",@"全屏视频",@"Banner"];
         NSArray *section2 = @[@"视频流",@"信息流",@"自渲染"];
-        NSArray *section3 = @[@"视频内容列表",@"视频内容瀑布流",@"视频内容横版",@"视频内容图文"];
+        NSArray *section3 = @[@"视频内容列表",@"新视频内容列表",@"视频内容瀑布流",@"视频内容横版"];
         NSArray *section4 = @[@"短剧",@"短剧-新对接方式(推荐)"];
         NSArray *section5 = @[@"新闻资讯",@"H5页面",@"悬浮广告",@"H5页面JS交互"];
         NSArray *section6 = @[@"微信小程序广告"];
         _adTypes = [NSArray arrayWithObjects:section1, section2, section3,section4,section5,section6, nil];
     }
-    return _adTypes;;
+    return _adTypes;
 }
 
 - (NSMutableDictionary *)demoVCDictionary{
@@ -102,11 +102,14 @@
         [_demoVCDictionary setValue:@"ZJFeedFullVideoViewController" forKey:@"视频流"];
         [_demoVCDictionary setValue:@"ZJFeedAdsViewController" forKey:@"信息流"];
         [_demoVCDictionary setValue:@"ZJNativeAdSelectedViewController" forKey:@"自渲染"];
-        
         [_demoVCDictionary setValue:@"ZJContentPageViewController" forKey:@"视频内容列表"];
+        [_demoVCDictionary setValue:@"ZJContentPageAdViewController" forKey:@"新视频内容列表"];
         [_demoVCDictionary setValue:@"ZJFeedPageLoadViewController" forKey:@"视频内容瀑布流"];
         [_demoVCDictionary setValue:@"ZJHorizontalFeedPageLoadVC" forKey:@"视频内容横版"];
-        [_demoVCDictionary setValue:@"ZJImageTextLoadVC" forKey:@"视频内容图文"];
+//        [_demoVCDictionary setValue:@"ZJContentPageViewController" forKey:@"视频内容列表"];
+//        [_demoVCDictionary setValue:@"ZJFeedPageLoadViewController" forKey:@"视频内容瀑布流"];
+//        [_demoVCDictionary setValue:@"ZJHorizontalFeedPageLoadVC" forKey:@"视频内容横版"];
+//        [_demoVCDictionary setValue:@"ZJImageTextLoadVC" forKey:@"视频内容图文"];
 
         [_demoVCDictionary setValue:@"ZJTubePageVC" forKey:@"短剧"];
         

@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_Interstitial1]];
+    [self.loadAdView appendAdID:@[AdId_Interstitial]];
     
 }
 

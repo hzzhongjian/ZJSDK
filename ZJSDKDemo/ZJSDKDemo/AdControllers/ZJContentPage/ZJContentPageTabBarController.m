@@ -10,8 +10,6 @@
 #import "ZJContentPageStyle2ViewController.h"
 #import "ZJContentPageStyle1ViewController.h"
 
-#define ContentPage1ID AdId_ContentPage1
-#define ContentPage2ID AdId_ContentPage1
 
 @interface ZJContentPageTabBarController ()
 
@@ -34,7 +32,7 @@
     
     //ZJContentPageStyle1ViewController;
     ZJContentPageStyle1ViewController *vc1 = [[ZJContentPageStyle1ViewController alloc] init];
-    vc1.contentId = ContentPage1ID;
+    vc1.contentId = AdId_ContentPage;
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:vc1];
     navi.title = @"视频style1";
     vc1.title = @"视频style1";
@@ -53,7 +51,7 @@
     //ZJContentPageStyle2ViewController
     ZJContentPageStyle2ViewController *vc3 = [[ZJContentPageStyle2ViewController alloc] init];
 //    vc3.view.backgroundColor = [UIColor blueColor];
-    vc3.contentId = ContentPage2ID;
+    vc3.contentId = AdId_ContentPage;
     vc3.title = @"视频style2";
     
     //vc4

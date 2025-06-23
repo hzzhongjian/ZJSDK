@@ -155,6 +155,7 @@
 		AB04E6482C1AF47D0050C68B /* ZJNativeAdSelectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04E6212C1AF47D0050C68B /* ZJNativeAdSelectedViewController.m */; };
 		AB04E6492C1AF47D0050C68B /* ZJMiniParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04E6222C1AF47D0050C68B /* ZJMiniParamViewController.m */; };
 		AB04E64A2C1AF47D0050C68B /* ZJSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04E6232C1AF47D0050C68B /* ZJSplashViewController.m */; };
+		AB355D392E0933230010AB87 /* ZJContentPageAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB355D382E0933230010AB87 /* ZJContentPageAdViewController.m */; };
 		AB5ADDC12959AD07000495B7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC02959AD07000495B7 /* JavaScriptCore.framework */; };
 		AB5ADDC32959AD16000495B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC22959AD16000495B7 /* AudioToolbox.framework */; };
 		AB5ADDC52959AD22000495B7 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC42959AD22000495B7 /* QuickLook.framework */; };
@@ -487,6 +488,8 @@
 		AB04E6222C1AF47D0050C68B /* ZJMiniParamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJMiniParamViewController.m; sourceTree = "<group>"; };
 		AB04E6232C1AF47D0050C68B /* ZJSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSplashViewController.m; sourceTree = "<group>"; };
 		AB04E6242C1AF47D0050C68B /* ZJFloatingAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJFloatingAdViewController.h; sourceTree = "<group>"; };
+		AB355D372E0933230010AB87 /* ZJContentPageAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentPageAdViewController.h; sourceTree = "<group>"; };
+		AB355D382E0933230010AB87 /* ZJContentPageAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentPageAdViewController.m; sourceTree = "<group>"; };
 		AB5ADDC02959AD07000495B7 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AB5ADDC22959AD16000495B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AB5ADDC42959AD22000495B7 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -971,6 +974,7 @@
 			isa = PBXGroup;
 			children = (
 				AB04E5DE2C1AF47D0050C68B /* ZJNativeExpressAdTableViewCell.h */,
+				AB04E5F82C1AF47D0050C68B /* ZJNativeExpressAdTableViewCell.m */,
 			);
 			path = NativeExpressFeedAd;
 			sourceTree = "<group>";
@@ -978,6 +982,8 @@
 		AB04E5E02C1AF47D0050C68B /* ZJContentPage */ = {
 			isa = PBXGroup;
 			children = (
+				AB355D372E0933230010AB87 /* ZJContentPageAdViewController.h */,
+				AB355D382E0933230010AB87 /* ZJContentPageAdViewController.m */,
 				AB04E5E12C1AF47D0050C68B /* ZJContentPageViewController.h */,
 				AB04E5E22C1AF47D0050C68B /* ZJContentPageStyle2ViewController.m */,
 				AB04E5E32C1AF47D0050C68B /* ZJContentPageStyle1ViewController.h */,
@@ -1008,7 +1014,6 @@
 			children = (
 				AB04E5F62C1AF47D0050C68B /* ZJNativeExpressAdsViewController.m */,
 				AB04E5F72C1AF47D0050C68B /* ZJFeedAdsViewController.h */,
-				AB04E5F82C1AF47D0050C68B /* ZJNativeExpressAdTableViewCell.m */,
 				AB04E5F92C1AF47D0050C68B /* ZJNativeExpressAdsViewController.h */,
 				AB04E5FA2C1AF47D0050C68B /* ZJFeedAdsViewController.m */,
 			);
@@ -1277,6 +1282,7 @@
 				001E72A3253AAC760086A93F /* MASCompositeConstraint.m in Sources */,
 				ABCFD8392B453DC400D2449D /* ViewController.m in Sources */,
 				AB04E6372C1AF47D0050C68B /* ZJFeedFullVideoViewController.m in Sources */,
+				AB355D392E0933230010AB87 /* ZJContentPageAdViewController.m in Sources */,
 				57EB05642635632F005DBA03 /* SDImageCachesManagerOperation.m in Sources */,
 				57EB05512635632F005DBA03 /* SDImageLoadersManager.m in Sources */,
 				57EB053A2635632F005DBA03 /* SDWebImageCacheSerializer.m in Sources */,

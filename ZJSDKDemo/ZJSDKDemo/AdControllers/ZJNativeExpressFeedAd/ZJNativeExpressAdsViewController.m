@@ -58,12 +58,12 @@
 -(void)loadAd{
     [self.logView logMessage:@"loadAd"];
     if (!_feedAdManager) {
-        _feedAdManager = [[ZJNativeExpressFeedAdManager alloc] initWithPlacementId:self.adId size:CGSizeMake(self.tableView.frame.size.width, 0)];
+        _feedAdManager = [[ZJNativeExpressFeedAdManager alloc] initWithPlacementId:self.adId size:CGSizeMake(self.tableView.frame.size.width, 300)]; // csj的banner需要固定高度
         _feedAdManager.delegate = self;
         _feedAdManager.mutedIfCan = YES;
         _feedAdManager.rootViewController = self;
     }
-    [_feedAdManager loadAdDataWithCount:3];
+    [_feedAdManager loadAdDataWithCount:2];
 }
 
 
@@ -82,7 +82,7 @@
         feedAd.rootViewController = self;
         feedAd.delegate = self;
         [feedAd render];
-        
+        NSLog(@"获取到的ECPM为-------%li",[feedAd eCPM]);
         NSInteger index = i*3;
         if (index >= self.dataArray.count) {
             [self.dataArray addObject:feedAd];
@@ -92,6 +92,7 @@
     }
     self.adArray = multipleResultObject;
     [self.tableView reloadData];
+    
 }
 
 -(void)ZJ_nativeExpressFeedAdManager:(ZJNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *)error{
@@ -120,21 +121,27 @@
 
 - (void)ZJ_nativeExpressFeedAdViewWillShow:(ZJNativeExpressFeedAd *)feedAd{
     [self.logView logMessage:[NSString stringWithFormat:@"nativeExpressFeedAdViewShow"]];
+    NSLog(@"ecpm = %ld", (long)_feedAdManager.eCPM);
 }
 - (void)ZJ_nativeExpressFeedAdDidClick:(ZJNativeExpressFeedAd *)feedAd{
-    
+    NSLog(@"======%s",__FUNCTION__);
 }
 - (void)ZJ_nativeExpressFeedAdDislike:(ZJNativeExpressFeedAd *)feedAd{
     [self.dataArray removeObject:feedAd];
     [self.tableView reloadData];
+    NSLog(@"======%s",__FUNCTION__);
 }
 - (void)ZJ_nativeExpressFeedAdDidShowOtherController:(ZJNativeExpressFeedAd *)nativeAd{
-    
+    NSLog(@"======%s",__FUNCTION__);
 }
 - (void)ZJ_nativeExpressFeedAdDidCloseOtherController:(ZJNativeExpressFeedAd *)nativeAd{
-    
+    NSLog(@"======%s",__FUNCTION__);
 }
 
+- (void)ZJ_nativeExpressFeedAdViewShowError:(ZJNativeExpressFeedAd *)feedAd error:(NSError *)error
+{
+    NSLog(@"======%s==%@",__FUNCTION__, error.userInfo);
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -148,7 +155,7 @@
         CGFloat height = ((ZJNativeExpressFeedAd *)object).feedView.frame.size.height;
         return height;
     }else{
-        return 44;;
+        return 44;
     }
 }
 

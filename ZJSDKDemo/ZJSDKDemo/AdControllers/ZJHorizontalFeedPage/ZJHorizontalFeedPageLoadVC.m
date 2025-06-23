@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_ContentPage1]];
+    [self.loadAdView appendAdID:@[AdId_ContentPage]];
     
     [self.loadAdView.loadButton setTitle:@"加载广告页" forState:UIControlStateNormal];
     

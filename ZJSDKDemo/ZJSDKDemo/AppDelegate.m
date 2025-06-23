@@ -19,8 +19,6 @@
 
 @interface AppDelegate ()<ZJSplashAdDelegate>
 
-@property (nonatomic, strong) UIWindow *showWindow;
-
 @property (nonatomic, strong) ZJSplashAd *splashAd;
 
 @property (nonatomic, strong) UIView *bottomView;
@@ -31,25 +29,13 @@
 
 @implementation AppDelegate
 
--(UIWindow*) showWindow{
-    if(!_showWindow){
-        _showWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        _showWindow.windowLevel = UIWindowLevelAlert +10000;
-        _showWindow.backgroundColor = [UIColor clearColor];
-        _showWindow.rootViewController = [[ZJSplashWindowVC alloc]init];
-    }
-    return _showWindow;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [ZJAdSDK registerAppId:ZJ_Appid];
-//    [ZJAdSDK registerAppId:@"Z2497296624"];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
     NSLog(@"ZJSDK版本号：%@",version);
 
-    self.showWindow.hidden = NO;
 //    NSArray *method = [ZJInvoker getInstanceMethodList:@"MTGNativeAdvancedAd"];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -58,9 +44,6 @@
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:homeVC];
     self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
-    
-    
-
     
     return YES;
 }
@@ -118,11 +101,11 @@
 
 
 -(void)showSplashAd{
-    self.splashAd = [[ZJSplashAd alloc]initWithPlacementId:AdId_Splash1];
+    self.splashAd = [[ZJSplashAd alloc]initWithPlacementId:AdId_Splash];
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;
-    self.splashAd.rootViewController = self.showWindow.rootViewController;
+    self.splashAd.rootViewController = self.window.rootViewController;
     [self.splashAd loadAd];
 }
 
@@ -132,7 +115,7 @@
 -(void)zj_splashAdDidLoad:(ZJSplashAd *)splashAd{
     NSLog(@"kpgg-----加载成功");
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.splashAd showAdInWindow:self.showWindow];
+        [self.splashAd showAdInWindow:self.window];
     });}
 
 /**
@@ -154,9 +137,6 @@
  */
 - (void)zj_splashAdClosed:(ZJSplashAd *)splashAd{
     NSLog(@"kpgg-----开屏关闭");
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.showWindow.hidden = YES;
-    });
 }
 
 /**
@@ -180,9 +160,6 @@
 - (void)zj_splashAdError:(ZJSplashAd *)splashAd withError:(NSError *)error{
     NSArray *errors =  [self.splashAd getFillFailureMessages];
     NSLog(@"开屏广告所有错误信息 %@",errors);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.showWindow.hidden = YES;
-    });
 }
 
 
@@ -190,9 +167,7 @@
  *  开屏广告播放错误
  */
 - (void)zj_splashAdDisplayError:(ZJSplashAd *)splashAd withError:(NSError *)error{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.showWindow.hidden = YES;
-    });
+
 }
 
 
@@ -202,6 +177,7 @@
         _bottomView.backgroundColor = [UIColor whiteColor];
         
         UILabel *titleLabel = [[UILabel alloc]init];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.textColor = [UIColor redColor];
         titleLabel.font = [UIFont boldSystemFontOfSize:24];
         titleLabel.text = @"LOGO";

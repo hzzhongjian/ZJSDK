@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_Tube1]];
+    [self.loadAdView appendAdID:@[AdId_Tube]];
     
     [self.loadAdView.loadButton setTitle:@"展示短剧" forState:UIControlStateNormal];
     

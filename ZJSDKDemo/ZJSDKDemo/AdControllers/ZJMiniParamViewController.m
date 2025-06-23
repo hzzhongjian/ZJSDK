@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_MiniParam1]];
+    [self.loadAdView appendAdID:@[AdId_MiniParam]];
 }
 
 -(void) loadAd:(NSString*) adId{

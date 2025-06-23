@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.loadAdView appendAdID:@[AdId_Tube1]];
+    [self.loadAdView appendAdID:@[AdId_Tube]];
 }
 
 - (void)loadAd:(NSString *)adId

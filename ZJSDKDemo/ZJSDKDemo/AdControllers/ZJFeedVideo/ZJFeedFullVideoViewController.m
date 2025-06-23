@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.loadAdView appendAdID:@[AdId_VideoExpress1,AdId_VideoExpress2,AdId_VideoExpress3]];
+    [self.loadAdView appendAdID:@[AdId_VideoExpress]];
 }
 
 -(void) viewDidAppear:(BOOL)animated{

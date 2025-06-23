@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.loadAdView appendAdID:@[AdId_Web1,AdId_Web2,AdId_Web3,AdId_Web4,AdId_Web5,AdId_Web6,AdId_Web7]];
+    [self.loadAdView appendAdID:@[AdId_Web]];
     [self.loadAdView.loadButton setTitle:@"加载网页" forState:UIControlStateNormal];
     
 }
