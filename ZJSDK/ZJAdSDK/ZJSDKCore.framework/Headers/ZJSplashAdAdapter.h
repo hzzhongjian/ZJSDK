@@ -72,6 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 奖励触发
 - (void)zj_splashAdDidRewardEffectiveWithInfo:(nullable NSDictionary *)info;
 
+/// 开屏广告落地页打开的事件回调
+- (void)zj_splashAdDetailViewShow;
+
+/// 开屏广告落地页关闭的回调
+- (void)zj_splashAdDetailViewClose;
 
 @end
 

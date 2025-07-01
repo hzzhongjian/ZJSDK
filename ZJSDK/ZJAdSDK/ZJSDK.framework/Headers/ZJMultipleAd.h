@@ -12,7 +12,7 @@
 #import <ZJSDKCore/ZJAdCountdown.h>
 #import <ZJSDKCore/ZJAdPreferenceManager.h>
 #import <ZJSDKCore/ZJStrategyManager.h>
-#import  <ZJSDK/ZJMultipleTierAdLoader.h>
+#import <ZJSDK/ZJMultipleTierAdLoader.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

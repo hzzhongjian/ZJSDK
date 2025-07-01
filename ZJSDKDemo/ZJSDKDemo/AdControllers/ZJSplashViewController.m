@@ -82,7 +82,7 @@
  *  开屏广告点击回调
  */
 - (void)zj_splashAdClicked:(ZJSplashAd *)splashAd{
-    
+    [self logMessage:@"splashAdClicked"];
 }
 
 /**
@@ -97,7 +97,7 @@
  *  开屏广告即将关闭回调
  */
 - (void)zj_splashAdWillClose:(ZJSplashAd *)splashAd{
-    
+    [self logMessage:@"splashAdWillClose"];
 }
 
 
@@ -113,7 +113,7 @@
  * 开屏广告倒记时结束
  */
 - (void)zj_splashAdCountdownEnd:(ZJSplashAd*)splashAd{
-    
+    [self logMessage:@"splashAdCountdownEnd"];
 }
 
 /**
@@ -140,6 +140,15 @@
 
 }
 
+- (void)zj_splashAdDetailViewShow:(ZJSplashAd *)splashAd
+{
+    [self logMessage:@"splashAdDetailViewShow"];
+}
+
+- (void)zj_splashAdDetailViewClose:(ZJSplashAd *)splashAd
+{
+    [self logMessage:@"splashAdDetailViewClose"];
+}
 
 -(void)dealloc{
     

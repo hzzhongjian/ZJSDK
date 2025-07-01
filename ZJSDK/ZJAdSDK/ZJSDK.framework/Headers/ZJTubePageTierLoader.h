@@ -130,6 +130,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zjTubePageTierLoader_shortplayPlayletDetailUnlockFlowCancelUnlock:(void (^)(void))cancelUnlockCallback
                                                 unlockCallback:(void(^)(void))unlockCallback;
 
+/**用来控制是否要自定义解锁弹窗的**/
+- (BOOL)zjTubePageTierLoader_shortplayPlayletDetailCustomUnlockView;
+
+
+@optional
+
 /*! @abstract 解锁流程结束，回调解锁结果
  *  - success: 是否解锁成功
  *   - error: 解锁失败错误信息
@@ -138,7 +144,6 @@ NS_ASSUME_NONNULL_BEGIN
                            success:(BOOL)success
                              error:(NSError * _Nullable)error;
 
-@optional
 
 /*! @abstract 点击混排中进入跳转播放页的按钮 */
 - (void)zjTubePageTierLoader_shortplayClickEnterView:(id<ZJContentInfo>)content;

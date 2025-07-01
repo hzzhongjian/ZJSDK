@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 
 ///  策略管理类，不同错误处理策略，次数限制策略等
 @interface ZJStrategyManager : NSObject
+
 @property (nonatomic, copy) NSArray *recordEventTypes;
 
 + (instancetype)sharedManager;
@@ -43,6 +44,7 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 /// @param adid 联盟广告位ID
 /// @param limitNum 当天限制展示的的次数
 - (BOOL)isExcutingLimitNumForAdid:(NSString *)adid limitNum:(NSInteger)limitNum;
+
 - (BOOL)isExcutingStartNumForAdid:(NSString *)adid startNum:(NSInteger)startNum;
 
 ///// 异步判断是否执行block，
@@ -67,20 +69,20 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 /// 给对应type事件计数+1
 /// @param type 事件type
 /// @param adid 联盟广告位ID
--(void)increaseEvent:(ZJEventString)type forAdid:(NSString *)adid;
+- (void)increaseEvent:(ZJEventString)type forAdid:(NSString *)adid;
 
 
 /// 给对应type事件计数+1
 /// @param type 事件type
 /// @param adid 联盟广告位ID
 /// @param completedBlock 磁盘存储完成回调
--(void)increaseEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
+- (void)increaseEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
 
 /// 给对应type事件计数-1
--(void)decreaseEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
+- (void)decreaseEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
 
 /// 清理掉对应事件记录
--(void)cleanEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
+- (void)cleanEvent:(ZJEventString)type forAdid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
 
 /// 错误类型发生次数记录加一,errorDomain可靠时，使用此方法，通过errorDomain判断平台，耦合性低。
 /// @param error 对应的错误
@@ -91,14 +93,14 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 /// @param error 对应的错误
 /// @param adid 联盟广告位ID
 /// @param type 对应平台
--(void)increaseError:(NSError *)error forAdid:(NSString *)adid platformType:(ZJAdPlatformType)type;
+- (void)increaseError:(NSError *)error forAdid:(NSString *)adid platformType:(ZJAdPlatformType)type;
 
 /// 错误类型发生次数记录加一
 /// @param error 对应的错误，通过errorDomain判断平台
 /// @param adid 联盟广告位ID
 /// @param type 对应平台
 /// @param completedBlock 磁盘存储完成回调
--(void)increaseError:(NSError *)error forAdid:(NSString *)adid platformType:(ZJAdPlatformType)type completed:(nullable ZJCacheCompletionBlock)completedBlock;
+- (void)increaseError:(NSError *)error forAdid:(NSString *)adid platformType:(ZJAdPlatformType)type completed:(nullable ZJCacheCompletionBlock)completedBlock;
 
 #pragma mark =============== 清理 ===============
 /// 每天首次调用cache类，会先清理过去的cache，返回是否应清理缓存
@@ -110,8 +112,10 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 
 /// 清理所有数据，并更新本地日期
 /// @param completionBlock 磁盘存储完成回调
--(void)cleanAndUpdateDateOnCompletion:(nullable ZJCacheCompletionBlock)completionBlock;
+- (void)cleanAndUpdateDateOnCompletion:(nullable ZJCacheCompletionBlock)completionBlock;
 
+
+- (void)cleanCacheForAdid:(NSString *)adid;
 
 @end
 

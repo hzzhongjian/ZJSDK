@@ -18,14 +18,22 @@ NS_ASSUME_NONNULL_BEGIN
 #define ColorHEX(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface UIColor (MKRGB)
+
 + (UIColor *) colorFromHexRGB:(NSString *) inColorString;
+
 #pragma mark === Some wonderful color
 + (UIColor *)tiffanyBlue;
+
 + (UIColor *)avocadoGreen;
+
 + (UIColor *)JesterRed;
+
 + (UIColor *)LipstickRed;
+
 + (UIColor *)NFBlue;
+
 + (UIColor *)NFPink;
+
 @end
 
 NS_ASSUME_NONNULL_END

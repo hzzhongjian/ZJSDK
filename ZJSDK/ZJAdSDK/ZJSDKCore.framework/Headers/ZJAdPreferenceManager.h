@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable, readonly) ZJAdUnionItemModel *currentPDItem;
 @property (nonatomic, strong, nullable, readonly) NSArray <ZJAdUnitModel *>*currentBDItems;
 
-@property (nonatomic,assign, readonly)NSInteger currentLevel;
-@property (nonatomic,assign, readonly)NSInteger totalLevels;
+@property (nonatomic,assign, readonly) NSInteger currentLevel;
+@property (nonatomic,assign, readonly) NSInteger totalLevels;
 
 
 @property (nonatomic, strong, nullable, readonly) NSArray <ZJAdUnionItemModel *>*pdItems;
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 //广告类型获取广告位id
 +(NSString *)getAdDefaultPlacementId:(NSString *)adType;
 
-+ (NSDictionary *)decryptionZJSDKMediaConfig:(NSString *)dataString;
+//+ (NSDictionary *)decryptionZJSDKMediaConfig:(NSString *)dataString;
 
 @end
 

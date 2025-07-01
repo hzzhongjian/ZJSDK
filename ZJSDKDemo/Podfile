@@ -80,6 +80,8 @@ target 'ZJSDKDemo' do
   
 # pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
   
+#  pod 'ZJSDK/ZJSDKModuleKSCompatible', :path => '../'
+#  pod 'KSAdSDK', '3.3.69'
 
 end
  

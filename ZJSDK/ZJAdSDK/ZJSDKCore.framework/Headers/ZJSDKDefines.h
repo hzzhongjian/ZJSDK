@@ -70,4 +70,20 @@ FOUNDATION_EXPORT UIViewController * zj_getCurrentVCFrom(UIViewController *vc);
 FOUNDATION_EXPORT NSString * const ZJSDKVersion;
 
 FOUNDATION_EXPORT NSNumber * getZJSDKPlugVer (void);
+
+
+// 判断某个类是否存在
+#define ZJ_RUNTIME_HAS_CLASS(classname) (NSClassFromString(@#classname) != nil)
+
+// 运行时检查协议是否存在
+#define ZJ_RUNTIME_HAS_PROTOCOL(protocolname) (objc_getProtocol(#protocolname) != nil)
+
+// 运行时检查某个类实现了某个协议，会检查整个继承链，包括父类实现的协议
+#define ZJ_CLASS_CONFORMS_TO_PROTOCOL(classname, protocolname) \
+    ([NSClassFromString(@#classname) conformsToProtocol:@protocol(protocolname)])
+
+// 运行时检查方法是否存在
+#define ZJ_RUNTIME_HAS_METHOD(classname, sel) ([NSClassFromString(@#classname) instancesRespondToSelector:@selector(sel)])
+
+
 #endif /* ZJSDKDefines_h */

@@ -96,6 +96,7 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 @interface ZJAdUnitModel : NSObject
 
+/// pm_id 联盟的广告id
 @property (nonatomic, copy) NSString *adId;
 
 @property (nonatomic, assign) BOOL is_enable;

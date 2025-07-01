@@ -188,6 +188,9 @@ NS_ASSUME_NONNULL_BEGIN
 /*! @abstract 解锁流程取消 */
 - (void)zj_shortplayPlayletDetailUnlockFlowCancel:(id<ZJContentInfo>)content;
 
+/**用来控制是否自定义解锁弹窗的**/
+- (BOOL)zj_shortplayPlayletDetailCustomUnlockView;
+
 /*! 自定义解锁弹窗 cancelUnlockCallback取消回调，unlockCallback确认的回调 */
 - (void)zj_shortplayPlayletDetailUnlockFlowCancelUnlock:(void (^)(void))cancelUnlockCallback
                                                 unlockCallback:(void(^)(void))unlockCallback;

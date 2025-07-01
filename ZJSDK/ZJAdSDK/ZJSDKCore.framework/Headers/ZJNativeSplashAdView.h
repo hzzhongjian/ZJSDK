@@ -24,13 +24,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL isTimerPaused;
 
+/// 广告关闭的回调
 @property (nonatomic, copy) void (^splashAdClosedBlock)(void);
 
+/// 广告曝光的回调
 @property (nonatomic, copy) void (^splashAdShowBlock)(void);
 
+/// 广告点击的回调
 @property (nonatomic, copy) void (^splashAdClickBlock)(void);
 
+/// 广告倒计时结束的回调
 @property (nonatomic, copy) void (^splashAdCountdownEndBlock)(void);
+
+/// 广告落地页展示的回调
+@property (nonatomic, copy) void (^splashAdDetailViewShowBlock)(void);
+
+/// 广告落地页关闭的回调
+@property (nonatomic, copy) void (^splashAdDetailViewCloseBlock)(void);
 
 - (void)addSplashViewInWindow;
 
