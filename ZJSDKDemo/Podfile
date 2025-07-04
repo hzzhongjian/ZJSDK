@@ -61,6 +61,9 @@ target 'ZJSDKDemo' do
 #注意：引入多个聚合广告可能会引起一些联盟重复初始化的问题。
   #pod 'ZJSDK/ZJSDKModuleWM'     #Sigmob to-bid广告
 
+  # 对接穿山甲短剧需要添加的source
+#   source 'https://github.com/CocoaPods/Specs.git'
+#   source 'https://github.com/volcengine/volcengine-specs.git'
   
   # Pods for ZJSDKDemo
   
@@ -74,10 +77,8 @@ target 'ZJSDKDemo' do
 
 #  pod 'ZJSDK/ZJSDKModuleJiaJi', :path => '../'
  
-# 对接穿山甲短剧需要添加的source
-# source 'https://github.com/CocoaPods/Specs.git'
-# source 'https://github.com/volcengine/volcengine-specs.git'
-  
+# pod 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
+# pod 'PangrowthX/shortplay', '2.8.0.0'
 # pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
   
 #  pod 'ZJSDK/ZJSDKModuleKSCompatible', :path => '../'

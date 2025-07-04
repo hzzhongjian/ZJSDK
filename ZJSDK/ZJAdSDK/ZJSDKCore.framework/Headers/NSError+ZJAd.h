@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
     ZJErrorCodeAd_MissParameter = 100601, // 缺少参数
     ZJErrorCodeAd_AdInvalid = 100602, // 广告不合法
     ZJErrorCodeAd_app_tradeId_verify_fail = 100701,//媒体激励校验未通过
-    ZJErrorCodeAd_POS_ID_RETURN_EMPTY_BY_SDK_FILTER_CODE = 100800,// 广告位匹配，但没有限制且填充为空,配置的平台没有匹配到
+    ZJErrorCodeAd_POS_ID_RETURN_EMPTY_BY_SDK_FILTER_CODE = 100800,// 未匹配到合适广告，请稍后重试
     ZJErrorCodeAd_CONFIG_ERROR = 1000009, // 配置数据错误
     ZJErrorCodeAd_Splash_RepeatedExposure_ERROR = 1000900, // 开屏广告重复曝光的错误
     ZJErrorCodeAd_RewardVideo_RepeatedExposure_ERROR = 1000901, // 激励视频广告重复曝光的错误
