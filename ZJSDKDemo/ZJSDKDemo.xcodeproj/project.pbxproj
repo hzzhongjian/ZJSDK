@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -249,27 +249,15 @@
 		0077472024E182A200C30636 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FA55DC36D259E34F026CA29 /* Pods_ZJSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484A08FA89AD4AEFE92CD8BF /* Pods-ZJSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5727059E264A31E60002F224 /* libZJSDKModuleDSP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleDSP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5738387C26C2610700008E82 /* ZJSDKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZJSDKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		576656D6264E7F7300C2C239 /* libZJSDKModuleKS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleKS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5769F1C6280E528B00BD5300 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
 		5769F1C7280E528B00BD5300 /* LYLUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLUnicode.h; sourceTree = "<group>"; };
 		5772EDCC27D09C20001B3197 /* ZJLogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJLogView.h; sourceTree = "<group>"; };
 		5772EDCD27D09C20001B3197 /* ZJLogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJLogView.m; sourceTree = "<group>"; };
 		5782A14225F1C6D30030E1A1 /* ZJSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZJSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5782A18425F1C86D0030E1A1 /* libZJSDKModuleCSJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleCSJ.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5782A18625F1C8720030E1A1 /* libZJSDKModuleDSP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleDSP.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5782A18825F1C8760030E1A1 /* libZJSDKModuleGDT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleGDT.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5782A18C25F1C87F0030E1A1 /* libZJSDKModuleMTG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleMTG.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		578A7B4727BB50F8004D86F4 /* libZJSDKModuleBD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleBD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		579209CB263961A8006693EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		579209CD263961DC006693EB /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		57A7EC182681DC6C003C10E5 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		57A8610126D7325D007CB3C3 /* libZJSDKModuleSIG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleSIG.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		57A8610D26D79BE8007CB3C3 /* libZJSDKModuleSIG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleSIG.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		57BD40142799584F00C01CF6 /* libZJSDKModuleGG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleGG.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		57BD41FD279E40FC00C01CF6 /* libZJSDKModuleGoogle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleGoogle.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		57E014722684241800CBF70C /* libZJSDKModuleYM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libZJSDKModuleYM.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EB04942635632E005DBA03 /* SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImage.h; sourceTree = "<group>"; };
 		57EB04992635632E005DBA03 /* UIImage+ExtendedCacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExtendedCacheData.h"; sourceTree = "<group>"; };
 		57EB049A2635632E005DBA03 /* SDImageHEICCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageHEICCoder.m; sourceTree = "<group>"; };
@@ -603,22 +591,10 @@
 				AB7A38E128FFD517004629FD /* ImageIO.framework */,
 				AB7A38DF28FFD4FD004629FD /* SafariServices.framework */,
 				AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */,
-				578A7B4727BB50F8004D86F4 /* libZJSDKModuleBD.a */,
-				57BD41FD279E40FC00C01CF6 /* libZJSDKModuleGoogle.a */,
-				57BD40142799584F00C01CF6 /* libZJSDKModuleGG.a */,
-				57A8610D26D79BE8007CB3C3 /* libZJSDKModuleSIG.a */,
-				57A8610126D7325D007CB3C3 /* libZJSDKModuleSIG.a */,
 				5738387C26C2610700008E82 /* ZJSDKCore.framework */,
-				57E014722684241800CBF70C /* libZJSDKModuleYM.a */,
 				57A7EC182681DC6C003C10E5 /* libc++abi.tbd */,
-				576656D6264E7F7300C2C239 /* libZJSDKModuleKS.a */,
-				5727059E264A31E60002F224 /* libZJSDKModuleDSP.a */,
 				579209CD263961DC006693EB /* CoreAudioKit.framework */,
 				579209CB263961A8006693EB /* CoreGraphics.framework */,
-				5782A18C25F1C87F0030E1A1 /* libZJSDKModuleMTG.a */,
-				5782A18825F1C8760030E1A1 /* libZJSDKModuleGDT.a */,
-				5782A18625F1C8720030E1A1 /* libZJSDKModuleDSP.a */,
-				5782A18425F1C86D0030E1A1 /* libZJSDKModuleCSJ.a */,
 				5782A14225F1C6D30030E1A1 /* ZJSDK.framework */,
 				0061941A25123E5800E09415 /* libbz2.tbd */,
 				0061941825123E4D00E09415 /* libsqlite3.tbd */,
@@ -1096,8 +1072,8 @@
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
 				574AA8FC25E517EE00098DCA /* Copy Files */,
-				DE4F5F5E9BF49CDFF5E924A1 /* [CP] Embed Pods Frameworks */,
-				5A5041E2C913D2A75EF3D960 /* [CP] Copy Pods Resources */,
+				40D7A384F4D147C457955DE8 /* [CP] Copy Pods Resources */,
+				E15FAE87BC0D5448D88C988A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1173,6 +1149,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
+		40D7A384F4D147C457955DE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4BF79167CC7928C6DDEE9AA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1195,24 +1188,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A5041E2C913D2A75EF3D960 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE4F5F5E9BF49CDFF5E924A1 /* [CP] Embed Pods Frameworks */ = {
+		E15FAE87BC0D5448D88C988A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

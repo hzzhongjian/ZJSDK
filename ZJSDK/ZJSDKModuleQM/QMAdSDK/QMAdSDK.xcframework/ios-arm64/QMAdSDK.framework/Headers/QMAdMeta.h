@@ -157,6 +157,23 @@ extern QMLossReason   *QMLossReasonOther;      // 其他
  */
 @property (nonatomic, readonly) NSDictionary<NSString *, id> *getExtraInfo;
 
+
+/**
+ * UniversalLink
+ */
+@property (nonatomic, readonly) NSString *getUniversalLink;
+
+
+/**
+ * DeepLink
+ */
+@property (nonatomic, readonly) NSString *getDeepLink;
+
+/**
+ * DownloadUrl
+ */
+@property (nonatomic, readonly) NSString *getDownloadUrl;
+
 @end
 
 NS_ASSUME_NONNULL_END

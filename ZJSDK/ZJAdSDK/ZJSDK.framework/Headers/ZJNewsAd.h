@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zj_newsAdDidShow:(ZJNewsAd *)newsAd;
 
 /**
- 关闭news广告回调
+ news广告奖励触发回调
  */
 - (void)zj_newsAdRewardEffective:(ZJNewsAd *)newsAd;
 

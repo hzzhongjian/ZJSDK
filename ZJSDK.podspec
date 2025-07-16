@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.21'
+  s.version          = '2.5.9.22'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos'
+  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication'
   s.weak_frameworks = 'AppTrackingTransparency'
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
@@ -133,7 +133,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleSIG' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleSIG/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'SigmobAd-iOS', '~> 4.19.0'
+        ss.dependency 'SigmobAd-iOS', '~> 4.20.0'
     end
 
     ### 谷歌适配器

@@ -51,8 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
         如果需要扩展，可以直接传入自定义的字符串（建议字符串为 >1000 的数字）
  */
 - (void)lossNotice:(NSInteger)auctionPrice
-        lossReason:(QMLossReason  * _Nullable)lossReason
-         winBidder:(QMWinBidder  * _Nullable)winBidder;
+        lossReason:(QMLossReason * _Nullable)lossReason
+         winBidder:(QMWinBidder * _Nullable)winBidder;
 
 @end
 

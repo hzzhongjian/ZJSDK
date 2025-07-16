@@ -39,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 检查 Scheme 列表 默认 YES
 @property (nonatomic, assign) BOOL canSniffingInstalls;
 
+/// 延迟获取 UserAgent 单位：秒 默认：0
+/// UserAgent 默认立即获取，若需延迟可以配置时间，设置该值会对首次填充可能会有影响
+@property (nonatomic, assign) CGFloat userAgentDelay;
 
 /// 是否开启 SDK 的播放器配置
 /// 在播放音频时是否使用 SDK 内部对 AVAudioSession 设置的 category 及 options，默认（YES）使用，若不使用，SDK 内部不做任何处理，由调用方在展示广告时自行设置；

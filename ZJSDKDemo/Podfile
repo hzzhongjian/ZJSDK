@@ -84,5 +84,6 @@ target 'ZJSDKDemo' do
 #  pod 'ZJSDK/ZJSDKModuleKSCompatible', :path => '../'
 #  pod 'KSAdSDK', '3.3.69'
 
+#pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
 end
  

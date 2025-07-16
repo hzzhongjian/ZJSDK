@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 //是否跳过单个广告位配置请求，直接使用本地配置
 @property (nonatomic, assign) BOOL is_skip_pos_conf_req;
 
+// ECPM服务端校验透传
+@property (nonatomic, assign) BOOL reward_chk_has_ecpm;
+
 - (void)registerPlatform:(NSString *)platform;
 
 
