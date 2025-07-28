@@ -33,6 +33,11 @@
     config.JSONConfigPath = [[NSBundle mainBundle] pathForResource:@"SDK_Setting_5434885" ofType:@"json"];
     config.freeEpisodesCount = 5;
     config.unlockEpisodesCountUsingAD = 5;
+    //    用来指定加载ZJ广告，如果不设置，默认加载的穿山甲自带广告，如果要设置需要同时设置下面两个字段的值
+    //    config.adType = ZJTubePageADTypeRewardVideo;
+    //    config.posId = @"KS90010001";
+    config.adType = ZJTubePageADTypeInterstitial;
+    config.posId = @"J7311893871";
     config.showCloseButton = YES;
     config.configOrNotCustomViewDelegate = YES;
     config.configOrNotCustomDrawAdViewDelegate = YES;
@@ -62,6 +67,7 @@
 - (void)showAd
 {
     self.weakTubeVC = self.tubePageAd.tubePageViewController;
+    self.weakTubeVC.modalPresentationStyle = UIModalPresentationFullScreen;
     if(self.weakTubeVC){
         // 快手只能push
         if (self.tubePageAd.currentAdapter.config.platformType == ZJAdPlatform_KS) {
@@ -112,6 +118,7 @@
 /**! @abstract 推荐页面底部banner视图**/
 - (UIView *)zj_shortplayDrawVideoVCBottomBannerView:(UIViewController *)vc content:(id<ZJContentInfo>)content
 {
+    return nil;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     view.backgroundColor = [UIColor cyanColor];
     return view;
@@ -210,6 +217,11 @@
     NSLog(@"======%s",__FUNCTION__);
 }
 
+- (BOOL)zj_shortplayPlayletDetailCustomUnlockView
+{
+    return NO;
+}
+
 
 /*! @abstract 解锁流程结束，回调解锁结果
  *  - success: 是否解锁成功
@@ -236,6 +248,7 @@
 
 - (UIView *)zj_shortplayPlayletDetailBottomBanner:(id<ZJContentInfo>)content
 {
+    return nil;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     view.backgroundColor = [UIColor orangeColor];
     return view;
@@ -247,6 +260,7 @@
 /// @param cell 短剧的cell
 - (UIView *)zj_shortplayPlayletDetailCellCustomView:(UITableViewCell *)cell
 {
+    return nil;
     // 短剧的cell自定义视图
     UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
     view.backgroundColor = [UIColor greenColor];
@@ -281,6 +295,7 @@
 #pragma mark - ZJShortPlayCustomDrawAdViewDelegate
 - (UIView *)zj_shortplayDetailCellCreateAdView:(UITableViewCell *)cell adInputIndex:(NSUInteger)adIndex
 {
+    return nil;
 //    自定义draw的广告页面
     UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
     view.backgroundColor = [UIColor yellowColor];
@@ -312,6 +327,7 @@
 #pragma mark - 推荐的底部banner
 - (UIView *)zj_shortplayDrawVideoVCBottomBannerView:(UIViewController *)vc
 {
+    return nil;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
     view.backgroundColor = [UIColor redColor];
     return view;

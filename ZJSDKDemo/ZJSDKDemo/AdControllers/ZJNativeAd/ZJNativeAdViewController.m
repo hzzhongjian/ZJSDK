@@ -57,7 +57,11 @@
     self.nativeAd = [[ZJNativeAd alloc] initWithPlacementId:self.adId];
     self.nativeAd.delegate = self;
     self.nativeAd.imgSize = ZJProposalSize_Feed690_388;
-    [self.nativeAd loadAdWithCount:4];
+//    新增下面三个参数
+    self.nativeAd.rootViewController = self;
+    self.nativeAd.adSize = CGSizeMake(self.view.bounds.size.width, 200);
+    self.nativeAd.mutedIfCan = YES;
+    [self.nativeAd loadAdWithCount:2];
     
     
 }

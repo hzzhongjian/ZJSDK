@@ -82,6 +82,11 @@
     [self logMessage:[NSString stringWithFormat:@"interstitialAdError : %@",error]];
 }
 
+- (void)zj_interstitialAdDetailDidPresentFullScreen:(ZJInterstitialAd *)ad
+{
+    [self logMessage:@"zj_interstitialAdDetailDidPresentFullScreen"];
+}
+
 /*
 #pragma mark - Navigation
 

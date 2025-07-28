@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///插屏广告其他错误回调
 - (void)zj_interstitialAdDidFail:(ZJInterstitialAd*)ad error:(nullable NSError *)error;
 
+///插屏广告详情页展示回调
+- (void)zj_interstitialAdDetailDidPresentFullScreen:(ZJInterstitialAd*)ad;
+
 @end
 
 @interface ZJInterstitialAd : ZJTierAd<ZJInterstitialAdProtocol>

@@ -45,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // ⚠️ 竞胜/竞败 时上报相关的函数。
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 

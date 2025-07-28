@@ -102,6 +102,7 @@ typedef NS_ENUM(NSUInteger, JLAdSdkUnionType) {
  是否屏蔽摇⼀摇，false或者不赋值，不屏蔽，true屏蔽
  */
 + (void)disableSplashAdShake:(BOOL)enabled;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,6 +18,8 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        //        设置视频播放是否静音，默认NO不禁音
+        self.mutedIfCan = NO;
         [self addSubview:self.titleLabel];
         [self addSubview:self.descLabel];
         [self addSubview:self.clickButton];

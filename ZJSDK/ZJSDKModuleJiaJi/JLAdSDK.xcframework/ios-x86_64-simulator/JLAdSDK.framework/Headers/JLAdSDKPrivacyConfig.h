@@ -45,6 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) JLAdSDKLocation * location;
 
 /**
+ * 添加自定义扩展参数
+ */
+@property (nonatomic, strong, nullable) NSDictionary *extraUserData;
+
+/**
  * 返回当前隐私配置的属性值字典
  *
  * @return 包含当前实例所有属性值的 NSDictionary 对象

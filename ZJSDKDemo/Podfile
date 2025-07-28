@@ -77,9 +77,9 @@ target 'ZJSDKDemo' do
 
 #  pod 'ZJSDK/ZJSDKModuleJiaJi', :path => '../'
  
+# pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
 # pod 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
 # pod 'PangrowthX/shortplay', '2.8.0.0'
-# pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
   
 #  pod 'ZJSDK/ZJSDKModuleKSCompatible', :path => '../'
 #  pod 'KSAdSDK', '3.3.69'

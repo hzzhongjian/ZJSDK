@@ -42,6 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showAdFromRootViewController:(UIViewController *)viewController;
 - (BOOL)isValid;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 

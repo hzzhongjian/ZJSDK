@@ -171,6 +171,20 @@
     }
 }
 
+- (void)zj_rewardVideoAdDidClickSkip:(ZJRewardVideoAd *)rewardedVideoAd
+{
+    [self logMessage:@"rewardVideoAdDidClickSkip"];
+}
+
+- (void)zj_rewardVideoAdDidPresentFullScreen:(ZJRewardVideoAd *)rewardedVideoAd
+{
+    [self logMessage:@"zj_rewardVideoAdDidPresentFullScreen"];
+}
+
+- (void)zj_rewardVideoAdDidCloseOtherController:(ZJRewardVideoAd *)rewardedVideoAd
+{
+    [self logMessage:@"zj_rewardVideoAdDidCloseOtherController"];
+}
 /*
 #pragma mark - Navigation
 

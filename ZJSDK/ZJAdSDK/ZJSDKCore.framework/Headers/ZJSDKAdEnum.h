@@ -49,6 +49,7 @@ typedef NS_ENUM(NSInteger, ZJAdPlatformType) {
     ZJAdPlatform_YIKA,
     ZJAdPlatform_QIYUN,
     ZJAdPlatform_TaKu,
+    ZJAdPlatform_QIMING,
 };
 
 typedef NS_ENUM(NSInteger, ZJAdType){

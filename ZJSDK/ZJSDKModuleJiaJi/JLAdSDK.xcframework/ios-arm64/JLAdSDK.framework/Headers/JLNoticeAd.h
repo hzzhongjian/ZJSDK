@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadAd;
 - (void)showAdInWindow:(UIWindow *)window;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 @end
 
 NS_ASSUME_NONNULL_END

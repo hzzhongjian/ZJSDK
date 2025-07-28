@@ -46,6 +46,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)zj_bannerAdDidCloseOtherController:(ZJBannerAd *)bannerAd;
 
+/**
+ 打开banner广告详情页回调
+ */
+- (void)zj_bannerAdDetailDidPresentFullScreen:(ZJBannerAd *)bannerAd;
+
 @end
 
 @interface ZJBannerAd : ZJTierAd

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.22'
+  s.version          = '2.5.9.23'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia'
+  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia','ZJSDKModuleQiMingADX'
   
     s.subspec 'ZJAdSDK' do |ss|
         ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
@@ -75,7 +75,7 @@ TODO: Add long description of the pod here.
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         # ss.dependency 'Ads-CN'
-        ss.dependency 'Ads-CN/CSJMediation' #使用gromore需要引入
+#        ss.dependency 'Ads-CN/CSJMediation' #使用gromore需要引入
         ss.dependency 'Ads-CN/BUAdSDK'
     end
 
@@ -291,6 +291,19 @@ TODO: Add long description of the pod here.
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTaKu/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'AnyThinkiOS', '~> 6.4.75'
+    end
+
+    ###QiMingADX适配器兼容版
+    s.subspec 'ZJSDKModuleQiMingADXCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiMingADX/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###QiMingADX适配器
+    s.subspec 'ZJSDKModuleQiMingADX' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiMingADX/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'QiMingADXSDK', '~> 2.2.6.0'
     end
  
 end

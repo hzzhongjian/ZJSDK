@@ -45,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) UIViewController * viewController;
 - (instancetype)initWithSlotId:(NSString *) slotId;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,6 +21,12 @@ typedef NS_ENUM(NSInteger, ZJTubePageDrawVideoVCTabOptions) {
     ZJTubePageDrawVideoVCTabOptions_theater       = 1 << 2, // 剧场Tab
 };
 
+// 广告类型
+typedef NS_ENUM(NSInteger, ZJTubePageADType) {
+    ZJTubePageADTypeInterstitial = 0,
+    ZJTubePageADTypeRewardVideo = 1,
+};
+
 @interface ZJTubePageConfig : NSObject
 
 /// 用户在穿山甲平台注册的应用，填写包名之后，下载的SDK参数配置的json文件，放在包中的路径
@@ -75,6 +81,12 @@ typedef NS_ENUM(NSInteger, ZJTubePageDrawVideoVCTabOptions) {
 @property (nonatomic, assign) BOOL configOrNotCustomDrawAdViewDelegate;
 /// 是否配置滑滑溜底部自定义Banner广告
 @property (nonatomic, assign) BOOL configOrNotCustomBannerDelegate;
+
+// ---------------自定义广告，--------------------------
+/// 指定广告类型，目前支持自定义广告，插屏和激励视频两种
+@property (nonatomic, assign) ZJTubePageADType adType;
+/// 指定广告位ID
+@property (nonatomic, copy) NSString *posId;
 
 @end
 

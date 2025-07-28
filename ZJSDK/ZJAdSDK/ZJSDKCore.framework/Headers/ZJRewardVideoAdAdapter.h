@@ -40,6 +40,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_rewardedVideoAdDidClickSkip;
 
+- (void)zj_rewardVideoAdDidCloseOtherController;
+
+- (void)zj_rewardVideoAdDidPresentFullScreen;
+
 @end
 
 NS_ASSUME_NONNULL_END

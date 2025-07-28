@@ -42,6 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIView *)getAdView;
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 @end

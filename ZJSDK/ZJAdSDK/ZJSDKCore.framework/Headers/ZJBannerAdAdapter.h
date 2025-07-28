@@ -46,6 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)zjad_bannerAdViewDidCloseOtherController:(ZJBannerAdAdapter *)bannerAd;
 
+/**
+ 打开banner广告详情页回调
+ */
+- (void)zjad_bannerAdViewDetailDidPresentFullScreen:(ZJBannerAdAdapter *)bannerAd;
+
+
 @end
 // ZJBannerAdAdapter是继承ZJCoreAdAdapter，
 @interface ZJBannerAdAdapter : ZJTierAdAdapter <ZJBannerAdProtocol>
@@ -95,6 +101,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)zjad_bannerAdViewDidCloseOtherController:(ZJBannerAdAdapter *)bannerAd;
 
+/**
+ 打开banner广告详情页回调
+ */
+- (void)zjad_bannerAdViewDetailDidPresentFullScreen;
 
 @end
 

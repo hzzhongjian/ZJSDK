@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithSlotId:(NSString *) slotId;
 - (void)loadAd;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 @end
 
 NS_ASSUME_NONNULL_END

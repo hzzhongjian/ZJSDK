@@ -15,7 +15,6 @@
 #import "ZJSplashWindowVC.h"
 #import "ZJHomeViewController.h"
 #import <ZJSDKCore/ZJCacheManager.h>
-//#import <ZJSDKCore/ZJInvoker.h>
 
 @interface AppDelegate ()<ZJSplashAdDelegate>
 
@@ -35,8 +34,14 @@
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
     NSLog(@"ZJSDK版本号：%@",version);
-
-//    NSArray *method = [ZJInvoker getInstanceMethodList:@"MTGNativeAdvancedAd"];
+    
+    //    ZJSDKPrivacyAuthorityModel *privacyAuthorityModel = [[ZJSDKPrivacyAuthorityModel alloc] init];
+    ////    NSLog(@"%@", privacyAuthorityModel);
+    //    privacyAuthorityModel.canUseIDFA = NO;
+    //    privacyAuthorityModel.canUseLocation = NO;
+    //    [ZJSDKInitConfig sharedInstance].privacyAuthorityModel = privacyAuthorityModel;
+    //    [ZJSDKInitConfig sharedInstance].privacyProvider = [[ZJDemoPrivacyProvider alloc] init];
+    //    [ZJAdSDK registerSDK:[[ZJSDKInitModel alloc] initWithAppId:@"Z0837060490" userId:@"" channel:@"test" app_extra:@{}]];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)loadAd;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 

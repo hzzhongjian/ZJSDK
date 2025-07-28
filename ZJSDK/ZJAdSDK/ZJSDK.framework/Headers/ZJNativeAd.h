@@ -29,6 +29,17 @@ NS_ASSUME_NONNULL_BEGIN
 // 穿山甲联盟要求传加载图片尺寸
 @property (nonatomic, assign) ZJProposalSize imgSize;
 
+// 部分联盟需要传的广告尺寸
+@property (nonatomic, assign) CGSize adSize;
+
+/**
+ 是否设置静音模式，默认是true
+*/
+@property (nonatomic ,assign) BOOL mutedIfCan;
+
+// 一般为当前展示广告控制器
+@property (nonatomic, strong) UIViewController *rootViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

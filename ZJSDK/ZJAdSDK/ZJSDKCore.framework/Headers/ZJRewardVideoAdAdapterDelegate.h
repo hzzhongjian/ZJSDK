@@ -35,6 +35,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_rewardVideoAdAdapterDidClickSkip:(ZJRewardVideoAdAdapter *)adapter;
 
+- (void)zj_rewardVideoAdAdapterDidCloseOtherController:(ZJRewardVideoAdAdapter *)adapter;
+
+- (void)zj_rewardVideoAdAdapterDidPresentFullScreen:(ZJRewardVideoAdAdapter *)adapter;
+
 @end
 
 NS_ASSUME_NONNULL_END

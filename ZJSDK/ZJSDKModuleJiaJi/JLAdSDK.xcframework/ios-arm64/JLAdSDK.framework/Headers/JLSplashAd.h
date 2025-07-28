@@ -54,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)dismiss;
 - (BOOL)isValid;
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 

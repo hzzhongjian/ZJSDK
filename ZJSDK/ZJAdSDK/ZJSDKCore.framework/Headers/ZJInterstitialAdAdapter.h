@@ -31,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_interstitialAdDidFail:(NSError * __nullable)error;
 
+- (void)zj_interstitialDidEnterBackground;
+
+- (void)zj_interstitialAdDetailDidPresentFullScreen;
+
 @end
 
 NS_ASSUME_NONNULL_END

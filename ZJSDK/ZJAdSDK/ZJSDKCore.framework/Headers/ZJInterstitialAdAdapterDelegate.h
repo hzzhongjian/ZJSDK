@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)zj_interstitialAdAdapterDidFail:(ZJInterstitialAdAdapter *)adapter error:(NSError * __nullable)error;
 
+- (void)zj_interstitialAdAdapterDetailDidPresentScreen:(ZJInterstitialAdAdapter *)adapter;
+
 @end
 
 NS_ASSUME_NONNULL_END

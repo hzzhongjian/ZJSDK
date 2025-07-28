@@ -103,6 +103,7 @@ typedef NS_ENUM(NSInteger, JLNativeAdInteractionType) {
 @property (nonatomic, assign, readonly) JLAdSdkUnionType unionType;
 
 - (NSInteger)eCPM;
+- (NSDictionary * _Nullable)extraInfo;
 - (void)sendWinNotificationWithInfo:(NSDictionary *)winInfo;
 - (void)sendLossNotificationWithInfo:(NSDictionary *)lossInfo;
 

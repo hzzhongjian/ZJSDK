@@ -23,7 +23,8 @@ FOUNDATION_EXPORT NSString * const ZJEvent_Click;//点击
 FOUNDATION_EXPORT NSString * const ZJEvent_Error;//错误
 FOUNDATION_EXPORT NSString * const ZJEvent_Other;//其他信息
 FOUNDATION_EXPORT NSString * const ZJEvent_Start_Show; // 媒体调用我们激励视频的展示方法
-
+FOUNDATION_EXPORT NSString * const ZJEvent_EnterBackground; // 从前台进入后台
+//FOUNDATION_EXPORT NSString * const ZJEvent_Close; // 广告关闭
 
 @interface ZJAdEventReport : ZJAdBaseNetworking
 
