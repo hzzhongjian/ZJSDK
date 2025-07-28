@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia','ZJSDKModuleQiMingADX'
+  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia'
   
     s.subspec 'ZJAdSDK' do |ss|
         ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
