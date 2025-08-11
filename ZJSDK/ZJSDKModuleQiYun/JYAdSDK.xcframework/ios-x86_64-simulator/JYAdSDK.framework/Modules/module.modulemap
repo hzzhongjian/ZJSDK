@@ -1,0 +1,6 @@
+framework module JYAdSDK {
+  umbrella header "JYAdSDK.h"
+  export *
+
+  module * { export * }
+}

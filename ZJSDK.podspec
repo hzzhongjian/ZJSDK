@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.23'
+  s.version          = '2.5.9.24'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = 'UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication'
+  s.frameworks = ['UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication']
   s.weak_frameworks = 'AppTrackingTransparency'
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
@@ -42,14 +42,14 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleJiaJi','ZJSDKModuleWanJia'
+  s.default_subspecs = ['ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleQiYun','ZJSDKModuleWanJia']
   
     s.subspec 'ZJAdSDK' do |ss|
         ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
         ss.preserve_paths = 'ZJSDK/ZJAdSDK/*.framework'
         ss.resource = 'ZJSDK/ZJAdSDK/*.bundle'
     end
-
+    
     ### GDT适配器兼容版
     s.subspec 'ZJSDKModuleGDTCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
@@ -104,18 +104,6 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
     end
 
-    ### MTG适配器
-    s.subspec 'ZJSDKModuleMTG' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'MintegralAdSDK', '~> 7.0'
-        ss.dependency 'MintegralAdSDK/RewardVideoAd'
-        ss.dependency 'MintegralAdSDK/BannerAd'
-        ss.dependency 'MintegralAdSDK/SplashAd'
-        ss.dependency 'MintegralAdSDK/InterstitialAd'
-        ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
-    end
-
     ### DSP适配器
     s.subspec 'ZJSDKModuleDSP' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleDSP/*.a'
@@ -135,13 +123,6 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'SigmobAd-iOS', '~> 4.20.0'
     end
-
-    ### 谷歌适配器
-    s.subspec 'ZJSDKModuleGoogle' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGoogle/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'Google-Mobile-Ads-SDK'
-    end
  
     ### 百度适配器兼容版   
     s.subspec 'ZJSDKModuleBDCompatible' do |ss|
@@ -157,13 +138,7 @@ TODO: Add long description of the pod here.
         ss.dependency 'BaiduMobAdSDK', '~> 5.37'
         ss.resource           = 'ZJSDK/ZJSDKModuleBD/*.bundle'
     end
- 
-    ### 穿山甲海外适配器
-    s.subspec 'ZJSDKModulePangle' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModulePangle/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'Ads-Global'
-    end
+
 
     ### 倍孜适配器兼容版
     s.subspec 'ZJSDKModuleBeiZiCompatible' do |ss|
@@ -266,18 +241,32 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
     end
     
-    ###奇运适配器兼容版
+    ###奇运适配器兼容版(废弃)
     s.subspec 'ZJSDKModuleJiaJiCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJiaJi/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
     end
 
-    ###奇运适配器
+    ###奇运适配器(废弃)
     s.subspec 'ZJSDKModuleJiaJi' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJiaJi/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleJiaJi/*.xcframework'
+    end
+
+    ###奇运新适配器兼容版
+    s.subspec 'ZJSDKModuleQiYunCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiYun/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###奇运新适配器
+    s.subspec 'ZJSDKModuleQiYun' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiYun/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
     end
 
     ###TaKu适配器兼容版
@@ -304,6 +293,32 @@ TODO: Add long description of the pod here.
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiMingADX/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'QiMingADXSDK', '~> 2.2.6.0'
+    end
+    
+    ### 谷歌适配器
+    s.subspec 'ZJSDKModuleGoogle' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGoogle/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'Google-Mobile-Ads-SDK'
+    end
+    
+    ### 穿山甲海外适配器
+    s.subspec 'ZJSDKModulePangle' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModulePangle/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'Ads-Global'
+    end
+    
+    ### MTG适配器
+    s.subspec 'ZJSDKModuleMTG' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMTG/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'MintegralAdSDK', '~> 7.0'
+        ss.dependency 'MintegralAdSDK/RewardVideoAd'
+        ss.dependency 'MintegralAdSDK/BannerAd'
+        ss.dependency 'MintegralAdSDK/SplashAd'
+        ss.dependency 'MintegralAdSDK/InterstitialAd'
+        ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
     end
  
 end
