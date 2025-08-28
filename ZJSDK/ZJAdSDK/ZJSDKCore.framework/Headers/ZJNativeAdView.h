@@ -50,6 +50,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *videoAdView;
 
 /**
+ HTML视图，绑定数据对象后自动生成，可自定义布局
+ */
+@property (nonatomic, strong) UIView *htmlView;
+
+/**
   联盟广告logo，调用registerDataObject: clickableViews:绑定数据对象后自动生成，可自定义布局
  */
 @property (nonatomic, strong, readonly) UIView *logoView;

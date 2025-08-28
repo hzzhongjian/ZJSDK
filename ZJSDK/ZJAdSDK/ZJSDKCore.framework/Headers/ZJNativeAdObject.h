@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, ZJAdMaterialType) {
     ZJAdMaterialTypeVideo       =       1,      // 视频
     ZJAdMaterialTypeSingle      =       2,      // 单图
     ZJAdMaterialTypeAtlas       =       3,      // 多图
+    ZJAdMaterialTypeHTML        =       4,      // HTML视图
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -74,8 +75,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) CGFloat appRating;
 
-
-
 /**
  广告对应的CTA文案，自定义CTA视图时建议使用此字段
  广告对应的callToAction文案，比如“立即预约”或“电话咨询”, 自定义callToAction视图时建议使用此字段
@@ -97,6 +96,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (nonatomic, copy, readonly)NSString *platform;
+
+/**
+ 联盟SDK logo图
+ */
+@property (nonatomic, copy, readonly) NSString *logoUrl;
 
 /**
  * 返回广告的eCPM，广告加载成功后调用有效，单位：分

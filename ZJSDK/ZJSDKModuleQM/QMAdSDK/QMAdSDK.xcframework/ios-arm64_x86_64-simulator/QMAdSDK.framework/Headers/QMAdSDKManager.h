@@ -25,14 +25,15 @@ __attribute__((objc_subclassing_restricted))
 /// 小版本号
 + (NSString *)shortSdkVersion;
 
-/// 设备信息
-+ (NSDictionary *)deviceInfo;
-
 /// QMCD
 + (NSArray *)qmcds;
 
 /// The  initialization state
 + (QMAdSDKInitializationState)sdkState;
+
+/// 是否允许摇一摇/扭一扭（单设备纬度）
+/// 默认：YES 允许
++ (void)setTwistSwitch:(BOOL)enabled;
 
 /// The  initialization method
 + (void)setupSDKWith:(QMAdSDKConfiguration *)config;

@@ -85,7 +85,8 @@
         NSArray *section4 = @[@"短剧",@"短剧-新对接方式(推荐)"];
         NSArray *section5 = @[@"新闻资讯",@"H5页面",@"悬浮广告",@"H5页面JS交互"];
         NSArray *section6 = @[@"微信小程序广告"];
-        _adTypes = [NSArray arrayWithObjects:section1, section2, section3,section4,section5,section6, nil];
+        NSArray *section7 = @[@"JS调用"];
+        _adTypes = [NSArray arrayWithObjects:section1, section2, section3,section4,section5,section6,section7, nil];
     }
     return _adTypes;
 }
@@ -120,7 +121,7 @@
         [_demoVCDictionary setValue:@"ZJFloatingAdViewController" forKey:@"悬浮广告"];
         [_demoVCDictionary setValue:@"ZJJSBridgeViewController" forKey:@"H5页面JS交互"];
         [_demoVCDictionary setValue:@"ZJMiniParamViewController" forKey:@"微信小程序广告"];
-
+        [_demoVCDictionary setValue:@"ZJJSViewController" forKey:@"JS调用"];
     }
     return _demoVCDictionary;;
 }

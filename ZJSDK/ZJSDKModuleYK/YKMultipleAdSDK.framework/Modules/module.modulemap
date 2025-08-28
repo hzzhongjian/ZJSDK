@@ -1,6 +1,0 @@
-framework module YKMultipleAdSDK {
-  umbrella header "YKMultipleAdSDK.h"
-  export *
-
-  module * { export * }
-}

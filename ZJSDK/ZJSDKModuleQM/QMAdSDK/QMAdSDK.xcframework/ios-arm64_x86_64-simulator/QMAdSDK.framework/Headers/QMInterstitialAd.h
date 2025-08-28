@@ -14,43 +14,7 @@ typedef NS_ENUM(NSUInteger, QMInterstitialAdCloseType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class QMInterstitialAd;
-@protocol QMInterstitialAdDelegate <NSObject>
-@optional
-
-/// 插屏广告加载成功
-- (void)qm_interstitialAdLoadSuccess:(QMInterstitialAd *)interstitialAd;
-
-/// 插屏广告加载失败
-- (void)qm_interstitialAdLoadFail:(QMInterstitialAd *)interstitialAd error:(NSError *)error;
-
-/// 插屏广告曝光
-- (void)qm_interstitialAdDidShow:(QMInterstitialAd *)interstitialAd;
-
-/// 插屏广告点击
-- (void)qm_interstitialAdDidClick:(QMInterstitialAd *)interstitialAd;
-
-/// 插屏广告关闭
-- (void)qm_interstitialAdDidClose:(QMInterstitialAd *)interstitialAd closeType:(QMInterstitialAdCloseType)type;
-
-/// 插屏广告视频播放开始
-- (void)qm_interstitialAdDidStart:(QMInterstitialAd *)rewardedVideoAd;
-
-/// 插屏广告视频播放暂停
-- (void)qm_interstitialAdDidPause:(QMInterstitialAd *)rewardedVideoAd;
-
-/// 插屏广告视频播放继续
-- (void)qm_interstitialAdDidResume:(QMInterstitialAd *)rewardedVideoAd;
-
-/// 插屏广告视频播放完成
-- (void)qm_interstitialAdVideoDidPlayComplection:(QMInterstitialAd *)interstitialAd;
-
-/// 插屏广告视频播放异常
-- (void)qm_interstitialAdVideoDidPlayFinished:(QMInterstitialAd *)interstitialAd didFailWithError:(NSError *)error;
-
-@end
-
-
+@protocol QMInterstitialAdDelegate;
 
 @interface QMInterstitialAd : NSObject
 
@@ -96,5 +60,45 @@ NS_ASSUME_NONNULL_BEGIN
         lossReason:(QMLossReason  * _Nullable)lossReason
          winBidder:(QMWinBidder  * _Nullable)winBidder;
 
+/// 是否有效 YES: 有效 NO: 无效
+- (BOOL)isValid;
+
 @end
+
+@protocol QMInterstitialAdDelegate <NSObject>
+
+@optional
+
+/// 插屏广告加载成功
+- (void)qm_interstitialAdLoadSuccess:(QMInterstitialAd *)interstitialAd;
+
+/// 插屏广告加载失败
+- (void)qm_interstitialAdLoadFail:(QMInterstitialAd *)interstitialAd error:(NSError *)error;
+
+/// 插屏广告曝光
+- (void)qm_interstitialAdDidShow:(QMInterstitialAd *)interstitialAd;
+
+/// 插屏广告点击
+- (void)qm_interstitialAdDidClick:(QMInterstitialAd *)interstitialAd;
+
+/// 插屏广告关闭
+- (void)qm_interstitialAdDidClose:(QMInterstitialAd *)interstitialAd closeType:(QMInterstitialAdCloseType)type;
+
+/// 插屏广告视频播放开始
+- (void)qm_interstitialAdDidStart:(QMInterstitialAd *)rewardedVideoAd;
+
+/// 插屏广告视频播放暂停
+- (void)qm_interstitialAdDidPause:(QMInterstitialAd *)rewardedVideoAd;
+
+/// 插屏广告视频播放继续
+- (void)qm_interstitialAdDidResume:(QMInterstitialAd *)rewardedVideoAd;
+
+/// 插屏广告视频播放完成
+- (void)qm_interstitialAdVideoDidPlayComplection:(QMInterstitialAd *)interstitialAd;
+
+/// 插屏广告视频播放异常
+- (void)qm_interstitialAdVideoDidPlayFinished:(QMInterstitialAd *)interstitialAd didFailWithError:(NSError *)error;
+
+@end
+
 NS_ASSUME_NONNULL_END

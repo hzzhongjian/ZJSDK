@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.24'
+  s.version          = '2.5.9.25'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,11 +30,11 @@ TODO: Add long description of the pod here.
   s.platform     = :ios, "11.0"
   
   #依赖的系统frameworks
-  s.frameworks = ['UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication']
-  s.weak_frameworks = 'AppTrackingTransparency'
+  s.frameworks = ['UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication','AssetsLibrary','CoreFoundation']
+  s.weak_frameworks = ['AppTrackingTransparency','CoreHaptics']
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
-  s.libraries = 'resolv.9','c++','z','sqlite3','bz2','xml2','c++abi','sqlite3.0','iconv'
+  s.libraries = ['resolv.9','c++','z','sqlite3','bz2','xml2','c++abi','sqlite3.0','iconv']
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64', 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386,arm64' }
   s.xcconfig = { 'ENABLE_BITCODE' => 'NO', 'OTHER_LDFLAGS' =>'-ObjC'}
 #  valid_archs = ['armv7', 'i386', 'x86_64', 'arm64']
@@ -226,20 +226,6 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleWanJia/WanJiaAdSDK/*.xcframework'
         ss.resource             = 'ZJSDK/ZJSDKModuleWanJia/WanJiaAdSDK/Assets/*.bundle'
     end
-
-    ###移卡适配器兼容版
-    s.subspec 'ZJSDKModuleYKCompatible' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-    end
-
-    ###移卡适配器
-    s.subspec 'ZJSDKModuleYK' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleYK/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleYK/*.framework'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleYK/*.framework'
-    end
     
     ###奇运适配器兼容版(废弃)
     s.subspec 'ZJSDKModuleJiaJiCompatible' do |ss|
@@ -293,6 +279,21 @@ TODO: Add long description of the pod here.
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQiMingADX/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.dependency 'QiMingADXSDK', '~> 2.2.6.0'
+    end
+
+    ###旺脉适配器兼容版
+    s.subspec 'ZJSDKModuleWangMaiCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleWangMai/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###旺脉适配器
+    s.subspec 'ZJSDKModuleWangMai' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleWangMai/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleWangMai/*.framework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleWangMai/*.framework'
+        ss.resource             = 'ZJSDK/ZJSDKModuleWangMai/*.bundle'
     end
     
     ### 谷歌适配器

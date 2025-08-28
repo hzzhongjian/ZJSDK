@@ -102,6 +102,9 @@ typedef NS_ENUM(NSInteger, ZJStrategy) {
 /// @param completedBlock 磁盘存储完成回调
 - (void)increaseError:(NSError *)error forAdid:(NSString *)adid platformType:(ZJAdPlatformType)type completed:(nullable ZJCacheCompletionBlock)completedBlock;
 
+// 插入自定义的事件类型
+- (void)increaseCustomEventType:(NSString *)eventType adid:(NSString *)adid completed:(nullable ZJCacheCompletionBlock)completedBlock;
+
 #pragma mark =============== 清理 ===============
 /// 每天首次调用cache类，会先清理过去的cache，返回是否应清理缓存
 /// 提前调用readDateInfoFromDiskCompleted方法，把日期缓存到内存，complicatedBlock将会同步执行返回。如果没有提前缓存，首次调用将会返回NO

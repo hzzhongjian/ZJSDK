@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param minuteOffset  增加的分钟数，为负数则为减少
 + (NSString *)getCurrentTimeMinuteOffset:(NSInteger)minuteOffset;
 
+// 获取当前日期少几天/多几天的日期
++ (NSString *)getCurrentDateDayOffset:(NSInteger)dayOffset;
+
 /// 判断当前时间是否大于禁止请求的时间
 /// @return 默认返回NSOrderedAscending（tA小于B）；NSOrderedSame（A等于B）；NSOrderedDescending（A大于B）；
 /// @param timeA 时间A

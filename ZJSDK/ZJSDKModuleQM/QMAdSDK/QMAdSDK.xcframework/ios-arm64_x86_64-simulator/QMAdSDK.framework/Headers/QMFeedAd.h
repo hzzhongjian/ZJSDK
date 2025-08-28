@@ -51,6 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
         lossReason:(QMLossReason  * _Nullable)lossReason
          winBidder:(QMWinBidder  * _Nullable)winBidder;
 
+/// 是否有效 YES: 有效 NO: 无效
+- (BOOL)isValid;
 
 @end
 

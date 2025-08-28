@@ -128,6 +128,8 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 @property (nonatomic, strong) NSString *load_strategy;
 /// 连续不完成限制
 @property (nonatomic, strong) NSString *finish_strategy;
+/// bidding广告位新增限制策略
+@property (nonatomic, strong) NSString *bid_floor_strategy;
 
 @property (nonatomic, assign) ZJAdPlatformType platformType;
 

@@ -11,8 +11,13 @@
 #import "ZJNativeAdImageTableViewCell.h"
 #import "ZJNativeAdAtlasImageTableViewCell.h"
 #import "ZJNativeAdVideoTableViewCell.h"
+#import "ZJNativeAdHTMLTableViewCell.h"
 #import "ZJLogView.h"
-@interface ZJNativeAdViewController ()<ZJNativeAdDelegate,UITableViewDataSource,UITableViewDelegate,ZJNativeAdViewDelegate>
+
+
+@interface ZJNativeAdViewController ()<ZJNativeAdDelegate,UITableViewDataSource,UITableViewDelegate,ZJNativeAdViewDelegate, UIGestureRecognizerDelegate>
+
+
 @property (strong, nonatomic) UITableView *tableView;
 
 @property (nonatomic,strong)ZJNativeAd *nativeAd;
@@ -57,22 +62,20 @@
     self.nativeAd = [[ZJNativeAd alloc] initWithPlacementId:self.adId];
     self.nativeAd.delegate = self;
     self.nativeAd.imgSize = ZJProposalSize_Feed690_388;
-//    新增下面三个参数
     self.nativeAd.rootViewController = self;
     self.nativeAd.adSize = CGSizeMake(self.view.bounds.size.width, 200);
     self.nativeAd.mutedIfCan = YES;
-    [self.nativeAd loadAdWithCount:2];
-    
-    
+    [self.nativeAd loadAdWithCount:1];
 }
 
+
 -(void)loadAd{
-    [self.nativeAd loadAdWithCount:2];
+    [self.nativeAd loadAdWithCount:1];
 }
 
 
 - (void)zj_nativeAdLoaded:(NSArray<ZJNativeAdObject *> * _Nullable)multipleResultObject error:(NSError * _Nullable)error{
-    if (!error &&multipleResultObject.count > 0) {
+    if (!error && multipleResultObject.count > 0) {
         [self.logView logMessage:[NSString stringWithFormat:@"nativeAdDidLoaded: %ld",multipleResultObject.count]];
         [self.dataArray addObjectsFromArray:multipleResultObject];
         [self.tableView reloadData];
@@ -101,6 +104,7 @@
         
         [_tableView registerClass:[ZJNativeAdImageTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdImageTableViewCell.class)];
         [_tableView registerClass:[ZJNativeAdAtlasImageTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdAtlasImageTableViewCell.class)];
+        [_tableView registerClass:[ZJNativeAdHTMLTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdAtlasImageTableViewCell.class)];
         [_tableView registerClass:[ZJNativeAdVideoTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdVideoTableViewCell.class)];
     }
     
@@ -115,13 +119,14 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    ZJNativeAdObject  *object =  self.dataArray[indexPath.row];
-    
+    ZJNativeAdObject *object = self.dataArray[indexPath.row];
     if (object.materialType == ZJAdMaterialTypeVideo) {
         return [ZJNativeAdVideoTableViewCell cellHeightWithUnifiedNativeAdDataObject:object];
     } else if (object.materialType == ZJAdMaterialTypeAtlas){
         return [ZJNativeAdAtlasImageTableViewCell cellHeightWithUnifiedNativeAdDataObject:object];
-    }else {
+    } else if (object.materialType == ZJAdMaterialTypeHTML) {
+        return [ZJNativeAdHTMLTableViewCell cellHeightWithUnifiedNativeAdDataObject:object];
+    } else {
         return [ZJNativeAdImageTableViewCell cellHeightWithUnifiedNativeAdDataObject:object];
     }
 }
@@ -136,13 +141,15 @@
         ZJNativeAdAtlasImageTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ZJNativeAdAtlasImageTableViewCell.class) forIndexPath:indexPath];
         [cell setupWithUnifiedNativeAdDataObject:object delegate:self vc:self];
         return cell;
-    }else {
+    } else if (object.materialType == ZJAdMaterialTypeHTML) {
+        ZJNativeAdHTMLTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ZJNativeAdHTMLTableViewCell.class) forIndexPath:indexPath];
+        [cell setupWithUnifiedNativeAdDataObject:object delegate:self vc:self];
+        return cell;
+    } else {
         ZJNativeAdImageTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ZJNativeAdImageTableViewCell.class) forIndexPath:indexPath];
         [cell setupWithUnifiedNativeAdDataObject:object delegate:self vc:self];
         return cell;
     }
-    
-    
 }
 
 -(void)dealloc{
@@ -152,17 +159,27 @@
 //广告曝光回调
 -(void)zj_nativeAdViewWillExpose:(UIView *)nativeAdView{
     NSLog(@"======%s",__FUNCTION__);
+    NSLog(@"ecpm = %ld", self.nativeAd.eCPM);
+    [self.logView logMessage:[NSString stringWithFormat:@"zj_nativeAdViewWillExpose"]];
 }
 //广告点击回调
 -(void)zj_nativeAdViewDidClick:(UIView *)nativeAdView{
     NSLog(@"======%s",__FUNCTION__);
+    [self.logView logMessage:[NSString stringWithFormat:@"zj_nativeAdViewDidClick"]];
 }
 //广告详情页关闭回调
 -(void)zj_nativeAdDetailViewClosed:(UIView *)nativeAdView{
     NSLog(@"======%s",__FUNCTION__);
+    [self.logView logMessage:[NSString stringWithFormat:@"zj_nativeAdDetailViewClosed"]];
 }
 //广告详情页面即将展示回调
 -(void)zj_nativeAdDetailViewWillPresentScreen:(UIView *)nativeAdView{
     NSLog(@"======%s",__FUNCTION__);
+    [self.logView logMessage:[NSString stringWithFormat:@"zj_nativeAdDetailViewWillPresentScreen"]];
 }
+//- (void)zj_nativeAdViewShowError:(ZJNativeAdView *)nativeAdView error:(NSError *)error
+//{
+//    NSLog(@"======%s==%@",__FUNCTION__, error.userInfo);
+//}
+
 @end

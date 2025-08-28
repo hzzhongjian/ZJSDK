@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong, readonly) UIView *splashAdapterView;
 
-
 /**
  *  开屏广告素材加载成功
  */

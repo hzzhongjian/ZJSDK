@@ -26,6 +26,8 @@ FOUNDATION_EXPORT NSString * const ZJEvent_Start_Show; // 媒体调用我们激�
 FOUNDATION_EXPORT NSString * const ZJEvent_EnterBackground; // 从前台进入后台
 //FOUNDATION_EXPORT NSString * const ZJEvent_Close; // 广告关闭
 
+FOUNDATION_EXPORT NSString * const ZJEvent_BidFloor; // bidding广告位获取的ecpm值小于设置的bidFloor时
+
 @interface ZJAdEventReport : ZJAdBaseNetworking
 
 //事件上报

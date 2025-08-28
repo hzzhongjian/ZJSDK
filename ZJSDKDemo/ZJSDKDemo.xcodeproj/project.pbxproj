@@ -166,6 +166,8 @@
 		AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38E128FFD517004629FD /* ImageIO.framework */; };
 		AB8D73162D641B2E00C8CE22 /* ZJNewTubePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D73152D641B2E00C8CE22 /* ZJNewTubePageVC.m */; };
 		AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */ = {isa = PBXBuildFile; fileRef = AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */; };
+		AB8F74CD2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F74CC2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m */; };
+		AB8F74D12E602EB400DD57CB /* ZJJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F74CF2E602EB400DD57CB /* ZJJSViewController.m */; };
 		ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */; };
 		ABCFD8392B453DC400D2449D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD7DD2B453DC400D2449D /* ViewController.m */; };
 		ABCFD85E2B453DC400D2449D /* ZJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8312B453DC400D2449D /* ZJHomeViewController.m */; };
@@ -490,6 +492,10 @@
 		AB8D73142D641B2E00C8CE22 /* ZJNewTubePageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNewTubePageVC.h; sourceTree = "<group>"; };
 		AB8D73152D641B2E00C8CE22 /* ZJNewTubePageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNewTubePageVC.m; sourceTree = "<group>"; };
 		AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDK_Setting_5434885.json; sourceTree = "<group>"; };
+		AB8F74CB2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNativeAdHTMLTableViewCell.h; sourceTree = "<group>"; };
+		AB8F74CC2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNativeAdHTMLTableViewCell.m; sourceTree = "<group>"; };
+		AB8F74CE2E602EB400DD57CB /* ZJJSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJJSViewController.h; sourceTree = "<group>"; };
+		AB8F74CF2E602EB400DD57CB /* ZJJSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJJSViewController.m; sourceTree = "<group>"; };
 		AB9272712A33192B00139D33 /* ZJADIDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJADIDS.h; sourceTree = "<group>"; };
 		ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ZJSDK.podspec; path = ../ZJSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABCFD7DC2B453DC400D2449D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -892,6 +898,7 @@
 		AB04E5CD2C1AF47D0050C68B /* AdControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB8F74D02E602EB400DD57CB /* ZJJSBridge */,
 				AB04E5FB2C1AF47D0050C68B /* AdViewController.h */,
 				AB04E5DF2C1AF47D0050C68B /* AdViewController.m */,
 				AB04E5DD2C1AF47D0050C68B /* NativeExpressFeedAd */,
@@ -1046,6 +1053,8 @@
 		AB04E6132C1AF47D0050C68B /* ZJNativeAd */ = {
 			isa = PBXGroup;
 			children = (
+				AB8F74CB2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.h */,
+				AB8F74CC2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m */,
 				AB04E6182C1AF47D0050C68B /* ZJFillNativeAdView.h */,
 				AB04E61E2C1AF47D0050C68B /* ZJFillNativeAdView.m */,
 				AB04E6152C1AF47D0050C68B /* ZJNativeAdAtlasImageTableViewCell.h */,
@@ -1062,6 +1071,15 @@
 				AB04E6172C1AF47D0050C68B /* ZJNativeAdViewController.m */,
 			);
 			path = ZJNativeAd;
+			sourceTree = "<group>";
+		};
+		AB8F74D02E602EB400DD57CB /* ZJJSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				AB8F74CE2E602EB400DD57CB /* ZJJSViewController.h */,
+				AB8F74CF2E602EB400DD57CB /* ZJJSViewController.m */,
+			);
+			path = ZJJSBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1277,6 +1295,7 @@
 				57EB055D2635632F005DBA03 /* SDWebImageOptionsProcessor.m in Sources */,
 				57EB05342635632F005DBA03 /* UIImage+ForceDecode.m in Sources */,
 				57EB053C2635632F005DBA03 /* SDGraphicsImageRenderer.m in Sources */,
+				AB8F74CD2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m in Sources */,
 				AB04E63F2C1AF47D0050C68B /* ZJNewsAdViewController.m in Sources */,
 				AB04E62D2C1AF47D0050C68B /* ZJContentPageStyle1ViewController.m in Sources */,
 				AB04E6272C1AF47D0050C68B /* ZJImageTextVC.m in Sources */,
@@ -1325,6 +1344,7 @@
 				0077472124E182A200C30636 /* main.m in Sources */,
 				57EB05492635632F005DBA03 /* SDDiskCache.m in Sources */,
 				AB04E6432C1AF47D0050C68B /* ZJNativeAdViewController.m in Sources */,
+				AB8F74D12E602EB400DD57CB /* ZJJSViewController.m in Sources */,
 				AB04E6282C1AF47D0050C68B /* ZJImageTextLoadVC.m in Sources */,
 				57EB05442635632F005DBA03 /* SDWebImageError.m in Sources */,
 				001E72A4253AAC760086A93F /* MASConstraintMaker.m in Sources */,

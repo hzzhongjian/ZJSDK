@@ -15,8 +15,17 @@
 #import "ZJSplashWindowVC.h"
 #import "ZJHomeViewController.h"
 #import <ZJSDKCore/ZJCacheManager.h>
+#import <ZJSDKCore/ZJSDKInitModel.h>
+#import <ZJSDKCore/ZJSDKInitConfig.h>
+#import <ZJSDKCore/ZJSDKPrivacyProvider.h>
+#import "ZJDemoPrivacyProvider.h"
+#import <ZJSDKCore/ZJProjectHelper.h>
+#import <ZJSDKCore/ZJDeviceHelper.h>
+#import <ZJSDKCore/ZJCommon.h>
 
 @interface AppDelegate ()<ZJSplashAdDelegate>
+
+@property (nonatomic, strong) UIWindow *showWindow;
 
 @property (nonatomic, strong) ZJSplashAd *splashAd;
 
@@ -27,6 +36,18 @@
 @end
 
 @implementation AppDelegate
+
+// 由于部分联盟不再支持自定义window中展示,（不推荐使用此种方式对接开屏）
+- (UIWindow *)showWindow
+{
+    if (!_showWindow) {
+        _showWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        _showWindow.windowLevel = UIWindowLevelAlert + 10000;
+        _showWindow.backgroundColor = [UIColor clearColor];
+        _showWindow.rootViewController = [[ZJSplashWindowVC alloc]init];
+    }
+    return _showWindow;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -42,7 +63,7 @@
     //    [ZJSDKInitConfig sharedInstance].privacyAuthorityModel = privacyAuthorityModel;
     //    [ZJSDKInitConfig sharedInstance].privacyProvider = [[ZJDemoPrivacyProvider alloc] init];
     //    [ZJAdSDK registerSDK:[[ZJSDKInitModel alloc] initWithAppId:@"Z0837060490" userId:@"" channel:@"test" app_extra:@{}]];
-
+    self.showWindow.hidden = NO;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     ZJHomeViewController *homeVC = [[ZJHomeViewController alloc]init];
@@ -120,7 +141,8 @@
 -(void)zj_splashAdDidLoad:(ZJSplashAd *)splashAd{
     NSLog(@"kpgg-----加载成功");
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.splashAd showAdInWindow:self.window];
+//        [self.splashAd showAdInWindow:self.window];
+        [self.splashAd showAdInWindow:self.showWindow]; //(不推荐)
     });}
 
 /**
@@ -142,6 +164,9 @@
  */
 - (void)zj_splashAdClosed:(ZJSplashAd *)splashAd{
     NSLog(@"kpgg-----开屏关闭");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.showWindow.hidden = YES;
+    });
 }
 
 /**
@@ -165,6 +190,9 @@
 - (void)zj_splashAdError:(ZJSplashAd *)splashAd withError:(NSError *)error{
     NSArray *errors =  [self.splashAd getFillFailureMessages];
     NSLog(@"开屏广告所有错误信息 %@",errors);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.showWindow.hidden = YES;
+    });
 }
 
 
@@ -172,7 +200,9 @@
  *  开屏广告播放错误
  */
 - (void)zj_splashAdDisplayError:(ZJSplashAd *)splashAd withError:(NSError *)error{
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.showWindow.hidden = YES;
+    });
 }
 
 
