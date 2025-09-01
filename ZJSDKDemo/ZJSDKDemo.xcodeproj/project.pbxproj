@@ -161,6 +161,7 @@
 		AB5ADDC52959AD22000495B7 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC42959AD22000495B7 /* QuickLook.framework */; };
 		AB5ADDC72959AD2F000495B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC62959AD2F000495B7 /* MessageUI.framework */; };
 		AB5ADDC92959AD3E000495B7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC82959AD3E000495B7 /* AVKit.framework */; };
+		AB7904F52E65AC6F0043D41E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB7904F42E65AC6F0043D41E /* README.md */; };
 		AB7A38DE28FFD4DB004629FD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */; };
 		AB7A38E028FFD4FD004629FD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38DF28FFD4FD004629FD /* SafariServices.framework */; };
 		AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A38E128FFD517004629FD /* ImageIO.framework */; };
@@ -486,6 +487,7 @@
 		AB5ADDC42959AD22000495B7 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		AB5ADDC62959AD2F000495B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AB5ADDC82959AD3E000495B7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		AB7904F42E65AC6F0043D41E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AB7A38DD28FFD4DB004629FD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AB7A38DF28FFD4FD004629FD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AB7A38E128FFD517004629FD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -661,6 +663,7 @@
 		0077470224E182A200C30636 = {
 			isa = PBXGroup;
 			children = (
+				AB7904F42E65AC6F0043D41E /* README.md */,
 				ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */,
 				0077470D24E182A200C30636 /* ZJSDKDemo */,
 				0077470C24E182A200C30636 /* Products */,
@@ -1147,6 +1150,7 @@
 			files = (
 				0077471E24E182A200C30636 /* LaunchScreen.storyboard in Resources */,
 				0077471B24E182A200C30636 /* Assets.xcassets in Resources */,
+				AB7904F52E65AC6F0043D41E /* README.md in Resources */,
 				ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */,
 				AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */,
 			);

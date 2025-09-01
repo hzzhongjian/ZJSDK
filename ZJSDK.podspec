@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.9.25'
+  s.version          = '2.5.10.0'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,6 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '11.0'
   s.platform     = :ios, "11.0"
-  
   #依赖的系统frameworks
   s.frameworks = ['UIKit','Foundation','StoreKit','MobileCoreServices','WebKit','MediaPlayer','CoreML','CoreMedia','CoreLocation','AVFoundation','CoreTelephony','SystemConfiguration','AdSupport','CoreMotion','Accelerate','QuartzCore','Security','ImageIO','CFNetwork','CoreGraphics','SafariServices','AVKit','DeviceCheck','CoreImage','MapKit','JavaScriptCore','CoreText','AddressBook','CoreData','MessageUI','QuickLook','AudioToolBox','Photos','LocalAuthentication','AssetsLibrary','CoreFoundation']
   s.weak_frameworks = ['AppTrackingTransparency','CoreHaptics']
