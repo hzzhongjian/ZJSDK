@@ -74,6 +74,7 @@
     self.loadAdView.showButton.backgroundColor = kMainColor;
     [self logMessage:@"rewardVideoAdVideoDidLoad"];
     [self logMessage:[self.rewardVideoAd valueForKey:@"logString"]];
+    NSLog(@"----%ld", rewardedVideoAd.eCPM);
 }
 
 
