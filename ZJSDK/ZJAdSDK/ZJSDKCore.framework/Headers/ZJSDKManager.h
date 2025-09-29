@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ZJSDKCore/ZJSDKAdEnum.h>
+#import <ZJSDKCore/ZJAdUnionItemModel.h>
 
 @class ZJSDKInitModel;
 
@@ -43,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 // ECPM服务端校验透传
 @property (nonatomic, assign) BOOL reward_chk_has_ecpm;
 
-- (void)registerPlatform:(NSString *)platform;
+- (void)registerPlatform:(NSString *)platform adConfig:(ZJAdUnitModel *)adConfig;
 
 
 @end

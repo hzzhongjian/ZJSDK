@@ -102,6 +102,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)rewardedVideoAd:(KSRewardedVideoAd *)rewardedVideoAd extraRewardVerify:(KSAdExtraRewardType)extraRewardType;
 
+/**
+ This method is called when the video ad is clicked and appid is in the white list.
+ @param retryTaskInfo retry reward info
+ */
+- (void)rewardedVideoAd:(KSRewardedVideoAd *)rewardedVideoAd rewardRetryTaskInfo:(KSAdInfoData *)retryTaskInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

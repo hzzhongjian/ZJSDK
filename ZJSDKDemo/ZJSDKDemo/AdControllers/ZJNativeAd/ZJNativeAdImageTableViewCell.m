@@ -36,6 +36,9 @@
 {
    CGFloat baseHeigth =  [super cellHeightWithUnifiedNativeAdDataObject:dataObject];
     
+    if (dataObject.imageWidth == 0 && dataObject.imageHeight == 0) {
+        return 100+baseHeigth+8;
+    }
     //单图cell
     CGFloat imageHeight = (kScreenWidth-10)*(@(dataObject.imageHeight).floatValue/@(dataObject.imageWidth).floatValue);
     //图片高度+顶部固定高度+底部间隙

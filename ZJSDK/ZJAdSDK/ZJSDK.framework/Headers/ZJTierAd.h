@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable)ZJTierAdAdapter *currentAdapter;
 
-- (void)loadAd;
+- (void)loadAd; // NS_SWIFT_NAME(loadAd());
 
 @end
 

@@ -59,6 +59,15 @@ NS_ASSUME_NONNULL_BEGIN
 // JSON字符串转字典
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
+// 获取状态栏的高度
++ (CGFloat)statusBarHeight;
+
+// 获取安全区域Top的高度
++ (CGFloat)safeAreaTop;
+
+// 获取安全区域Bottom的高度
++ (CGFloat)safeAreaBottom;
+
 @end
 
 NS_ASSUME_NONNULL_END

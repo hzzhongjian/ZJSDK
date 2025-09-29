@@ -32,8 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *appName;
 // 跳转类型
 @property (nonatomic, assign) KSAdInteractionType interactionType;
+// 转化目标
+@property (nonatomic, assign) NSInteger convertType;
 // 广告创意id
-@property (nonatomic, assign)  long long creativeId;
+@property (nonatomic, assign) long long creativeId;
+
+@property (nonatomic, copy) NSString *llsid;
 
 @end
 
