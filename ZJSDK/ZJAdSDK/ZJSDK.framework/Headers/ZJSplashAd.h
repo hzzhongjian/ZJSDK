@@ -72,6 +72,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开屏广告落地页关闭 -- 部分联盟有回调
 - (void)zj_splashAdDetailViewClose:(ZJSplashAd *)splashAd;
 
+/// 开屏广告，跳过按钮被点击
+- (void)zj_splashAdClickSkip:(ZJSplashAd *)splashAd;
+
 @end
 
 

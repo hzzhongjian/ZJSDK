@@ -45,7 +45,8 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nul
 
 @property (nonatomic, assign) long timeout;
 
-
+/// caid json值
+@property (nonatomic, copy) NSString *caid_json;
 
 - (instancetype)initWithTiers:(NSArray <ZJAdUnitModel *>*)tiers
                      timeoutInterval:(CGFloat)timeoutInterval

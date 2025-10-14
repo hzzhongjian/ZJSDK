@@ -77,6 +77,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开屏广告落地页关闭的回调
 - (void)zj_splashAdDetailViewClose;
 
+/// 开屏广告跳过按钮被点击
+- (void)zj_splashAdClickSkip;
+
 @end
 
 NS_ASSUME_NONNULL_END

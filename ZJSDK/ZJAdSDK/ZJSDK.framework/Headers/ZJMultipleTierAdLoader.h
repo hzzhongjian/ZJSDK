@@ -34,6 +34,9 @@ typedef void(^MultipleRequestLevelCompleteBlk)( NSMutableArray <ZJMultipleAdAdap
 
 @property (nonatomic, assign) CGFloat timeoutInterval;
 
+/// caid json值
+@property (nonatomic, copy) NSString *caid_json;
+
 @property (nonatomic, assign) ZJAdShowPriority showPriority;
 
 @property (nonatomic, nullable, copy) MultipleRequestLevelCompleteBlk completeBlk;

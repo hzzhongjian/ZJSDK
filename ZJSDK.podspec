@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.10.2'
+  s.version          = '2.5.10.3'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -293,6 +293,19 @@ TODO: Add long description of the pod here.
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleWangMai/*.framework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleWangMai/*.framework'
         ss.resource             = 'ZJSDK/ZJSDKModuleWangMai/*.bundle'
+    end
+
+    ###美数适配器兼容版
+    s.subspec 'ZJSDKModuleMeiShuCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMeiShu/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###美数适配器
+    s.subspec 'ZJSDKModuleMeiShu' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMeiShu/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.dependency 'MSMobAdSDKv3/MS', '~> 3.0.3.0'
     end
     
     ### 谷歌适配器

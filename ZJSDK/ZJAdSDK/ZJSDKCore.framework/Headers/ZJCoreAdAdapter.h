@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *cacheTime;
 
+/// caid json值
+@property (nonatomic, copy) NSString *caid_json;
+
 /// 记录加载广告成功的时间戳
 @property (nonatomic, assign) NSTimeInterval hasAdTimeInterval;
 

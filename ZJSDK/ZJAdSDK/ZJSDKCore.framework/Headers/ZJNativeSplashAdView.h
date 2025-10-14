@@ -12,13 +12,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJNativeSplashAdView : UIView
 
+// 详情页跳转的根视图控制器
 @property (nonatomic, strong) UIViewController *rootViewController;
 
+// 自定义底部的LogoView
 @property (nonatomic, strong) UIView *customBottomView;
 
+// 背景图片
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
+// 跳过按钮
 @property (nonatomic, strong) UIButton *skipButton;
+
+// ICON图片
+@property (nonatomic, strong) UIImageView *iconImageView;
+
+// 标题展示
+@property (nonatomic, strong) UILabel *titleLabel;
+
+// 详情描述
+@property (nonatomic, strong) UILabel *descLabel;
 
 @property (nonatomic, strong) dispatch_source_t countdownTimer;
 

@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// bidding广告竞价成功是否回传，由sdk内部使用
 @property (nonatomic, assign, readonly) BOOL isBiddingSuccessReport;
 
+/// caid json值
+@property (nonatomic, copy) NSString *caid_json;
+
 /**
 *  构造方法
 *  详解：placementId - 广告位 ID

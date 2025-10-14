@@ -104,7 +104,7 @@
         
         [_tableView registerClass:[ZJNativeAdImageTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdImageTableViewCell.class)];
         [_tableView registerClass:[ZJNativeAdAtlasImageTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdAtlasImageTableViewCell.class)];
-        [_tableView registerClass:[ZJNativeAdHTMLTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdAtlasImageTableViewCell.class)];
+        [_tableView registerClass:[ZJNativeAdHTMLTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdHTMLTableViewCell.class)];
         [_tableView registerClass:[ZJNativeAdVideoTableViewCell class] forCellReuseIdentifier:NSStringFromClass(ZJNativeAdVideoTableViewCell.class)];
     }
     

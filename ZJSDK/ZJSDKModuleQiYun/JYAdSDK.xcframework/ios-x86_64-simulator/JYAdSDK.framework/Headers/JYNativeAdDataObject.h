@@ -70,6 +70,10 @@ typedef NS_ENUM(NSInteger, JYNativeAdCreativeType) {
     JYNativeAdCreativeType_GRO_LandscapeVideo = JYNativeAdCreativeType_GRO_VideoImage,
     JYNativeAdCreativeType_GRO_PortraitVideo = JYNativeAdCreativeType_GRO_VideoPortrait,
     JYNativeAdCreativeType_GRO_PortraitImage = JYNativeAdCreativeType_GRO_ImagePortrait,
+    
+    JYNativeAdCreativeType_SIG_VIDEO = (8 << 24) | 0,
+    JYNativeAdCreativeType_SIG_IMAGE = (8 << 24) | 1,
+    JYNativeAdCreativeType_SIG_UNKNOWN = (8 << 24) | 2,
 };
 
 typedef NS_ENUM(NSInteger, JYNativeAdInteractionType) {
