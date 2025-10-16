@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger reward_ver;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *zj_adID; // 广告位
+@property (nonatomic, assign) NSInteger ecpm_ratio;//输出价格比例
 @property (nonatomic, copy) NSArray <ZJAdUnionItemModel *>*items_pd;
 @property (nonatomic, copy) NSArray <ZJAdUnitModel *>*items_hb_array;
 

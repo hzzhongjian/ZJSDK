@@ -64,6 +64,7 @@
  *  开屏广告素材加载成功
  */
 -(void)zj_splashAdDidLoad:(ZJSplashAd *)splashAd{
+    NSLog(@"666====%ld", splashAd.eCPM);
     self.loadAdView.showButton.backgroundColor = kMainColor;
     [self logMessage:@"splashAdDidLoad"];
     [self logMessage:[splashAd valueForKey:@"logString"]];

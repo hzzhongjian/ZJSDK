@@ -55,6 +55,8 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 };
 
 @class ZJAdUnitModel;
+
+// pd层数据模型
 @interface ZJAdUnionItemModel : NSObject
 
 @property (nonatomic, assign) ZJAdShowPriority showPriority;
@@ -71,6 +73,8 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 @property (nonatomic, assign) BOOL is_pd_cache;
 
 @property (nonatomic, assign) BOOL is_verify_params;
+
+@property (nonatomic, assign) NSInteger ecpm_ratio;//输出价格比例
 
 @property (nonatomic, assign) NSInteger reward_ver;
 
@@ -94,6 +98,12 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 @end
 
+
+
+
+
+// bidding广告的数据模型
+
 @interface ZJAdUnitModel : NSObject
 
 /// pm_id 联盟的广告id
@@ -103,7 +113,7 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 /// 是否开启服务校验，0 关闭，1开启
 @property (nonatomic, assign) BOOL is_service;
 
-
+@property (nonatomic, assign) NSInteger ecpm_ratio;//输出价格比例
 /// 时间戳
 @property (nonatomic, copy) NSString *msel;
 
