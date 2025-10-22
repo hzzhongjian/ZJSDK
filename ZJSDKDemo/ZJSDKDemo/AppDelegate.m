@@ -51,6 +51,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+//    [ZJAdSDK registerAppId:@"Z5799033013"];
     [ZJAdSDK registerAppId:ZJ_Appid];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
