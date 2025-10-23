@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 当前是否禁止获取idfa(只读)
 @property (nonatomic, assign, readonly) BOOL forbiddenUseIDFA;
 
+/// 当前是否允许使用加速度传感器
+@property (nonatomic, assign, readonly) BOOL enableAccelerometer;
+
 /// 媒体自定义用户质量,字段格式{"key":["value"]}
 @property (nonatomic, strong) NSDictionary<NSString *,NSArray *> * userTag;
 
@@ -42,6 +45,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param forbiddened YES:禁止获取
 - (void)forbiddenUseIDFA:(BOOL)forbiddened;
 
+/// 是否允许使用加速度传感器，禁用无法通过摇一摇触发广告。默认 NO，不通过摇一摇触发广告
+/// @param enable 是否使用加速度传感器
+- (void)setEnableAccelerometer:(BOOL)enable;
+
 /// 禁止SDK获取idfa前提下，外部媒体通过该接口传递IDFA
 /// @param idfa 外部传入的idfa
 - (void)setSDKIDFA:(NSString *)idfa;
@@ -53,7 +60,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param lon 经度
 /// @param lat 纬度
 - (void)setSDKLBSLon:(NSString *)lon lat:(NSString *)lat;
-
 
 /*------------------注：下面方法、属性，已废弃------------------*/
 

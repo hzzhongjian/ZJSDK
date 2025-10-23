@@ -22,7 +22,7 @@
 
 /* ----------- splash Caches action ----------- */
 + (NSArray *)splash_getMaterials;
-+ (NSString *)splash_loadResponse:(NSString *)pid;
++ (void)splash_loadResponse:(NSString *)pid completion:(void (^)(NSString *response))completion;
 + (void)splash_saveResponse:(NSString *)res pid:(NSString *)pid;
 + (void)splash_deleteResponse:(NSString *)pid;
 + (void)splash_deleteMaterial:(NSString *)path;
@@ -35,6 +35,11 @@
  */
 + (void)setAdRequestEnv:(NSUInteger)env;
 + (NSUInteger)getAdRequestEnv;
+
+/// 调用后会自动打开系统分享面板，可以分享出最近的广告网络请求数据
+///  ** 注意，请只在调试场景下调用本方法 **
++ (void)shareRecentRequestLogs;
+
 @end
 
 

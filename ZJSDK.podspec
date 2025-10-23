@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.5.10.6'
+  s.version          = '2.5.10.7'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -182,9 +182,9 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         # 可以把TanX的依赖更换为pod管理
         #    ss.dependency 'TanxSDK', '~> 3.5.3'
-        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+        ss.vendored_frameworks  = ['ZJSDK/ZJSDKModuleTanX/*.framework','ZJSDK/ZJSDKModuleTanX/*.xcframework']
         ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+        ss.preserve_paths       = ['ZJSDK/ZJSDKModuleTanX/*.framework','ZJSDK/ZJSDKModuleTanX/*.xcframework']
     end
 
     ###趣盟适配器兼容版

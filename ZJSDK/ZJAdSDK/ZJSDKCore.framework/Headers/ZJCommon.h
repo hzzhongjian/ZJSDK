@@ -68,6 +68,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取安全区域Bottom的高度
 + (CGFloat)safeAreaBottom;
 
+// 获取Bundle的图片
++ (nullable UIImage *)zj_imageNamed:(NSString *)name;
+
 @end
 
 NS_ASSUME_NONNULL_END

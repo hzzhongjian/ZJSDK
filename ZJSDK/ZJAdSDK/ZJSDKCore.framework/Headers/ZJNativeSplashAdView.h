@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ZJSDKCore/ZJSDKDefines.h>
+#import <ZJSDKCore/ZJCommon.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 详情描述
 @property (nonatomic, strong) UILabel *descLabel;
 
+// 静音按钮
+@property (nonatomic, strong) UIButton *muteBtn;
+
 @property (nonatomic, strong) dispatch_source_t countdownTimer;
 
 @property (nonatomic, assign) BOOL isTimerPaused;
@@ -57,7 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addSplashViewInWindow;
 
+// 跳过按钮被点击事件
 - (void)skipButtonDidClick:(UIButton *)sender;
+
+// 静音按钮被点击的事件
+- (void)muteBtnDidClick:(UIButton *)sender;
 
 @end
 

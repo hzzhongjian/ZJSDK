@@ -4,7 +4,7 @@
 //
 //  Created by TNXASDK on 8/29/20.
 //  Copyright © 2020 TNXASDK. All rights reserved.
-// v2.6.0 tanx
+// v3.0.0.k tanx
 
 #import <Foundation/Foundation.h>
 
@@ -14,11 +14,17 @@
 /// @param domain 域名字符串 如：https://www.xxxxxx.com
 + (void)configureDomain:(NSString *)domain;
 
+/// CValue配置
+/// - Parameters:
+///   - sID: 来源ID
+///   - sourceToken: 授权令牌
++ (void)sourceID:(NSString *)sID token:(NSString *)sourceToken;
+
 /// SDK初始化，异步请求tnxKey
 /// @param completion 请求tnxKey的回调，tnxKey为返回值，如果失败，tnxKey为空字符串@“”
 + (void)init:(void (^)(NSString *tnxKey))completion;
 
-/// SDK初始化，异步请求tnxKey和cValue
+/// SDK初始化，异步请求aToken和cValue
 /// @param tnxKeyBlock 请求tnxKey的回调，tnxKey为返回值，如果失败，tnxKey为空字符串@“”
 /// @param cValueBlock 请求cValue的回调，cValue为返回值，如果失败，cValue为nil
 + (void)init:(void (^)(NSString *tnxKey))tnxKeyBlock cValue:(void (^)(NSArray *cValue))cValueBlock;

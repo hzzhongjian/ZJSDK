@@ -350,7 +350,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+iSF5CUv5bRYol1Pp1kdK4nQato=
+		nsb00f+xonpf5QxSgPhPEELelGw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -361,10 +361,6 @@
 	<dict>
 		<key>Headers/NSArray+WanjaSafe.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			7Z6W4lpcXU7n/gUF5nksuTqVyxY=
-			</data>
 			<key>hash2</key>
 			<data>
 			a6HzcMERLg/VNswab0j76Bv7Py69szQQ8S4dR9y3giY=
@@ -372,10 +368,6 @@
 		</dict>
 		<key>Headers/NSData+WanjaAES.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pknyZl4HfgOV76SsAZYzzMimyk8=
-			</data>
 			<key>hash2</key>
 			<data>
 			tSto22iCDgYuq9v1kybSPrGcgMzk4sdOVakqElJS1JE=
@@ -383,10 +375,6 @@
 		</dict>
 		<key>Headers/NSData+WanjaEncryption.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yjFEhz8fWx9m558LianZ9FnPrlA=
-			</data>
 			<key>hash2</key>
 			<data>
 			Xx7rlWoTx1TCW18O8vHtgGX7fR/k5mRdaRgZ5WbmyPc=
@@ -394,10 +382,6 @@
 		</dict>
 		<key>Headers/NSDictionary+WanjaSafe.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1IlUjY/bObMOcZvD7dK/Neik1L0=
-			</data>
 			<key>hash2</key>
 			<data>
 			7hYeJWvLuCYmCzlE5sjxI3G6xIJzylvJhINmJLMcNmo=
@@ -405,10 +389,6 @@
 		</dict>
 		<key>Headers/NSObject+WanjaAddition.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			b/GXz/XFpNVXGhjiDCP1RdGT6CE=
-			</data>
 			<key>hash2</key>
 			<data>
 			E0bHf3b4jUcqzWRLVaXhrFqlVowM0iiAINnFuztgD9A=
@@ -416,10 +396,6 @@
 		</dict>
 		<key>Headers/NSObject+WanjaModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KP0/4I6g7UkY2ixUn/bnzqFonWY=
-			</data>
 			<key>hash2</key>
 			<data>
 			x8Az291sIlesiEhNlALUEIu21FifSmKeTYZn1wKh5ug=
@@ -427,10 +403,6 @@
 		</dict>
 		<key>Headers/NSString+WanjaAddition.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GBa9Cg/LezvmyNVXkT2yKuVAd7k=
-			</data>
 			<key>hash2</key>
 			<data>
 			YpQd9asFEYt8xF35c/5q7Rdvbk64tDnKTSypIvsPKEM=
@@ -438,10 +410,6 @@
 		</dict>
 		<key>Headers/NSString+WanjaEncryption.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gXyikxhZPRu7PkHv1SekiDqeBIQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			FYda7Rm+oQ9670u6tzbh8o84uvsdtJWqWSo/FZS/prU=
@@ -449,10 +417,6 @@
 		</dict>
 		<key>Headers/NSTimer+WanjaTimer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			vuigPzkGHm/qeFkPK3KPWqujyU4=
-			</data>
 			<key>hash2</key>
 			<data>
 			KF5rlkywh0xKhBVdxxOl7l/kN+o5KAI9n3+RTThSry8=
@@ -460,10 +424,6 @@
 		</dict>
 		<key>Headers/UIView+WanjaAddition.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			W5/pUFVp1Iqlpc7W40zMwVJQXXI=
-			</data>
 			<key>hash2</key>
 			<data>
 			g8ecKn7JrVBjDz7nc6qRxE7KHPfxs05oTXldP37yExk=
@@ -471,10 +431,6 @@
 		</dict>
 		<key>Headers/UIView+WanjaAttribute.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			q9waKBU7X1jhebfSw5Y8U2BVAI4=
-			</data>
 			<key>hash2</key>
 			<data>
 			Hp7n4CyVHJDyse0eL3wUCMG5aY0GOhCjDk+N2KY4E+w=
@@ -482,10 +438,6 @@
 		</dict>
 		<key>Headers/UIView+WanjaFrame.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WBlje/KjFkAzLcMdi6FPEqB9bMM=
-			</data>
 			<key>hash2</key>
 			<data>
 			65hcCmHIBtdBa02TyCf8yVE2RkplqFyfZXK5/MvY/Js=
@@ -493,10 +445,6 @@
 		</dict>
 		<key>Headers/WanjaAdAES.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8yiAAQtgbFgm1TgMDf6HYA3VOkc=
-			</data>
 			<key>hash2</key>
 			<data>
 			cshZtBC6+c77UkONLu4+FXxIV4LiN38gNNFpgBmpK9I=
@@ -504,10 +452,6 @@
 		</dict>
 		<key>Headers/WanjaAdDecodeErrorReportModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+N0buGOefUxSFw2r+gapt2rhI8k=
-			</data>
 			<key>hash2</key>
 			<data>
 			qAZa/lU/p6s2XHUowwU107YnomXueB8GwsVXX4WrzMg=
@@ -515,10 +459,6 @@
 		</dict>
 		<key>Headers/WanjaAdGTMBase64.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+W7WGN8I0xr6rOTOLmS5OrKYKJY=
-			</data>
 			<key>hash2</key>
 			<data>
 			VxXIHUIC/EpvyLmOy6uvHQj5LVARx/lJxxAqYxD1aog=
@@ -526,10 +466,6 @@
 		</dict>
 		<key>Headers/WanjaAdGTMDefines.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kSdVSP799z44r5SronPCFnrP93s=
-			</data>
 			<key>hash2</key>
 			<data>
 			I2TBaCruIpR3BVIg1F4R5CsvS1HiQp9We8OzloYzSlo=
@@ -537,10 +473,6 @@
 		</dict>
 		<key>Headers/WanjaAdRecordModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			96XrmaBfpIg4cUyaNvm2Din7fog=
-			</data>
 			<key>hash2</key>
 			<data>
 			nyrWNRawrawuOKNvNyoLibDu0gQtwpHYr6JyIZw+DBA=
@@ -548,10 +480,6 @@
 		</dict>
 		<key>Headers/WanjaAdRequestError.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jtB+vzs7f6P6N7qkcGv1omjAxlg=
-			</data>
 			<key>hash2</key>
 			<data>
 			91fhAhBuF00nBpLji3/uzTfsWeXZkahOlhU69ggBIRQ=
@@ -559,10 +487,6 @@
 		</dict>
 		<key>Headers/WanjaAdRequestModel+Builder.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NgDZtxY1abSPX1bdDISHwERg67U=
-			</data>
 			<key>hash2</key>
 			<data>
 			lgkzewfsxkNFOAiRVjMNTvr0ZtP+mt0pmDjfYlRZfSc=
@@ -570,10 +494,6 @@
 		</dict>
 		<key>Headers/WanjaAdRequestModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			knNSsNt1do92Tis4qv+wiPpACDc=
-			</data>
 			<key>hash2</key>
 			<data>
 			J42311OaqC5qf6iJxTz9W0ChGTyqR74umKKuelRfW5g=
@@ -581,10 +501,6 @@
 		</dict>
 		<key>Headers/WanjaAdResponseModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZyS848Z1CeItK4gEneSpfMbMpnc=
-			</data>
 			<key>hash2</key>
 			<data>
 			33g1Gy5IisSYfZRbfo9h/0MzzEyoeGbBdx9Yq016bl4=
@@ -592,10 +508,6 @@
 		</dict>
 		<key>Headers/WanjaAdViewAttribute.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6IF3nOhj8ish0ULucDoQetzQUZc=
-			</data>
 			<key>hash2</key>
 			<data>
 			E54EzDwmXByGsVg7nyVvrFqifaKiOuPFf24jDpOPU2E=
@@ -603,10 +515,6 @@
 		</dict>
 		<key>Headers/WanjaAdvertLog.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			G/6NxWdTH0AYcCsrMeoY5UZtY4o=
-			</data>
 			<key>hash2</key>
 			<data>
 			MtOFFtqHbmhhpOFjlitkxXSlv8chAtlwT7qEdDp/uZ4=
@@ -614,10 +522,6 @@
 		</dict>
 		<key>Headers/WanjaAdvertisingDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			B6VKrvXA82OTwZ9G9VOptR+90VA=
-			</data>
 			<key>hash2</key>
 			<data>
 			2HsDKcCXGctFXCVJ1PbABuN5eifDw2MmYlQhOcRmJ0w=
@@ -625,10 +529,6 @@
 		</dict>
 		<key>Headers/WanjaAdvertisingType.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SAaIx6RLLOeSV/5vYTG11mfesYo=
-			</data>
 			<key>hash2</key>
 			<data>
 			mtQAdtrwAxdjacFYCS4rsJU9XaE0OQ0ZBqVWI7y7Eyg=
@@ -636,10 +536,6 @@
 		</dict>
 		<key>Headers/WanjaAppInfoHelper.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hS8d2n3pSxLmVc4CDaRzFnb+k1g=
-			</data>
 			<key>hash2</key>
 			<data>
 			i87T2urIreFaBw5enA/jcjJPnw62zqqaG9GtNpulU48=
@@ -647,10 +543,6 @@
 		</dict>
 		<key>Headers/WanjaBadgeLogoView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			EYxWAGwyYU5qL/Sev4l7Iy24Zwk=
-			</data>
 			<key>hash2</key>
 			<data>
 			ews/EnhYOQnmn2LfMpuLEX/2bZJkBZCB5EmJm4sT6ug=
@@ -658,10 +550,6 @@
 		</dict>
 		<key>Headers/WanjaBaseModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3LwJ0SplzX32WkYmvRbHIrBQ4Bk=
-			</data>
 			<key>hash2</key>
 			<data>
 			JcIPMdQ4SSrJdNh9xw9r/0v8Tw4zVuIf+weclwZIl2k=
@@ -669,10 +557,6 @@
 		</dict>
 		<key>Headers/WanjaBaseViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OwZc/M8PHaOwg4NU6iSFmQkVYHg=
-			</data>
 			<key>hash2</key>
 			<data>
 			i/rg76atFiuKVIGbyfQhCjSqS4b856GgaDZg1Cyd4QE=
@@ -680,10 +564,6 @@
 		</dict>
 		<key>Headers/WanjaBusinessReport.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cm+AVl2IkGWo3UPcTlOISzq3DOM=
-			</data>
 			<key>hash2</key>
 			<data>
 			t1M3gj5lqpsNZI9gWgbfrvdQh1faO37zRYUJHUnKLGk=
@@ -691,10 +571,6 @@
 		</dict>
 		<key>Headers/WanjaClassInfo.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			z2Lkdu7xr6XLEC2Br6NxczLixDU=
-			</data>
 			<key>hash2</key>
 			<data>
 			bFAcvo0trwL/KXHqipHbf/WmuuM2CnQQhK2l0KOHYNI=
@@ -702,10 +578,6 @@
 		</dict>
 		<key>Headers/WanjaClickWorker.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sbYr0PgQ1qCrbLLbVP9kFgms6g8=
-			</data>
 			<key>hash2</key>
 			<data>
 			Yy36Tc4kAN3wBD0gLk8NaRulAkvJ8Hhea5evpMRGLCw=
@@ -713,10 +585,6 @@
 		</dict>
 		<key>Headers/WanjaCompatibilityMacros.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cCD3MfRf76YzniaKH7IRqhKkrF8=
-			</data>
 			<key>hash2</key>
 			<data>
 			XnHVACXZ//pJZmktq689sUrZvvlDuFyd2i26CGT/zUk=
@@ -724,10 +592,6 @@
 		</dict>
 		<key>Headers/WanjaConfigureModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ptxrYFlPx+ciwyHW4GzqFBuojfw=
-			</data>
 			<key>hash2</key>
 			<data>
 			6Fce5JKXRF/ViG9sb0iMwP1DmwEPCtLfRXvxi+VIYLU=
@@ -735,10 +599,6 @@
 		</dict>
 		<key>Headers/WanjaCore-umbrella.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			B/dpven2qnLb5AvhHH6blUwkCt0=
-			</data>
 			<key>hash2</key>
 			<data>
 			Oke4uJNWRWrAqFzrpy+Gq/RJ0SP4h/Jn63bzHkA3HEg=
@@ -746,10 +606,6 @@
 		</dict>
 		<key>Headers/WanjaCore.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HAdqS6WROeytaRqVFyWTvOdNkZM=
-			</data>
 			<key>hash2</key>
 			<data>
 			2lsUj0Bd98A+MgcFebqjDFAu8ZAGgjGxzlysrxj1pQs=
@@ -757,10 +613,6 @@
 		</dict>
 		<key>Headers/WanjaCountDownView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UI5y1SqoMvrWMkYkfnuMI8XEpXQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			lgL65Cok74Nn1F/W5Ku4oJGLwgMmJCMQaN43/dFg4wQ=
@@ -768,10 +620,6 @@
 		</dict>
 		<key>Headers/WanjaDefines.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SqaF9V8AesxOY2O+ZaOUDdSldLk=
-			</data>
 			<key>hash2</key>
 			<data>
 			ozDhi0FeDnRgucvsu3gR+9eStgmI1hX3IoajE+XrTyE=
@@ -779,10 +627,6 @@
 		</dict>
 		<key>Headers/WanjaDefinitionTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hFvo2i/AXSuoW1tFVgQkojH0f48=
-			</data>
 			<key>hash2</key>
 			<data>
 			MWZlelRlDLxBMphOeSKdQ5fhYDZtDu27H5Ya/1t3eeE=
@@ -790,10 +634,6 @@
 		</dict>
 		<key>Headers/WanjaDevice.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kSmzSn5QCwScjN1kBwkSphV2PSI=
-			</data>
 			<key>hash2</key>
 			<data>
 			AFzyTKsMYFy9e9rhO1deD262exmyCahf5WoQfRx3Q0I=
@@ -801,10 +641,6 @@
 		</dict>
 		<key>Headers/WanjaDeviceInfoHelper.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			58ytiHJQSR0a2BJDkitYvvpX3JM=
-			</data>
 			<key>hash2</key>
 			<data>
 			3penOZuFw53LW4kD+a0vTdFxaAuZOSj6nAjdoH/PKB8=
@@ -812,10 +648,6 @@
 		</dict>
 		<key>Headers/WanjaDisposeResponseModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rilczFhJEhp8D0MwDWFDqSfemks=
-			</data>
 			<key>hash2</key>
 			<data>
 			r8TzHShuL0bbP57O3+Ni/UHi/QV3YQo/eN6gPFXVWfY=
@@ -823,10 +655,6 @@
 		</dict>
 		<key>Headers/WanjaDotCloseView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rGQDZjcYPhsbAr40X0mBNVNkqh8=
-			</data>
 			<key>hash2</key>
 			<data>
 			Tsz4QGjHI+x/mD3sEnxVAAT63OX5x0CuFi2ZFjW7/Ko=
@@ -834,10 +662,6 @@
 		</dict>
 		<key>Headers/WanjaEventCodes.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4k0Vq/CY/S2ah+WeFK/9mRyBXI4=
-			</data>
 			<key>hash2</key>
 			<data>
 			uZ/H3I355nZhWzmauUfrjmmQyPv/dBhElFa3rbt8OtQ=
@@ -845,10 +669,6 @@
 		</dict>
 		<key>Headers/WanjaGTMBase64.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jbGzeafrXdRB+SKGK6vxCnzNX58=
-			</data>
 			<key>hash2</key>
 			<data>
 			gyh7G+gZLzv9Z4kAy1T4cF9fHRt/DJEBwZBz1QScg2s=
@@ -856,10 +676,6 @@
 		</dict>
 		<key>Headers/WanjaGTMDefines.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8hMfeTfUUat4EfF55/izxUWIXUo=
-			</data>
 			<key>hash2</key>
 			<data>
 			pEpvr/7ZTwO8yM/3XTN6pcVDHFQwcSjfcKP/hzkA3gU=
@@ -867,10 +683,6 @@
 		</dict>
 		<key>Headers/WanjaGcdTimer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nlLlR0JTjuAwD5f/Bq6yhw+DkVc=
-			</data>
 			<key>hash2</key>
 			<data>
 			QwfgWuXymtyumNDOqbw4CfjEHQAlQDpV2PT2kKsMmvk=
@@ -878,10 +690,6 @@
 		</dict>
 		<key>Headers/WanjaGeoHelper.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			G63B/JhObaca07fCAUbt5Y4cb9I=
-			</data>
 			<key>hash2</key>
 			<data>
 			KE6W6GrazCG/X9z+611RM3O11S/MwVWhJQMTyZ5lCx4=
@@ -889,10 +697,6 @@
 		</dict>
 		<key>Headers/WanjaHTTPRequest.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QPKsWLXtNyZmBU/6MoeRzrNfi/c=
-			</data>
 			<key>hash2</key>
 			<data>
 			kJuCBjlRfqwdeuZjG7hmy1+IzlUKSA5Vu8mTz1mtTA8=
@@ -900,10 +704,6 @@
 		</dict>
 		<key>Headers/WanjaHTTPSessionManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			90G4EwQ2USQjRo0dbO5Wd4iEqqQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			4A3CeaZS86pfACSwXmmPITKQAvwiB+rWuVuARMHUirs=
@@ -911,10 +711,6 @@
 		</dict>
 		<key>Headers/WanjaHttpRequestType.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bSjG1R6cpRphB6NZ7z60c6hYFPM=
-			</data>
 			<key>hash2</key>
 			<data>
 			X0kepFH/+SPDuWUyZAteKdujGT5PTjinXThE6NuYpmo=
@@ -922,10 +718,6 @@
 		</dict>
 		<key>Headers/WanjaImageView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pDsMi6BjJSyY9e05y+sMd7Vx0J8=
-			</data>
 			<key>hash2</key>
 			<data>
 			uAWEP1PoxXjtVD1u7zPtD8O8yr+4JCHK28Q7deO3+TA=
@@ -933,10 +725,6 @@
 		</dict>
 		<key>Headers/WanjaLandingPageViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yu4e9BMBj8fhpo6VNjRf03dZuBs=
-			</data>
 			<key>hash2</key>
 			<data>
 			B+yBP9meJb8zYq9NKxkOnTEYQJvd0LC4YjUjtgimOrY=
@@ -944,10 +732,6 @@
 		</dict>
 		<key>Headers/WanjaLogHTTPRequest.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VO/GlHIoUfVUxJEEW6BtmtaMGcU=
-			</data>
 			<key>hash2</key>
 			<data>
 			Ri4OZ7sh/sz4Wd1/AFI2Bs8KckQpo/O6dVprdiU3h7U=
@@ -955,10 +739,6 @@
 		</dict>
 		<key>Headers/WanjaManageModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			62eOJVITB0XB+gb32/UsgtJGwU0=
-			</data>
 			<key>hash2</key>
 			<data>
 			GxLNp3BJOLKI11CgTZdLM5nBVAcuW1XsMBeXFMYvaMM=
@@ -966,10 +746,6 @@
 		</dict>
 		<key>Headers/WanjaModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Mepe5Mz1fdKAwtmZu4xNkLzY7tQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			BxME0cXWl+8L5SN5AR5MYiqm3+irxO6/DEhfbxHDzPI=
@@ -977,10 +753,6 @@
 		</dict>
 		<key>Headers/WanjaNetworkReachabilityManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ReWzDeUSajsTJAHtiggt8EOhHCA=
-			</data>
 			<key>hash2</key>
 			<data>
 			yleNcbc74s2MbWfFSSPI3koa+ojw02Y+Qebi0XPn7dY=
@@ -988,10 +760,6 @@
 		</dict>
 		<key>Headers/WanjaNetworkStatusTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			haHR4m1wLJR8hnNmMiKEF8rxk/8=
-			</data>
 			<key>hash2</key>
 			<data>
 			f8vXC/GkHN0JpB5niy+GoikeCad+UTVUNewQ1/MSu2A=
@@ -999,10 +767,6 @@
 		</dict>
 		<key>Headers/WanjaNetworking.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QtrjeEqfKQr+guDEl4H7Ww3r5wQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			Z9i3eDIdEFwZMTaxfZrfSRF3gojDOo3sB/c12YUMcH8=
@@ -1010,10 +774,6 @@
 		</dict>
 		<key>Headers/WanjaNormalPageViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cB5EKRrFg5BHv5SUP0EIUWJnOOA=
-			</data>
 			<key>hash2</key>
 			<data>
 			c9K+qa2+rzOIykM7BJXQV+KgDcIB6bKg8ruHw4IhYaM=
@@ -1021,10 +781,6 @@
 		</dict>
 		<key>Headers/WanjaOtherTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rE5v7M5BhDD8y5GGwrPgML39PmA=
-			</data>
 			<key>hash2</key>
 			<data>
 			n33LuI/b+y6xC7XBJTaZ0SnAZzQFpYVQODprf90FZ0M=
@@ -1032,10 +788,6 @@
 		</dict>
 		<key>Headers/WanjaPlayerView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			5tIXLtlNuO869YcQZXjl/WeGdBI=
-			</data>
 			<key>hash2</key>
 			<data>
 			1GhHxymzJh1ZiHGAIM5sN3IFthpG/mI7hWLyFYk9WM0=
@@ -1043,10 +795,6 @@
 		</dict>
 		<key>Headers/WanjaRegionClickView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4DWC+WA7ifeWQJmLXgeRFXWNrC0=
-			</data>
 			<key>hash2</key>
 			<data>
 			OuRVTe6xvhTj4BpXHbfiJdYLv/vPiWYUIOg7LSXhzCk=
@@ -1054,10 +802,6 @@
 		</dict>
 		<key>Headers/WanjaReplaceURLTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/7cPKf1WIGlJLEfjY3es18Vs1sk=
-			</data>
 			<key>hash2</key>
 			<data>
 			NyHQjo8zt6XuZm+BbBfkn3yJXz3vucKDCUYFGvDVXo0=
@@ -1065,10 +809,6 @@
 		</dict>
 		<key>Headers/WanjaResourcesFile.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sUBORlrploJ7GEGQkGP+rUanczc=
-			</data>
 			<key>hash2</key>
 			<data>
 			OfGpN0dpj/sg5Fr53fMbWOI6jGWYZDnlRkLaq6JqzP4=
@@ -1076,10 +816,6 @@
 		</dict>
 		<key>Headers/WanjaResourcesHeader.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GjhMbhfFlrKzC2Sj4nx0inl3ouM=
-			</data>
 			<key>hash2</key>
 			<data>
 			o4QI1ReoGGnUvHVMaSjVSVVY8TVURlcAF1uWpy3VGDY=
@@ -1087,10 +823,6 @@
 		</dict>
 		<key>Headers/WanjaSDKHTTPRequest.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GvheReX1Rz5cdPX6N4JzzVdXjqI=
-			</data>
 			<key>hash2</key>
 			<data>
 			96J2p+55KBgI5B/M5IqOwCs3/bLWrtuFSWtfS35wItU=
@@ -1098,10 +830,6 @@
 		</dict>
 		<key>Headers/WanjaScreenTool.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			24p3Y7HNrbaKehqRkPHvQA6OZPI=
-			</data>
 			<key>hash2</key>
 			<data>
 			VWcPZ/v4XZ5KaikBGImyLVLSt/0O4LuXms/0tVufGMw=
@@ -1109,10 +837,6 @@
 		</dict>
 		<key>Headers/WanjaSecureAccessData.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			x+rGpTMgRRYK2RfUVBUStBa2G94=
-			</data>
 			<key>hash2</key>
 			<data>
 			WfBTbbRjsT/SLtPiwPogy0ZkGjAZKSxctMxjOExpzdE=
@@ -1120,10 +844,6 @@
 		</dict>
 		<key>Headers/WanjaSecurityAndGziptTool.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Mza99xsRzS8aJEStKg1AzJWm484=
-			</data>
 			<key>hash2</key>
 			<data>
 			lY46D2WHgBrvn9S4xsXoX8tF+ZmPyX4dRmooxGMRN30=
@@ -1131,10 +851,6 @@
 		</dict>
 		<key>Headers/WanjaSecurityPolicy.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HR3Lo0rpr9nB1n9xMJVTtMAQGWE=
-			</data>
 			<key>hash2</key>
 			<data>
 			atI/Ojf/uW4DRUuKxSVZHblxH+R15roTgNCF7xV/S9A=
@@ -1142,10 +858,6 @@
 		</dict>
 		<key>Headers/WanjaStaticString.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lH5K0hB3t5MJ31fbrR//JZ7dnFA=
-			</data>
 			<key>hash2</key>
 			<data>
 			w1tH7l4UZzS3SI9OFHRU/gl4BsdwmAOM1zmC8FwYMlk=
@@ -1153,10 +865,6 @@
 		</dict>
 		<key>Headers/WanjaSwipeView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0LAWWRt3ET3UjTuYlf2jtgOyyIY=
-			</data>
 			<key>hash2</key>
 			<data>
 			EgL+et++45MnefiGbcEmW5x244JSdWYwmZmxTe97aUU=
@@ -1164,10 +872,6 @@
 		</dict>
 		<key>Headers/WanjaTimeTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OaLxrvjQNf+bAwmWY4/INluKXtE=
-			</data>
 			<key>hash2</key>
 			<data>
 			qAJpx+GEeE3nm/Mf79tvDVu2vfxzKKeOK67cEYZn3Pw=
@@ -1175,10 +879,6 @@
 		</dict>
 		<key>Headers/WanjaTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WcxyiknI82wfd2U4pEA/GTn3PuI=
-			</data>
 			<key>hash2</key>
 			<data>
 			hV0lW35RmIr9XzS3fqyhQdlLdGA6qMC3IZGsaOAcWUk=
@@ -1186,10 +886,6 @@
 		</dict>
 		<key>Headers/WanjaURLRequestSerialization.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			52pPBDhkc0LYQWbZFZKSNMPchck=
-			</data>
 			<key>hash2</key>
 			<data>
 			RstQ8NMTHROw9H801tHddutSXnPjDl+O27tfoF2A+YQ=
@@ -1197,10 +893,6 @@
 		</dict>
 		<key>Headers/WanjaURLResponseSerialization.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			p29iI4J7TYgN4fgefJ2e3rZThxc=
-			</data>
 			<key>hash2</key>
 			<data>
 			ZfmgyM+csqnJzktXkgvw5+o9ZO5nyOU5z12YoD2o4xk=
@@ -1208,10 +900,6 @@
 		</dict>
 		<key>Headers/WanjaURLSessionManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rpZ73MS/iCbH1QRCJypidCQH+R0=
-			</data>
 			<key>hash2</key>
 			<data>
 			+fNdiQonr/c47f4yGkjF6C2fl5PV60Cl8492WyYrt8I=
@@ -1219,10 +907,6 @@
 		</dict>
 		<key>Headers/WanjaUncaughtExceptionHandler.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			O3Gvk/ODVzEIPK/sncOklVWmM80=
-			</data>
 			<key>hash2</key>
 			<data>
 			g4qmGmt9fktMk8d16hKivqybPWqLRrZjnpqg8ZC6uNc=
@@ -1230,10 +914,6 @@
 		</dict>
 		<key>Headers/WanjaUserEnvInfoHelper.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			kSlT+zbSmaHb0kBfx0ejznvNXNo=
-			</data>
 			<key>hash2</key>
 			<data>
 			UEN64E9++YYimJpUyEy3zDJxXrr5MJcSTbNrEpPtvF0=
@@ -1241,10 +921,6 @@
 		</dict>
 		<key>Headers/WanjaVedioCountDownView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/TsPj433nXEMGhMOavGjSYmMSQA=
-			</data>
 			<key>hash2</key>
 			<data>
 			BvptYq7OZhNGyjOqmF4yLXzn8JQGqB5ZJ0XGnoyN0hc=
@@ -1252,10 +928,6 @@
 		</dict>
 		<key>Headers/WanjaVersionTools.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Y45h6qqOcmb8i1C4hj20sZZYyoU=
-			</data>
 			<key>hash2</key>
 			<data>
 			p0U7OyIdoPwFi87ieuTtjyhBCoUuX0EBlsNX89qNs8s=
@@ -1263,10 +935,6 @@
 		</dict>
 		<key>Headers/WanjaVideoTool.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			XybXTZbOrhBFFVqD52ahWgNSKP8=
-			</data>
 			<key>hash2</key>
 			<data>
 			A+dbW0VMTFYluupMCrMnFJGGcTj59FvJYCrYYF+b260=
@@ -1274,10 +942,6 @@
 		</dict>
 		<key>Headers/WanjaWebView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yy4DA3NUFT77C/s/eu07Y5MtI+s=
-			</data>
 			<key>hash2</key>
 			<data>
 			8Kn+kLoo99HniK8MmLUrpVnrbedgUwQPzNHDnUFuuK4=
@@ -1285,10 +949,6 @@
 		</dict>
 		<key>Headers/WanjaWorkerDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			PB4wBtcbwQWBVTmZ4N2LOFXZMAU=
-			</data>
 			<key>hash2</key>
 			<data>
 			PDpy566YWiMaQPb9zd8FycGz72WvUfQUyxYGnaD+418=
@@ -1296,10 +956,6 @@
 		</dict>
 		<key>Headers/WanjaWriteOfflineReport.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			w58JYeFa0/swLmcrYn087DpfBT0=
-			</data>
 			<key>hash2</key>
 			<data>
 			GuOZ2HLyb1s+nUf6j3GaqqfRshnoAwJ+Yh/Feu72mTA=
@@ -1307,10 +963,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nDvJ6BYz6LXwOUthrEngDMZ2GWY=
-			</data>
 			<key>hash2</key>
 			<data>
 			T91fY1YuI5J90plTCKEwAMXCmPXOLsxAn5UJf/uOmlc=
