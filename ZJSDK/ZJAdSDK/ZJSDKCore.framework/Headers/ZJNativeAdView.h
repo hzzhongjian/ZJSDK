@@ -91,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)unregisterDataObject;
 
-/// 设置是否静音，默认为NO
+/// 设置是否静音，默认为静音YES, 非静音为NO
 @property (nonatomic, assign, readwrite) BOOL mutedIfCan;
 
 /// 部分联盟设置了视频视图后需要重绘UI

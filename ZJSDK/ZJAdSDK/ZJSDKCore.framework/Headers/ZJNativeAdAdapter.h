@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 部分联盟需要设置的广告尺寸
 @property (nonatomic, assign) CGSize adSize;
 
-// 设置是否静音
+// 设置是否静音,默认为静音YES，非静音为NO
 @property (nonatomic ,assign) BOOL mutedIfCan;
 
 // 一般为当前展示广告控制器
