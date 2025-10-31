@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJInterstitialAdProtocol <NSObject>
 
-///视频静音， 支持部分广播  默认：NO
+///视频静音， 支持部分广播  默认：YES,静音，NO为非静音
 @property (nonatomic) BOOL mutedIfCan;
 ///广告size， 支持部分广播
 @property (nonatomic, assign) CGSize adSize;
@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///交易ID
 @property (nonatomic, copy, readonly) NSString *trans_id;
 
+/// ///视频静音， 支持部分广播  默认：YES,静音，NO为非静音
 @property (nonatomic) BOOL videoMuted;
 
 - (void)loadAd;

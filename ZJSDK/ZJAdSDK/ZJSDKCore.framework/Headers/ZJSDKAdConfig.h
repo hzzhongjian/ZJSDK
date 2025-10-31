@@ -35,6 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 监控插屏广告如果用户在广告曝光之后立马切换到后台的事件上报
 @property (nonatomic, assign) BOOL is_interstitial_show_switch_background;
 
+// 透传联盟名称
+@property (nonatomic, assign) BOOL adn_name;
+
+// 透传联盟广告位ID
+@property (nonatomic, assign) BOOL adn_pos_id;
 
 @end
 

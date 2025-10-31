@@ -110,7 +110,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSInteger)eCPM;
 
-
+// 用户的唯一标识符
+@property (nonatomic, copy) NSString *user_unique_identifier;
 
 
 @end

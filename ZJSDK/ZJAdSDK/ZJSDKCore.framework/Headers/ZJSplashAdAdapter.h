@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong, readonly) UIView *splashAdapterView;
 
+// 是否静音，默认为YES静音，NO为非静音
+@property (nonatomic, assign) BOOL mutedIfCan;
+
 /**
  *  开屏广告素材加载成功
  */

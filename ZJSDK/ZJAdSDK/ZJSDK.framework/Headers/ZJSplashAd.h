@@ -84,6 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong,nullable) ZJSplashAdAdapter *currentAdapter;
 
+// 是否静音，默认为YES静音，NO为非静音
+@property (nonatomic, assign) BOOL mutedIfCan;
+
 @end
 
 NS_ASSUME_NONNULL_END

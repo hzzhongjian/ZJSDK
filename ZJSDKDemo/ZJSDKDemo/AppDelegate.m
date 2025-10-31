@@ -132,7 +132,7 @@
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;
-    self.splashAd.rootViewController = self.window.rootViewController;
+    self.splashAd.rootViewController = self.showWindow.rootViewController;
     [self.splashAd loadAd];
 }
 

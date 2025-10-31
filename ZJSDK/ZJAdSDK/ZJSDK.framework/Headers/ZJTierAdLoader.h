@@ -48,6 +48,9 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nul
 /// caid json值
 @property (nonatomic, copy) NSString *caid_json;
 
+// 用户的唯一标识符
+@property (nonatomic, copy) NSString *user_unique_identifier;
+
 - (instancetype)initWithTiers:(NSArray <ZJAdUnitModel *>*)tiers
                      timeoutInterval:(CGFloat)timeoutInterval
                         showPriority:(ZJAdShowPriority)showPriority;

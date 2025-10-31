@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @warning  初始化SDK前调用，否则有可能不生效
 - (void)setDeviceIDFA:(NSString *)idfa;
 
-/// 可传入caid
+/// 可传入设备号
 /// @param cdInfo 参数数组，数组内部为字典对象,Key为cd(参数)和version(版本号),对应的值均为字符串类型,示例:@{@"cd":@"",@"version":@""}
 /// @warning  初始化SDK前调用，否则有可能不生效
 - (void)setCdInfo:(NSArray *)cdInfo;

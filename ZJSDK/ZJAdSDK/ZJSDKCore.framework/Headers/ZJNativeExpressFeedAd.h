@@ -80,6 +80,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, weak) id<ZJNativeExpressFeedAdDelegate> delegate;
 
+// 用户的唯一标识符
+@property (nonatomic, copy) NSString *user_unique_identifier;
+
 /*
  *required.[必选]
  * root view controller for handling ad actions.

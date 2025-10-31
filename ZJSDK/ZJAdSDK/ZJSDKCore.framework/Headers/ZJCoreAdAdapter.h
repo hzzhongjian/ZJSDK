@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// caid json值
 @property (nonatomic, copy) NSString *caid_json;
 
+// 用户的唯一标识符
+@property (nonatomic, copy) NSString *user_unique_identifier;
+
 /// 记录加载广告成功的时间戳
 @property (nonatomic, assign) NSTimeInterval hasAdTimeInterval;
 

@@ -71,6 +71,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取Bundle的图片
 + (nullable UIImage *)zj_imageNamed:(NSString *)name;
 
+// 简洁版本 - 直接获取 keyWindow 的最外层视图控制器
++ (UIViewController *)topViewControllerFromKeyWindow;
+
 @end
 
 NS_ASSUME_NONNULL_END

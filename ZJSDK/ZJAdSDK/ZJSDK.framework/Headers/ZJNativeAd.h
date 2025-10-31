@@ -40,6 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 一般为当前展示广告控制器
 @property (nonatomic, strong) UIViewController *rootViewController;
 
+/** 用户可根据该字段，自己控制视频是否可以点击，
+* 如果是YES，就是可以点击，
+* 默认为NO，根据SDK内部去判断视频是否可以点击*
+*/
+@property (nonatomic, assign) BOOL forced_clickable;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -95,9 +95,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readwrite) BOOL mutedIfCan;
 
 /// 部分联盟设置了视频视图后需要重绘UI
--(void)resizeIfNeed;
+- (void)resizeIfNeed;
 
-
+// 用户的唯一标识符
+@property (nonatomic, copy) NSString *user_unique_identifier;
 
 @end
 

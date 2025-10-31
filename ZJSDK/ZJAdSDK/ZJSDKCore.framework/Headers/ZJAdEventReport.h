@@ -51,6 +51,9 @@ FOUNDATION_EXPORT NSString * const ZJEvent_BidFloor; // bidding广告位获取�
 
 + (NSString *)adPlatformTypeConvertPmName:(ZJAdPlatformType)adPlatformType;
 
+// 根据联盟平台映射ADNName
++ (NSNumber *)platformTypeConvertADNName:(ZJAdPlatformType)adPlatformType;
+
 @end
 
 NS_ASSUME_NONNULL_END

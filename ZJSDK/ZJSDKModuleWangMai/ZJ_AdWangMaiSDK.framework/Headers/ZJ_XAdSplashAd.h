@@ -33,8 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter adSlotId: 广告位id
 - (instancetype)initWithAdSlotId:(NSString *)adSlotId;
 
-/// 预加载广告,只加载不展示,需要调用showAd展示广告
-- (void)preloadAdData;
+/// 获取用于 Server Bidding 请求SDK侧相关请求参数信息
+/// - Parameter adSlotId: 广告位id
+- (NSString *)getBuyerIdWithAdSlotId:(NSString *)adSlotId;
+
+/// 加载广告,只加载不展示,需要调用showAd展示广告
+/// - Parameter serverBidToken: 通过 Server Bidding 请求回来的 token  不使用Server Bidding时传 nil
+- (void)preloadAdDataWithServerBidToken:(NSString *_Nullable)serverBidToken;
 
 /// 展示广告
 /// @param window 应用的window窗口 [必传]
@@ -47,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSInteger)eCPM;
 
-/// 竞价成功上报，脉盟平台竞胜之后调用，需要在广告请求成功之后,展示之前调用，winInfo脉盟平台竞价获胜信息，可为nil。
+/// 竞价成功上报，脉盟平台竞胜之后调用，需要在广告请求成功之后,展示之前调用，winInfo脉盟平台竞价获胜信息，可为nil。（使用 Server Bidding 时，竞胜竞败由Server处理。不用调用该方法）
 /// @param winInfo 竞胜信息 字典类型
 - (void)sendWinNotificationWithInfo:(NSDictionary *_Nullable)winInfo;
 
