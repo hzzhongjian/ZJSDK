@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, weak, nullable) id<JYNativeAdViewDelegate> delegate;
 @property (nonatomic, weak, readonly) UIView *mediaView;
-@property (nonatomic, weak, readonly) UIImageView *logoView;
+@property (nonatomic, strong, readonly) UIImageView *logoView;
 
 @property (nonatomic, assign, readonly) CGFloat logoImageViewDefaultWidth;
 @property (nonatomic, assign, readonly) CGFloat logoImageViewDefaultHeight;

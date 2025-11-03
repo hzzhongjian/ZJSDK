@@ -22,6 +22,7 @@
 #import <ZJSDKCore/ZJProjectHelper.h>
 #import <ZJSDKCore/ZJDeviceHelper.h>
 #import <ZJSDKCore/ZJCommon.h>
+#import "VCUtils.h"
 
 @interface AppDelegate ()<ZJSplashAdDelegate>
 
@@ -132,7 +133,7 @@
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;
-    self.splashAd.rootViewController = self.showWindow.rootViewController;
+    self.splashAd.rootViewController = self.window.rootViewController;
     [self.splashAd loadAd];
 }
 
@@ -143,6 +144,10 @@
     NSLog(@"kpgg-----加载成功");
     dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.splashAd showAdInWindow:self.window];
+        UIViewController *vc1 = [ZJCommon getCurrentVC];
+        UIViewController *vc2 = [ZJCommon topViewControllerFromKeyWindow];
+        UIViewController *vc3 = [VCUtils topmostViewController];
+        NSLog(@"--%@--%@--%@", NSStringFromClass(vc1.class), NSStringFromClass(vc2.class), NSStringFromClass(vc3.class));
         [self.splashAd showAdInWindow:self.showWindow]; //(不推荐)
     });}
 

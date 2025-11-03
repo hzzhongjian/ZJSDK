@@ -175,6 +175,7 @@
 		ABCFD85F2B453DC400D2449D /* ZJSplashWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8322B453DC400D2449D /* ZJSplashWindowVC.m */; };
 		ABCFD8602B453DC400D2449D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8332B453DC400D2449D /* AppDelegate.m */; };
 		ABCFD8612B453DC400D2449D /* ZJHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8342B453DC400D2449D /* ZJHomeTableViewCell.m */; };
+		ABD420AE2EB843B100BBDDB3 /* VCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD420AD2EB843B100BBDDB3 /* VCUtils.m */; };
 		ABF3BD7E2E375366004E48F7 /* ZJDemoPrivacyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3BD7C2E375366004E48F7 /* ZJDemoPrivacyProvider.m */; };
 		ABF4E98D292CB929004CC39D /* DeviceCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF4E98C292CB929004CC39D /* DeviceCheck.framework */; };
 /* End PBXBuildFile section */
@@ -510,6 +511,8 @@
 		ABCFD8362B453DC400D2449D /* ZJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJHomeViewController.h; sourceTree = "<group>"; };
 		ABCFD8372B453DC400D2449D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ABCFD8382B453DC400D2449D /* ZJSplashWindowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSplashWindowVC.h; sourceTree = "<group>"; };
+		ABD420AC2EB843B100BBDDB3 /* VCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCUtils.h; sourceTree = "<group>"; };
+		ABD420AD2EB843B100BBDDB3 /* VCUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCUtils.m; sourceTree = "<group>"; };
 		ABF3BD7C2E375366004E48F7 /* ZJDemoPrivacyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJDemoPrivacyProvider.m; sourceTree = "<group>"; };
 		ABF3BD7D2E375366004E48F7 /* ZJDemoPrivacyProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJDemoPrivacyProvider.h; sourceTree = "<group>"; };
 		ABF4E98C292CB929004CC39D /* DeviceCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceCheck.framework; path = System/Library/Frameworks/DeviceCheck.framework; sourceTree = SDKROOT; };
@@ -691,6 +694,8 @@
 				ABCFD8332B453DC400D2449D /* AppDelegate.m */,
 				ABCFD8372B453DC400D2449D /* ViewController.h */,
 				ABCFD7DD2B453DC400D2449D /* ViewController.m */,
+				ABD420AC2EB843B100BBDDB3 /* VCUtils.h */,
+				ABD420AD2EB843B100BBDDB3 /* VCUtils.m */,
 				ABCFD8352B453DC400D2449D /* ZJHomeTableViewCell.h */,
 				ABF3BD7D2E375366004E48F7 /* ZJDemoPrivacyProvider.h */,
 				ABF3BD7C2E375366004E48F7 /* ZJDemoPrivacyProvider.m */,
@@ -1320,6 +1325,7 @@
 				AB04E63B2C1AF47D0050C68B /* ZJFullScreenVideoViewController.m in Sources */,
 				57EB056A2635632F005DBA03 /* NSBezierPath+SDRoundedCorners.m in Sources */,
 				57EB05592635632F005DBA03 /* UIImage+MemoryCacheCost.m in Sources */,
+				ABD420AE2EB843B100BBDDB3 /* VCUtils.m in Sources */,
 				001E72A1253AAC760086A93F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				57EB05652635632F005DBA03 /* SDImageAssetManager.m in Sources */,
 				AB8D73162D641B2E00C8CE22 /* ZJNewTubePageVC.m in Sources */,

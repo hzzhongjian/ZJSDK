@@ -77,6 +77,8 @@
 //            [self.dataArray removeObject:feedAd];
 //        }
 //    }
+    NSDictionary *dict = [self.feedAdManager getExtraInfo];
+    NSLog(@"%@", dict);
     for (int i = 0; i<multipleResultObject.count; i++) {
         ZJNativeExpressFeedAd *feedAd = multipleResultObject[i];
         feedAd.rootViewController = self;

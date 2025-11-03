@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)buildView;
 
+@property (nonatomic, copy) void(^skipButtonDidClick)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END
