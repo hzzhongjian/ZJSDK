@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
     ZJErrorCodeAd_FullScreenVideo_RepeatedExposure_ERROR = 1000904, // 全屏视频广告重复曝光的错误
     ZJErrorCodeAd_NativeExpress_RepeatedExposure_ERROR = 1000905, // 信息流广告重复曝光的错误
     ZJErrorCodeAd_Native_RepeatedExposure_ERROR = 1000906, // 自渲染广告重复曝光的错误
-    
+    ZJErrorCodeAd_NOT_FULL = 100302, // 广告无填充
 };
 
 
