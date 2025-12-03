@@ -57,7 +57,7 @@
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
     NSLog(@"ZJSDK版本号：%@",version);
-    
+//    NSLog(@"idfa:%@", [ZJDeviceHelper IDFA]);
     //    ZJSDKPrivacyAuthorityModel *privacyAuthorityModel = [[ZJSDKPrivacyAuthorityModel alloc] init];
     ////    NSLog(@"%@", privacyAuthorityModel);
     //    privacyAuthorityModel.canUseIDFA = NO;
@@ -145,9 +145,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.splashAd showAdInWindow:self.window];
         UIViewController *vc1 = [ZJCommon getCurrentVC];
-        UIViewController *vc2 = [ZJCommon topViewControllerFromKeyWindow];
+//        UIViewController *vc2 = [ZJCommon topViewControllerFromKeyWindow];
         UIViewController *vc3 = [VCUtils topmostViewController];
-        NSLog(@"--%@--%@--%@", NSStringFromClass(vc1.class), NSStringFromClass(vc2.class), NSStringFromClass(vc3.class));
+//        NSLog(@"--%@--%@--%@", NSStringFromClass(vc1.class), NSStringFromClass(vc2.class), NSStringFromClass(vc3.class));
         [self.splashAd showAdInWindow:self.showWindow]; //(不推荐)
     });}
 

@@ -13,6 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * 此类配置需要再初始化sdk之前设置
+ */
+
 @interface ZJSDKInitConfig : NSObject
 
 
@@ -35,6 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
  * 用户控制ZJSDK隐私权限
  */
 @property (nonatomic, strong, nullable) id <ZJSDKPrivacyProvider> privacyProvider;
+
+/**
+ * 是否需要接口支持https请求，由媒体自己设置，默认是NO不支持，YES是支持
+ */
+@property (nonatomic, assign) BOOL isSupportHttps;
 
 @end
 

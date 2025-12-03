@@ -30,18 +30,18 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nul
 
 @property (nonatomic, nullable, copy) RequestLevelCompleteBlk completeBlk;
 
-@property (nonatomic, strong) NSArray <ZJAdUnitModel *>* currentTiers;
+@property (nonatomic, strong) NSArray <ZJAdUnitModel *> *currentTiers;
 //广告请求对象数组
-@property (nonatomic,readonly)NSMutableArray <ZJTierAdAdapter *>*adapterArray;
+@property (nonatomic, readonly) NSMutableArray <ZJTierAdAdapter *> *adapterArray;
 
 //广告请求成功数组
-@property (nonatomic,strong)NSMutableArray <ZJTierAdAdapter *>*successAdapters;
+@property (nonatomic, strong) NSMutableArray <ZJTierAdAdapter *> *successAdapters;
 
 //错误信息数组
-@property (nonatomic,strong)NSMutableArray <NSError *>*tierFailArray;
+@property (nonatomic, strong) NSMutableArray <NSError *> *tierFailArray;
 
 //倒计时器
-@property (nonatomic,strong)ZJAdCountdown *countdown;
+@property (nonatomic, strong) ZJAdCountdown *countdown;
 
 @property (nonatomic, assign) long timeout;
 

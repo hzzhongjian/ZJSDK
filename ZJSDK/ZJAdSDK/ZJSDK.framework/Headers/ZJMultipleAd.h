@@ -44,25 +44,25 @@ NS_ASSUME_NONNULL_BEGIN
 //倒计时器
 //@property (nonatomic,strong)ZJAdCountdown *countdown;
 //数据管理
-@property (nonatomic,strong)ZJAdPreferenceManager *adManager;
+@property (nonatomic, strong) ZJAdPreferenceManager *adManager;
 
 //错误信息数组
-@property (nonatomic,strong)NSMutableArray <NSError *>*adFailArray;
+@property (nonatomic, strong) NSMutableArray <NSError *> *adFailArray;
 
-@property (nonatomic,strong)NSMutableString *logString;
+@property (nonatomic, strong) NSMutableString *logString;
 
 
 
 //pd广告请求成功数组
-@property (nonatomic,strong)NSMutableArray <ZJMultipleAdAdapter *>*successAdaptersPD;
+@property (nonatomic, strong) NSMutableArray <ZJMultipleAdAdapter *> *successAdaptersPD;
 
 //bd广告请求成功数组
-@property (nonatomic,strong)NSMutableArray <ZJMultipleAdAdapter *>*successAdaptersBD;
+@property (nonatomic, strong) NSMutableArray <ZJMultipleAdAdapter *> *successAdaptersBD;
 
 
-@property (nonatomic,strong)ZJMultipleAdAdapter *ecpm1Adapter;
+@property (nonatomic, strong) ZJMultipleAdAdapter *ecpm1Adapter;
 
-@property (nonatomic,strong,nullable)ZJMultipleAdAdapter *currentAdapter;
+@property (nonatomic, strong, nullable) ZJMultipleAdAdapter *currentAdapter;
 
 - (void)loadAdWithCount:(NSUInteger)count;
 

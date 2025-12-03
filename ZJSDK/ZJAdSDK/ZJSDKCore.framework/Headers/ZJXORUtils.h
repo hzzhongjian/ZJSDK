@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 解密函数
 + (NSString *)xorDecrypt:(NSString *)encryptedBase64String;
 
+// 替换特殊字符，+ 替换成 -，/ 替换成 _, = 替换成 ""
++ (NSString *)urlSafeEncode:(NSString *)base64String;
+
+// 替换特殊字符，- 替换成 +，_ 替换成 /, "" 替换成 =
++ (NSString *)urlSafeDecode:(NSString *)base64String;
 
 @end
 
