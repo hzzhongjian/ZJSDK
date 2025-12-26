@@ -10,6 +10,7 @@
 #import <WebKit/WebKit.h>
 #import <ZJSDK/ZJNewsAdView.h>
 #import <ZJSDKCore/ZJSDKDefines.h>
+#import <ZJSDKCore/ZJCommon.h>
 @interface ZJNewsAdViewController () <ZJNewsAdViewDelegate>
 @property(nonatomic,strong) ZJNewsAdView *newsAdView;
 
@@ -122,7 +123,7 @@
         [_newsAdView removeFromSuperview];
         _newsAdView = nil;
     }
-    self.newsAdView = [[ZJNewsAdView alloc] initWithPlacementId:adId frame:CGRectMake(0, ZJ_StatusBarHeight+44, kScreenWidth, kScreenHeight-ZJ_StatusBarHeight-44)];
+    self.newsAdView = [[ZJNewsAdView alloc] initWithPlacementId:adId frame:CGRectMake(0, [ZJCommon statusBarHeight]+44, kScreenWidth, kScreenHeight-[ZJCommon statusBarHeight]-44)];
     self.newsAdView.delegate = self;
     self.newsAdView.userId = @"robin6666";
     [self.view addSubview:self.newsAdView];
