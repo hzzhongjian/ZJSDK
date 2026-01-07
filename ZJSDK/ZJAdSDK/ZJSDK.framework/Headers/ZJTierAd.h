@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) ZJTierAdAdapter *ecpm1Adapter;
 
-@property (nonatomic, strong, nullable)ZJTierAdAdapter *currentAdapter;
+@property (nonatomic, strong, nullable) ZJTierAdAdapter *currentAdapter;
 
 - (void)loadAd; // NS_SWIFT_NAME(loadAd());
 
