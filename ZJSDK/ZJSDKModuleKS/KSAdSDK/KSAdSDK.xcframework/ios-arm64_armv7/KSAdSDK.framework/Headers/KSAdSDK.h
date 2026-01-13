@@ -165,3 +165,15 @@
 #elif __has_include(<KSAdSDK/KSAdCouponData.h>)
     #import <KSAdSDK/KSAdCouponData.h>
 #endif
+
+#if __has_include(<KSUVideoView/KSAdRewardAdRetryTaskManager.h>)
+    #import <KSUVideoView/KSAdRewardAdRetryTaskManager.h>
+#elif __has_include(<KSAdSDK/KSAdRewardAdRetryTaskManager.h>)
+    #import <KSAdSDK/KSAdRewardAdRetryTaskManager.h>
+#endif
+
+#if __has_include(<KSUModel/KSAdRewardAdRetryTaskResult.h>)
+    #import <KSUModel/KSAdRewardAdRetryTaskResult.h>
+#elif __has_include(<KSAdSDK/KSAdRewardAdRetryTaskResult.h>)
+    #import <KSAdSDK/KSAdRewardAdRetryTaskResult.h>
+#endif

@@ -66,7 +66,7 @@
     //    [ZJSDKInitConfig sharedInstance].privacyAuthorityModel = privacyAuthorityModel;
     //    [ZJSDKInitConfig sharedInstance].privacyProvider = [[ZJDemoPrivacyProvider alloc] init];
     //    [ZJAdSDK registerSDK:[[ZJSDKInitModel alloc] initWithAppId:@"Z0837060490" userId:@"" channel:@"test" app_extra:@{}]];
-    self.showWindow.hidden = NO;
+//    self.showWindow.hidden = NO;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     ZJHomeViewController *homeVC = [[ZJHomeViewController alloc]init];
@@ -130,8 +130,8 @@
 
 
 -(void)showSplashAd{
-//    self.splashAd = [[ZJSplashAd alloc]initWithPlacementId:AdId_Splash];
-    self.splashAd = [[ZJSplashAd alloc] initWithPlacementId:@"J4179705243"];
+    self.splashAd = [[ZJSplashAd alloc]initWithPlacementId:AdId_Splash];
+//    self.splashAd = [[ZJSplashAd alloc] initWithPlacementId:@"J4179705243"];
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;
@@ -145,12 +145,12 @@
 -(void)zj_splashAdDidLoad:(ZJSplashAd *)splashAd{
     NSLog(@"kpgg-----加载成功");
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.splashAd showAdInWindow:self.window];
+        [self.splashAd showAdInWindow:self.window];
         UIViewController *vc1 = [ZJCommon getCurrentVC];
 //        UIViewController *vc2 = [ZJCommon topViewControllerFromKeyWindow];
         UIViewController *vc3 = [VCUtils topmostViewController];
 //        NSLog(@"--%@--%@--%@", NSStringFromClass(vc1.class), NSStringFromClass(vc2.class), NSStringFromClass(vc3.class));
-        [self.splashAd showAdInWindow:self.showWindow]; //(不推荐)
+//        [self.splashAd showAdInWindow:self.showWindow]; //(不推荐)
     });}
 
 /**
