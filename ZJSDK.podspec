@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.0.6'
+  s.version          = '2.6.0.7'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -44,9 +44,9 @@ TODO: Add long description of the pod here.
   s.default_subspecs = ['ZJSDKModuleGDT','ZJSDKModuleCSJ','ZJSDKModuleDSP','ZJSDKModuleSIG','ZJSDKModuleBD','ZJSDKModuleBeiZi','ZJSDKModuleTanX','ZJSDKModuleKS','ZJSDKModuleTaKu','ZJSDKModuleQiYun','ZJSDKModuleWanJia']
   
     s.subspec 'ZJAdSDK' do |ss|
-        ss.vendored_frameworks = 'ZJSDK/ZJAdSDK/*.framework'
-        ss.preserve_paths = 'ZJSDK/ZJAdSDK/*.framework'
-        ss.resource = 'ZJSDK/ZJAdSDK/*.bundle'
+        ss.vendored_frameworks = ['ZJSDK/ZJAdSDK/*.framework']
+        ss.preserve_paths = ['ZJSDK/ZJAdSDK/*.framework']
+        ss.resource = ['ZJSDK/ZJAdSDK/*.bundle']
     end
     
     ### GDT适配器兼容版

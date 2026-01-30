@@ -74,7 +74,7 @@ target 'ZJSDKDemo' do
 #pod 'ZJSDK', '2.5.10.12'
   pod 'ZJSDK', :path => '../'
   
-  pod 'ZJSDK/ZJSDKModuleWangMai', :path => '../'
+#  pod 'ZJSDK/ZJSDKModuleWangMai', :path => '../'
   
   pod 'ZJSDK/ZJSDKModuleQiMingADX', :path => '../'
 #
