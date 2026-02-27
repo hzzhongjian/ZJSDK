@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.0.7'
+  s.version          = '2.6.0.8'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -73,8 +73,6 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleCSJ' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        # ss.dependency 'Ads-CN'
-#        ss.dependency 'Ads-CN/CSJMediation' #使用gromore需要引入
         ss.dependency 'Ads-CN/BUAdSDK'
     end
 
@@ -84,8 +82,11 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleCSJPlayletSDK' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleCSJ/playlet/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        # ss.dependency 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
-        # ss.dependency 'PangrowthX/shortplay', '2.8.0.0'
+#        ss.dependency 'Ads-CN/CSJMediation-Only'
+#        ss.dependency 'Ads-CN/BUAdLive'
+#        ss.dependency 'TTSDKFramework/Player-SR', '1.46.2.7-premium'
+#        ss.dependency 'TTSDKFramework/LivePull', '1.46.2.7-premium'
+#        ss.dependency 'PangrowthX/shortplay', '2.9.0.5'
     end    
   
     ### 快手适配器兼容版

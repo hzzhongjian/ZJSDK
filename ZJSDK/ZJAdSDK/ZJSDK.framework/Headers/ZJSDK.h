@@ -27,5 +27,5 @@ FOUNDATION_EXPORT const unsigned char ZJSDKVersionString[];
 #import <ZJSDK/ZJH5Page.h>
 #import <ZJSDK/ZJTubePage.h>
 #import <ZJSDK/ZJNewsAdView.h>
-
+#import <ZJSDK/ZJNativeAd.h>
 

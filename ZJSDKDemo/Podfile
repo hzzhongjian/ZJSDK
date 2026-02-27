@@ -73,15 +73,16 @@ target 'ZJSDKDemo' do
 
 #pod 'ZJSDK', '2.5.10.12'
   pod 'ZJSDK', :path => '../'
-  
-#  pod 'ZJSDK/ZJSDKModuleWangMai', :path => '../'
-  
-  pod 'ZJSDK/ZJSDKModuleQiMingADX', :path => '../'
-#
-  pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
-  
-  pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+#  
+##  pod 'ZJSDK/ZJSDKModuleWangMai', :path => '../'
+#  
+#  pod 'ZJSDK/ZJSDKModuleQiMingADX', :path => '../'
+##
+#  pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
+#  
+#  pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 
+#pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
   
 #  pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
 
@@ -103,7 +104,10 @@ target 'ZJSDKDemo' do
 #  
 #  pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
 #
-#  pod 'ZJSDK/ZJSDKModuleCSJCompatible', :path => '../'
+#  pod 'ZJSDK/ZJSDKModuleCSJCompatible'#, :path => '../'
+
+#pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
+#pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
   
 end
  

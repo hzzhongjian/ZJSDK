@@ -31,18 +31,18 @@
     ZJTubePageConfig *config = [[ZJTubePageConfig alloc] init];
     // bundleid需要改为com.bytedance.pangrowth，才能跑SDK_Setting_5434885.json
     config.JSONConfigPath = [[NSBundle mainBundle] pathForResource:@"SDK_Setting_5434885" ofType:@"json"];
-    config.freeEpisodesCount = 5;
-    config.unlockEpisodesCountUsingAD = 5;
-    //    用来指定加载ZJ广告，如果不设置，默认加载的穿山甲自带广告，如果要设置需要同时设置下面两个字段的值
-    //    config.adType = ZJTubePageADTypeRewardVideo;
-    //    config.posId = @"KS90010001";
-    config.adType = ZJTubePageADTypeInterstitial;
-    config.posId = @"J7311893871";
+    config.freeEpisodesCount = 2;
+    config.unlockEpisodesCountUsingAD = 1;
+//    用来指定加载ZJ广告，如果不设置，默认加载的穿山甲自带广告，不要同时设置下面两个字段的值
+//        config.adType = ZJTubePageADTypeRewardVideo;
+//        config.posId = @"KS90010001";
+//    config.adType = ZJTubePageADTypeInterstitial;
+//    config.posId = @"J7311893871";
     config.showCloseButton = YES;
     config.configOrNotCustomViewDelegate = YES;
     config.configOrNotCustomDrawAdViewDelegate = YES;
     config.configOrNotCustomBannerDelegate = YES;
-    config.customAdIndex = @[@0, @1];
+//    config.customAdIndex = @[@0, @1];
     self.tubePageAd = [[ZJTubePageAd alloc]initWithPlacementId:adId];
     self.tubePageAd.tubePageConfig = config;
     self.tubePageAd.videoStateDelegate = self;
@@ -53,7 +53,7 @@
     /// 广告回调
     self.tubePageAd.adCallbackDelegate = self;
     /// 业务接口回调
-//    self.tubePageAd.interfaceCallbackDelegate = self;
+    self.tubePageAd.interfaceCallbackDelegate = self;
 
     /// 自定义详情页cell试图回调
     self.tubePageAd.customViewCallBackDelegate = self;
@@ -119,9 +119,9 @@
 - (UIView *)zj_shortplayDrawVideoVCBottomBannerView:(UIViewController *)vc content:(id<ZJContentInfo>)content
 {
     return nil;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    view.backgroundColor = [UIColor cyanColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+//    view.backgroundColor = [UIColor cyanColor];
+//    return view;
 }
 
 #pragma mark - ZJShortPlayAdDelegate
@@ -249,9 +249,9 @@
 - (UIView *)zj_shortplayPlayletDetailBottomBanner:(id<ZJContentInfo>)content
 {
     return nil;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    view.backgroundColor = [UIColor orangeColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+//    view.backgroundColor = [UIColor orangeColor];
+//    return view;
 }
 
 #pragma mark - ZJShortPlayCustomViewDelegate
@@ -262,9 +262,9 @@
 {
     return nil;
     // 短剧的cell自定义视图
-    UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
-    view.backgroundColor = [UIColor greenColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
+//    view.backgroundColor = [UIColor greenColor];
+//    return view;
 }
 
 /// 根据数据更新UI
@@ -297,9 +297,9 @@
 {
     return nil;
 //    自定义draw的广告页面
-    UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
-    view.backgroundColor = [UIColor yellowColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:cell.bounds];
+//    view.backgroundColor = [UIColor yellowColor];
+//    return view;
 }
 
 - (void)zj_shortplayDetailCell:(UITableViewCell *)cell bindDataToDrawAdView:(UIView *)drawAdView adInputIndex:(NSUInteger)adIndex
@@ -328,9 +328,9 @@
 - (UIView *)zj_shortplayDrawVideoVCBottomBannerView:(UIViewController *)vc
 {
     return nil;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    view.backgroundColor = [UIColor redColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+//    view.backgroundColor = [UIColor redColor];
+//    return view;
     
 //    return nil;
 }

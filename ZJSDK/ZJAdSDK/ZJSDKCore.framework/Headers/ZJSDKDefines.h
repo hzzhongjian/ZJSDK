@@ -46,6 +46,7 @@ FOUNDATION_EXPORT UIWindow * zj_visibleWindow(void);
 FOUNDATION_EXPORT BOOL zj_is_iphoneXSeries_screen(void);
 
 FOUNDATION_EXPORT UIViewController * zj_getCurrentVC(void);
+
 FOUNDATION_EXPORT UIViewController * zj_getCurrentVCFrom(UIViewController *vc);
 
 FOUNDATION_EXPORT NSString * const ZJSDKVersion;
