@@ -1,0 +1,6 @@
+framework module ZJ_AdWangMaiSDK {
+  umbrella header "ZJ_AdWangMaiSDK.h"
+  export *
+
+  module * { export * }
+}
