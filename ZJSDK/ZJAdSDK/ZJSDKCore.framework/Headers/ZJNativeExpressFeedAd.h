@@ -112,6 +112,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告是否有效，一般广告从加载到展示，默认30分钟的有效期，过了有效期请重新加载广告
 - (BOOL)pmAdValid;
 
+// FeiSuo使用方法，2.6.0.9版本开始新增
+- (void)showInView:(UIView *)view;
+
 @end
 
 NS_ASSUME_NONNULL_END
