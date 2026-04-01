@@ -1,0 +1,11 @@
+framework module FSUnionAdSDK {
+  umbrella header "FSUnionAdSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module FSUnionAdSDK.Swift {
+  header "FSUnionAdSDK-Swift.h"
+  requires objc
+}

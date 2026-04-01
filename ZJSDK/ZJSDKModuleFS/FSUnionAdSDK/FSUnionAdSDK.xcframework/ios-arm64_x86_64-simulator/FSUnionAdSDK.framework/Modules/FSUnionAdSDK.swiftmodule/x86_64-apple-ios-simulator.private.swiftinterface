@@ -1,0 +1,809 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FSUnionAdSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AVFoundation
+import AdSupport
+import AppTrackingTransparency
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
+import Compression
+import CoreLocation
+import CoreMedia
+import CoreMotion
+import CoreTelephony
+import CoreText
+@_exported import FSUnionAdSDK
+import Foundation
+import Network
+import NetworkExtension
+import OSLog
+import SQLite3
+import Security
+import StoreKit
+import Swift
+import SystemConfiguration
+@_exported import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+extension AVFoundation.AVPlayer {
+  @_Concurrency.MainActor @preconcurrency public var bufferProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentBufferDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentImage: UIKit.UIImage? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var playProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var totalDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency convenience public init(asset: AVFoundation.AVURLAsset)
+  @_Concurrency.MainActor @preconcurrency public func getFirstFrameFromVideo() -> UIKit.UIImage?
+}
+@_hasMissingDesignatedInitializers public class FrameworkInfoTool {
+  public static func getMarketingVersion() -> Swift.String
+  public static func getBuildVersion() -> Swift.String
+  @objc deinit
+}
+@objc public protocol FSInterstitialAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func fs_interstitialAdSuccessToLoadAd(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdFailedToLoadAd(_ ad: FSUnionAdSDK.FSInterstitialAd, error: any Swift.Error)
+  @objc optional func fs_interstitialAdSuccessToDwonlaodMaterial(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdFailedToDwonlaodMaterial(_ ad: FSUnionAdSDK.FSInterstitialAd, error: any Swift.Error)
+  @objc optional func fs_interstitialAdRenderSuccess(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdRenderFail(_ ad: FSUnionAdSDK.FSInterstitialAd, error: any Swift.Error)
+  @objc optional func fs_interstitialAdWillPresent(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdDidVisible(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdDidClick(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdDidClose(_ ad: FSUnionAdSDK.FSInterstitialAd)
+  @objc optional func fs_interstitialAdDidCloseOtherController(_ ad: FSUnionAdSDK.FSInterstitialAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+}
+@objc @objcMembers public class FSInterstitialAd : FSUnionAdSDK.FSUnionAd {
+  @objc weak public var delegate: (any FSUnionAdSDK.FSInterstitialAdDelegate)?
+  @objc public var videoMuted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public let slot: FSUnionAdSDK.FSAdSlot
+  @objc public var timeout: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc public func price() -> Swift.String
+  @objc deinit
+  @objc public init(slot: FSUnionAdSDK.FSAdSlot)
+  @objc override public func loadAdData()
+  @objc public func showAdFromRootViewController(_ rootViewController: UIKit.UIViewController)
+}
+@objc public enum FSSplashAdCloseType : Swift.Int {
+  case unknown
+  case clickSkip
+  case countdownToZero
+  case clickJump
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol FSSplashAdDelegate {
+  @objc optional func fs_splashAdLoadSuccess(_ ad: FSUnionAdSDK.FSSplashAd)
+  @objc optional func fs_splashAdLoadFailed(_ ad: FSUnionAdSDK.FSSplashAd, error: Foundation.NSError)
+  @objc optional func fs_splashAdMaterialDownloadSuccess(_ ad: FSUnionAdSDK.FSSplashAd)
+  @objc optional func fs_splashAdMaterialDownloadFailed(_ ad: FSUnionAdSDK.FSSplashAd, error: Foundation.NSError)
+  @objc optional func fs_splashAdWillPresent(_ ad: FSUnionAdSDK.FSSplashAd)
+  @objc optional func fs_splashAdDidVisible(_ ad: FSUnionAdSDK.FSSplashAd)
+  @objc optional func fs_splashAdFailedToPresent(_ ad: FSUnionAdSDK.FSSplashAd, error: Foundation.NSError)
+  @objc optional func fs_splashAdDidClick(_ ad: FSUnionAdSDK.FSSplashAd)
+  @objc optional func fs_splashAdDidClose(_ ad: FSUnionAdSDK.FSSplashAd, closeType: FSUnionAdSDK.FSSplashAdCloseType)
+  @objc optional func fs_splashAdDidCloseOtherController(_ ad: FSUnionAdSDK.FSSplashAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+}
+@objc @objcMembers public class FSCAIDModel : ObjectiveC.NSObject {
+  @objc public var version: Swift.String?
+  @objc public var caid: Swift.String?
+  @objc public init(version: Swift.String? = nil, caid: Swift.String? = nil)
+  @objc deinit
+}
+@objc public class FSSplashAd : FSUnionAdSDK.FSUnionAd {
+  final public let slot: FSUnionAdSDK.FSAdSlot
+  @objc weak public var delegate: (any FSUnionAdSDK.FSSplashAdDelegate)?
+  public var timeout: Swift.Double {
+    get
+    set
+  }
+  @objc public var bottomView: UIKit.UIView?
+  @objc deinit
+  @objc public init(slot: FSUnionAdSDK.FSAdSlot)
+  @objc override public func loadAdData()
+  @objc public func showSplash(in rootViewController: UIKit.UIViewController, bottomView: UIKit.UIView?)
+}
+extension FSUnionAdSDK.FSSplashAd {
+  @objc dynamic public func price() -> Swift.String
+}
+@objc public enum FSPlayerPlayState : Swift.Int {
+  case none = 0
+  case buffering
+  case playing
+  case stopped
+  case pause
+  case failed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct WfNetwork {
+  public var ssid: Swift.String?
+  public var bssid: Swift.String?
+}
+extension FSUnionAdSDK.WfNetwork {
+  public static func fetchCurrentInfo() -> FSUnionAdSDK.WfNetwork?
+}
+@objc public protocol FSNativeAdsManagerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func fs_nativeAdsManagerSuccessToLoad(_ adsManager: FSUnionAdSDK.FSNativeAdsManager, nativeAds: [FSUnionAdSDK.FSNativeAd])
+  @objc optional func fs_nativeAdsManagerDidFail(_ adsManager: FSUnionAdSDK.FSNativeAdsManager, error: (any Swift.Error)?)
+}
+@objc public class FSNativeAdsManager : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any FSUnionAdSDK.FSNativeAdsManagerDelegate)?
+  final public let slot: FSUnionAdSDK.FSAdSlot!
+  @objc public init(slot: FSUnionAdSDK.FSAdSlot)
+  @objc public func loadAd()
+  @objc deinit
+}
+public enum WfNativeAdDealType : Swift.Int {
+  case unspecified
+  case gd
+  case pdb
+  case pd
+  case rtb
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum FSAdInteractionType : Swift.Int {
+  case unspecified = 0
+  case redirect = 1
+  case download = 2
+  case deeplink = 3
+  case wxMiniApp = 4
+  case market = 5
+  case quickApp = 6
+  case justShow = 7
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum WfNativeAdInteractionStyle : Swift.Int {
+  case unspecified
+  case tap
+  case slide
+  case shake
+  case twist
+  case custom
+  case rotateX
+  case rotateY
+  case rotateZ
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class FSNativeAd : FSUnionAdSDK.FSUnionAd {
+  @objc weak public var nativeAdRelatedView: FSUnionAdSDK.FSNativeAdRelatedView? {
+    get
+  }
+  public var interactionStyle: FSUnionAdSDK.WfNativeAdInteractionStyle
+  @objc public var realCpm: Swift.UInt32
+  @objc public var maxCpm: Swift.UInt32
+  @objc public var minCpm: Swift.UInt32
+  @objc public var smartRankPkg: Swift.String?
+  @objc public var maxCpmDiff: Swift.UInt32
+  @objc final public let material: FSUnionAdSDK.FSMaterialMeta
+  @objc final public let createTime: Swift.Double
+  @objc weak public var rootViewController: UIKit.UIViewController?
+  @objc weak public var delegate: (any FSUnionAdSDK.FSNativeAdDelegate)?
+  public var expressType: FSUnionAdSDK.FSNativeExpressType?
+  @objc public var twinAd: FSUnionAdSDK.FSTwinAd?
+  @objc deinit
+  @objc public func registerContainer(_ containerView: UIKit.UIView, withClickableViews clickableViews: [UIKit.UIView])
+  @objc override public func loadAdData()
+  @objc public func price() -> Swift.String
+  @objc public func handleClick(view: UIKit.UIView)
+}
+@objc @_hasMissingDesignatedInitializers public class FSTwinAd : FSUnionAdSDK.FSNativeAd {
+  @objc public var adView: FSUnionAdSDK.FSTwinAdView?
+  @objc deinit
+}
+extension FSUnionAdSDK.FSTwinAd {
+  @objc dynamic public func render()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class WfNativeAdActionView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any FSUnionAdSDK.WfNativeAdActionDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func startMotion()
+  @_Concurrency.MainActor @preconcurrency public func restartMotion()
+  @_Concurrency.MainActor @preconcurrency public func stopMotion()
+  @objc deinit
+}
+@objc public enum FSNativeExpressType : Swift.Int {
+  case none = 0
+  case banner = 1
+  case smallBanner = 2
+  case full = 3
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum FSUnionAdType {
+  case none
+  case splash
+  case interstital
+  case rewardVideo
+  case native
+  case nativeExpress(expressType: FSUnionAdSDK.FSNativeExpressType)
+}
+@objc @_inheritsConvenienceInitializers public class FSUnionAd : ObjectiveC.NSObject {
+  @objc public var dspName: Swift.String? {
+    @objc get
+  }
+  @objc public var dspID: Swift.String? {
+    @objc get
+  }
+  @objc public var sid: Swift.String? {
+    @objc get
+  }
+  @objc public var maxCPM: Swift.String? {
+    @objc get
+  }
+  @objc public var minCPM: Swift.String? {
+    @objc get
+  }
+  @objc public var realCPM: Swift.String? {
+    @objc get
+  }
+  @objc public var dealType: Swift.UInt32 {
+    @objc get
+  }
+  @objc public var disableCpmFilter: Swift.Bool {
+    @objc get
+  }
+  @objc public var shakeSensitivity: Swift.Int {
+    @objc get
+  }
+  @objc public var interactionType: FSUnionAdSDK.FSAdInteractionType {
+    @objc get
+  }
+  @objc deinit
+  @objc public func win()
+  @objc public func lose(winPrice: Swift.String)
+  @objc public func lose(winPrice: Swift.String, extraWinInfo: [Swift.String : Any])
+  @objc public func loadAdData()
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class FSTwinAdView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @objc deinit
+}
+extension Foundation.NSNotification.Name {
+  public static let VideoDownloadProgressDidChanged: Foundation.Notification.Name
+  public static let VideoDownloadDidFinished: Foundation.Notification.Name
+}
+public protocol WfVideoDownloaderDelegate : AnyObject {
+  func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didReceive response: Foundation.URLResponse)
+  func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didReceive data: Foundation.Data)
+  func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didFinished error: (any Swift.Error)?)
+}
+public class WfVideoDownloader {
+  weak public var delegate: (any FSUnionAdSDK.WfVideoDownloaderDelegate)?
+  final public let url: Foundation.URL
+  public init(url: Foundation.URL, cacheHandler: FSUnionAdSDK.WfVideoCacheHandler)
+  public func downloadToEnd(from offset: Swift.Int)
+  public func download(from offset: Swift.Int, length: Swift.Int)
+  public func resume()
+  public func suspend()
+  public func cancel()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor @preconcurrency open class WfVideoPlayerView : UIKit.UIView {
+  public enum State {
+    case none
+    case loading
+    case playing
+    case paused(playProgress: Swift.Double, bufferProgress: Swift.Double)
+    case error(Foundation.NSError)
+    case readyToPlay
+    case buffering
+  }
+  public enum PausedReason : Swift.Int {
+    case hidden
+    case userInteraction
+    case waitingKeepUp
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency final public let playerLayer: AVFoundation.AVPlayerLayer
+  @_Concurrency.MainActor @preconcurrency public var player: AVFoundation.AVPlayer? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var playerURL: Foundation.URL?
+  @_Concurrency.MainActor @preconcurrency public var state: FSUnionAdSDK.WfVideoPlayerView.State {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var pausedReason: FSUnionAdSDK.WfVideoPlayerView.PausedReason {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var replayCount: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var isAutoReplay: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var isFrontPlayBackPause: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open var playToEndTime: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency open var stateDidChanged: ((FSUnionAdSDK.WfVideoPlayerView.State) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency open var playTimeChanged: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency open var bufferProgressChanged: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency open var replay: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency open var isMuted: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var speedRate: Swift.Float
+  @_Concurrency.MainActor @preconcurrency open var volume: Swift.Double {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var playProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var bufferProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentBufferDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var totalDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var watchDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var contentMode: UIKit.UIView.ContentMode {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc extension FSUnionAdSDK.WfVideoPlayerView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func prepareToPlay()
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func play()
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func play(for url: Foundation.URL)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func replay(resetCount: Swift.Bool = false)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func resume()
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func pause()
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func seek(to time: CoreMedia.CMTime, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func seek(to time: CoreMedia.CMTime, toleranceBefore: CoreMedia.CMTime, toleranceAfter: CoreMedia.CMTime, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @discardableResult
+  @nonobjc @_Concurrency.MainActor @preconcurrency public func addBoundaryTimeObserver(forTimes times: [CoreMedia.CMTime], queue: Dispatch.DispatchQueue? = nil, using: @escaping () -> Swift.Void) -> Any?
+  @objc @discardableResult
+  @_Concurrency.MainActor @preconcurrency dynamic open func addPeriodicTimeObserver(forInterval interval: CoreMedia.CMTime, queue: Dispatch.DispatchQueue? = nil, using: @escaping (CoreMedia.CMTime) -> Swift.Void) -> Any?
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func removeTimeObserver(_ observer: Any)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func destroy()
+}
+extension FSUnionAdSDK.WfVideoPlayerView {
+  @_Concurrency.MainActor @preconcurrency public func pause(reason: FSUnionAdSDK.WfVideoPlayerView.PausedReason)
+}
+extension FSUnionAdSDK.WfVideoPlayerView.State : Swift.Equatable {
+  public static func == (lhs: FSUnionAdSDK.WfVideoPlayerView.State, rhs: FSUnionAdSDK.WfVideoPlayerView.State) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class FSAdSDKConfiguration : ObjectiveC.NSObject {
+  @objc public static let configuration: FSUnionAdSDK.FSAdSDKConfiguration
+  @objc public var debug: Swift.Bool
+  @objc public var appID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var appToken: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var appName: Swift.String?
+  @objc public var customDeviceID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var caids: [FSUnionAdSDK.FSCAIDModel]?
+  @objc public var extraUserData: [Swift.String : Swift.AnyHashable]?
+  @objc public var personalRecommend: Swift.Bool
+  @objc public var teenagerModel: Swift.Bool
+  @objc public var channel: Swift.String
+  @objc public var supportWXApi: Swift.Bool
+  @objc public var customUnionLogo: UIKit.UIImage?
+  @objc deinit
+}
+extension Foundation.Data {
+  public init(hex: Swift.String)
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func toHexString() -> Swift.String
+}
+extension Swift.Array {
+  @inlinable internal init(reserveCapacity: Swift.Int) {
+    self = Array<Element>()
+    self.reserveCapacity(reserveCapacity)
+  }
+  @inlinable internal var slice: Swift.ArraySlice<Element> {
+    get {
+    self[self.startIndex ..< self.endIndex]
+  }
+  }
+  @inlinable internal subscript(safe index: Swift.Array<Element>.Index) -> Element? {
+    get {
+    return indices.contains(index) ? self[index] : nil
+  }
+  }
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers public class FSAdDifferenceAttribution : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol FSNativeAdDelegate {
+  @objc optional func fs_nativeAdWillVisible(nativeAd: FSUnionAdSDK.FSNativeAd)
+  @objc optional func fs_nativeAdDidBecomeVisible(nativeAd: FSUnionAdSDK.FSNativeAd)
+  @objc optional func fs_nativeAdDidCloseOtherController(nativeAd: FSUnionAdSDK.FSNativeAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+  @objc optional func fs_nativeAdDidClick(nativeAd: FSUnionAdSDK.FSNativeAd, containerView: UIKit.UIView?)
+}
+@objc public protocol FSNativeExpressFeedsAdDelegate {
+  @objc optional func fs_expressFeedAdLoadSuccess(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd)
+  @objc optional func fs_expressFeedAdLoadFailed(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd, withError error: Foundation.NSError)
+  @objc optional func fs_expressFeedAdDidVisible(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd)
+  @objc optional func fs_expressFeedAdPresentFailed(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd, withError error: Foundation.NSError)
+  @objc optional func fs_expressFeedAdDidClosed(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd)
+  @objc optional func fs_expressFeedAdDidClicked(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd)
+  @objc optional func fs_expressFeedAdDidCloseOtherController(_ ad: FSUnionAdSDK.FSNativeExpressFeedsAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+}
+@objc public class FSNativeExpressFeedsAd : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any FSUnionAdSDK.FSNativeExpressFeedsAdDelegate)?
+  @objc public var videoMuted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public func price() -> Swift.String
+  @objc public var preloaded: Swift.Bool {
+    @objc get
+  }
+  @objc public var isLoading: Swift.Bool {
+    @objc get
+  }
+  @objc weak public var rootViewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @objc public var expressType: FSUnionAdSDK.FSNativeExpressType
+  @objc public var view: UIKit.UIView {
+    @objc get
+  }
+  @objc public var nativeAd: FSUnionAdSDK.FSNativeAd?
+  @objc public init(slot: FSUnionAdSDK.FSAdSlot)
+  @objc public func loadAdData()
+  @objc public func showInView(_ view: UIKit.UIView?)
+  @objc public func render()
+  @objc deinit
+}
+extension FSUnionAdSDK.FSNativeExpressFeedsAd : FSUnionAdSDK.FSNativeAdsManagerDelegate {
+  @objc dynamic public func fs_nativeAdsManagerSuccessToLoad(_ adsManager: FSUnionAdSDK.FSNativeAdsManager, nativeAds: [FSUnionAdSDK.FSNativeAd])
+  @objc dynamic public func fs_nativeAdsManagerDidFail(_ adsManager: FSUnionAdSDK.FSNativeAdsManager, error: (any Swift.Error)?)
+}
+extension FSUnionAdSDK.FSNativeExpressFeedsAd : FSUnionAdSDK.FSVideoAdViewDelegate {
+  @objc dynamic public func fs_videoAdViewReadyToPlay(_ videoAdView: FSUnionAdSDK.FSVideoAdView)
+  @objc dynamic public func fs_videoAdViewDidPlayFinish(_ videoAdView: FSUnionAdSDK.FSVideoAdView)
+  @objc dynamic public func fs_videoAdView(_ videoAdView: FSUnionAdSDK.FSVideoAdView, playStateDidChanged playState: FSUnionAdSDK.FSPlayerPlayState)
+  @objc dynamic public func fs_videoAdView(_ videoAdView: FSUnionAdSDK.FSVideoAdView, didLoadFailedWithError error: Foundation.NSError?)
+}
+extension FSUnionAdSDK.FSNativeExpressFeedsAd : FSUnionAdSDK.FSNativeAdDelegate {
+  @objc dynamic public func fs_nativeAdDidBecomeVisible(nativeAd: FSUnionAdSDK.FSNativeAd)
+  @objc dynamic public func fs_nativeAdDidCloseOtherController(nativeAd: FSUnionAdSDK.FSNativeAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+  @objc dynamic public func fs_nativeAdDidClick(nativeAd: FSUnionAdSDK.FSNativeAd, containerView: UIKit.UIView?)
+}
+@objc public enum FSAdType : Swift.UInt {
+  case none
+  case splash
+  case interstitial
+  case reward
+  case native
+  case nativeExpress
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+@objc @objcMembers public class FSAdSlot : ObjectiveC.NSObject {
+  @objc public var slotID: Swift.String
+  @objc public var type: FSUnionAdSDK.FSAdType
+  @objc public var timeout: Swift.Double
+  @objc public var requestID: Swift.String
+  @objc public var count: Swift.UInt {
+    @objc get
+    @objc set
+  }
+  @objc public init(slotID: Swift.String, type: FSUnionAdSDK.FSAdType)
+  @objc deinit
+}
+public protocol WfNativeAdActionDelegate : ObjectiveC.NSObjectProtocol {
+  func actionDetected(nativeAd: FSUnionAdSDK.FSNativeAd, interactionStyle: FSUnionAdSDK.WfNativeAdInteractionStyle)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class FSNativeAdRelatedView : ObjectiveC.NSObject {
+  @objc public var logoImageView: UIKit.UIImageView
+  @objc public var adLabel: UIKit.UILabel
+  @objc public var videoAdView: FSUnionAdSDK.FSVideoAdView
+  @objc public var unionLogoImageView: UIKit.UIImageView {
+    @objc get
+    @objc set
+  }
+  @objc public var actionView: FSUnionAdSDK.WfNativeAdActionView?
+  @objc public func refreshData(_ nativeAd: FSUnionAdSDK.FSNativeAd)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class WfVideoLoadManager : ObjectiveC.NSObject {
+  public static let shared: FSUnionAdSDK.WfVideoLoadManager
+  public var reportError: ((any Swift.Error) -> Swift.Void)?
+  public var customHTTPHeaderFields: ((Foundation.URL) -> [Swift.String : Swift.String]?)?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension FSUnionAdSDK.WfVideoLoadManager : AVFoundation.AVAssetResourceLoaderDelegate {
+  @objc dynamic public func resourceLoader(_ resourceLoader: AVFoundation.AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource loadingRequest: AVFoundation.AVAssetResourceLoadingRequest) -> Swift.Bool
+  @objc dynamic public func resourceLoader(_ resourceLoader: AVFoundation.AVAssetResourceLoader, didCancel loadingRequest: AVFoundation.AVAssetResourceLoadingRequest)
+}
+@objc public protocol FSRewardedAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func fs_rewardedAdDidLoadSuccess(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAd(_ ad: FSUnionAdSDK.FSRewardedAd, didLoadFailedWithError error: any Swift.Error)
+  @objc optional func fs_rewardedAdDidDownloadMaterial(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAd(_ ad: FSUnionAdSDK.FSRewardedAd, didRenderFailedWithError error: any Swift.Error)
+  @objc optional func fs_rewardedAdWillPresent(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdDidVisible(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdVideoDidPlayFinish(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdDidSucceed(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdDidClose(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdDidCloseOtherController(_ ad: FSUnionAdSDK.FSRewardedAd, interactionType: FSUnionAdSDK.FSAdInteractionType)
+  @objc optional func fs_rewardedAdDidClick(_ ad: FSUnionAdSDK.FSRewardedAd)
+  @objc optional func fs_rewardedAdDidSkip(_ ad: FSUnionAdSDK.FSRewardedAd)
+}
+@objc public class FSRewardedAd : FSUnionAdSDK.FSUnionAd {
+  @objc weak public var delegate: (any FSUnionAdSDK.FSRewardedAdDelegate)?
+  final public let slot: FSUnionAdSDK.FSAdSlot
+  @objc deinit
+  @objc public init(slot: FSUnionAdSDK.FSAdSlot)
+  @objc override public func loadAdData()
+  @objc public func showAdFromRootViewController(_ rootViewController: UIKit.UIViewController?)
+  @objc public func price() -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class FSAdSDKManager : ObjectiveC.NSObject {
+  @objc public static let sdkVersion: Swift.String
+  @objc public static func logEnable(_ logEnable: Swift.Bool)
+  @objc public static func startWithCompletionHandler(_ completionHandler: ((Swift.Bool, (any Swift.Error)?) -> Swift.Void)?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum WfAdFeedMode : Swift.Int {
+  case WfAdFeedModeUnspecified
+  case WfAdFeedModeHorizontalPic
+  case WfAdFeedModeVerticalPic
+  case WfAdFeedModeHorizontalVideo
+  case WfAdFeedModeVerticalVideo
+  case WfAdFeedModeVultiPics
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class FSMaterialMeta : ObjectiveC.NSObject {
+  @objc public var title: Swift.String?
+  @objc public var desc: Swift.String?
+  @objc public var dspName: Swift.String?
+  public var feedMode: FSUnionAdSDK.WfAdFeedMode?
+  @objc public var images: [FSUnionAdSDK.WfAdImage]?
+  @objc public var isVideo: Swift.Bool
+  @objc public var videoWidth: CoreFoundation.CGFloat
+  @objc public var videoHeight: CoreFoundation.CGFloat
+  @objc public var type: FSUnionAdSDK.FSAdInteractionType
+  @objc public var adLogo: UIKit.UIImage?
+  @objc public var app: FSUnionAdSDK.FSApp?
+  @objc public var appRating: CoreFoundation.CGFloat
+  @objc public var isShakeEnabled: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class FSApp : ObjectiveC.NSObject {
+  @objc public var ID: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var pkgName: Swift.String?
+  @objc public var icon: Swift.String?
+  @objc public var buttonText: Swift.String?
+  @objc public var size: Swift.UInt32
+  @objc public var hasApp: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol FSVideoAdViewDelegate {
+  @objc optional func fs_videoAdViewReadyToPlay(_ videoAdView: FSUnionAdSDK.FSVideoAdView)
+  @objc optional func fs_videoAdViewDidPlayFinish(_ videoAdView: FSUnionAdSDK.FSVideoAdView)
+  @objc optional func fs_videoAdView(_ videoAdView: FSUnionAdSDK.FSVideoAdView, didLoadFailedWithError error: Foundation.NSError?)
+  @objc optional func fs_videoAdView(_ videoAdView: FSUnionAdSDK.FSVideoAdView, playStateDidChanged playState: FSUnionAdSDK.FSPlayerPlayState)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class FSVideoAdView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency public var isPlayFinished: Swift.Bool {
+    get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var natureSize: CoreFoundation.CGSize {
+    get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var isMuted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var isAutoReplay: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var backgroundView: UIKit.UIView
+  @objc @_Concurrency.MainActor @preconcurrency final public let muteButton: UIKit.UIButton
+  @objc @_Concurrency.MainActor @preconcurrency weak public var delegate: (any FSUnionAdSDK.FSVideoAdViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect, nativeAd: FSUnionAdSDK.FSNativeAd)
+  @objc @_Concurrency.MainActor @preconcurrency public func replay()
+  @objc @_Concurrency.MainActor @preconcurrency public func destroy()
+  @objc @_Concurrency.MainActor @preconcurrency public func pause()
+  @objc @_Concurrency.MainActor @preconcurrency public func play()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class FSAdapterConstants : ObjectiveC.NSObject {
+  @objc public static let videoMuteKey: Swift.String
+  @objc public static let videoAutoReplayKey: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum AdConfigRequestError : Swift.Error, Foundation.LocalizedError {
+  case commenError(Swift.Int32, Swift.String)
+  case noNewData
+  case noData
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@objc public protocol WfVideoPreloadManagerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func videoPreloadManagerDidFinish(_ preloadManager: FSUnionAdSDK.WfVideoPreloadManager)
+}
+@objc @_inheritsConvenienceInitializers public class WfVideoPreloadManager : ObjectiveC.NSObject {
+  final public let delegates: Foundation.NSPointerArray
+  public var preloadByteCount: Swift.Int
+  public var didStart: (() -> Swift.Void)?
+  public var didPause: (() -> Swift.Void)?
+  public func addDelegate(_ delegate: any FSUnionAdSDK.WfVideoPreloadManagerDelegate)
+  public func set(waiting: [Foundation.URL])
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension FSUnionAdSDK.WfVideoPreloadManager : FSUnionAdSDK.WfVideoDownloaderDelegate {
+  public func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didReceive response: Foundation.URLResponse)
+  public func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didReceive data: Foundation.Data)
+  public func downloader(_ downloader: FSUnionAdSDK.WfVideoDownloader, didFinished error: (any Swift.Error)?)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class WfAdImage : ObjectiveC.NSObject {
+  @objc public var url: Swift.String
+  @objc public var width: Swift.Double
+  @objc public var height: Swift.Double
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct WfVideoCacheConfiguration : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum WfVideoCacheManager {
+  public static func cachedFilePath(for url: Foundation.URL) -> Swift.String
+  public static func cachedConfiguration(for url: Foundation.URL) throws -> FSUnionAdSDK.WfVideoCacheConfiguration
+  public static func calculateCachedSize() -> Swift.UInt
+  public static func cleanAllCache() throws
+}
+@objc @_inheritsConvenienceInitializers public class WfVideoPreloadMultiManager : ObjectiveC.NSObject {
+  public static let shared: FSUnionAdSDK.WfVideoPreloadMultiManager
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension FSUnionAdSDK.WfVideoPreloadMultiManager : FSUnionAdSDK.WfVideoPreloadManagerDelegate {
+  @objc dynamic public func videoPreloadManagerDidFinish(_ preloadManager: FSUnionAdSDK.WfVideoPreloadManager)
+}
+extension FSUnionAdSDK.WfVideoPreloadMultiManager {
+  public func addManager(_ manager: FSUnionAdSDK.WfVideoPreloadManager, withURLString URLString: Swift.String)
+  public func removeManager(withURLString URLString: Swift.String)
+  public func removeManager(_ manager: FSUnionAdSDK.WfVideoPreloadManager)
+  public func managerWithURLString(_ URLString: Swift.String) -> FSUnionAdSDK.WfVideoPreloadManager?
+}
+public class WfVideoCacheHandler {
+  public init(url: Foundation.URL) throws
+  @objc deinit
+  public class func isCache(url: Foundation.URL) -> Swift.Bool
+  public func cache(data: Foundation.Data, for range: Foundation.NSRange) -> Swift.Bool
+}
+extension AVFoundation.AVPlayerItem {
+  @_Concurrency.MainActor @preconcurrency public var bufferProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentBufferDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var playProgress: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var totalDuration: Swift.Double {
+    get
+  }
+}
+extension FSUnionAdSDK.FSSplashAdCloseType : Swift.Equatable {}
+extension FSUnionAdSDK.FSSplashAdCloseType : Swift.Hashable {}
+extension FSUnionAdSDK.FSSplashAdCloseType : Swift.RawRepresentable {}
+extension FSUnionAdSDK.FSPlayerPlayState : Swift.Equatable {}
+extension FSUnionAdSDK.FSPlayerPlayState : Swift.Hashable {}
+extension FSUnionAdSDK.FSPlayerPlayState : Swift.RawRepresentable {}
+extension FSUnionAdSDK.WfNativeAdDealType : Swift.Equatable {}
+extension FSUnionAdSDK.WfNativeAdDealType : Swift.Hashable {}
+extension FSUnionAdSDK.WfNativeAdDealType : Swift.RawRepresentable {}
+extension FSUnionAdSDK.FSAdInteractionType : Swift.Equatable {}
+extension FSUnionAdSDK.FSAdInteractionType : Swift.Hashable {}
+extension FSUnionAdSDK.FSAdInteractionType : Swift.RawRepresentable {}
+extension FSUnionAdSDK.WfNativeAdInteractionStyle : Swift.Equatable {}
+extension FSUnionAdSDK.WfNativeAdInteractionStyle : Swift.Hashable {}
+extension FSUnionAdSDK.WfNativeAdInteractionStyle : Swift.RawRepresentable {}
+extension FSUnionAdSDK.FSNativeExpressType : Swift.Equatable {}
+extension FSUnionAdSDK.FSNativeExpressType : Swift.Hashable {}
+extension FSUnionAdSDK.FSNativeExpressType : Swift.RawRepresentable {}
+extension FSUnionAdSDK.WfVideoPlayerView.PausedReason : Swift.Equatable {}
+extension FSUnionAdSDK.WfVideoPlayerView.PausedReason : Swift.Hashable {}
+extension FSUnionAdSDK.WfVideoPlayerView.PausedReason : Swift.RawRepresentable {}
+extension FSUnionAdSDK.FSAdType : Swift.Equatable {}
+extension FSUnionAdSDK.FSAdType : Swift.Hashable {}
+extension FSUnionAdSDK.FSAdType : Swift.RawRepresentable {}
+extension FSUnionAdSDK.WfAdFeedMode : Swift.Equatable {}
+extension FSUnionAdSDK.WfAdFeedMode : Swift.Hashable {}
+extension FSUnionAdSDK.WfAdFeedMode : Swift.RawRepresentable {}

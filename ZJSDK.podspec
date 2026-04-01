@@ -264,11 +264,14 @@ TODO: Add long description of the pod here.
         ss.dependency 'MSMobAdSDKv3/MS', '~> 3.0.3.0'
     end
 
-    ###飞梭适配器
+    ###飞梭适配器-支持最低版本是iOS12.0
     s.subspec 'ZJSDKModuleFS' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleFS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'FSUnionAdSDK'
+        # ss.dependency 'FSUnionAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleFS/FSUnionAdSDK/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleFS/FSUnionAdSDK/*.xcframework'
+        ss.resource             = 'ZJSDK/ZJSDKModuleFS/FSUnionAdSDK/*.bundle'
     end
 
     ###飞梭适配器兼容版
