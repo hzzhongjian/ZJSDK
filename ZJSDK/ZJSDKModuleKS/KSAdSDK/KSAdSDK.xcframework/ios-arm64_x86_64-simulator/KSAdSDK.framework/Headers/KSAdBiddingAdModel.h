@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSDictionary *appTag;
 @property (nonatomic, strong, nullable) KSAdUserInfo *userInfo;
 @property (nonatomic, strong, nullable) KSAdExtraDataModel *extraDataModel; //请求额外参数数据
+@property (nonatomic, copy, nullable) NSString *query;
 
 @end
 

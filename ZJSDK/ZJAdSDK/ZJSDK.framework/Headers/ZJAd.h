@@ -57,6 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 竞胜成功的事件回调，由sdk内部使用。
 - (void)biddingSuccessCallbackEvent;
 
+/// 海外平台bidding信息
+- (void)bidInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

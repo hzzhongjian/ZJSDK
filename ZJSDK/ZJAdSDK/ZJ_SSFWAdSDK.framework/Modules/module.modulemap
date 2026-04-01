@@ -1,0 +1,6 @@
+framework module ZJ_SSFWAdSDK {
+  umbrella header "ZJ_SSFWAdSDK.h"
+  export *
+
+  module * { export * }
+}

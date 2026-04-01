@@ -156,7 +156,6 @@
 		AB04E6492C1AF47D0050C68B /* ZJMiniParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04E6222C1AF47D0050C68B /* ZJMiniParamViewController.m */; };
 		AB04E64A2C1AF47D0050C68B /* ZJSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04E6232C1AF47D0050C68B /* ZJSplashViewController.m */; };
 		AB355D392E0933230010AB87 /* ZJContentPageAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB355D382E0933230010AB87 /* ZJContentPageAdViewController.m */; };
-		AB436BDA2F626C4000C73C8A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AB436BD92F626C4000C73C8A /* README.md */; };
 		AB5ADDC12959AD07000495B7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC02959AD07000495B7 /* JavaScriptCore.framework */; };
 		AB5ADDC32959AD16000495B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC22959AD16000495B7 /* AudioToolbox.framework */; };
 		AB5ADDC52959AD22000495B7 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5ADDC42959AD22000495B7 /* QuickLook.framework */; };
@@ -169,7 +168,6 @@
 		AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */ = {isa = PBXBuildFile; fileRef = AB8D73172D641C0800C8CE22 /* SDK_Setting_5434885.json */; };
 		AB8F74CD2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F74CC2E602EA700DD57CB /* ZJNativeAdHTMLTableViewCell.m */; };
 		AB8F74D12E602EB400DD57CB /* ZJJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F74CF2E602EB400DD57CB /* ZJJSViewController.m */; };
-		ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */; };
 		ABCFD8392B453DC400D2449D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD7DD2B453DC400D2449D /* ViewController.m */; };
 		ABCFD85E2B453DC400D2449D /* ZJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8312B453DC400D2449D /* ZJHomeViewController.m */; };
 		ABCFD85F2B453DC400D2449D /* ZJSplashWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8322B453DC400D2449D /* ZJSplashWindowVC.m */; };
@@ -483,7 +481,6 @@
 		AB04E6242C1AF47D0050C68B /* ZJFloatingAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJFloatingAdViewController.h; sourceTree = "<group>"; };
 		AB355D372E0933230010AB87 /* ZJContentPageAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentPageAdViewController.h; sourceTree = "<group>"; };
 		AB355D382E0933230010AB87 /* ZJContentPageAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentPageAdViewController.m; sourceTree = "<group>"; };
-		AB436BD92F626C4000C73C8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		AB5ADDC02959AD07000495B7 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AB5ADDC22959AD16000495B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AB5ADDC42959AD22000495B7 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -500,7 +497,6 @@
 		AB8F74CE2E602EB400DD57CB /* ZJJSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJJSViewController.h; sourceTree = "<group>"; };
 		AB8F74CF2E602EB400DD57CB /* ZJJSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJJSViewController.m; sourceTree = "<group>"; };
 		AB9272712A33192B00139D33 /* ZJADIDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJADIDS.h; sourceTree = "<group>"; };
-		ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ZJSDK.podspec; path = ../ZJSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABCFD7DC2B453DC400D2449D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABCFD7DD2B453DC400D2449D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ABCFD8312B453DC400D2449D /* ZJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJHomeViewController.m; sourceTree = "<group>"; };
@@ -666,8 +662,6 @@
 		0077470224E182A200C30636 = {
 			isa = PBXGroup;
 			children = (
-				AB436BD92F626C4000C73C8A /* README.md */,
-				ABCBC38F299C7BDD00139E36 /* ZJSDK.podspec */,
 				0077470D24E182A200C30636 /* ZJSDKDemo */,
 				0077470C24E182A200C30636 /* Products */,
 				006192DA250FAF4D00E09415 /* Frameworks */,
@@ -1103,8 +1097,8 @@
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
 				574AA8FC25E517EE00098DCA /* Copy Files */,
-				AF2D35267BEDB0F16E588827 /* [CP] Copy Pods Resources */,
-				DC6F3732B22579CD72E7D071 /* [CP] Embed Pods Frameworks */,
+				1415063C748DEE1417245E84 /* [CP] Embed Pods Frameworks */,
+				7E3196D22EF92448CD6B5082 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1155,8 +1149,6 @@
 			files = (
 				0077471E24E182A200C30636 /* LaunchScreen.storyboard in Resources */,
 				0077471B24E182A200C30636 /* Assets.xcassets in Resources */,
-				AB436BDA2F626C4000C73C8A /* README.md in Resources */,
-				ABCBC390299C7BDD00139E36 /* ZJSDK.podspec in Resources */,
 				AB8D73182D641C0800C8CE22 /* SDK_Setting_5434885.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1181,6 +1173,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
+		1415063C748DEE1417245E84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4BF79167CC7928C6DDEE9AA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1203,7 +1212,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF2D35267BEDB0F16E588827 /* [CP] Copy Pods Resources */ = {
+		7E3196D22EF92448CD6B5082 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1211,38 +1220,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC6F3732B22579CD72E7D071 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJSDKDemo/Pods-ZJSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1534,7 +1518,16 @@
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/PangleSDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/Fmk",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/cloudcode-iOS-1.0.4",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/WindSDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/Baidu",
+					"$(PROJECT_DIR)/ZJSDKDemo/KSAdSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
@@ -1546,6 +1539,10 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/libGDT",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/lib",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/OneWaySDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/OpenSDK1.9.6_NoPay",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
 				);
@@ -1579,7 +1576,16 @@
 				DEVELOPMENT_TEAM = FDRWRXCL7C;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/PangleSDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/Fmk",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/cloudcode-iOS-1.0.4",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/WindSDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/Baidu",
+					"$(PROJECT_DIR)/ZJSDKDemo/KSAdSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
@@ -1591,6 +1597,10 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/libGDT",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/lib",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/OneWaySDK",
+					"$(PROJECT_DIR)/ZJSDKDemo/lib/OpenSDK1.9.6_NoPay",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
 				);

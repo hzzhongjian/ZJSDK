@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id<JYRewardVideoAdDelegate> delegate;
 @property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 @property (nonatomic, assign, readonly) JYAdSdkUnionType unionType;
 
 - (instancetype)initWithSlotId:(NSString *)slotId;

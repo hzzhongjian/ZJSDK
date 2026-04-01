@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 自动播放时，是否静音。默认 YES。loadAd 前设置。
 @property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 
 - (instancetype)initWithSlotId:(NSString *)slotId adSize:(CGSize)adSize;
 - (void)loadAd;

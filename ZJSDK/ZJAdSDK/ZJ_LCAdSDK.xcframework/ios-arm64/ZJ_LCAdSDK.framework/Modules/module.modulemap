@@ -1,0 +1,6 @@
+framework module ZJ_LCAdSDK {
+  umbrella header "ZJ_LCAdSDK.h"
+  export *
+
+  module * { export * }
+}

@@ -52,6 +52,14 @@ extern ZJAdADNName const ZJAdADNNameSIGMOB; // sigmob
 extern ZJAdADNName const ZJAdADNNameOCTOPUS; // 章鱼
 extern ZJAdADNName const ZJAdADNNameQuMeng; // 趣盟
 extern ZJAdADNName const ZJAdADNNameBeiZi; // 倍孜
+extern ZJAdADNName const ZJAdADNNameTanx; // Tanx
+extern ZJAdADNName const ZJAdADNNameQiYun; // 奇运
+extern ZJAdADNName const ZJAdADNNameTaKu; // 塔酷
+extern ZJAdADNName const ZJAdADNNameWangMai; // 旺脉
+extern ZJAdADNName const ZJAdADNNameMeiShu; // 美数
+extern ZJAdADNName const ZJAdADNNameFeiSuo; // 飞梭
+extern ZJAdADNName const ZJAdADNNameFanWei; // 泛为
+extern ZJAdADNName const ZJAdADNNameJuTui; // 聚推
 extern ZJAdADNName const ZJAdADNNameOther; // 其他
 
 @interface ZJAdExposureReportParam : NSObject

@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<JYDrawVideoAdDelegate> delegate;
 @property (nonatomic, assign, readonly) JYAdSdkUnionType unionType __attribute__(( deprecated ( "使用JYDrawVideoAdRelatedView中unionType代替" )));
 @property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 
 - (instancetype) initWithSlotId:(NSString *)slotId adSize:(CGSize)adSize;
 - (void)loadAdWithCount:(NSInteger)count;

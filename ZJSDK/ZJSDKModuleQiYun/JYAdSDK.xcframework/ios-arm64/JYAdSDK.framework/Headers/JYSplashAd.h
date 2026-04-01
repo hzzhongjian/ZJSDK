@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id<JYSplashAdDelegate> delegate;
 @property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 @property (nonatomic, assign) BOOL legacyH5;/// 临时开关：是否浏览器打开落地页
 @property (nonatomic, assign, readonly) JYAdSdkUnionType unionType;
 @property (nonatomic, strong, nullable) UIView * customBottomView;

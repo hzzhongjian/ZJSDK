@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JYFullScreenVideoAd : NSObject <JYAdProtocol>
 @property (nonatomic, weak, nullable) id<JYFullScreenVideoAdDelegate> delegate;
 @property (nonatomic, assign, readonly) JYAdSdkUnionType unionType;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 - (instancetype)initWithSlotId:(NSString *) slotId;
 - (void)loadAd;
 - (void)showAdFromRootViewController:(UIViewController *) viewController;

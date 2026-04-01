@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id<JYBannerAdViewDelegate> delegate;
 @property (nonatomic, assign) BOOL videoMuted;
+@property (nonatomic, assign) JYAdShowDirection showDirection;
 @property (nonatomic, assign, readonly) JYAdSdkUnionType unionType;
 
 /// 广告刷新间隔，范围 [30, 120] 秒，默认值 30 秒。设 0 则不刷新。 [可选，只对广点通、穿山甲有效]

@@ -117,7 +117,7 @@
  @param rewardedVideoAd ZJRewardVideoAd 实例
  */
 - (void)zj_rewardVideoAdDidClicked:(ZJRewardVideoAd *)rewardedVideoAd{
-    
+    [self logMessage:@"rewardVideoAdDidClicked"];
 }
 
 

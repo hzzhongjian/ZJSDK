@@ -61,6 +61,12 @@ typedef NS_ENUM(NSUInteger, JYAdSdkUnionType) {
     JYAdSdkUnionTypeGromore = 18, //Gromore
 };
 
+typedef NS_ENUM(NSInteger, JYAdShowDirection) {
+    JYAdShowDirection_Server           = 0,     //默认由服务端控制
+    JYAdShowDirection_Vertical         = 1,     //竖屏
+    JYAdShowDirection_Horizontal       = 2,     //横屏
+};
+
 @protocol JYAdProtocol <NSObject>
 
 /**

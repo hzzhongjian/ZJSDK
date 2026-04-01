@@ -42,6 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)reportAdExposureFailed:(KSAdExposureFailureCode)failureCode reportParam:(KSAdExposureReportParam *)reportParam;
 
+/**
+ * 设置搜索词，会依据搜索词匹配相关广告
+ * @param queryInfo 搜索字段
+ */
+- (void)setQueryInfo:(NSString*)queryInfo;
+
 @end
 
 @interface KSAd : NSObject<KSAdProtocol>

@@ -12,105 +12,10 @@ target 'ZJSDKDemo' do
 #    end
 #  end
 
-#pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
+pod 'ZJSDK', :path =>"../"
+pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 
-#pod 'BaiduMobAdSDK', '5.371'
-##mark 1，直接导入方式,一般打开此注释即可, :path => '../'
-
-#2.5.9.6 ---- 2.5.8.
-#   pod 'ZJSDK', '2.5.9.1'
-#  pod 'ZJSDK', '2.5.9.0'
-
-
-#pod 'ZJSDK', '2.5.8.20' 2.5.8.18
-
-#pod 'ZJSDK', '2.5.8.18' 优量汇激励视频id写死了
-
-
-
-#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.17'
-
-##################
-#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.16' ---- 2.5.8.15
-#pod 'ZJSDK/ZJSDKModuleGDT', '2.5.8.14'
-#pod 'ZJSDK/ZJSDKModuleDSP', '2.5.10.8'
-#pod 'ZJSDK/ZJSDKModuleKS'
-#pod 'ZJSDK', '2.5.8.11'
-  
-#如需接入内容包，需要制定本地，公共仓库的不支持内容包
-#   pod 'KSAdSDK', :path => '../ZJSDK/ZJSDKModuleKS/KS'
-   
-##mark 2，分模块导入方式
-  #pod 'ZJSDK/ZJSDKModuleDSP'#依赖库，引入任何模块都需要依赖此模块，默认引入
-  #pod 'ZJSDK/ZJSDKModuleGDT'#优量汇广告
-  #pod 'ZJSDK/ZJSDKModuleCSJ'#穿山甲广告
-  #pod 'ZJSDK/ZJSDKModuleKS'#快手广告
-  #pod 'ZJSDK/ZJSDKModuleMTG'#MTG广告
-  #pod 'ZJSDK/ZJSDKModuleSIG'#Sigmob广告
-  #pod 'ZJSDK/ZJSDKModuleBD'#百度广告
-  #pod 'ZJSDK/ZJSDKModuleBeiZi'#倍孜广告
-  #pod 'ZJSDK/ZJSDKModuleTanX'#TanX广告
-  #pod 'ZJSDK/ZJSDKModuleQM'#趣盟广告
-  #pod 'ZJSDK/ZJSDKModuleOCTOPUS'#章鱼广告
-  
-##mark 3，默认不引入的广告模块
-  #pod 'ZJSDK/ZJSDKModuleGoogle'#Google广告
-  #pod 'ZJSDK/ZJSDKModulePangle'#穿山甲海外
-
-##mark 4，引入聚合广告模块
-#聚合广告模块（默认不引入）
-#注意：引入多个聚合广告可能会引起一些联盟重复初始化的问题。
-  #pod 'ZJSDK/ZJSDKModuleWM'     #Sigmob to-bid广告
-
-  # 对接穿山甲短剧需要添加的source
-#   source 'https://github.com/CocoaPods/Specs.git'
-#   source 'https://github.com/volcengine/volcengine-specs.git'
-  
-  # Pods for ZJSDKDemo
-  
-  pod 'DSPSDK', '1.0.3.4'
-#  pod 'Ads-CN-Beta', '6.7.0.3'
-
-#pod 'ZJSDK', '2.5.10.12'
-
-#pod 'ZJSDK', '2.6.0.3'
-
-  pod 'ZJSDK', :path => '../'
-#  
-##  pod 'ZJSDK/ZJSDKModuleWangMai', :path => '../'
-#  
-#  pod 'ZJSDK/ZJSDKModuleQiMingADX', :path => '../'
-##
-#  pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
-#  
-#  pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
-
-#pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
-  
-#  pod 'ZJSDK/ZJSDKModuleTanX', :path => '../'
-
-#  pod 'ZJSDK/ZJSDKModuleJiaJi', :path => '../'
- 
-# pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
-# pod 'TTSDKFramework/Player-SR', '1.42.3.4-premium'
-# pod 'PangrowthX/shortplay', '2.8.0.0'
-  
-#  pod 'ZJSDK/ZJSDKModuleKSCompatible', :path => '../'
-#  pod 'KSAdSDK', '3.3.69'
-
-#pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
-
-#pod 'ZJSDK/ZJSDKModuleWanJia', '2.6.0.3'
-
-#  pod 'Ads-CN', '7.3.0.7'
-#  pod 'Ads-CN/BUAdSDK', '7.3.0.7'
-#  
-#  pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
-#
-#  pod 'ZJSDK/ZJSDKModuleCSJCompatible'#, :path => '../'
-
-#pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleCSJPlayletSDK', :path => '../'
   
 end
  
