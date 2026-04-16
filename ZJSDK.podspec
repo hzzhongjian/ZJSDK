@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.1.0'
+  s.version          = '2.6.1.1'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -278,6 +278,14 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleFSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleFS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
+    end
+
+    ###聚推适配器
+    s.subspec 'ZJSDKModuleJuTui' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleJuTui/*.a'
+        ss.dependency 'ZJSDK/ZJAdSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleJuTui/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleJuTui/*.xcframework'
     end
     
     ### 谷歌适配器

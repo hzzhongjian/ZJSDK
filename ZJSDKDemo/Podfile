@@ -15,7 +15,7 @@ target 'ZJSDKDemo' do
 pod 'ZJSDK', :path =>"../"
 pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
-
+pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
   
 end
  

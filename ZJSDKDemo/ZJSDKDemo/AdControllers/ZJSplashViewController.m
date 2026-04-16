@@ -93,6 +93,10 @@
     [self logMessage:@"splashAdClosed"];
 }
 
+- (void)zj_splashAdClickSkip:(ZJSplashAd *)splashAd
+{
+    [self logMessage:@"splashAdClickSkip"];
+}
 
 /**
  *  开屏广告即将关闭回调

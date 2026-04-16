@@ -45,7 +45,6 @@
 		5769F1C8280E528B00BD5300 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5769F1C6280E528B00BD5300 /* LYLUnicode.m */; };
 		576F37AA27698161000CEEE8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0061931E251236A200E09415 /* AdSupport.framework */; };
 		5772EDCE27D09C20001B3197 /* ZJLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5772EDCD27D09C20001B3197 /* ZJLogView.m */; };
-		579209CC263961A8006693EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579209CB263961A8006693EB /* CoreGraphics.framework */; };
 		57A7EC192681DC6C003C10E5 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A7EC182681DC6C003C10E5 /* libc++abi.tbd */; };
 		57EB05292635632F005DBA03 /* SDImageHEICCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB049A2635632E005DBA03 /* SDImageHEICCoder.m */; };
 		57EB052A2635632F005DBA03 /* NSImage+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB049C2635632E005DBA03 /* NSImage+Compatibility.m */; };
@@ -173,23 +172,11 @@
 		ABCFD85F2B453DC400D2449D /* ZJSplashWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8322B453DC400D2449D /* ZJSplashWindowVC.m */; };
 		ABCFD8602B453DC400D2449D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8332B453DC400D2449D /* AppDelegate.m */; };
 		ABCFD8612B453DC400D2449D /* ZJHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCFD8342B453DC400D2449D /* ZJHomeTableViewCell.m */; };
+		ABD0B2322F7D07D300469723 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579209CB263961A8006693EB /* CoreGraphics.framework */; };
 		ABD420AE2EB843B100BBDDB3 /* VCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD420AD2EB843B100BBDDB3 /* VCUtils.m */; };
 		ABF3BD7E2E375366004E48F7 /* ZJDemoPrivacyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF3BD7C2E375366004E48F7 /* ZJDemoPrivacyProvider.m */; };
 		ABF4E98D292CB929004CC39D /* DeviceCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF4E98C292CB929004CC39D /* DeviceCheck.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		574AA8FC25E517EE00098DCA /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		001E727A2539F4220086A93F /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
@@ -528,11 +515,11 @@
 				ABF4E98D292CB929004CC39D /* DeviceCheck.framework in Frameworks */,
 				AB7A38E228FFD517004629FD /* ImageIO.framework in Frameworks */,
 				AB7A38E028FFD4FD004629FD /* SafariServices.framework in Frameworks */,
+				ABD0B2322F7D07D300469723 /* CoreGraphics.framework in Frameworks */,
 				AB7A38DE28FFD4DB004629FD /* CFNetwork.framework in Frameworks */,
 				576F37AA27698161000CEEE8 /* AdSupport.framework in Frameworks */,
 				57A7EC192681DC6C003C10E5 /* libc++abi.tbd in Frameworks */,
 				006193312512376300E09415 /* AVFoundation.framework in Frameworks */,
-				579209CC263961A8006693EB /* CoreGraphics.framework in Frameworks */,
 				0061941B25123E5800E09415 /* libbz2.tbd in Frameworks */,
 				0061941925123E4D00E09415 /* libsqlite3.tbd in Frameworks */,
 				0061941725123E4100E09415 /* libc++.tbd in Frameworks */,
@@ -1096,7 +1083,6 @@
 				0077470824E182A200C30636 /* Frameworks */,
 				0077470924E182A200C30636 /* Resources */,
 				001E753E25496C5B0086A93F /* ShellScript */,
-				574AA8FC25E517EE00098DCA /* Copy Files */,
 				1415063C748DEE1417245E84 /* [CP] Embed Pods Frameworks */,
 				7E3196D22EF92448CD6B5082 /* [CP] Copy Pods Resources */,
 			);
@@ -1527,11 +1513,12 @@
 					"$(PROJECT_DIR)/ZJSDKDemo/lib/WindSDK",
 					"$(PROJECT_DIR)/ZJSDKDemo/lib/Baidu",
 					"$(PROJECT_DIR)/ZJSDKDemo/KSAdSDK",
+					"$(SDKROOT)/System/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -1585,11 +1572,12 @@
 					"$(PROJECT_DIR)/ZJSDKDemo/lib/WindSDK",
 					"$(PROJECT_DIR)/ZJSDKDemo/lib/Baidu",
 					"$(PROJECT_DIR)/ZJSDKDemo/KSAdSDK",
+					"$(SDKROOT)/System/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
