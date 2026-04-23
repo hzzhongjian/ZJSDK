@@ -35,7 +35,7 @@ typedef void(^MultipleRequestLevelCompleteBlk)( NSMutableArray <ZJMultipleAdAdap
 @property (nonatomic, assign) CGFloat timeoutInterval;
 
 /// caid json值
-@property (nonatomic, copy) NSString *caid_json;
+@property (nonatomic, copy) NSString *promotion_params;
 
 // 用户的唯一标识符
 @property (nonatomic, copy) NSString *user_unique_identifier;
