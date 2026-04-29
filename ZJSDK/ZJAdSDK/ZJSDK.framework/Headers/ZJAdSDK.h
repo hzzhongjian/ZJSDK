@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)registerAppId:(NSString *)appId callback:(void(^)(BOOL completed, NSDictionary *info))callback;
 
 /**
- * sdk是否初始化完成
+ * sdk是否初始化完成，可在加载广告之前进行判断
  */
 + (BOOL)SDKInitComplete;
 
