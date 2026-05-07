@@ -52,7 +52,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    [ZJAdSDK registerAppId:@"Z5588099195"];
+//    [ZJAdSDK registerAppId:@"Z4072098911"];
     [ZJAdSDK registerAppId:ZJ_Appid];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
@@ -131,7 +131,7 @@
 
 -(void)showSplashAd{
     self.splashAd = [[ZJSplashAd alloc]initWithPlacementId:AdId_Splash];
-//    self.splashAd = [[ZJSplashAd alloc] initWithPlacementId:@"J4179705243"];
+//    self.splashAd = [[ZJSplashAd alloc] initWithPlacementId:@"J1861431718"];
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;

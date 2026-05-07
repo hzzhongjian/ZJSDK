@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否屏蔽摇一摇，NO或者不赋值，不屏蔽，YES屏蔽
 @property (nonatomic, assign) BOOL disableShake;
 
+/// 视频类型时，是否静音。默认 YES。loadAdData 前设置。
+@property (nonatomic, assign) BOOL videoMuted;
 /// 是否屏蔽扭一扭，NO或者不赋值，不屏蔽，YES屏蔽
 @property (nonatomic, assign) BOOL disableTwist;
 

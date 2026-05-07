@@ -1540,7 +1540,7 @@
 					"-ObjC",
 					"-l\"ObjC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hunan.gdds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zj.shop.towmall.hwxsx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1599,7 +1599,7 @@
 					"-ObjC",
 					"-l\"ObjC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hunan.gdds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zj.shop.towmall.hwxsx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

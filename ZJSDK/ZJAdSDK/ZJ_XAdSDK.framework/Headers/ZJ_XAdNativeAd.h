@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否需要满足HTTPS  [可选] 默认为NO
 @property (nonatomic,assign) BOOL secure;
 
-/// 视频物料是否静音  [可选]  默认为NO
+/// 视频物料是否静音,YES为静音  [可选]  默认为YES
 @property (nonatomic,assign) BOOL videoMuted;
 
 /// 是否自动播放  [可选] 默认为YES

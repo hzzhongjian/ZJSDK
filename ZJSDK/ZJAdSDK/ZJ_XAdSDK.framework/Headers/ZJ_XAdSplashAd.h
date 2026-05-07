@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 底部自定义窗口  [可选]
 @property (nonatomic, weak) UIView *bottomView;
 
+/// 视频类型时，是否静音。默认 NO。loadAdData 前设置。
+@property (nonatomic, assign) BOOL videoMuted;
+
 /// 构造方法
 /// - Parameter adSlotId: 广告位id
 - (instancetype)initWithAdSlotId:(NSString *)adSlotId;

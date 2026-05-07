@@ -8,10 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, WMNativeAdType) {
-    SINGLE_IMAGE, // 单图
-    GROUP_IMAGE, // 多图
-    VIDEO, // 视频广告
+typedef NS_ENUM(NSInteger, WMXAdNativeAdType) {
+    WMXAdNativeAdType_SINGLE_IMAGE, // 单图
+    WMXAdNativeAdType_GROUP_IMAGE, // 多图
+    WMXAdNativeAdType_VIDEO, // 视频广告
 };
 
 typedef NS_ENUM(NSInteger, WMAdInteractionType) {
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJ_XAdWMNativeAdData : NSObject
 // 物料类型
-@property (nonatomic,assign) WMNativeAdType adType;
+@property (nonatomic,assign) WMXAdNativeAdType adType;
 // 交互类型
 @property (nonatomic,assign) WMAdInteractionType interaction_type;
 // 素材id/创意id

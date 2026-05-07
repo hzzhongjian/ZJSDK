@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+@class XAdRewardedVideoModel;
 NS_ASSUME_NONNULL_BEGIN
 @protocol ZJ_XAdRewardedVideoDelegate;
 
@@ -21,6 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否屏蔽摇一摇，NO或者不赋值，不屏蔽，YES屏蔽
 @property (nonatomic, assign) BOOL disableShake;
+
+/// 视频物料是否静音,YES为静音  [可选]  默认为YES
+@property (nonatomic,assign) BOOL videoMuted;
+//激励视频奖励对象，开启服务端时必传
+@property (nonatomic,strong) NSString *userId;
+//激励任务扩展字段，可选
+@property (nonatomic,strong) NSDictionary *rewardExt;
 
 /// 初始化广告
 /// - Parameter adSlotId: 广告位id

@@ -39,9 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardVideoOnVideoComplete;
 
 /// 奖励回调
-/// - Parameter rewards: 奖励
+/// - Parameter rewards: 奖励，开启服务端回调后，根据rewards中的verify字段判断奖励是否有效
 - (void)rewardVideoOnRewarded:(NSDictionary *)rewards;
-
 @end
 
 NS_ASSUME_NONNULL_END
