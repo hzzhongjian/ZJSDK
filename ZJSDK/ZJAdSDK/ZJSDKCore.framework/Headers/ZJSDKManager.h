@@ -46,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerPlatform:(NSString *)platform adConfig:(ZJAdUnitModel *)adConfig;
 
+#pragma mark - 是否设置相应的平台
+- (BOOL)isContainAdPlatform:(NSString *)platform;
 
 @end
 

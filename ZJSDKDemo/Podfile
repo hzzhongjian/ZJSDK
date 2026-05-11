@@ -13,11 +13,15 @@ target 'ZJSDKDemo' do
 #  end
 
 pod 'ZJSDK', :path =>"../"
-#pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
+pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
 #pod 'Ads-CN/BUAdSDK', '7.5.0.8'
+
+#pod 'GDTMobSDK', '4.15.90'
+
+#pod 'SigmobAd-iOS', '4.20.12'
   
 end
  

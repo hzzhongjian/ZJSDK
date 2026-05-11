@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 透传给联盟的
 @property (nonatomic, copy) NSString *reward_extra;
-///激励视频静音， 默认：NO
+///激励视频静音， 默认：YES 静音
 @property (nonatomic) BOOL videoMuted;
 /**加载广告数据*/
 - (void)loadAd;
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 为了适配插屏转激励
 - (void)presentAdFromRootViewController:(UIViewController*)viewController;
-// 为了适配插屏转激励
+// 为了适配插屏转激励，默认YES静音
 @property (nonatomic) BOOL mutedIfCan;
 
 ///交易ID 需开启服务端校验才能获取交易ID
