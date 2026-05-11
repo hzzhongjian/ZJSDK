@@ -1,5 +1,5 @@
 //
-//  ZJ_CJ_SDKManager.h
+//  ZJ_CJAdSDKManager.h
 //  ZJ_CJAdSDK
 //
 //  Created by coderqi on 2025/11/14.
@@ -11,23 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ZJ_CJ_InitResultBlock)(BOOL isSucc, NSError * _Nullable error);
 
-@interface ZJ_CJ_SDKManager : NSObject
+@interface ZJ_CJAdSDKManager : NSObject
 
 /**
  * SDK 初始化接口，请在 app 初始化时调用。
  * @param clientId - ZJ_CJ_开发者后台创建的clientId
  * @param clientSecret - ZJ_CJ_开发者后台创建的clientSecret
- */
-+ (NSError *)initWithClientId:(NSString *)clientId andClientSecret:(NSString *)clientSecret;
-
-/**
- * SDK 初始化接口，请在 app 初始化时调用。
- * @param clientId - ZJ_CJ_开发者后台创建的clientId
- * @param clientSecret - ZJ_CJ_开发者后台创建的clientSecret
- * @param resultBlock - ZJ_CJ_SDK初始化结果
+ * @param resultBlock - ZJ_CJ_ SDK初始化结果
  */
 + (NSError *)initWithClientId:(NSString *)clientId andClientSecret:(NSString *)clientSecret andInitResult:(ZJ_CJ_InitResultBlock)resultBlock;
-
 
 /**
  * 获取 SDK 版本
@@ -53,6 +45,12 @@ typedef void (^ZJ_CJ_InitResultBlock)(BOOL isSucc, NSError * _Nullable error);
  */
  + (void)updateLocalLBSLon:(nullable NSString *)lon
                        lat:(nullable NSString *)lat;
+
+/**
+ *  是否打开个性化广告开关
+ *  @param isOpen  是否打开
+ */
++ (void)setPersonalInfo:(BOOL)isOpen;
 
 
 @end

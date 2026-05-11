@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJ_CJ_InterstitialSlot : ZJ_CJ_Slot
 
+/// 是否点击后关闭插屏，默认不关闭
+@property (nonatomic, assign) BOOL closeBehindClicked;
+
 /// ------------------------------------模版配置------------------------------------
 /// 模版背景颜色， 默认白色
 @property (nonatomic, strong) UIColor *bacColor;

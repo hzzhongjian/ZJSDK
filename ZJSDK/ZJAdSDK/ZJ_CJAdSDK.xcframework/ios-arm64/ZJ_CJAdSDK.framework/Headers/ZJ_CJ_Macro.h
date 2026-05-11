@@ -11,17 +11,17 @@
 /// 广告类型
 typedef NS_OPTIONS(NSUInteger, ZJ_CJ_AdType) {
     /// 信息流
-    ZJCJTypeNative          = 1,
+    ZJCJAdTypeNative          = 1,
     /// 开屏
-    ZJCJTypeSplash          = 2,
+    ZJCJAdTypeSplash          = 2,
     /// banner
-    ZJCJTypeBanner          = 3,
+    ZJCJAdTypeBanner          = 3,
     /// 插屏
-    ZJCJTypeInterstitial    = 4,
+    ZJCJAdTypeInterstitial    = 4,
     /// 激励
-    ZJCJTypeRewardVideo    = 5,
+    ZJCJAdTypeRewardVideo    = 5,
     /// 信息流自渲染
-    ZJCJTypeFeedCustom      = 6,
+    ZJCJAdTypeFeedCustom      = 6,
 };
 
 /// 广告渲染类型
@@ -85,10 +85,10 @@ typedef NS_ENUM(NSInteger, ZJ_CJ_AdInteractionType) {
 
 /**以下为C2S bidding上报参数key**/
 //竞胜方价格 单位：分
-#define kZJCJMediaWinPrice   @"win_price"
+#define kZJCJAdMediaWinPrice   @"win_price"
 //最大竞败方出价 单位：分
-#define kZJCJMediaLossPrice  @"sec_price"
+#define kZJCJAdMediaLossPrice  @"sec_price"
 //竞败原因 0 未知 100价格低失败 200 超时失败
-#define kZJCJMediaLossReason @"loss_reason"
+#define kZJCJAdMediaLossReason @"loss_reason"
 
 #endif /* ZJ_CJ_Macro_h */

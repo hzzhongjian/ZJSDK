@@ -13,6 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZJ_CJ_VideoPlayerView : UIView
 
 /**
+ * 是否在滚动导致可见面积不足时自动暂停，再次露出时恢复播放（适用于列表/信息流等）。
+ * 依据 ExposeMonitor：露出约 ≥50% 视为回屏，低于约 30% 视为离屏。默认 NO。
+ */
+@property (nonatomic, assign) BOOL pausesWhenOffscreen;
+
+/**
  * 设置视频播放状态回调
  * @param callback 状态变化时的回调
  */

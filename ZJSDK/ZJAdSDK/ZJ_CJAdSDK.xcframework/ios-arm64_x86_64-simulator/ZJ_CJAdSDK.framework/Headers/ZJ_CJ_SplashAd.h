@@ -74,9 +74,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @required 用于打开落地页，确保ta当前无presentedVC，否则将无法打开落地页
 @property (nonatomic, weak) UIViewController *rootViewController;
 
-/// 当前广告是否有效，show前检查
-@property (nonatomic, assign, readonly, getter=isValid) BOOL valid;
-
 /// 设置加载广告超时时长(秒)，默认为5秒
 @property (nonatomic, assign) NSTimeInterval tolerateTimeout;
 
