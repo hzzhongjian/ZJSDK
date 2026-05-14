@@ -30,10 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class JYInnerNativeExpressAdRelatedView;
 
 @interface JYNativeExpressAdRelatedView : NSObject <JYAdProtocol>
-{
-    @package
-    JYInnerNativeExpressAdRelatedView * _innerNativeExpressAdRelatedView;
-}
+//{
+//    @package
+//    JYInnerNativeExpressAdRelatedView * _innerNativeExpressAdRelatedView;
+//}
+@property (nonatomic, strong) JYInnerNativeExpressAdRelatedView *innerNativeExpressAdRelatedView;
 -(instancetype) initWithInnerNativeExpressAdRelatedView:(JYInnerNativeExpressAdRelatedView *) innerNativeExpressAdRelatedView;
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, weak, nullable) id<JYNativeExpressAdRelatedViewDelegate> delegate;

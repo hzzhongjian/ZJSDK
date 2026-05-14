@@ -85,10 +85,12 @@ typedef NS_ENUM(NSInteger, JYNativeAdInteractionType) {
 @class JYInnerNativeAdDataObject;
 
 @interface JYNativeAdDataObject : NSObject <JYAdProtocol>
-{
-    @package
-     JYInnerNativeAdDataObject * _innerNativeAdDataObject;
-}
+//{
+//    @package
+//     JYInnerNativeAdDataObject * _innerNativeAdDataObject2;
+//}
+
+@property (nonatomic, strong) JYInnerNativeAdDataObject *innerNativeAdDataObject;
 
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, copy, readonly) NSString *desc;

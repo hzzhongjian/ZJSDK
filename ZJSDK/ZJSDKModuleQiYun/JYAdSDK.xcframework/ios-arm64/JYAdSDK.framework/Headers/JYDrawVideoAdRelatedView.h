@@ -26,10 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 @class JYInnerDrawVideoAdRelatedView;
 
 @interface JYDrawVideoAdRelatedView : NSObject <JYAdProtocol>
-{
-    @package
-    JYInnerDrawVideoAdRelatedView * _innerDrawVideoAdRelatedView;
-}
+//{
+//    @package
+//    JYInnerDrawVideoAdRelatedView * _innerDrawVideoAdRelatedView;
+//}
+
+@property (nonatomic, strong) JYInnerDrawVideoAdRelatedView *innerDrawVideoAdRelatedView;
 
 - (instancetype)initWithInnerDrawVideoAdRelatedView:(JYInnerDrawVideoAdRelatedView *) innerDrawVideoAdRelatedView;
 

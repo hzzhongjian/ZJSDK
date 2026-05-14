@@ -1,6 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '12.0'
 #-source 'https://github.com/CocoaPods/Specs.git'
+
+#source 'https://gitee.com/jyadteam/JYSpecs.git'
+
+
 target 'ZJSDKDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -12,10 +16,10 @@ target 'ZJSDKDemo' do
 #    end
 #  end
 
-#pod 'ZJSDK', :path =>"../"
-#pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
+pod 'ZJSDK', :path =>"../"
+pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
 #pod 'Ads-CN/BUAdSDK', '7.5.0.8'
 
@@ -23,7 +27,7 @@ target 'ZJSDKDemo' do
 
 #pod 'SigmobAd-iOS', '4.20.12'
 
-pod 'ZJSDK', :path =>"../"
+#pod 'JYAdSDK', '2.1.0'
   
 end
  
