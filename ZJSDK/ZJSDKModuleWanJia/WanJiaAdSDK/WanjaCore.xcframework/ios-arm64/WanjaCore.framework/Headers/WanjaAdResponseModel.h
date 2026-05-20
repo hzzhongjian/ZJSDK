@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class WanjaStrategyTouchclk;
 @class WanjaVideoTrackersModel;
 @class WanjaStrategyDeeplink;
+@class WanjaNewUserAttributionModel;
 
 /**
  广告返回的model
@@ -52,7 +53,14 @@ NS_ASSUME_NONNULL_BEGIN
 //补量boostId
 @property (nonatomic, copy) NSString *boostId;
 @property (nonatomic, assign) BOOL initSo;
-
+//控制是否埋点
+@property (nonatomic, assign) BOOL logReportFlag;
+//广告接口返回增加priority 权重字段，默认为 1，值越大代表权重越大。在广告都填充的情况下，优先比较权重再比较价格。
+@property (nonatomic, assign) NSInteger priority;
+//拉新抢归因
+@property (nonatomic, strong) WanjaNewUserAttributionModel *extTracking;
+//广告点击之后延迟capDelay秒后， 发送请求， 如果==0，则不发送请求
+@property (nonatomic, assign) NSInteger cpaDelay;
 @end
 
 @interface WanjaSpaceInfoModel : WanjaBaseModel
@@ -112,6 +120,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isWaitCache;
 //是否是摇一摇广告
 @property (nonatomic, assign) BOOL isShakeAd;
+//广告接口增加促留弹窗开关
+@property (nonatomic, assign) BOOL isStopover;
+//广告接口增加播放结束页开关
+@property (nonatomic, assign) BOOL isEndPage;
+//
+@property (nonatomic, assign) BOOL clickBackClose;
+//快速拿奖励
+@property (nonatomic, assign) BOOL quickReward;
 
 @end
 
@@ -185,6 +201,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *icon;
 @property(nonatomic, copy) NSString *resId;
 @property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *deepLink;
+@property(nonatomic, copy) NSString *universalLink;
+@property(nonatomic, copy) NSString *landingPageUrl;
+@property(nonatomic, copy) NSString *packageName;
+@property(nonatomic, copy) NSString *cover;
+@property(nonatomic, copy) NSString *dspName;
 
 // 媒体需要的素材信息反馈
 @property (nonatomic, readonly) NSDictionary *mediaExtraInfoDict;
@@ -211,6 +233,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *feedbackUrl;
 //  视频进度上报
 @property(nonatomic, strong) NSArray<WanjaVideoTrackersModel*> *videoTrackers;
+//  控制以及曝光链接中有失败直接上报，不再重试
+@property (nonatomic, assign) BOOL checkSuccess;
+//曝光过滤列表
+@property(nonatomic, strong) NSArray<NSString*> *impTrackDomainList;
+//点击过滤列表
+@property(nonatomic, strong) NSArray<NSString*> *clkTrackDomainList;
 
 @end
 
@@ -222,7 +250,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *adLabel;
 //  当 sourceUrl 不为空时展示此url图片，否则展示sourceLable内容
 @property(nonatomic, copy) NSString *sourceUrl;
-//  广告来源的文字 如：“Wanja广告”，如有特殊需求，可以展示此文字
+//  广告来源的文字 如：“WANJA广告”，如有特殊需求，可以展示此文字
 @property(nonatomic, copy) NSString *sourceLabel;
 
 @end
@@ -293,10 +321,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *tx;
 @property(nonatomic, assign) NSInteger reportOpt;//是否需要上报opt 0:不需要 1:需要
 @property(nonatomic, assign) NSInteger show; //是否显示摇一摇logo
+@property (nonatomic, assign) NSInteger time; //目前服务器还没有配置这个参数
 //百度网盘专用
 @property(nonatomic, assign) NSInteger sn;//摇动次数
 //"type": 0摇一摇 1转一转
 @property(nonatomic, assign) NSInteger type;
+//是否可以点击摇一摇logo
+@property(nonatomic, assign) NSInteger clk;
 
 @end
 
@@ -329,6 +360,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) WanjaStrategyImpcallback *impcallback;
 @property(nonatomic, strong) WanjaStrategyTouchclk *touchclk;
 @property(nonatomic, strong) WanjaStrategyDeeplink *dpInt;
+@property(nonatomic, strong) WanjaStrategyAoclk *vdp;
+
 
 @end
 
@@ -352,7 +385,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger co;
 @property(nonatomic, assign) NSInteger et;
 @property(nonatomic, assign) NSInteger ct;
-
+@property(nonatomic, assign) NSInteger lo;//如果关闭开关，就不判断别人调不调起了，正常执行策略就行了,默认=1
 @end
 
 //曝光回调概率
@@ -375,5 +408,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger ploy; //0、新的替换旧的1、价格高的替换价格低的
 @property(nonatomic, copy) NSString *key; //tbopenDp链接的关键字
 @property(nonatomic, copy) NSString *pkg; //包名
+@end
+
+//拉新抢归因
+@interface WanjaNewUserAttributionModel : WanjaBaseModel
+@property(nonatomic, assign) NSInteger eInterval; //曝光到点击的间隔，单位毫秒
+@property(nonatomic, copy) NSArray<NSString*> *iUrls; //点击链接
+@property(nonatomic, copy) NSArray<NSString*> *cUrls; //曝光链接
 @end
 NS_ASSUME_NONNULL_END

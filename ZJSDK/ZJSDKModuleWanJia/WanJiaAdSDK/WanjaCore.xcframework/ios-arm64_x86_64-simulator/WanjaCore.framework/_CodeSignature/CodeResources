@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/NSObject+WanjaAddition.h</key>
 		<data>
-		b/GXz/XFpNVXGhjiDCP1RdGT6CE=
+		782vvtBH9leQ4Y/BvmdeGyvNUss=
 		</data>
 		<key>Headers/NSObject+WanjaModel.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/NSString+WanjaAddition.h</key>
 		<data>
-		GBa9Cg/LezvmyNVXkT2yKuVAd7k=
+		dgP3iUgBriA9+WVT4gV8a+AsB8k=
 		</data>
 		<key>Headers/NSString+WanjaEncryption.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/UIView+WanjaAddition.h</key>
 		<data>
-		W5/pUFVp1Iqlpc7W40zMwVJQXXI=
+		b6rZtVfDBTmlf38Hrqp76b+Ja3k=
 		</data>
 		<key>Headers/UIView+WanjaAttribute.h</key>
 		<data>
@@ -60,6 +60,10 @@
 		<data>
 		+N0buGOefUxSFw2r+gapt2rhI8k=
 		</data>
+		<key>Headers/WanjaAdFeedbackModel.h</key>
+		<data>
+		SfW1k6WE1ghVOcnRbJkppwcYaN4=
+		</data>
 		<key>Headers/WanjaAdGTMBase64.h</key>
 		<data>
 		+W7WGN8I0xr6rOTOLmS5OrKYKJY=
@@ -68,13 +72,17 @@
 		<data>
 		kSdVSP799z44r5SronPCFnrP93s=
 		</data>
+		<key>Headers/WanjaAdLocationModel.h</key>
+		<data>
+		H0PBrJCABnRjZyR4s7y5Sqk7lFQ=
+		</data>
 		<key>Headers/WanjaAdRecordModel.h</key>
 		<data>
-		96XrmaBfpIg4cUyaNvm2Din7fog=
+		U/X6f46ABji69ASa9+2qBd+muHE=
 		</data>
 		<key>Headers/WanjaAdRequestError.h</key>
 		<data>
-		jtB+vzs7f6P6N7qkcGv1omjAxlg=
+		aHsT0aAjfMQvVnpI7p5cj2C3Mis=
 		</data>
 		<key>Headers/WanjaAdRequestModel+Builder.h</key>
 		<data>
@@ -82,11 +90,15 @@
 		</data>
 		<key>Headers/WanjaAdRequestModel.h</key>
 		<data>
-		knNSsNt1do92Tis4qv+wiPpACDc=
+		3mc+YyGH9U9I4EpeNaQC+o7Q6DY=
 		</data>
 		<key>Headers/WanjaAdResponseModel.h</key>
 		<data>
-		ZyS848Z1CeItK4gEneSpfMbMpnc=
+		FbU6AMw4Xjea+/nQP4Zyn53ACTw=
+		</data>
+		<key>Headers/WanjaAdShakeConfigModel.h</key>
+		<data>
+		nudq7tgZ0cgXFzjTPAbNIl/ulZA=
 		</data>
 		<key>Headers/WanjaAdViewAttribute.h</key>
 		<data>
@@ -98,11 +110,11 @@
 		</data>
 		<key>Headers/WanjaAdvertisingDelegate.h</key>
 		<data>
-		B6VKrvXA82OTwZ9G9VOptR+90VA=
+		wVMU4S8rh7Mz0Maie7wdHVnyoyg=
 		</data>
 		<key>Headers/WanjaAdvertisingType.h</key>
 		<data>
-		SAaIx6RLLOeSV/5vYTG11mfesYo=
+		916yjYZKx8vbvUKmwwyRssRZV9Y=
 		</data>
 		<key>Headers/WanjaAppInfoHelper.h</key>
 		<data>
@@ -120,9 +132,13 @@
 		<data>
 		OwZc/M8PHaOwg4NU6iSFmQkVYHg=
 		</data>
+		<key>Headers/WanjaBlurImageView.h</key>
+		<data>
+		lEs5sYeUyvWF0WWhX6nOqOmyzUI=
+		</data>
 		<key>Headers/WanjaBusinessReport.h</key>
 		<data>
-		cm+AVl2IkGWo3UPcTlOISzq3DOM=
+		1qSBu9DoE3d52mhwQ6QYu+d+has=
 		</data>
 		<key>Headers/WanjaClassInfo.h</key>
 		<data>
@@ -138,11 +154,11 @@
 		</data>
 		<key>Headers/WanjaConfigureModel.h</key>
 		<data>
-		ptxrYFlPx+ciwyHW4GzqFBuojfw=
+		4kLvRkZp3FcxUiQZBm1VTgm2v3c=
 		</data>
 		<key>Headers/WanjaCore-umbrella.h</key>
 		<data>
-		B/dpven2qnLb5AvhHH6blUwkCt0=
+		9J1lKh5A4B2l9R/DcjJxfriaoO0=
 		</data>
 		<key>Headers/WanjaCore.h</key>
 		<data>
@@ -150,7 +166,7 @@
 		</data>
 		<key>Headers/WanjaCountDownView.h</key>
 		<data>
-		UI5y1SqoMvrWMkYkfnuMI8XEpXQ=
+		8eoC9HZkiAUIyWTFh1OshGRWWck=
 		</data>
 		<key>Headers/WanjaDefines.h</key>
 		<data>
@@ -158,7 +174,7 @@
 		</data>
 		<key>Headers/WanjaDefinitionTools.h</key>
 		<data>
-		hFvo2i/AXSuoW1tFVgQkojH0f48=
+		8VfPOcUhEI2ZtuVViRrmlWgC66E=
 		</data>
 		<key>Headers/WanjaDevice.h</key>
 		<data>
@@ -166,11 +182,11 @@
 		</data>
 		<key>Headers/WanjaDeviceInfoHelper.h</key>
 		<data>
-		58ytiHJQSR0a2BJDkitYvvpX3JM=
+		jdGOBrPp33xHR2a06NEpYFFTubk=
 		</data>
 		<key>Headers/WanjaDisposeResponseModel.h</key>
 		<data>
-		rilczFhJEhp8D0MwDWFDqSfemks=
+		soNIU3d2NrbnsCjvrKsVddr9KYA=
 		</data>
 		<key>Headers/WanjaDotCloseView.h</key>
 		<data>
@@ -206,7 +222,7 @@
 		</data>
 		<key>Headers/WanjaHttpRequestType.h</key>
 		<data>
-		bSjG1R6cpRphB6NZ7z60c6hYFPM=
+		0qO5cjuxaKQJXzZugCjqMCIabdw=
 		</data>
 		<key>Headers/WanjaImageView.h</key>
 		<data>
@@ -222,7 +238,7 @@
 		</data>
 		<key>Headers/WanjaManageModel.h</key>
 		<data>
-		62eOJVITB0XB+gb32/UsgtJGwU0=
+		w+0thSlZLk6lhI529+e+ERne/Hs=
 		</data>
 		<key>Headers/WanjaModel.h</key>
 		<data>
@@ -234,7 +250,7 @@
 		</data>
 		<key>Headers/WanjaNetworkStatusTools.h</key>
 		<data>
-		haHR4m1wLJR8hnNmMiKEF8rxk/8=
+		LC8cz8wHc6deRgMiXvxF6FstxVQ=
 		</data>
 		<key>Headers/WanjaNetworking.h</key>
 		<data>
@@ -250,7 +266,7 @@
 		</data>
 		<key>Headers/WanjaPlayerView.h</key>
 		<data>
-		5tIXLtlNuO869YcQZXjl/WeGdBI=
+		3mTJyu058HIcjMvPyOfMLSdsXNs=
 		</data>
 		<key>Headers/WanjaRegionClickView.h</key>
 		<data>
@@ -266,11 +282,11 @@
 		</data>
 		<key>Headers/WanjaResourcesHeader.h</key>
 		<data>
-		GjhMbhfFlrKzC2Sj4nx0inl3ouM=
+		yoKJWvmpPUtMqz5I9iu/0gHuW94=
 		</data>
 		<key>Headers/WanjaSDKHTTPRequest.h</key>
 		<data>
-		GvheReX1Rz5cdPX6N4JzzVdXjqI=
+		cARKWO6HpDWj83PwYUzyrthKu1M=
 		</data>
 		<key>Headers/WanjaScreenTool.h</key>
 		<data>
@@ -290,7 +306,7 @@
 		</data>
 		<key>Headers/WanjaStaticString.h</key>
 		<data>
-		lH5K0hB3t5MJ31fbrR//JZ7dnFA=
+		jya0sksYv8Qy5nzQ5hbJRuS2KxE=
 		</data>
 		<key>Headers/WanjaSwipeView.h</key>
 		<data>
@@ -324,9 +340,13 @@
 		<data>
 		kSlT+zbSmaHb0kBfx0ejznvNXNo=
 		</data>
+		<key>Headers/WanjaUserProfileModel.h</key>
+		<data>
+		Pp8GyKWQXKRQ3JMnQCZW9tJMBMs=
+		</data>
 		<key>Headers/WanjaVedioCountDownView.h</key>
 		<data>
-		/TsPj433nXEMGhMOavGjSYmMSQA=
+		1Zwkn730TMBFcrh1QTpfJtQske8=
 		</data>
 		<key>Headers/WanjaVersionTools.h</key>
 		<data>
@@ -391,7 +411,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E0bHf3b4jUcqzWRLVaXhrFqlVowM0iiAINnFuztgD9A=
+			4dr4Iu1A8wB+xho/hwbQHXjnJ6bskiZSFRiYFEFgIpw=
 			</data>
 		</dict>
 		<key>Headers/NSObject+WanjaModel.h</key>
@@ -405,7 +425,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YpQd9asFEYt8xF35c/5q7Rdvbk64tDnKTSypIvsPKEM=
+			rNF67qEB/ppbYhujp619S9l9xgzpGvpgh5tgGm5ELAk=
 			</data>
 		</dict>
 		<key>Headers/NSString+WanjaEncryption.h</key>
@@ -426,7 +446,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g8ecKn7JrVBjDz7nc6qRxE7KHPfxs05oTXldP37yExk=
+			iqXUcOpZZosJP7XhwADPXoWdo3Z793PkCHMo4KiUIXQ=
 			</data>
 		</dict>
 		<key>Headers/UIView+WanjaAttribute.h</key>
@@ -457,6 +477,13 @@
 			qAZa/lU/p6s2XHUowwU107YnomXueB8GwsVXX4WrzMg=
 			</data>
 		</dict>
+		<key>Headers/WanjaAdFeedbackModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			psfthRE1Tyx2BCEnN3BNHx37env5TUrG7XOB4t7uTlU=
+			</data>
+		</dict>
 		<key>Headers/WanjaAdGTMBase64.h</key>
 		<dict>
 			<key>hash2</key>
@@ -471,18 +498,25 @@
 			I2TBaCruIpR3BVIg1F4R5CsvS1HiQp9We8OzloYzSlo=
 			</data>
 		</dict>
+		<key>Headers/WanjaAdLocationModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p1bEOrIpTfqH/ZpLzZn5zW4D5BaxmRLESvd4FW25E4g=
+			</data>
+		</dict>
 		<key>Headers/WanjaAdRecordModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nyrWNRawrawuOKNvNyoLibDu0gQtwpHYr6JyIZw+DBA=
+			9YpRwg+I5pUfmN1+X/U3xcHgzgKV7TusIH++OphVQJ8=
 			</data>
 		</dict>
 		<key>Headers/WanjaAdRequestError.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			91fhAhBuF00nBpLji3/uzTfsWeXZkahOlhU69ggBIRQ=
+			mAnl7c7IEyNGg3CzHOsb+gm3U0KgasfGPiFbSfKHj6o=
 			</data>
 		</dict>
 		<key>Headers/WanjaAdRequestModel+Builder.h</key>
@@ -496,14 +530,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J42311OaqC5qf6iJxTz9W0ChGTyqR74umKKuelRfW5g=
+			mvgPNJdJ7QeRQMbOXgEV6qssHwGzyUC4pe5gPAroQbk=
 			</data>
 		</dict>
 		<key>Headers/WanjaAdResponseModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			33g1Gy5IisSYfZRbfo9h/0MzzEyoeGbBdx9Yq016bl4=
+			Qkh50tsQy+vLdWAA+cEEmul/nb+w36jdn/EFeSGi8pw=
+			</data>
+		</dict>
+		<key>Headers/WanjaAdShakeConfigModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V204Z0nIrhKRJPtq9ZeoAulivi8D/CZYWRIz568Y0SY=
 			</data>
 		</dict>
 		<key>Headers/WanjaAdViewAttribute.h</key>
@@ -524,14 +565,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2HsDKcCXGctFXCVJ1PbABuN5eifDw2MmYlQhOcRmJ0w=
+			WFeQ7+H7prpVJh1VGiv7pfcHRr5eTAuOGOJaueAuQH0=
 			</data>
 		</dict>
 		<key>Headers/WanjaAdvertisingType.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mtQAdtrwAxdjacFYCS4rsJU9XaE0OQ0ZBqVWI7y7Eyg=
+			hvXYcMU/U55fkkYV/IYxbqRQFM/meuQ99TWxwZaTjJ0=
 			</data>
 		</dict>
 		<key>Headers/WanjaAppInfoHelper.h</key>
@@ -562,11 +603,18 @@
 			i/rg76atFiuKVIGbyfQhCjSqS4b856GgaDZg1Cyd4QE=
 			</data>
 		</dict>
+		<key>Headers/WanjaBlurImageView.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6LoVj3sDatkOhC8jaJAUml4IZxI4mfss4Kz2NEPgEW8=
+			</data>
+		</dict>
 		<key>Headers/WanjaBusinessReport.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t1M3gj5lqpsNZI9gWgbfrvdQh1faO37zRYUJHUnKLGk=
+			O/y8wGww9lLxum1bZ/YgYOs1LVVsH0J2FaLL6uLFzzg=
 			</data>
 		</dict>
 		<key>Headers/WanjaClassInfo.h</key>
@@ -594,14 +642,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Fce5JKXRF/ViG9sb0iMwP1DmwEPCtLfRXvxi+VIYLU=
+			MRCDi3Pk3F50wLIdmkByIjQlCRh0oEkrw1YkulDRXtM=
 			</data>
 		</dict>
 		<key>Headers/WanjaCore-umbrella.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Oke4uJNWRWrAqFzrpy+Gq/RJ0SP4h/Jn63bzHkA3HEg=
+			DMYJAZ0XktybgwQ01dkGfrp+sGr9r7Ptdbjq883ePqc=
 			</data>
 		</dict>
 		<key>Headers/WanjaCore.h</key>
@@ -615,7 +663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgL65Cok74Nn1F/W5Ku4oJGLwgMmJCMQaN43/dFg4wQ=
+			RKTGnSGj31xp5X1ol2AGTI9Y/zkLl3icdpay7WOUzC4=
 			</data>
 		</dict>
 		<key>Headers/WanjaDefines.h</key>
@@ -629,7 +677,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MWZlelRlDLxBMphOeSKdQ5fhYDZtDu27H5Ya/1t3eeE=
+			nSMXOeEUS2Qif3UDkOV2SA39ltUVwfwwbE2rfxlb4pw=
 			</data>
 		</dict>
 		<key>Headers/WanjaDevice.h</key>
@@ -643,14 +691,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3penOZuFw53LW4kD+a0vTdFxaAuZOSj6nAjdoH/PKB8=
+			JWpcDTBqp8j0HKGY/rGrhCBeX8HYMeTYhrH7B7Cl0j0=
 			</data>
 		</dict>
 		<key>Headers/WanjaDisposeResponseModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r8TzHShuL0bbP57O3+Ni/UHi/QV3YQo/eN6gPFXVWfY=
+			2aonS7jiDZlmQjcizWKFEGx3ratL0808ZKd+TWwvpuY=
 			</data>
 		</dict>
 		<key>Headers/WanjaDotCloseView.h</key>
@@ -713,7 +761,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X0kepFH/+SPDuWUyZAteKdujGT5PTjinXThE6NuYpmo=
+			XFP0Z+GWoGd0EhwdiInMFX/yqv9x0HgCHwItzLmj6+w=
 			</data>
 		</dict>
 		<key>Headers/WanjaImageView.h</key>
@@ -741,7 +789,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GxLNp3BJOLKI11CgTZdLM5nBVAcuW1XsMBeXFMYvaMM=
+			19XNiNMpJhVzkaS3QfGV+bqAFx83IEgG2Pna19ITatU=
 			</data>
 		</dict>
 		<key>Headers/WanjaModel.h</key>
@@ -762,7 +810,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f8vXC/GkHN0JpB5niy+GoikeCad+UTVUNewQ1/MSu2A=
+			uUTAn7tli2x64In1vYRvNrPRnDpQ8p2OfrQ78hBVuJc=
 			</data>
 		</dict>
 		<key>Headers/WanjaNetworking.h</key>
@@ -790,7 +838,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1GhHxymzJh1ZiHGAIM5sN3IFthpG/mI7hWLyFYk9WM0=
+			tvVuC0im2EwjzmJ5brWJIxvmdQytBHxpOeVzORDbA6o=
 			</data>
 		</dict>
 		<key>Headers/WanjaRegionClickView.h</key>
@@ -818,14 +866,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o4QI1ReoGGnUvHVMaSjVSVVY8TVURlcAF1uWpy3VGDY=
+			uogO/WACPHXDYT9IH6+rheHccViDC4ryDzUbk9i+uzc=
 			</data>
 		</dict>
 		<key>Headers/WanjaSDKHTTPRequest.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			96J2p+55KBgI5B/M5IqOwCs3/bLWrtuFSWtfS35wItU=
+			ksQO0ox+i2Guo8SonJFTkGy1wHEVSRoe1EengyEZVqU=
 			</data>
 		</dict>
 		<key>Headers/WanjaScreenTool.h</key>
@@ -860,7 +908,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w1tH7l4UZzS3SI9OFHRU/gl4BsdwmAOM1zmC8FwYMlk=
+			QvtCu3oZVPe5kqDnZQPSG2GemFHoHzHx5VRi87O+7JM=
 			</data>
 		</dict>
 		<key>Headers/WanjaSwipeView.h</key>
@@ -919,11 +967,18 @@
 			UEN64E9++YYimJpUyEy3zDJxXrr5MJcSTbNrEpPtvF0=
 			</data>
 		</dict>
+		<key>Headers/WanjaUserProfileModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OA14xnn2ITgtczF/U8TbPeYRCa9+5B741AeWbTalcBk=
+			</data>
+		</dict>
 		<key>Headers/WanjaVedioCountDownView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BvptYq7OZhNGyjOqmF4yLXzn8JQGqB5ZJ0XGnoyN0hc=
+			/UzgJOY8Jb5GlUU6id+GMzpvorY0h+8YGY93ZHS/vZ4=
 			</data>
 		</dict>
 		<key>Headers/WanjaVersionTools.h</key>

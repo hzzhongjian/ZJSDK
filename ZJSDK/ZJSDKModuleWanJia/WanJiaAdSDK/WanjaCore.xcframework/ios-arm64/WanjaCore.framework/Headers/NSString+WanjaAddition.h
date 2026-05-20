@@ -1,6 +1,6 @@
 //
 //  NSString+WanjaAddition.h
-//  WanjaOPUS
+//  WANJAOPUS
 //
 //  Created by zwf on 2020/12/8.
 //
@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGSize)caleSizeByWidth:(CGFloat)width fontSize:(CGFloat)fontSize;
 
+- (NSString*)relativeToURL:(NSURL*)baseURL;
 @end
 
 NS_ASSUME_NONNULL_END

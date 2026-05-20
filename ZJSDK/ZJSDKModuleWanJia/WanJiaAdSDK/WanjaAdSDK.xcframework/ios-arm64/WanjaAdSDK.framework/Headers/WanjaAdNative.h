@@ -4,6 +4,12 @@
 //
 //  Created by guantou on 2023/11/16.
 //
+
+/**
+ - (instancetype)initWithSlotId:(NSString *)slotId isSelfRender:(BOOL)isSelfRender
+ 建议使用该方法进行初始化，可以通过isSelfRender来指定是模版广告，还是自渲染广告
+ */
+
 #import "WanjaopusBaseAd.h"
 #import "WanjaNativeAdDataModel.h"
 
@@ -19,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置原生广告的代理
 @property (nonatomic, weak)id<WanjaAdNativeDelegate> delegate;
 
+//指定模版信息流视图的大小, 生成的模版视图会使用viewSize的width，但是height会根据SDK内部模版视图的宽高比，等比调整
+@property (nonatomic, assign) CGSize viewSize;
+
 // 原生初始化
 - (instancetype)initWithSlotId:(NSString *)slotId;
 // isSelfRender：是否是自渲染。 默认为NO； 如果设置为YES， 那么就需要开发者自己渲染视图了， nativeAdViews将无效
@@ -29,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 获取广告返回价格(价格单位：分)
 - (int)getPrice;
+
+// 广告是否加载成功
+- (BOOL)isLoaded;
 
 // 获取广告时效(单位：毫秒)
 - (NSInteger)getValidTime;
@@ -53,6 +65,9 @@ NS_ASSUME_NONNULL_BEGIN
 //是否是摇一摇广告
 @property (nonatomic, readonly) BOOL isShakeAd;
 
+//是否是视频广告
+@property (nonatomic, readonly) BOOL isVideoAd;
+
 @end
 
 @protocol WanjaAdNativeDelegate <NSObject>
@@ -75,6 +90,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告落地页关闭
 - (void)wanjaad_nativeAdViewWillCloseOtherView:(WanjaAdNative *)nativeAd;
 
+// CPA回调
+- (void)wanjaad_nativeAdCPAResult:(BOOL)success;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -31,6 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) uint64_t adInitStartTime;
 @property (nonatomic, assign) uint64_t adInitEndTime;
 
+//
+@property (nonatomic, readonly) BOOL isNeedFeedback;
+
+// 外部传入的idfv, 非必传
+@property (nonatomic, copy) NSString *idfv;
+
 @end
 
 NS_ASSUME_NONNULL_END

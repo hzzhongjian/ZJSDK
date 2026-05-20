@@ -29,7 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *screenSize;
 @property (nonatomic, readonly) NSString *language;
 @property (nonatomic, readonly) NSString *idfv;
-@property (nonatomic, readonly) NSString *openUdid;
 @property (nonatomic, readonly) NSString *density;
 @property (nonatomic, readonly) NSString *wifi;
 @property (nonatomic, readonly) NSString *cpu;

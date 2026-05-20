@@ -17,9 +17,9 @@ target 'ZJSDKDemo' do
 #  end
 
 pod 'ZJSDK', :path =>"../"
-#pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
+pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
 #pod 'Ads-CN/BUAdSDK', '7.5.0.8'
 

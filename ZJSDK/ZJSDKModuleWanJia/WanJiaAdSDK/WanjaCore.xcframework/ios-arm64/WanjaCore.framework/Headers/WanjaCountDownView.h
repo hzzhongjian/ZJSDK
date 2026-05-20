@@ -50,6 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger vedioTotalTime;
 @property (nonatomic, assign) NSInteger vedioMaxTime;
 @property (nonatomic, readonly) NSInteger leftVedioTime;
+
+//定时器控制, 默认为NO
+@property (nonatomic, assign) BOOL isPauseTimer;
+
 - (void)forceShowCloseButton;
 @end
 

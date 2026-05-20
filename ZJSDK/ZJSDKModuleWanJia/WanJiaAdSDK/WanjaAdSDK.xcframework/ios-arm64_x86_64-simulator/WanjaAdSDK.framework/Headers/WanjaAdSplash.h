@@ -21,7 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 //从落地页回到广告页时， 如果此时倒计时还未结束，是否关闭广告
 @property (nonatomic, assign) BOOL isCloseAfterBackToAdvert;
 //标识是否是UniApp的适配器
+//isUniAppAdapter=YES， 使用方法showUniAdsInViewController展示广告， 支持在展示的时候， 才提供bottomView
+//isUniAppAdapter=NO， 使用方法showAdsInViewController展示广告，实现这个回调wanjaad_splashBottomView，同时isShowBottomView=YES，才能展示bottomView
 @property (nonatomic, assign) BOOL isUniAppAdapter;
+//设置倒计时的时间, 取值 >= 3s, 否则无效
+@property (nonatomic, assign) NSInteger countDownSeconds;
 
 // 开屏初始化
 - (instancetype)initWithSlotId:(NSString *)slotId;
@@ -37,11 +41,18 @@ NS_ASSUME_NONNULL_BEGIN
 // 展示广告。开屏广告基于viewController弹出
 - (void)showAdsInViewController:(UIViewController *)viewController;
 
-// uniapp适配器，展示开屏广告
+// uniapp适配器，展示开屏广告， 使用这个方法时， 需要在初始化时， 将isUniAppAdapter设置为YES
 - (void)showUniAdsInViewController:(UIViewController *)viewController bottomView:(UIView*)bottomView;
+
+// uniapp适配器，展示开屏广告， 使用这个方法时， 需要在初始化时， 将isUniAppAdapter设置为YES
+//copyBottomView: 如果设置为YES，那么会对bottomView进行copy操作， 防止外部篡改
+- (void)showUniAdsInViewController:(UIViewController *)viewController bottomView:(UIView*)bottomView copyBottomView:(BOOL)copyBottomView;
 
 // 获取广告返回价格(价格单位：分)
 - (int)getPrice;
+
+// 广告是否加载成功
+- (BOOL)isLoaded;
 
 // 获取广告时效(单位：毫秒)
 - (NSInteger)getValidTime;
@@ -105,6 +116,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)wanjaad_splashResourcePreLoadState:(WanjaAdSplash *)splashAd preLoadState:(BOOL)isSuccess;
 
+// CPA回调
+- (void)wanjaad_splashAdCPAResult:(BOOL)success;
 @end
 
 

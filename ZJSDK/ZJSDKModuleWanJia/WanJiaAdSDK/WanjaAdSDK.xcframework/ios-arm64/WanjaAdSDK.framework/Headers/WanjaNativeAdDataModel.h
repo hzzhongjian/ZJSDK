@@ -65,6 +65,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addADCloseTarget:(UIView*)targetView;
 // 添加摇一摇视图， 调用此方法后， sdk内会开启摇一摇的监听, 以及targetView的点击响应
 - (void)addShakeTarget:(UIView*)targetView;
+// 添加支持手势滑动的视图
+- (void)addADSwipeTarget:(NSArray*)swipeList;
+
 
 
 /**

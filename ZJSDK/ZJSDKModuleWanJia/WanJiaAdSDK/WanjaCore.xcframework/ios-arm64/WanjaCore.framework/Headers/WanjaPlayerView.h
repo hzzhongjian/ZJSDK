@@ -79,7 +79,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) NSString * videoEndTime;
 //
-@property (nonatomic, strong) WanjaBusinessReport *businessReport;
+@property (nonatomic, weak) WanjaBusinessReport *businessReport;
+
+//是否正在播放
+@property (nonatomic, readonly) BOOL isPlaying;
+//是否播放完成
+@property (nonatomic, readonly) BOOL isPlayComplete;
+
+/**  是否允许sdk内部修改AVAudioSession 的 AVAudioSession.Category   默认允许 0 允许，1 不允许,  **/
+@property (nonatomic, assign) BOOL isLimitAudioSessionCategory;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 
@@ -91,6 +99,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)loadPlayerWithWanjaSpaceInfo:(WanjaSpaceInfoModel *)spaceInfo bottomView:(UIView * _Nullable)view index:(NSInteger)index;
 
+//设置静音
+- (void)voiceMute:(BOOL)mute;
 /**
  播放
  */
@@ -115,6 +125,11 @@ NS_ASSUME_NONNULL_BEGIN
  清理缓存
  */
 + (void)clearCache;
+
+/**
+ 提前回收资源
+ */
+- (void)recycle;
 
 @end
 

@@ -73,7 +73,7 @@ typedef NS_ENUM(NSUInteger, WanjaNeedComparePrices) {
     kWanjaNeedComparePricesNo                   = 2,    // 不等最高价格，直接返回
 };
 
-static NSString *const kWanjaBuyerId = @"WanjaOPUS";
+static NSString *const kWanjaBuyerId = @"WANJAOPUS";
 static NSString *const kGdtBuyerId = @"GDT";
 static NSString *const kBdBuyerId = @"BD";
 static NSString *const kCsjBuyerId = @"CSJ";

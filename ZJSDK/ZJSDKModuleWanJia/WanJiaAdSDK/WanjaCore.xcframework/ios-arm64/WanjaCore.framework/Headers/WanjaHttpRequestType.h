@@ -47,12 +47,16 @@ typedef void( ^ WanjaResponseSuccess)(WanjaURLSessionDataTask *dataTask, id resp
 typedef void( ^ WanjaResponseFail)(WanjaURLSessionDataTask *dataTask, NSError *error);
 /* 只返回结果请求成功的 block */
 typedef void( ^ WanjaResponseSuccessWithModel)(id response);
+/* 只返回结果请求成功的 block, 附带请求开始时间ms */
+typedef void( ^ WanjaResponseSuccessWithModelTime)(id response, uint64_t startReqTime);
 /* 只返回结果请求失败的 block */
 typedef void( ^ WanjaResponseFailWithError)(NSError *error);
 /* 定义上传进度 block */
 typedef void( ^ WanjaUploadProgress)(int64_t bytesProgress, int64_t totalBytesProgress);
 /* 定义下载进度 block */
 typedef void( ^ WanjaDownloadProgress)(int64_t bytesProgress, int64_t totalBytesProgress);
+/* 只返回结果请求成功的 block, 附带上报参数 */
+typedef void( ^ WanjaResponseSuccessWithReportParam)(id response, NSDictionary *reportParam);
 
 NS_ASSUME_NONNULL_END
 

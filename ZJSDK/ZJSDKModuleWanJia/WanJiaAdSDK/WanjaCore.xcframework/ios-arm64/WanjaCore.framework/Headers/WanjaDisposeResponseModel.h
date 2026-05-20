@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) CGFloat widthThanHeigh;
 @property (nonatomic, assign, readonly) CGFloat heighThanWidth;
 
+//记录广告获取到的起始时间
+@property (nonatomic, assign) NSTimeInterval startAdtTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -5,6 +5,7 @@
 //  Created by hongji cai on 2024/11/16.
 //
 
+#ifndef WANJA_BAIDUMAP_DISABLE
 #import <UIKit/UIKit.h>
 #import "WanjaMediaView.h"
 
@@ -24,3 +25,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+#endif

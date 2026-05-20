@@ -46,7 +46,7 @@ typedef void(^WanjaNetworkingStatusBlock)(WanjaNetworkStatus status);
 @property (nonatomic, readonly) WanjaOperatorType carrierType; // 运营商类型，移动/联通/电信/其它
 @property (nonatomic, readonly) WanjaConnectionType connectionType;   // 连接类型，2G/3G/4G/WIFI
 @property (nonatomic, readonly) NSString *ipAddress;
-@property (nonatomic, readonly) NSString *userAgent;
+@property (atomic, strong) NSString *userAgent;
 
 + (WanjaNetworkStatusTools *)shareInstance;
 

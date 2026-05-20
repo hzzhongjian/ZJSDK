@@ -5,6 +5,7 @@
 //  Created by guantou on 2023/11/20.
 //
 
+#ifndef WANJA_BAIDUMAP_DISABLE
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -12,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class WanjaDisposeResponseModel;
 @class WanjaAdRecordModel;
 @class WanjaBusinessReport;
-@class WanjaStrategyHelper;
+@class WANJAStrategyHelper;
 @class WanjaBuyerModel;
 
 @protocol WanjaFullScreenVedioVCDelegate <NSObject>
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) WanjaBusinessReport *businessReport;
 
-@property (nonatomic, strong) WanjaStrategyHelper *strategyHelper;
+@property (nonatomic, strong) WANJAStrategyHelper *strategyHelper;
 
 @property (nonatomic, strong) WanjaBuyerModel *buyerModel;
 //是否是视频广告
@@ -59,3 +60,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+#endif

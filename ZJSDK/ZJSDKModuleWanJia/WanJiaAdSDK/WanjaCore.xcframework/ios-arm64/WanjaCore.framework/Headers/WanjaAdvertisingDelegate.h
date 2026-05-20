@@ -63,6 +63,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)wanja_advertisingPlayerTotalLenght:(CGFloat)time;
 
+/**
+ 是否需要恢复视频播放
+ */
+- (BOOL)wanja_advertisingPlayerIsCanResume;
+
 @end
 
 NS_ASSUME_NONNULL_END

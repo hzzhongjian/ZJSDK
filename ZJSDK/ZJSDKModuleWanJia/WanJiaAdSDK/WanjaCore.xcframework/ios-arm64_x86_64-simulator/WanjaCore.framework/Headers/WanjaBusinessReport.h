@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-//0:默认值可不传 1:调起 5:apk安装成功 6:apk下载成功 7:摇一摇灵敏度0时上报 8:回调 9:自动点击 10:补量 11:曝光回调 12:触摸点击 2:关闭触发点击 4:广告过期 13:dp拦截(调起)
-//所有的优先级排序 广告过期>补量>调起>回调>自动点击>摇一摇灵敏度>曝光回调>触摸点击
+//0:默认值可不传 1:调起 5:apk安装成功 6:apk下载成功 7:摇一摇灵敏度0时上报 8:回调 9:自动点击 10:补量 11:曝光回调 12:触摸点击 2:关闭触发点击 4:广告过期 13:dp拦截(调起) 3:倒计时自动点击
+//所有的优先级排序 广告过期>补量>调起>回调>自动点击>摇一摇灵敏度>曝光回调>触摸点击>倒计时自动点击
 typedef NS_ENUM(NSUInteger, WanjaAdClickType) {
     WanjaAdClickDefaut = 0,
     WanjaAdClickStart = 1,
@@ -23,7 +23,8 @@ typedef NS_ENUM(NSUInteger, WanjaAdClickType) {
     WanjaAdTouchClick = 12,
     WanjaAdCloseClick = 2,
     WanjaAdTimeInvalid = 4,
-    WanjaAdDeeplinkStart = 13
+    WanjaAdDeeplinkStart = 13,
+    WanjaAdCountdownAutoClick = 3
 };
 
 typedef enum : NSUInteger {
@@ -76,6 +77,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *exposeRetryUrl;
 //
 @property (nonatomic, strong) NSArray<WanjaVideoTrackersModel *> *videoTarckers;
+//
+@property (nonatomic, assign) uint64_t reqStartTime;
+//
+@property (nonatomic, readonly) uint64_t exposeStartTime;
+//曝光过滤列表
+@property(nonatomic, strong) NSArray<NSString*> *impTrackDomainList;
+//点击过滤列表
+@property(nonatomic, strong) NSArray<NSString*> *clkTrackDomainList;
 
 //  上报展示
 - (void)wanja_reportShowView:(WanjaAdClickType)clickType;

@@ -200,3 +200,12 @@ static dispatch_queue_t wanja_queue_normal_request() {
     });
     return wanja_queue_normalRequest;
 }
+
+static dispatch_queue_t wanja_queue_static_batchrequest() {
+    static dispatch_queue_t wanja_queue_batchrequest;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        wanja_queue_batchrequest = dispatch_queue_create("com.lvjunxue.wanjaQueue.batchrequest", DISPATCH_QUEUE_SERIAL);
+    });
+    return wanja_queue_batchrequest;
+}

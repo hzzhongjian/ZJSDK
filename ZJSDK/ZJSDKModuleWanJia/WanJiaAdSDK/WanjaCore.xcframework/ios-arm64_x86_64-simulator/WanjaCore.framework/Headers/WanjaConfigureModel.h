@@ -48,6 +48,15 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /**
+ 配置domain
+*/
+@interface WanjaGroupDomainModel : WanjaBaseModel
+@property (nonatomic, copy) NSString *groupsdk;
+@property (nonatomic, copy) NSString *sdklog;
+@property (nonatomic, copy) NSString *sdkv;
+@end
+
+/**
  data解密后Model
 */
 @interface WanjaDataModel : WanjaBaseModel
@@ -73,6 +82,14 @@ NS_ASSUME_NONNULL_BEGIN
 // 上报事件
 @property (nonatomic, strong) WanjaMessageModel *messenger;
 
+//
+@property (nonatomic, assign) BOOL ipv6;
+
+//是否https
+@property (nonatomic, assign) BOOL ssl;
+
+// 配置更新
+@property (nonatomic, strong) WanjaGroupDomainModel *domain;
 @end
 
 /**

@@ -8,6 +8,8 @@
 #import "WanjaBaseModel.h"
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <WanjaCore/WanjaAdShakeConfigModel.h>
+#import <WanjaCore/WanjaAdLocationModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class WanjaEnvInfoModel;
 @class WanjaAdReqInfoModel;
 @class WanjaSdidModel;
+@class WanjaUserProfileModel;
 
 /**
  广告请求的model
@@ -52,9 +55,29 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *appName;
 //  app包名
 @property (nonatomic, copy) NSString *packageName;
-//idfa和caid的来源
+//idfa和iosid的来源
 @property (nonatomic, assign) NSInteger idfaM;
-@property (nonatomic, assign) NSInteger caidM;
+@property (nonatomic, assign) NSInteger iosidM;
+//infoplis中的白名单
+@property (nonatomic, strong) NSString *schemeInfo;
+/**
+摇一摇是否可用， 默认YES
+ */
+@property (nonatomic, assign) NSInteger isCanShake;
+/**
+摇一摇相关参数配置
+ */
+@property (nonatomic, strong) WanjaAdShakeConfigModel *shakeValue;
+/**
+定位相关参数配置
+ */
+@property (nonatomic, strong) WanjaAdLocationModel *locInfo;
+
+//是否是重试的请求， 取值1/0，1表示重试
+@property (nonatomic, assign) NSInteger retryReq;
+
+// 用户画像
+@property (nonatomic, strong) WanjaUserProfileModel *userProfile;
 
 @end
 
@@ -89,17 +112,17 @@ NS_ASSUME_NONNULL_BEGIN
 //  是否越狱
 @property (nonatomic, copy) NSString *root;
 //系统启动时间
-@property (nonatomic, copy) NSString *bootMark;
+@property (nonatomic, copy) NSString *zyBM;
 //系统更新时间
-@property (nonatomic, copy) NSString *updateMark;
-//caid信息
+@property (nonatomic, copy) NSString *zyUM;
+//iosid信息
 @property (nonatomic, strong) NSArray<WanjaSdidModel *> *iosidInfo;
 //paid信息
 @property (nonatomic, copy) NSString *paid;
 //idfv信息
 @property (nonatomic, copy) NSString *idfv;
 
-//有的客户需要合成caid的14个原始参数
+//有的客户需要合成iosid的14个原始参数
 @property (nonatomic, copy) NSString *physicalMemory;//物理内存
 @property (nonatomic, copy) NSString *harddiskSize;//磁盘大小
 @property (nonatomic, copy) NSString *hardwareMachine;//machine 如“iPhone10,3”
@@ -112,11 +135,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *osVersion;//系统版本
 @property (nonatomic, copy) NSString *language;//设备设置的语言：如"zh -Hans-CN"
 @property (nonatomic, copy) NSString *phoneName;//设备名称（小写MD5)
-@property (nonatomic, copy) NSString *fileInitTime;//设备初始化时间
-@property (nonatomic, copy) NSString *mntId;//mnt_id
+@property (nonatomic, copy) NSString *p6;//设备初始化时间
+@property (nonatomic, copy) NSString *p7;//mnt_id
 //本地安装的app列表
 @property (nonatomic, copy) NSString *appList;
-
+//前一次的系统更新时间， 如果和当前的更新时间相同， 那么传@""
+@property (nonatomic, copy) NSString *zyPUM;
 
 @end
 
@@ -161,6 +185,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) uint64_t channelReserveTs;
 //  预留备用字段
 @property (nonatomic, copy) NSString *sdkExtInfo;
+/**
+ 是否使用https
+ */
+@property (nonatomic, assign) BOOL ssl;
 
 @end
 
@@ -171,7 +199,5 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *version;
 
 @end
-
-
 
 NS_ASSUME_NONNULL_END

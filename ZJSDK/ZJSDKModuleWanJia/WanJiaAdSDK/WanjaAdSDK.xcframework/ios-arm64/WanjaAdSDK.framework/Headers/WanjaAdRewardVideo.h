@@ -72,6 +72,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 开发者在章鱼后台配置校验回调地址后，当发放奖励时， 如果校验失败，会走这个回调
 - (void)wanjaad_rewardVideoCheckFail:(WanjaAdRewardVideo *)rewardVideo;
 
+// 视频播放开始
+- (void)wanjaad_rewardVedioAdViewVedioPlayStart:(WanjaAdRewardVideo *)rewardVideo;
+
+// CPA回调
+- (void)wanjaad_rewardVedioAdCPAResult:(BOOL)success;
 @end
 
 NS_ASSUME_NONNULL_END

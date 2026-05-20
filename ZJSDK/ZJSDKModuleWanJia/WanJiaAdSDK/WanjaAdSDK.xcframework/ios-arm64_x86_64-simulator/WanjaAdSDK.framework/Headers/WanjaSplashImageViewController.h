@@ -14,10 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class WanjaSpaceInfoModel;
 @protocol WanjaWorkerDelegate;
 @class WanjaBuyerModel;
-@class WanjaStrategyHelper;
+@class WANJAStrategyHelper;
 @class WanjaAdRecordModel;
 @class WanjaBusinessReport;
 @class WanjaAdSplash;
+@class WanjaCountDownView;
 
 @interface WanjaSplashImageViewController : WanjaBaseViewController
 
@@ -34,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *randomUUID;
 
-@property (nonatomic, strong) WanjaStrategyHelper *strategyHelper;
+@property (nonatomic, strong) WANJAStrategyHelper *strategyHelper;
 
 @property (nonatomic, strong) WanjaAdRecordModel *adRecordModel;
 
@@ -42,10 +43,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**控制视频的音量控制按钮是否展示（默认显示）*/
 @property (nonatomic, assign) BOOL isHiddenVoiceButton;
+//设置倒计时的时间, 取值 >= 3s
+@property (nonatomic, assign) NSInteger countDownSeconds;
+//
+@property (nonatomic, assign) uint64_t startReqTime;
+//
+@property (nonatomic, readonly) WanjaCountDownView *closeView;
 
-- (void)addCloseView;
+- (void)addCloseView:(void(^)(BOOL isExpose))exposeBlock;
 
-- (void)reportDeepLink:(BOOL)isSuccess;
+- (void)closeAdvert;
 
 // 上报竞价成功
 - (void)wanja_reportWinPrice:(NSString*)secondPrice;

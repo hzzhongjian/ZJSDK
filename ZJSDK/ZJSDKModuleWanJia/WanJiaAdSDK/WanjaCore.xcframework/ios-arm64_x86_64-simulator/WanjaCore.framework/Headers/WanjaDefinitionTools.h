@@ -13,8 +13,8 @@
 /**
  切换SDK预编译条件
 */
-#define Wanja_SDK_CAN_CUSTOM_SKIPVIEW 0
-#define Wanja_SDK_CAN_SWITCH_CHANNEL 0
+#define WANJA_SDK_CAN_CUSTOM_SKIPVIEW 0
+#define WANJA_SDK_CAN_SWITCH_CHANNEL 0
 
 #define WanjaWithTimeLog(format, ...) NSLog(@"%@", [NSString stringWithFormat:(format), ##__VA_ARGS__])
 
@@ -25,7 +25,7 @@
 #define Num(_x_) _x_*LJX_Multiple
 
 // 比例：x需要现实的大小，y比例最大值为0时无上限。
-#define Wanja_Num(_x_, _y_) \
+#define WANJA_Num(_x_, _y_) \
 ({CGFloat wanja_screen = MIN(kWanjaScreenWidth, kWanjaScreenHeight);\
 CGFloat wanja_multiple = wanja_screen/375;\
 if (_y_ <= 1) {\
@@ -77,7 +77,7 @@ if(isPad) {\
 #define IPHONEX_TABBAR_FIX_HEIGHT 34
 #define IPHONEX_TOPBAR_FIX_HEIGHT 44
 
-#define Wanja_SCREEN_WIDTH(_type_) \
+#define WANJA_SCREEN_WIDTH(_type_) \
 ({CGFloat width = 0;\
 if (_type_ == 2) {\
 width = MAX(kWanjaScreenWidth, kWanjaScreenHeight);\
@@ -86,7 +86,7 @@ width = MIN(kWanjaScreenWidth, kWanjaScreenHeight);\
 }\
 (width);})
 
-#define Wanja_SCREEN_HEIGHT(_type_) \
+#define WANJA_SCREEN_HEIGHT(_type_) \
 ({CGFloat height = 0;\
 if (_type_ == 2) {\
 height = MIN(kWanjaScreenWidth, kWanjaScreenHeight);\
@@ -95,7 +95,7 @@ height = MAX(kWanjaScreenWidth, kWanjaScreenHeight);\
 }\
 (height);})
 
-#define Wanja_BASE_SCREEN_WIDTH(_type_) \
+#define WANJA_BASE_SCREEN_WIDTH(_type_) \
 ({CGFloat width = 0;\
 if (_type_ == 2) {\
 width = MAX(414, 736);\
@@ -104,7 +104,7 @@ width = MIN(414, 736);\
 }\
 (width);})
 
-#define Wanja_BASE_SCREEN_HEIGHT(_type_) \
+#define WANJA_BASE_SCREEN_HEIGHT(_type_) \
 ({CGFloat height = 0;\
 if (_type_ == 2) {\
 height = MIN(414, 736);\

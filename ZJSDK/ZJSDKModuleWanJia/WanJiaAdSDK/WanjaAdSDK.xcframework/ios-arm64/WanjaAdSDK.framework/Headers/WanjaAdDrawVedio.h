@@ -4,6 +4,7 @@
 //
 //  Created by guantou on 2023/11/16.
 //
+#ifndef WANJA_BAIDUMAP_DISABLE
 #import "WanjaopusBaseAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置原生广告的代理
 @property (nonatomic, weak)id<WanjaDrawVedioDelegate> delegate;
 
+//是否是视频广告
+@property (nonatomic, readonly) BOOL isVideoAd;
+
 // 原生初始化
 - (instancetype)initWithSlotId:(NSString *)slotId;
 
@@ -26,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 获取广告返回价格(价格单位：分)
 - (int)getPrice;
+
+// 广告是否加载成功
+- (BOOL)isLoaded;
 
 // 获取广告时效(单位：毫秒)
 - (NSInteger)getValidTime;
@@ -60,6 +67,15 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告落地页关闭
 - (void)wanjaad_drawVedioAdViewWillCloseOtherView:(WanjaAdDrawVedio *)drawVedioAd;
 
+// 视频播放开始
+- (void)wanjaad_drawVedioAdViewVedioPlayStart:(WanjaAdDrawVedio *)drawVedioAd;
+
+// 视频播放结束
+- (void)wanjaad_drawVedioAdViewVedioPlayEnd:(WanjaAdDrawVedio *)drawVedioAd;
+
+// CPA回调
+- (void)wanjaad_drawVedioAdCPAResult:(BOOL)success;
 @end
 
 NS_ASSUME_NONNULL_END
+#endif

@@ -73,6 +73,12 @@ typedef NS_ENUM(NSInteger, WanjaErrorCode) {
     // appicon为空, 个别媒体要求此时，当作广告失败
     kWanjaErrorAppIconNull                          = -10600,
     
+    // 视频播放失败
+    kWanjaErrorVedioPlayFail                        = -10700,
+    
+    //
+    kWanjaBatchRequestFail                          = -13000,
+    
 };
 
 @interface WanjaAdRequestError : NSError

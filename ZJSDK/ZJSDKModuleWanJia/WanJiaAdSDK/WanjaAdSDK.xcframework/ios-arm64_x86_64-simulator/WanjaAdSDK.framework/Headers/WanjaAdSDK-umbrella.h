@@ -25,8 +25,6 @@
 #import "WanjaAdRewardVideo.h"
 #import "WanjaAdSplash.h"
 #import "WanjaSplashImageViewController.h"
-#import "WanjaSplashPlayerViewController.h"
-#import "WanjaSplashWebViewController.h"
 
 FOUNDATION_EXPORT double WanjaAdSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char WanjaAdSDKVersionString[];

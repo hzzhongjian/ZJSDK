@@ -5,6 +5,7 @@
 //  Created by guantou on 2023/11/20.
 //
 
+#ifndef WANJA_BAIDUMAP_DISABLE
 #import "WanjaopusBaseAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -62,6 +63,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 图片/视频资源预加载 YES: 预加载成功；NO：预加载失败
 - (void)wanjaad_intersititalResourcePreLoadState:(WanjaAdIntersitital *)intersititalAd preLoadState:(BOOL)isSuccess;
 
+// CPA回调
+- (void)wanjaad_intersititalAdCPAResult:(BOOL)success;
 @end
 
 NS_ASSUME_NONNULL_END
+#endif
