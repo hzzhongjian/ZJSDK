@@ -31,5 +31,7 @@ pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
 #pod 'ZJSDK', '2.6.1.8'
 
+#pod 'AnyThinkiOS'
+
 end
  

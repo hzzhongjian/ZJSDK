@@ -25,13 +25,13 @@ typedef NS_OPTIONS(NSUInteger, ZJ_CJ_AdType) {
 };
 
 /// 广告渲染类型
-typedef NS_OPTIONS(NSInteger, ZJ_CJ_AdRenderType) {
+typedef NS_OPTIONS(NSInteger, ZJ_CJAdRenderType) {
     /// 默认值
-    ZJ_CJ_AdRenderTypeDefault = -9999,
+    ZJ_CJAdRenderTypeDefault = -9999,
     /// sdk模版渲染
-    ZJ_CJ_AdRenderTypeTemplate = 1,
+    ZJ_CJAdRenderTypeTemplate = 1,
     /// 媒体自渲染
-    ZJ_CJ_AdRenderTypeCustom   = 2,
+    ZJ_CJAdRenderTypeCustom   = 2,
 };
 
 /// 广告数据请求回调

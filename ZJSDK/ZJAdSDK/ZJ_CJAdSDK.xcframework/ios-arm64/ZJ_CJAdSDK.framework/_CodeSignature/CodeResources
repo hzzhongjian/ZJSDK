@@ -6,79 +6,79 @@
 	<dict>
 		<key>Headers/ZJ_CJAdSDK.h</key>
 		<data>
-		L3hzP8WZuuVpytAQYS2jCy8HNIk=
+		PclCvqj66e5bQ9Zya3fVsUOBh4M=
 		</data>
 		<key>Headers/ZJ_CJAdSDKManager.h</key>
 		<data>
 		cWLX/U2SluXDNRAfqakdanylZto=
 		</data>
-		<key>Headers/ZJ_CJ_BannerAd.h</key>
+		<key>Headers/ZJ_CJBannerAd.h</key>
 		<data>
-		M97XRTfzRcc/Ki4pJUb0LIOpVic=
+		ZcN/bTOBCnbWHl6GO/5bh3cWnS8=
 		</data>
-		<key>Headers/ZJ_CJ_BannerSlot.h</key>
+		<key>Headers/ZJ_CJBannerSlot.h</key>
 		<data>
-		+pW2nCUa+bDSHhke4dOl2J9SvQ4=
+		7eS/3sorBkj1Ov8ydVYmSdY69SY=
 		</data>
-		<key>Headers/ZJ_CJ_BannerView.h</key>
+		<key>Headers/ZJ_CJBannerView.h</key>
 		<data>
-		oNBnUc4eUAeYfE61ObczgLRLlJI=
+		SLx5wHfxYEWpGEt40goWKipItyo=
 		</data>
-		<key>Headers/ZJ_CJ_BaseAd.h</key>
+		<key>Headers/ZJ_CJBaseAd.h</key>
 		<data>
-		1bjE4PLDqRs0nXPrQhkcqGj6dwQ=
+		EjLsYwKZUuaYX7G/vbwp/e2xHWU=
 		</data>
-		<key>Headers/ZJ_CJ_InterstitialAd.h</key>
+		<key>Headers/ZJ_CJInterstitialAd.h</key>
 		<data>
-		quEUmQglcjYw78+f4ZUhOgJOHDk=
+		f1sJ1yEi6O/xF8rnBTpEYTV36jA=
 		</data>
-		<key>Headers/ZJ_CJ_InterstitialSlot.h</key>
+		<key>Headers/ZJ_CJInterstitialSlot.h</key>
 		<data>
-		QskobT4H+mcqZSSM1dB+KDLnNRA=
+		ZWB9awNOIoL5c/utrMFCopw3Ycc=
+		</data>
+		<key>Headers/ZJ_CJNativeAd.h</key>
+		<data>
+		JCE5p7fTDqBD3rYnZDq1zJk9vrU=
+		</data>
+		<key>Headers/ZJ_CJNativeAdData.h</key>
+		<data>
+		IwdH1QKa9FrgbPz+/oGASoiGVXI=
+		</data>
+		<key>Headers/ZJ_CJNativeAdObject.h</key>
+		<data>
+		ztxz0oJ0KU0pPTAIh8r0sT268i4=
+		</data>
+		<key>Headers/ZJ_CJNativeAdSlot.h</key>
+		<data>
+		TAo3VH/zHzpRMr8boYkvdi6fNBE=
+		</data>
+		<key>Headers/ZJ_CJNativeExpressView.h</key>
+		<data>
+		F2KfpXl4fPpBczzzQK4qzR+I388=
+		</data>
+		<key>Headers/ZJ_CJRewardVideoAd.h</key>
+		<data>
+		8Pl65qPTSWVGqO2zQdyf5vvUIdE=
+		</data>
+		<key>Headers/ZJ_CJRewardVideoSlot.h</key>
+		<data>
+		8R4WVVxonx+Oam9O0UqfT2cs9uM=
+		</data>
+		<key>Headers/ZJ_CJSlot.h</key>
+		<data>
+		IwcezmLR+6PDhLdmXp01xfDZLSE=
+		</data>
+		<key>Headers/ZJ_CJSplashAd.h</key>
+		<data>
+		GnA3b4Me/CczIF4TrvMPhyvd/bE=
+		</data>
+		<key>Headers/ZJ_CJSplashAdSlot.h</key>
+		<data>
+		CGOGR4XvbXAV6wJu1NWzMrWvX4g=
 		</data>
 		<key>Headers/ZJ_CJ_Macro.h</key>
 		<data>
-		D6+fCkaLjjEhiCgvPyyIWGJqJPY=
-		</data>
-		<key>Headers/ZJ_CJ_NativeAd.h</key>
-		<data>
-		utwQ9ccfMx5mO2Hmr+e7/kQcjjo=
-		</data>
-		<key>Headers/ZJ_CJ_NativeAdData.h</key>
-		<data>
-		vstHrEVIGZyCQi/NcuI26T1ivZw=
-		</data>
-		<key>Headers/ZJ_CJ_NativeAdObject.h</key>
-		<data>
-		g9zzqaD6En/L8uVul6iP07XTWoc=
-		</data>
-		<key>Headers/ZJ_CJ_NativeAdSlot.h</key>
-		<data>
-		kUOJ3Yl3zqs/+OKVTJbchWsfghc=
-		</data>
-		<key>Headers/ZJ_CJ_NativeExpressView.h</key>
-		<data>
-		ZkxwZ5yXyd5zlqk3qHUumtbtP5U=
-		</data>
-		<key>Headers/ZJ_CJ_RewardVideoAd.h</key>
-		<data>
-		KO29+OxAZV9yQkFsfSzI+gCa3GQ=
-		</data>
-		<key>Headers/ZJ_CJ_RewardVideoSlot.h</key>
-		<data>
-		5Ys9vdOVjgu6U+8aSwd0DWu/wVQ=
-		</data>
-		<key>Headers/ZJ_CJ_Slot.h</key>
-		<data>
-		0lK6uIlTZTv7YOqGSn9zi1HVnjw=
-		</data>
-		<key>Headers/ZJ_CJ_SplashAd.h</key>
-		<data>
-		2KohHumUCgFED2yaIa2MrlHnNjc=
-		</data>
-		<key>Headers/ZJ_CJ_SplashAdSlot.h</key>
-		<data>
-		jid037AyYktDQ8UWMlcUn+FLVHg=
+		dqWxVv5t9iPZea1MgwHanHmAn8Q=
 		</data>
 		<key>Headers/ZJ_CJ_VideoPlayerView.h</key>
 		<data>
@@ -86,15 +86,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zpCpjLZ+DiUDBPGS2Uwz/0xfLy0=
+		gio0oEeppHk3gYrMxIkxToZ/7JE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		ssEEnUYoCHcopHc6cJmjU1/iXes=
 		</data>
-		<key>PrivateHeaders/ZJ_CJ_AdItem.h</key>
+		<key>PrivateHeaders/ZJ_CJAdItem.h</key>
 		<data>
-		oJpc0YWIUxsVigb5z5dUspd7h4I=
+		XsU1cbNjDJR+juLE2Q9Ji1n7QLU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jHMXvd4xDBL98OJFajtfpoxd2Jn+2p0+08IaHinPrUk=
+			DHBrUiP/kY+HWm4DdZAT+ndX2g2go5B0J/LeAZCR4mg=
 			</data>
 		</dict>
 		<key>Headers/ZJ_CJAdSDKManager.h</key>
@@ -113,123 +113,123 @@
 			YXrCYnAAD6/EitdYvrUeHiaQPaks9FExLvXH59gJGwo=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_BannerAd.h</key>
+		<key>Headers/ZJ_CJBannerAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9vlk1RbzmVfj9nEbL3YJ/EoU4w7R1gAzNBWYwwHJUVo=
+			1aD/dt1gly+8gthEmDheoGk+Aa5nsk23F9tCNKnFKt4=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_BannerSlot.h</key>
+		<key>Headers/ZJ_CJBannerSlot.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HwHbI5PnHHvZLdTVSmuiWMhPeTX8mU25SJXEVJyNzDM=
+			3EWma8zHyT3wz7u7yMaIFIuB0OETYD4/P5lDh6v0pUk=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_BannerView.h</key>
+		<key>Headers/ZJ_CJBannerView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nlHBZ+DTs+HV8G74A2Vdi88PEthra2lsIugO0qCc86w=
+			MNeja8HgmlGenTnutuJ7fduyaLoyZia0384zJYac/Cs=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_BaseAd.h</key>
+		<key>Headers/ZJ_CJBaseAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p7Z53II0M+5FP3dfHhld3XwdIcaUH1O9FNbVymnTGmM=
+			l27yb90Bk1M/IjjBetkKVWs7Ew/4aa+vM2yzE0QLQCw=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_InterstitialAd.h</key>
+		<key>Headers/ZJ_CJInterstitialAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oTWTskXx4yVIdHKufNA5UxMKrq+zcQz6knFj/VSWNpY=
+			CkFTPSVHmaE6b2qc2FvHoGNxSlKVAkEoZB+ibWShBsI=
 			</data>
 		</dict>
-		<key>Headers/ZJ_CJ_InterstitialSlot.h</key>
+		<key>Headers/ZJ_CJInterstitialSlot.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ID+aLSHUASKB9w/LXEpWEEJ8ibyvr9euh5/yCyJBL9w=
+			3rWQYqV/uijeeWUCu+AIrFGCk0s2O5lbBrjsWKlV7Ag=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJNativeAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dPmEqSIO8KmUPvI1pos+YRL46xIy6235k2hb0g+6PlU=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJNativeAdData.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qXUgWMQ+kn45TkFBSER25o/obKcT3TNX/bOKUu6JZhg=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJNativeAdObject.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Vqgx4Lqjsx4psB9waabUfHh9OeFkAc+QK8qCL8pvXH4=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJNativeAdSlot.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PzYwMXQocmCJK79C/1yO1JD5CC9jqHCisk4kIryO8TM=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJNativeExpressView.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tg4hLw0hdh1PPImVKPCV+14l2Yf/sTHmjWcSwfQNC44=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJRewardVideoAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yA2Pnhzz+JuL659T9NsodNmqLDp02zJ6KOF63NYZVEk=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJRewardVideoSlot.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1Mleg0DrSwl/Nvb7ww4HM3JSDpi0ichEwP7yRVlyvoA=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJSlot.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eJVeIyhmT6rjNEOKT6pIsBLEhcE/1JlvjxT7qDxkJ2M=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJSplashAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9YUa9dtzYNOKD/QjpIG7V8FQAa8mE8hVI7KPKxu401M=
+			</data>
+		</dict>
+		<key>Headers/ZJ_CJSplashAdSlot.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qAdDB56/AVCDXjXebCUHXCRfIi/1FqW5u8UdHsvl56Q=
 			</data>
 		</dict>
 		<key>Headers/ZJ_CJ_Macro.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n0ev+RKNKlSjP5bAQ2FoXd94hAtBeItij+DwbDL4JR0=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_NativeAd.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			eoWKf/oFlY+0E8K+iJWSu5cZjx5nReY7HAePmFKYn7w=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_NativeAdData.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rzpqTcP3YlO70vg1jaztcMkDeXHmyrEazDImNOirL/c=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_NativeAdObject.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7NDy99K3kn0uZeCejFP8XspuYCNfFXkc2flsKT7Ys7c=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_NativeAdSlot.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Hea3KiQQ8X/UCKXv9FLWePhXUMPssu2PGTlwfI6IxiE=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_NativeExpressView.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KLP9eRDgXLkoXZftHW+xnQQ1YlpoDki8tSrk4Usidro=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_RewardVideoAd.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VmGLpnTpGSoEgPDHyphniroLN2CRhA3v+kOW6Ze2vEk=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_RewardVideoSlot.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XCPOh5iKeoLtcOy69+jQrxEnaiVfN+WTYi/6l6IPctg=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_Slot.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jllwrMViVeZ4YpIuX5xG6D9RRDsEkgBB4VzV/6mExko=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_SplashAd.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hfqP1rMe6/YPN7bHKWcwHIU1KpRCJDYGaFWQjCNTyeI=
-			</data>
-		</dict>
-		<key>Headers/ZJ_CJ_SplashAdSlot.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			84a6BNHz9DJNafZ9pu0PqfVAKsegAisNeYfZv9xYx5k=
+			1NX7dAvHx6qWuV6IxY3RfbysPHUpjl76LS96eHcQYxk=
 			</data>
 		</dict>
 		<key>Headers/ZJ_CJ_VideoPlayerView.h</key>
@@ -246,11 +246,11 @@
 			3FpFzMYKX8yD57oPG48JcZGHGpTyDsRvwUJ4CDiwoLI=
 			</data>
 		</dict>
-		<key>PrivateHeaders/ZJ_CJ_AdItem.h</key>
+		<key>PrivateHeaders/ZJ_CJAdItem.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2mgmE23VJc3nA1oUMuVR2as7wSn0kjYjtVol1yxfiO8=
+			n+e6wJhMbrWOPI9E7iLCmrg5Q8YVyiQ9+hq7lNRO0t4=
 			</data>
 		</dict>
 	</dict>

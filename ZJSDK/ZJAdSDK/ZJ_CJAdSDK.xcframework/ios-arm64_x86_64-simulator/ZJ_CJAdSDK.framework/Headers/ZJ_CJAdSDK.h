@@ -17,10 +17,10 @@ FOUNDATION_EXPORT const unsigned char ZJ_CJAdSDKVersionString[];
 
 #import <ZJ_CJAdSDK/ZJ_CJ_Macro.h>
 #import <ZJ_CJAdSDK/ZJ_CJAdSDKManager.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_Slot.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_SplashAd.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_InterstitialAd.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_NativeAd.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_RewardVideoAd.h>
-#import <ZJ_CJAdSDK/ZJ_CJ_BannerAd.h>
+#import <ZJ_CJAdSDK/ZJ_CJSlot.h>
+#import <ZJ_CJAdSDK/ZJ_CJSplashAd.h>
+#import <ZJ_CJAdSDK/ZJ_CJInterstitialAd.h>
+#import <ZJ_CJAdSDK/ZJ_CJNativeAd.h>
+#import <ZJ_CJAdSDK/ZJ_CJRewardVideoAd.h>
+#import <ZJ_CJAdSDK/ZJ_CJBannerAd.h>
 #import <ZJ_CJAdSDK/ZJ_CJ_VideoPlayerView.h>
