@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// bidding广告竞价成功是否回传，由sdk内部使用
 @property (nonatomic, assign, readonly) BOOL isBiddingSuccessReport;
 
-/// caid json值
+
 @property (nonatomic, copy) NSString *promotion_params;
 
 // 用户的唯一标识符

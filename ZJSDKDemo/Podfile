@@ -21,6 +21,8 @@ pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
+#pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
+
 #pod 'Ads-CN/BUAdSDK', '7.5.0.8'
 
 #pod 'GDTMobSDK', '4.15.90'
@@ -31,7 +33,23 @@ pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
 #pod 'ZJSDK', '2.6.1.8'
 
-#pod 'AnyThinkiOS'
+#pod 'AnyThinkiOS', '6.5.71'
+#pod 'AnyThinkBanner'
+#pod 'AnyThinkinterstitial'
+#pod 'AnyThinkMediaVideo'
+#pod 'AnyThinkNative'
+#pod 'AnyThinkRewardedVideo'
+#pod 'AnyThinkSplash'
+
+#pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
+
+#pod 'AnyThinkiOS','6.5.47'
+##Anythink Kuying Adx SDK(necessary)
+#pod 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.66.0'
+
+#pod 'SmartdigimktCNSDK','6.5.66'
+
+#pod 'ZJSDK/ZJSDKModuleSIG', '2.6.2.2'
 
 end
  
