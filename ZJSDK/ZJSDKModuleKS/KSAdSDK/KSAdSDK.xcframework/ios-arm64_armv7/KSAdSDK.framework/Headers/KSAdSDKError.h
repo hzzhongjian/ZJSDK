@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, KSAdErrorCode) {
     KSAdErrorCodeAdStyleMismatchError = 40008, // 返回的adStyle不是具体场景的adstyle
 
     KSAdErrorCodeNotVideoAd = 50001, // not a video ad
+    KSAdErrorCodeOrientationConflict = 50002, // 广告方向与应用支持方向冲突
     KSAdErrorCodeParamWrong = 100001, // 参数有误
     KSAdErrorCodeServerError = 100002, // 服务器错误
     KSAdErrorCodeNoPermission = 100003, // 不允许的操作

@@ -21,6 +21,7 @@ pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 
+
 #pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 
 #pod 'Ads-CN/BUAdSDK', '7.5.0.8'

@@ -14,27 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hSDtTe4l/uQjv43VtUtBVvRBTkg=
+		0DIP/+41KmTRX2d9GtTd5gwdEwo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		1St3NhWNU3X4HltPacxw0qLotJM=
-		</data>
-		<key>PrivateHeaders/KSCUMediaPlayer.h</key>
-		<data>
-		boVB1Ho5cHumEdNVntaUg4exP6U=
-		</data>
-		<key>PrivateHeaders/KSCUMediaPlayerActionMeta.h</key>
-		<data>
-		lytnndHpNEe15qozpoDdn3bW9ck=
-		</data>
-		<key>PrivateHeaders/KSCUMediaPlayerReportAPI.h</key>
-		<data>
-		MI1lX2O4i96m3hprAUYWwjqkcIY=
-		</data>
-		<key>PrivateHeaders/KSCUMediaPlayerReportManager.h</key>
-		<data>
-		yYwrFlpq+pPihvVYrMpiSGhRnN0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -70,50 +54,6 @@
 			<key>hash2</key>
 			<data>
 			xj8njF6AxbzR2KhRA1QSKy7AT2VcWsmP1+Z9bS9jQbU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/KSCUMediaPlayer.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			boVB1Ho5cHumEdNVntaUg4exP6U=
-			</data>
-			<key>hash2</key>
-			<data>
-			VJaCkAmTHI4gGdafHI61ChtydpUNei/UUBW110v7MpE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/KSCUMediaPlayerActionMeta.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lytnndHpNEe15qozpoDdn3bW9ck=
-			</data>
-			<key>hash2</key>
-			<data>
-			1o7S2E51FKDjY6k37nAOV5/MHlqGs4uaPsdDUa3TxuQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/KSCUMediaPlayerReportAPI.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MI1lX2O4i96m3hprAUYWwjqkcIY=
-			</data>
-			<key>hash2</key>
-			<data>
-			gQra+O3kPbc8i1g5BhFkGufynHaLdaxW3bMI/AZAy68=
-			</data>
-		</dict>
-		<key>PrivateHeaders/KSCUMediaPlayerReportManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yYwrFlpq+pPihvVYrMpiSGhRnN0=
-			</data>
-			<key>hash2</key>
-			<data>
-			DSqOrL5ycnAhmCq56SJToIqksHqbsrINMO/Ywj84OLg=
 			</data>
 		</dict>
 	</dict>
