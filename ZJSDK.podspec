@@ -127,7 +127,7 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         # ss.dependency 'SigmobAd-iOS', '~> 4.20.0'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleSIG/*.xcframework'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModZJSDKModuleSIGuleKS/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleSIG/*.xcframework'
     end
  
     ### 百度适配器兼容版   
@@ -439,7 +439,7 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
         # ss.dependency 'SigmobAd-iOS', '~> 4.20.0'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleSIG/*.xcframework'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModZJSDKModuleSIGuleKS/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleSIG/*.xcframework'
     end
  
     ### 百度适配器兼容版   
