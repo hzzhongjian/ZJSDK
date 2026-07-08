@@ -20,9 +20,14 @@
 #pragma mark - public
 - (void)setupWithUnifiedNativeAdDataObject:(ZJNativeAdObject *)dataObject delegate:(id<ZJNativeAdViewDelegate>)delegate vc:(UIViewController *)vc{
     //配置单图广告
+    CGFloat height = 0;
+    if (dataObject.imageWidth == 0 && dataObject.imageHeight == 0) {
+        height = 100;
+    } else {
+        height = (kScreenWidth-10)*(@(dataObject.imageHeight).floatValue/@(dataObject.imageWidth).floatValue);
+    }
     [self.fillView.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo((kScreenWidth-10)*(@(dataObject.imageHeight).floatValue/@(dataObject.imageWidth).floatValue));
-        
+        make.height.mas_equalTo(height);
     }];
     
     self.fillView.delegate = delegate; // adView 广告回调

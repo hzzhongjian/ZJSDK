@@ -1,0 +1,6 @@
+framework module WindFoundation {
+  umbrella header "WindFoundation.h"
+  export *
+
+  module * { export * }
+}

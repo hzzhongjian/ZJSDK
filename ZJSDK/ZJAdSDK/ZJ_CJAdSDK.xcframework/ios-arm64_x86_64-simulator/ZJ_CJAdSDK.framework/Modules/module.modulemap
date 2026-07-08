@@ -1,0 +1,6 @@
+framework module ZJ_CJAdSDK {
+  umbrella header "ZJ_CJAdSDK.h"
+  export *
+
+  module * { export * }
+}

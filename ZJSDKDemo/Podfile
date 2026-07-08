@@ -16,11 +16,38 @@ target 'ZJSDKDemo' do
 #    end
 #  end
 
-pod 'ZJSDK', :path =>"../"
+pod 'DSPSDK', '1.0.4.0'
+pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
+pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
+pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
+pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleSIG', :path => '../'
+pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
+pod 'ZJSDK/ZJSDKModuleWanJia', :path => '../'
+pod 'ZJSDK/ZJSDKModuleQiYun', :path => '../'
 pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
+pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
 
+#pod 'ZJSDK/ZJSDKBaseModuleDSP', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleGDT', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleCSJ', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleKS', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleSIG', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleBeiZi', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleWanJia', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleQiYun', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleMeiShu', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleFS', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleJuTui', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleTaKu', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleBD', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleBLK', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleFW', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleXWM', :path => '../'
+#pod 'ZJSDK/ZJSDKBaseModuleYS', :path => '../'
 
 #pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 
@@ -51,6 +78,16 @@ pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 #pod 'SmartdigimktCNSDK','6.5.66'
 
 #pod 'ZJSDK/ZJSDKModuleSIG', '2.6.2.2'
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # 将最低部署版本设置为 11.0 或更高（根据你的主项目需求）
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+    end
+  end
+end
+
 
 end
  

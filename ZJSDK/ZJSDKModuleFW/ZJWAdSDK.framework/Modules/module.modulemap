@@ -1,0 +1,6 @@
+framework module ZJWAdSDK {
+  umbrella header "ZJWAdSDK.h"
+  export *
+
+  module * { export * }
+}

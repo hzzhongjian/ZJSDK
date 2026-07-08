@@ -1,0 +1,6 @@
+framework module ZJ_YSAdSDK {
+  umbrella header "YSAdvSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
