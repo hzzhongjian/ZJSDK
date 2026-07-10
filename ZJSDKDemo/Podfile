@@ -16,7 +16,7 @@ target 'ZJSDKDemo' do
 #    end
 #  end
 
-pod 'DSPSDK', '1.0.4.0'
+pod 'DSPSDK', '1.0.4.1'
 pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
 pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'

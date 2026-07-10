@@ -52,6 +52,7 @@ extern ZJAdADNName const ZJAdADNNameSIGMOB; // sigmob
 extern ZJAdADNName const ZJAdADNNameOCTOPUS; // 章鱼
 extern ZJAdADNName const ZJAdADNNameQuMeng; // 趣盟
 extern ZJAdADNName const ZJAdADNNameBeiZi; // 倍孜
+extern ZJAdADNName const ZJAdADNNameDSP;// 自持DSP平台
 extern ZJAdADNName const ZJAdADNNameTanx; // Tanx
 extern ZJAdADNName const ZJAdADNNameQiYun; // 奇运
 extern ZJAdADNName const ZJAdADNNameTaKu; // 塔酷
