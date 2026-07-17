@@ -13,7 +13,7 @@ FOUNDATION_EXPORT double AdWangMaiSDKVersionNumber;
 //! Project version string for ZJ_AdWangMaiSDK.
 FOUNDATION_EXPORT const unsigned char AdWangMaiSDKVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <ZJ_XAdSDK/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <ZJ_AdWangMaiSDK/PublicHeader.h>
 
 
 #import <ZJ_XAdSDK/ZJ_XAdWangMaiSDk.h>
@@ -32,7 +32,3 @@ FOUNDATION_EXPORT const unsigned char AdWangMaiSDKVersionString[];
 #import <ZJ_XAdSDK/ZJ_XAdNativeAd.h>
 #import <ZJ_XAdSDK/ZJ_XAdNativeAdResponse.h>
 #import <ZJ_XAdSDK/ZJ_XAdNativeDelegete.h>
-
-#import <ZJ_XAdSDK/ZJ_XAdWMNativeAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdWMNativeAdData.h>
-#import <ZJ_XAdSDK/ZJ_XAdWMNativeAdDelegate.h>

@@ -194,7 +194,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param cell 短剧的cell
 /// @param customView `djx_playletDetailCellCustomView:`返回的自定义View，短剧的cell内部会持有
 /// @param playletInfo 短剧的数据
-- (void)zjAdapter_shortplayPlayletDetailCell:(UITableViewCell *)cell updateCustomView:(UIView *)customView withPlayletData:(id)playletInfo;
+- (void)zjAdapter_shortplayPlayletDetailCell:(UITableViewCell *)cell updateCustomView:(UIView *)customView withPlayletData:(id<ZJContentInfo>)playletInfo;
 
 /// 当cell执行到layoutSubviews时会回调此协议方法
 /// @param cell 短剧的cell

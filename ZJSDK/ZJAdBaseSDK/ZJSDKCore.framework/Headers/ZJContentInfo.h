@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ZJSDKCore/ZJPlayletInfoModel.h>
+
 typedef NS_ENUM(NSUInteger, ZJContentInfoType) {
     ZJContentInfoTypeUnknown,         //未知，正常不会出现
     ZJContentInfoTypeNormal,          //普通信息流
@@ -25,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 // ZJContentInfoTypeAd = 2,              //SDK内部广告
 //ZJContentInfoTypeEmbeded = 100    //外部广告
 - (NSInteger)contentInfoType;
+
+@property (nonatomic, readonly) ZJPlayletInfoModel *infoModel;
 
 @end
 

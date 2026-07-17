@@ -88,3 +88,4 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJNativeRewardAdView.h>
 #import <ZJSDKCore/ZJNativeNativeExpressAdView.h>
 #import <ZJSDKCore/ZJDecryptionUtils.h>
+#import <ZJSDKCore/ZJPlayletInfoModel.h>

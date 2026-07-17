@@ -84,6 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
 // posId代表广告位id
 + (NSDictionary *)getSdkServerBiddingInfo:(NSString *)posId;
 
+// 通过广告位id获取广告位的类型
++ (NSString *)getAdType:(NSString *)adId;
+
 @end
 
 NS_ASSUME_NONNULL_END

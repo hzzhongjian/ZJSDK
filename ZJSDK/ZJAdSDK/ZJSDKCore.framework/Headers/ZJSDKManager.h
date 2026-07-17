@@ -51,6 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDictionary *)getSdkServerBiddingInfo:(NSString *)posId;
 
+- (NSString *)getAdType:(NSString *)adId;
+
 @end
 
 NS_ASSUME_NONNULL_END

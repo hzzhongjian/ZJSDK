@@ -37,6 +37,12 @@ typedef NS_ENUM(NSInteger, NativeAdType) {
 @property (nonatomic,strong) NSArray *imagesURL;
 // 视频URL
 @property (nonatomic,copy) NSString *videoUrl;
+// 视频时长
+@property (nonatomic,assign) NSInteger duration;
+// 素材宽度
+@property (nonatomic,assign) NSInteger materialWidth;
+// 素材高度
+@property (nonatomic,assign) NSInteger materialHeight;
 /// 物料类型
 @property (nonatomic,assign) NativeAdType adType;
 

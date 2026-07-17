@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
   @brief 初始化SDK
  @param appToken 平台生成的appToken
- @param appKey 应用key
+ @param appKey 媒体key
  @param appId 小程序跳转所需appId,用于向微信注册应用
  @param universalLink 小程序跳转所需universalLink,用于向微信注册应用
  @param handler 初始化结果
