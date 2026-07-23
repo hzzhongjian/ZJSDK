@@ -23,8 +23,6 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJProjectHelper.h>
 #import <ZJSDKCore/ZJAdBaseNetworking.h>
 #import <ZJSDKCore/ZJSDKGlobalAdConfig.h>
-#import <ZJSDKCore/ZJLocalAdRewardVideoAd.h>
-#import <ZJSDKCore/ZJLocalAdFullScreenVideoAd.h>
 #import <ZJSDKCore/ZJXORUtils.h>
 #import <ZJSDKCore/ZJCoreCrypto.h>
 #import <ZJSDKCore/SliderLabel.h>
@@ -60,7 +58,6 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJImageTextAdapter.h>
 #import <ZJSDKCore/ZJInterstitialAdAdapter.h>
 #import <ZJSDKCore/ZJInvoker.h>
-#import <ZJSDKCore/ZJLocalAdInterstitialAd.h>
 #import <ZJSDKCore/ZJMediaBidResult.h>
 #import <ZJSDKCore/ZJMiniParamAdAdapter.h>
 #import <ZJSDKCore/ZJNativeAdAdapter.h>

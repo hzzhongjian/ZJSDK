@@ -85,6 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否允许获取IP地址
 @property (nonatomic, assign) BOOL canUseIPAddress;
 
+/// 短剧设置是否返回带有备案号的， true仅有备案号、false全量内容(默认)
+@property (nonatomic, assign) BOOL isOnlyICPNumber;
+
+/// 短剧设置是否打开青少年模式，默认不打开
+@property (nonatomic, assign) BOOL turnOnTeenMode;
+
 @end
 
 NS_ASSUME_NONNULL_END
