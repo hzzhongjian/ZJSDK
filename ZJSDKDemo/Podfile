@@ -16,8 +16,12 @@ target 'ZJSDKDemo' do
 #    end
 #  end
 
-pod 'DSPSDK', '1.0.4.1'
-pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
+#pod 'ZJSDK/ZJSDKModulePangle'
+
+pod 'DSPSDK', '1.0.4.2'
+
+
+pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
 pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
 pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
@@ -29,6 +33,7 @@ pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
 
 #pod 'ZJSDK/ZJSDKBaseModuleDSP', :path => '../'
 #pod 'ZJSDK/ZJSDKBaseModuleGDT', :path => '../'

@@ -159,6 +159,7 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 @property (nonatomic, copy) NSString *type;
 
+/// 广告位id
 @property (nonatomic, copy) NSString *zj_adID;
 
 @property (nonatomic, copy) NSString *pd_price;
