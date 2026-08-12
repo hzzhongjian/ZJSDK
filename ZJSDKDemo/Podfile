@@ -20,7 +20,6 @@ target 'ZJSDKDemo' do
 
 pod 'DSPSDK', '1.0.4.2'
 
-
 pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
 pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
@@ -82,6 +81,18 @@ pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
 #pod 'SmartdigimktCNSDK','6.5.66'
 
 #pod 'ZJSDK/ZJSDKModuleSIG', '2.6.2.2'
+
+#pod 'TPNiOS','6.5.74'
+##TPN Adx SDK(necessary)
+#pod 'TPNMediationAdxSmartdigimktAdapter','6.5.75.2.2'
+
+
+#pod 'TPNMediationFacebookAdapter','6.21.1.2.0'
+#pod 'TPNMediationAdmobAdapter','13.6.0.2.1'
+#pod 'TPNMediationMintegralAdapter','7.7.9.0'
+
+#pod 'TPNDebugUISDK','1.0.8'
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.3.0'
+  s.version          = '2.6.3.1'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -50,7 +50,6 @@ TODO: Add long description of the pod here.
         ss.resource = ['ZJSDK/ZJAdSDK/*.bundle']
         ss.dependency 'Masonry'
         ss.dependency 'ReactiveObjC'
-        ss.dependency 'lottie-ios', '2.5.3'
     end
     
     ### GDT适配器兼容版
@@ -154,7 +153,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleBeiZi' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~> 4.90'
+        ss.dependency 'BeiZiSDK-iOS'
     end
  
 #   s.subspec 'ZJSDKModuleWM' do |ss|
@@ -243,6 +242,7 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
+        ss.resource             = 'ZJSDK/ZJSDKModuleQiYun/*.bundle'
     end
 
     ###TaKu适配器兼容版
@@ -363,7 +363,6 @@ TODO: Add long description of the pod here.
         ss.resource             = 'ZJSDK/ZJSDKModuleYS/*.bundle'
         ss.dependency 'Masonry'
         ss.dependency 'ReactiveObjC'
-        ss.dependency 'lottie-ios', '2.5.3'
     end
 
     ### GDT适配器兼容版
