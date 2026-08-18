@@ -52,6 +52,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    Class cls = NSClassFromString(@"ZJTakuADNSplashAdapter");
+    NSLog(@"%@", cls);
 //    [ZJAdSDK registerAppId:@"Z4072098911"];
     [ZJAdSDK registerAppId:ZJ_Appid];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];

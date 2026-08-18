@@ -20,45 +20,45 @@ NS_ASSUME_NONNULL_BEGIN
  *  广告加载成功
  * @param interstititalAd  广告对象
  */
-- (void)zjcj_InterAdLoadSuccess:(ZJ_CJInterstitialAd *)interstititalAd;
+- (void)zj_cj_InterAdLoadSuccess:(ZJ_CJInterstitialAd *)interstititalAd;
 
 /**
  *  广告加载失败
  * @param interstititalAd  广告对象
  * @param error  错误信息
  */
-- (void)zjcj_InterAdLoadFail:(ZJ_CJInterstitialAd *)interstititalAd withError:(NSError *)error;
+- (void)zj_cj_InterAdLoadFail:(ZJ_CJInterstitialAd *)interstititalAd withError:(NSError *)error;
 
 
 /**
  * 广告展示成功
  * @param interstititalAd  广告对象
  */
-- (void)zjcj_InterAdShowSuccess:(ZJ_CJInterstitialAd *)interstititalAd;
+- (void)zj_cj_InterAdShowSuccess:(ZJ_CJInterstitialAd *)interstititalAd;
 
 /**
  * 广告展示失败
  * @param interstititalAd  广告对象
  */
-- (void)zjcj_InterAdShowFail:(ZJ_CJInterstitialAd *)interstititalAd withError:(NSError *)error;
+- (void)zj_cj_InterAdShowFail:(ZJ_CJInterstitialAd *)interstititalAd withError:(NSError *)error;
 
 /**
  * 广告点击
  * @param interstititalAd  广告数据
  */
-- (void)zjcj_InterAdDidClicked:(ZJ_CJInterstitialAd *)interstititalAd;
+- (void)zj_cj_InterAdDidClicked:(ZJ_CJInterstitialAd *)interstititalAd;
 
 /**
  * 广告关闭
  * @param interstititalAd  广告数据
  */
-- (void)zjcj_InterAdDidClosed:(ZJ_CJInterstitialAd *)interstititalAd;
+- (void)zj_cj_InterAdDidClosed:(ZJ_CJInterstitialAd *)interstititalAd;
 
 /**
  * sdk广告跳转落地页关闭回调
  * @param interstititalAd  广告对象
  */
-- (void)zjcj_InterAdWebPageClose:(ZJ_CJInterstitialAd *)interstititalAd;
+- (void)zj_cj_InterAdWebPageClose:(ZJ_CJInterstitialAd *)interstititalAd;
 
 @end
 
@@ -97,6 +97,21 @@ NS_ASSUME_NONNULL_BEGIN
  * 聚合竞价结果回传
  */
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
+
+/**
+ * 获取图片素材地址
+ */
+- (NSArray<NSString *> *)getImageFileUrls;
+
+/**
+ * 获取视频素材地址
+ */
+- (NSArray<NSString *> *)getVideoFileUrls;
+
+/**
+ * 获取落地页地址
+ */
+- (NSString *)getLandpageUrl;
 
 @end
 

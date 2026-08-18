@@ -1,5 +1,5 @@
 //
-//  ZJ_CJ_VideoPlayerView.h
+//  ZJ_CJVideoPlayerView.h
 //  ZJ_CJAdSDK
 //
 //  Created by coderqi on 2025/12/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJ_CJ_VideoPlayerView : UIView
+@interface ZJ_CJVideoPlayerView : UIView
 
 /**
  * 是否在滚动导致可见面积不足时自动暂停，再次露出时恢复播放（适用于列表/信息流等）。
@@ -22,13 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
  * 设置视频播放状态回调
  * @param callback 状态变化时的回调
  */
-- (void)setStateCallback:(nullable ZJ_CJ_VideoPlayerStateCallback)callback;
+- (void)setStateCallback:(nullable ZJ_CJVideoPlayerStateCallback)callback;
 
 /**
  * 设置视频播放进度回调
  * @param callback 进度变化时的回调，间隔（1秒）
  */
-- (void)setProgressCallback:(nullable ZJ_CJ_VideoPlayerProgressCallback)callback;
+- (void)setProgressCallback:(nullable ZJ_CJVideoPlayerProgressCallback)callback;
 
 /**
  * 开始播放视频
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 播放器状态
  * @return SYVideoPlayerState
  */
-- (ZJ_CJ_VideoPlayerState)playerState;
+- (ZJ_CJVideoPlayerState)playerState;
 
 /**
  * 释放资源

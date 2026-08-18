@@ -9,17 +9,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ZJ_CJ_InitResultBlock)(BOOL isSucc, NSError * _Nullable error);
+typedef void (^ZJ_CJInitResultBlock)(BOOL isSucc, NSError * _Nullable error);
 
 @interface ZJ_CJAdSDKManager : NSObject
 
 /**
  * SDK 初始化接口，请在 app 初始化时调用。
- * @param clientId - ZJ_CJ_开发者后台创建的clientId
- * @param clientSecret - ZJ_CJ_开发者后台创建的clientSecret
- * @param resultBlock - ZJ_CJ_ SDK初始化结果
+ * 可在任意线程调用；`resultBlock` 保证在主线程回调。
+ * @param clientId - ZJ_CJ开发者后台创建的clientId
+ * @param clientSecret - ZJ_CJ开发者后台创建的clientSecret
+ * @param resultBlock - ZJ_CJ SDK初始化结果（主线程回调）
  */
-+ (NSError *)initWithClientId:(NSString *)clientId andClientSecret:(NSString *)clientSecret andInitResult:(ZJ_CJ_InitResultBlock)resultBlock;
++ (NSError *)initWithClientId:(NSString *)clientId andClientSecret:(NSString *)clientSecret andInitResult:(ZJ_CJInitResultBlock)resultBlock;
 
 /**
  * 获取 SDK 版本
@@ -27,8 +28,11 @@ typedef void (^ZJ_CJ_InitResultBlock)(BOOL isSucc, NSError * _Nullable error);
 + (NSString *)SDKVersion;
 
 /**
- *  是否允许sdk 获取当前设备经纬度信息
- *  @param canGetLBSBySDK    默认NO，不允许
+ * 是否允许 SDK 获取设备经纬度（默认 NO）。
+ * 设为 YES 后：已授权则读取坐标；权限未决定时，仅当宿主 Info.plist 已配置
+ * NSLocationWhenInUseUsageDescription 等定位用途文案才会弹出系统授权框；
+ * 宿主未声明定位权限时 SDK 不会弹窗，请求照常发出且坐标为空。
+ * @param canGetLBSBySDK YES=允许按上述规则获取；NO=不获取
  */
 + (void)getDeviceLBSBySDK:(BOOL)canGetLBSBySDK;
 
@@ -45,6 +49,13 @@ typedef void (^ZJ_CJ_InitResultBlock)(BOOL isSucc, NSError * _Nullable error);
  */
  + (void)updateLocalLBSLon:(nullable NSString *)lon
                        lat:(nullable NSString *)lat;
+
+/**
+ *  接入方透传设备ID
+ *  若 deviceID 非空，SDK 直接使用该值作为设备ID，不再自行请求获取。
+ *  @param deviceID 媒体获取的设备ID字符串；传 nil 或空串表示不透传，由 SDK 自行获取
+ */
++ (void)setDeviceID:(nullable NSString *)deviceID;
 
 /**
  *  是否打开个性化广告开关

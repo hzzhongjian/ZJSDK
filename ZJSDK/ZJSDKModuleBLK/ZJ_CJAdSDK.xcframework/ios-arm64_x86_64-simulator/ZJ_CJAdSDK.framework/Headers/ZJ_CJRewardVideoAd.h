@@ -21,69 +21,69 @@ NS_ASSUME_NONNULL_BEGIN
  *  广告加载成功
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdLoadSuccess:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdLoadSuccess:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  *  广告加载失败
  * @param rewardAd  广告对象
  * @param error  错误信息
  */
-- (void)zjcj_RewardAdLoadFail:(ZJ_CJRewardVideoAd *)rewardAd withError:(NSError *)error;
+- (void)zj_cj_RewardAdLoadFail:(ZJ_CJRewardVideoAd *)rewardAd withError:(NSError *)error;
 
 
 /**
  * 广告展示成功
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdShowSuccess:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdShowSuccess:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  * 广告展示失败
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdShowFail:(ZJ_CJRewardVideoAd *)rewardAd withError:(NSError *)error;
+- (void)zj_cj_RewardAdShowFail:(ZJ_CJRewardVideoAd *)rewardAd withError:(NSError *)error;
 
 /**
  * 广告播放开始
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdPlayStart:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdPlayStart:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  * 广告播放结束
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdPlayFinished:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdPlayFinished:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**·
  * 广告点击
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdDidClicked:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdDidClicked:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  * 广告关闭
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdDidClosed:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdDidClosed:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  * 广告点击跳过
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdDidSkiped:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdDidSkiped:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  * sdk广告跳转落地页关闭回调
  * @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdWebPageClose:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdWebPageClose:(ZJ_CJRewardVideoAd *)rewardAd;
 
 /**
  *  广告任务完成
  *  @param rewardAd  广告对象
  */
-- (void)zjcj_RewardAdTaskCompleted:(ZJ_CJRewardVideoAd *)rewardAd;
+- (void)zj_cj_RewardAdTaskCompleted:(ZJ_CJRewardVideoAd *)rewardAd;
 
 @end
 
@@ -122,6 +122,21 @@ NS_ASSUME_NONNULL_BEGIN
  * 聚合竞价结果回传
  */
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
+
+/**
+ * 获取图片素材地址
+ */
+- (NSArray<NSString *> *)getImageFileUrls;
+
+/**
+ * 获取视频素材地址
+ */
+- (NSArray<NSString *> *)getVideoFileUrls;
+
+/**
+ * 获取落地页地址
+ */
+- (NSString *)getLandpageUrl;
 
 @end
 

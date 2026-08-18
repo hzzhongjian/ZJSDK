@@ -21,24 +21,24 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告展示
  * @param adObject  广告数据
  */
-- (void)zjcj_NativeAdShow:(ZJ_CJNativeAdObject *)adObject;
+- (void)zj_cj_NativeAdShow:(ZJ_CJNativeAdObject *)adObject;
 
 /**
  * 广告点击
  * @param adObject  广告数据
  */
-- (void)zjcj_NativeAdClicked:(ZJ_CJNativeAdObject *)adObject;
+- (void)zj_cj_NativeAdClicked:(ZJ_CJNativeAdObject *)adObject;
 /**
  * 广告关闭
  * @param adObject  广告数据
  */
-- (void)zjcj_NativeAdClosed:(ZJ_CJNativeAdObject *)adObject;
+- (void)zj_cj_NativeAdClosed:(ZJ_CJNativeAdObject *)adObject;
 
 /**
  * 广告关闭
  * @param adObject  广告数据
  */
-- (void)zjcj_NativeAdWebPageClosed:(ZJ_CJNativeAdObject *)adObject;
+- (void)zj_cj_NativeAdWebPageClosed:(ZJ_CJNativeAdObject *)adObject;
 
 @end
 
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (ZJ_CJNativeExpressView *)getExpressView;
 
 /// 获取广告的视频播放器
-- (ZJ_CJ_VideoPlayerView *)getMediaView;
+- (ZJ_CJVideoPlayerView *)getMediaView;
 
 @property (nonatomic, weak) id <ZJ_CJNativeAdObjectDelegate> delegate;
 
@@ -70,6 +70,21 @@ NS_ASSUME_NONNULL_BEGIN
  * 聚合竞价结果回传
  */
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
+
+/**
+ * 获取图片素材地址
+ */
+- (NSArray<NSString *> *)getImageFileUrls;
+
+/**
+ * 获取视频素材地址
+ */
+- (NSArray<NSString *> *)getVideoFileUrls;
+
+/**
+ * 获取落地页地址
+ */
+- (NSString *)getLandpageUrl;
 
 @end
 

@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJ_CJNativeAdDelegate <NSObject>
 
-- (void)zjcj_nativeAdLoadSuccess:(ZJ_CJNativeAd *)nativeAd;
+- (void)zj_cj_nativeAdLoadSuccess:(ZJ_CJNativeAd *)nativeAd;
 
-- (void)zjcj_nativeAdLoadFail:(ZJ_CJNativeAd *)nativeAd withError:(NSError *)error;
+- (void)zj_cj_nativeAdLoadFail:(ZJ_CJNativeAd *)nativeAd withError:(NSError *)error;
 
 
 
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id <ZJ_CJNativeAdDelegate> delegate;
 
-/// 广告对象，在zjcj_nativeAdLoadSuccess回调后有值
+/// 广告对象，在zj_cj_nativeAdLoadSuccess回调后有值
 @property (nonatomic, strong, readonly, nullable) NSArray <ZJ_CJNativeAdObject *> *nativeAdObjects;
 
 /**

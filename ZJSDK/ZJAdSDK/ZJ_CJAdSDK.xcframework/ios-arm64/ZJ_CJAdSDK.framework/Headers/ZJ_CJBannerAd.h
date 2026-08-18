@@ -1,5 +1,5 @@
 //
-//  ZJCJBannerAd.h
+//  ZJ_CJBannerAd.h
 //  ZJ_CJAdSDK
 //
 //  Created by coderqi on 2025/11/13.
@@ -21,45 +21,45 @@ NS_ASSUME_NONNULL_BEGIN
  *  广告加载成功
  * @param bannerAd  广告对象
  */
-- (void)zjcj_BannerAdLoadSuccess:(ZJ_CJBannerAd *)bannerAd;
+- (void)zj_cj_BannerAdLoadSuccess:(ZJ_CJBannerAd *)bannerAd;
 
 /**
  *  广告加载失败
  * @param bannerAd  广告对象
  * @param error  错误信息
  */
-- (void)zjcj_BannerAdLoadFail:(ZJ_CJBannerAd *)bannerAd withError:(NSError *)error;
+- (void)zj_cj_BannerAdLoadFail:(ZJ_CJBannerAd *)bannerAd withError:(NSError *)error;
 
 
 /**
  * 广告展示成功
  * @param bannerAd  广告对象
  */
-- (void)zjcj_BannerAdShowSuccess:(ZJ_CJBannerAd *)bannerAd;
+- (void)zj_cj_BannerAdShowSuccess:(ZJ_CJBannerAd *)bannerAd;
 
 /**
  * 广告展示失败
  * @param bannerAd  广告对象
  */
-- (void)zjcj_BannerAdShowFail:(ZJ_CJBannerAd *)bannerAd withError:(NSError *)error;
+- (void)zj_cj_BannerAdShowFail:(ZJ_CJBannerAd *)bannerAd withError:(NSError *)error;
 
 /**
  * 广告点击
  * @param bannerAd  广告数据
  */
-- (void)zjcj_BannerAdDidClicked:(ZJ_CJBannerAd *)bannerAd;
+- (void)zj_cj_BannerAdDidClicked:(ZJ_CJBannerAd *)bannerAd;
 
 /**
  * 广告关闭
  * @param bannerAd  广告数据
  */
-- (void)zjcj_BannerAdDidClosed:(ZJ_CJBannerAd *)bannerAd;
+- (void)zj_cj_BannerAdDidClosed:(ZJ_CJBannerAd *)bannerAd;
 
 /**
  * sdk广告跳转落地页关闭回调
  * @param bannerAd  广告对象
  */
-- (void)zjcj_BannerAdWebPageClose:(ZJ_CJBannerAd *)bannerAd;
+- (void)zj_cj_BannerAdWebPageClose:(ZJ_CJBannerAd *)bannerAd;
 
 @end
 
@@ -101,6 +101,21 @@ NS_ASSUME_NONNULL_BEGIN
  * 聚合竞价结果回传
  */
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
+
+/**
+ * 获取图片素材地址
+ */
+- (NSArray<NSString *> *)getImageFileUrls;
+
+/**
+ * 获取视频素材地址
+ */
+- (NSArray<NSString *> *)getVideoFileUrls;
+
+/**
+ * 获取落地页地址
+ */
+- (NSString *)getLandpageUrl;
 
 @end
 

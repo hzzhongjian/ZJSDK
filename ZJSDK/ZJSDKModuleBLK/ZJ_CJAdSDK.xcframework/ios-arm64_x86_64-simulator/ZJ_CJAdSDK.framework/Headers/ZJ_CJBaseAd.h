@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJ_CJBaseAd : NSObject
 
+/// 广告的拓展信息
+@property (nonatomic, strong, readonly)NSMutableDictionary *extInfo;
+
 - (BOOL)isReady;
 
 @end

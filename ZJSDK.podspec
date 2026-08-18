@@ -589,6 +589,31 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleJuTui/*.xcframework'
     end
 
+    ### ZJ-Taku的适配器6.5.xx
+    s.subspec 'ZJSDKTakuAdapter65' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKTakuAdapter/6.5.xx/*.a'
+    end
+
+    ### ZJ-Taku的适配器6.4.xx
+    s.subspec 'ZJSDKTakuAdapter64' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKTakuAdapter/6.4.xx/*.a'
+    end
+
+    ### ZJ-ToBid的适配器
+    s.subspec 'ZJSDKToBidAdapter' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKToBidAdapter/*.a'
+    end
+
+    ### ZJ-轻便聚合的适配器
+    s.subspec 'ZJSDKBeiZiAdapter' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKBeiZiAdapter/*.a'
+    end
+
+    ### ZJ-Gromore的适配器
+    s.subspec 'ZJSDKGromoreAdapter' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKGromoreAdapter/*.a'
+    end
+
     ### 谷歌适配器
     s.subspec 'ZJSDKModuleGoogle' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGoogle/*.a'

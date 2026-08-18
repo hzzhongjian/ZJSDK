@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJ_CJNativeAdSlot : ZJ_CJSlot
 
-/// 任务完成之后，是否需要后端检查验证任务有效性，默认NO
+/// 广告的尺寸大小
 @property (nonatomic, assign) CGSize adSize;
 /// 渲染类型，默认是模板渲染
 @property (nonatomic, assign) ZJ_CJAdRenderType renderType;

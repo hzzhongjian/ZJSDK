@@ -1,5 +1,5 @@
 //
-//  ZJCJSplashAd.h
+//  ZJ_CJSplashAd.h
 //  ZJ_CJAdSDK
 //
 //  Created by coderqi on 2025/11/13.
@@ -18,43 +18,43 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  广告请求成功，并且素材加载完成，在此选择调用showAd来展示广告
  */
-- (void)zjcj_SplashAdDidLoad:(ZJ_CJSplashAd *)splashAd;
+- (void)zj_cj_SplashAdDidLoad:(ZJ_CJSplashAd *)splashAd;
 
 /**
  *  广告请求失败
  *  @param error 失败原因
  */
-- (void)zjcj_SplashAdFailedToLoad:(ZJ_CJSplashAd *)splashAd withError:(NSError *)error;
+- (void)zj_cj_SplashAdFailedToLoad:(ZJ_CJSplashAd *)splashAd withError:(NSError *)error;
 
 /**
  *  广告素材缓存完毕
  */
-- (void)zjcj_SplashAdDidCacheFinished:(ZJ_CJSplashAd *)splashAd;
+- (void)zj_cj_SplashAdDidCacheFinished:(ZJ_CJSplashAd *)splashAd;
 
 /**
  *  广告即将展示
  */
-- (void)zjcj_SplashAdWillShow:(ZJ_CJSplashAd *)splashAd;
+- (void)zj_cj_SplashAdWillShow:(ZJ_CJSplashAd *)splashAd;
 
 /**
  *  广告展示完毕
  */
-- (void)zjcj_SplashAdDidShow:(ZJ_CJSplashAd *)splashAd;
+- (void)zj_cj_SplashAdDidShow:(ZJ_CJSplashAd *)splashAd;
 
 /**
  *  广告展示失败，未能正确显示在屏幕上: 如调用showAd时，window不是keywindow
  *  @param error 失败原因
  */
-- (void)zjcj_SplashAdFailedToShow:(ZJ_CJSplashAd *)splashAd withError:(NSError *)error;
+- (void)zj_cj_SplashAdFailedToShow:(ZJ_CJSplashAd *)splashAd withError:(NSError *)error;
 /**
  *  广告点击回调
  */
-- (void)zjcj_SplashAdDidClick:(ZJ_CJSplashAd *)splashAd;
+- (void)zj_cj_SplashAdDidClick:(ZJ_CJSplashAd *)splashAd;
 
 /**
  *  广告关闭回调：跳过/倒计时结束/点击广告后广告view被移除
  */
-- (void)zjcj_SplashAdDidClose:(ZJ_CJSplashAd *)splashAd isSkip:(BOOL)isSkip;
+- (void)zj_cj_SplashAdDidClose:(ZJ_CJSplashAd *)splashAd isSkip:(BOOL)isSkip;
 
 /**
  *  广告转化完成：关闭落地页或者跳转到其他应用
@@ -109,6 +109,21 @@ NS_ASSUME_NONNULL_BEGIN
  * 聚合竞价结果回传
  */
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
+
+/**
+ * 获取图片素材地址
+ */
+- (NSArray<NSString *> *)getImageFileUrls;
+
+/**
+ * 获取视频素材地址
+ */
+- (NSArray<NSString *> *)getVideoFileUrls;
+
+/**
+ * 获取落地页地址
+ */
+- (NSString *)getLandpageUrl;
 
 @end
 

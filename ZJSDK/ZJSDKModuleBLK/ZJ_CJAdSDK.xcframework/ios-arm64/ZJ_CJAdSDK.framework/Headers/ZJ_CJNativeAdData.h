@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface ZJ_CJ_ImageInfo : NSObject
+@interface ZJ_CJImageInfo : NSObject
 
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, assign) NSInteger width;
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ZJ_CJ_VideoInfo : NSObject
+@interface ZJ_CJVideoInfo : NSObject
 
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, assign) NSInteger width;
@@ -58,13 +58,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSArray <NSString *>*imageUrls;
 
 /// 广告图片对象集合
-@property (nonatomic, strong, readonly) NSArray <ZJ_CJ_ImageInfo *>*images;
+@property (nonatomic, strong, readonly) NSArray <ZJ_CJImageInfo *>*images;
 
 /// 是否是视频类广告
 @property (nonatomic, assign, readonly) BOOL isVideoAd;
 
 /// 视频类素材描述
-@property (nonatomic, strong, readonly) ZJ_CJ_VideoInfo *videoAdInfo;
+@property (nonatomic, strong, readonly) ZJ_CJVideoInfo *videoAdInfo;
 
 /// 是否下载类广告
 @property (nonatomic, assign, readonly) BOOL isDownloadAd;
