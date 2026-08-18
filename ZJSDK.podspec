@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.3.1'
+  s.version          = '2.6.3.2'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -102,9 +102,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleKS' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ##    ss.dependency 'KSAdSDK', '3.3.69'
-        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
+        ss.dependency 'KSAdSDK'
     end
 
     ### DSP适配器
@@ -139,7 +137,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleBD' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'BaiduMobAdSDK', '~> 5.37'
+        ss.dependency 'BaiduMobAdSDK'
     end
 
 
@@ -415,8 +413,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleKS' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleKS/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
-        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleKS/KSAdSDK/*.xcframework'
+        ss.dependency 'KSAdSDK'
     end
 
     ### DSP适配器
@@ -451,7 +448,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleBD' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBD/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.dependency 'BaiduMobAdSDK', '~> 5.37'
+        ss.dependency 'BaiduMobAdSDK'
     end
 
 

@@ -20,10 +20,10 @@ target 'ZJSDKDemo' do
 
 pod 'DSPSDK', '1.0.4.2'
 
-pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
+#pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
 #pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 #pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
 #pod 'ToBid-iOS' # 对接tobid需要
 #pod 'ZJSDK/ZJSDKModuleSIGCompatible', :path => '../'
 #pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
