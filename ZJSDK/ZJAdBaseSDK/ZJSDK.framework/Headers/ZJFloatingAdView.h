@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class ZJFloatingAdView;
+
 @protocol ZJFloatingAdViewDelegate <NSObject>
 
 //广告加载完成

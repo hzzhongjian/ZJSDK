@@ -20,7 +20,6 @@
 #import <ZJSDKCore/ZJSDKPrivacyProvider.h>
 #import "ZJDemoPrivacyProvider.h"
 #import <ZJSDKCore/ZJProjectHelper.h>
-#import <ZJSDKCore/ZJDeviceHelper.h>
 #import <ZJSDKCore/ZJCommon.h>
 #import "VCUtils.h"
 
@@ -52,15 +51,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    Class cls = NSClassFromString(@"ZJTakuADNSplashAdapter");
-    NSLog(@"%@", cls);
 //    [ZJAdSDK registerAppId:@"Z4072098911"];
     [ZJAdSDK registerAppId:ZJ_Appid];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
     NSLog(@"ZJSDK版本号：%@",version);
-//    NSLog(@"idfa:%@", [ZJDeviceHelper IDFA]);
-    NSLog(@"uuid:%@", [ZJDeviceHelper UUID]);
     //    ZJSDKPrivacyAuthorityModel *privacyAuthorityModel = [[ZJSDKPrivacyAuthorityModel alloc] init];
     ////    NSLog(@"%@", privacyAuthorityModel);
     //    privacyAuthorityModel.canUseIDFA = NO;

@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <ZJSDKCore/ZJNewsAdProtocol.h>
+
+
 NS_ASSUME_NONNULL_BEGIN
+
 @class ZJNewsAdView;
+
 @protocol ZJNewsAdViewDelegate <NSObject>
+
 @optional
 /**
  news广告加载成功
@@ -41,10 +46,20 @@ NS_ASSUME_NONNULL_BEGIN
  canGoBack状态监听
  */
 - (void)zj_newsAd:(ZJNewsAdView *)newsAd canGoBackStateChange:(BOOL)canGoBack;
+
 @end
+
+/**
+ * 该类已废弃，请对接的媒体使用ZJNewsAd来对接新闻资讯，此类将会移除
+ */
+__attribute__((deprecated("No longer supported; please use ZJNewsAd.")))
+
 @interface ZJNewsAdView : UIView <ZJNewsAdProtocol>
+
 @property (nonatomic, copy, readonly) NSString *placementId;
+
 @property (nonatomic, assign) BOOL enableGoBackGesture;
+
 @property (nonatomic, assign) BOOL enableSlide;
 
 @property (nonatomic, weak, nullable) id <ZJNewsAdViewDelegate> delegate;

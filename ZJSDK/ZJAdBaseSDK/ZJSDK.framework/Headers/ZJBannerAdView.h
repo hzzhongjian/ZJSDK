@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /**
- * 该类已废弃，请对接的媒体使用模版信息流来对接banner广告，ZJSDK提供了ZJNativeExpressFeedAdManager代替ZJBannerAdView
+ * 该类已废弃，请对接的媒体使用模版信息流来对接banner广告，ZJSDK提供了ZJNativeExpressFeedAdManager代替ZJBannerAdView，该类将会被移除
  */
 __attribute__((deprecated("No longer supported; please use ZJNativeExpressFeedAdManager.")))
 @interface ZJBannerAdView : UIView<ZJBannerAdProtocol>

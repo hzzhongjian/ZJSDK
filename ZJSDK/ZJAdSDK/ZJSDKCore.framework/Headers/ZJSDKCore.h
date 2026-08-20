@@ -19,7 +19,7 @@ FOUNDATION_EXPORT const unsigned char ZJSDKCoreVersionString[];
 #import <ZJSDKCore/ZJSDKAdEnum.h>
 #import <ZJSDKCore/ZJAdDebugLog.h>
 #import <ZJSDKCore/ZJAdCountdown.h>
-#import <ZJSDKCore/ZJDeviceHelper.h>
+#import <ZJSDKCore/ZJContextProvider.h>
 #import <ZJSDKCore/ZJProjectHelper.h>
 #import <ZJSDKCore/ZJAdBaseNetworking.h>
 #import <ZJSDKCore/ZJSDKGlobalAdConfig.h>

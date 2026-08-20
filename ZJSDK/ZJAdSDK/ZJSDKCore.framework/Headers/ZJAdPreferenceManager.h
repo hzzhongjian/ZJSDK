@@ -49,7 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
 //广告类型获取广告位id
 +(NSString *)getAdDefaultPlacementId:(NSString *)adType;
 
-//+ (NSDictionary *)decryptionZJSDKMediaConfig:(NSString *)dataString;
 
 @end
 

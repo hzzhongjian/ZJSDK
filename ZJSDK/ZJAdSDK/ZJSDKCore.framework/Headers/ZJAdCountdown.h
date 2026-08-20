@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-typedef NS_ENUM(NSInteger,ZJCountdownState){
+
+typedef NS_ENUM(NSInteger, ZJCountdownState)
+{
     ZJCountdownStateNone  = 0,
     ZJCountdownStatePaused,
     ZJCountdownStateResumed,
@@ -22,27 +24,32 @@ typedef void(^ZJCountdownCallBack) (long remainSec, ZJCountdownState state);
 @interface ZJAdCountdown : NSObject
 
 ///计时器状态
-@property(nonatomic,assign,readonly)ZJCountdownState countdownState;
+@property(nonatomic, assign, readonly) ZJCountdownState countdownState;
 
 /**
  @param
  countDownSec : 设置倒计时的时间 &&
  callBack : 倒计时回调
 */
--(void)setCountDown:(long)countDownSec callBack:(ZJCountdownCallBack)callBack;
+- (void)setCountDown:(long)countDownSec callBack:(ZJCountdownCallBack)callBack;
 
 ///开始倒计时
--(void)startCountdown;
+- (void)startCountdown;
+
 ///暂停倒计时
--(void)pauseCountdown;
+- (void)pauseCountdown;
+
 ///继续倒计时
--(void)resumeCountdown;
+- (void)resumeCountdown;
+
 ///重新开始倒计时
--(void)reStartCountdown;
+- (void)reStartCountdown;
+
 ///结束倒计时
--(void)stopCountdown;
+- (void)stopCountdown;
+
 /////关闭倒计时
-//-(void)invalidateTimer;
+//- (void)invalidateTimer;
 
 @end
 

@@ -13,6 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * 该类已废弃，请对接的媒体使用ZJTubePageAd来对接短剧，此类将会移除
+ */
+__attribute__((deprecated("No longer supported; please use ZJTubePageAd.")))
+
 @interface ZJTubePage : ZJAd <ZJContentInfo>
 
 @property (nonatomic, readonly) UIViewController *viewController;

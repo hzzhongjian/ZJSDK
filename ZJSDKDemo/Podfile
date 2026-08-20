@@ -18,22 +18,22 @@ target 'ZJSDKDemo' do
 
 #pod 'ZJSDK/ZJSDKModulePangle'
 
-pod 'DSPSDK', '1.0.4.2'
+pod 'DSPSDK', '1.0.4.3'
 
-#pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
-#pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
+pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #'2.6.2.8'
+pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
+pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
 pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
-#pod 'ToBid-iOS' # 对接tobid需要
-#pod 'ZJSDK/ZJSDKModuleSIGCompatible', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleWanJia', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleQiYun', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
-#pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
+##pod 'ToBid-iOS' # 对接tobid需要
+##pod 'ZJSDK/ZJSDKModuleSIGCompatible', :path => '../'
+pod 'ZJSDK/ZJSDKModuleBeiZi', :path => '../'
+pod 'ZJSDK/ZJSDKModuleWanJia', :path => '../'
+pod 'ZJSDK/ZJSDKModuleQiYun', :path => '../'
+pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
+pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
+pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
+pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
+##pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
 
 #pod 'ZJSDK/ZJSDKTakuAdapter65', :path => '../'
 #pod 'ZJSDK/ZJSDKToBidAdapter', :path => '../'
