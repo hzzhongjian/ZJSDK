@@ -1,0 +1,27 @@
+//
+//  ZJFLAnimationGiftView.h
+//  ZJ_FLAdSDK
+//
+//  Created by Lurich on 2023/5/10.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@protocol ZJFLAnimationGiftDelegate <NSObject>
+
+- (void)adImageClick:(UITapGestureRecognizer *)tap;
+
+@end
+
+@interface ZJFLAnimationGiftView : UIView
+
++ (instancetype)createWithDegate:(nullable id<ZJFLAnimationGiftDelegate>)delegate;
+@property (nonatomic, strong) NSMutableArray *animationViewArray;
+
+- (void)startAnimationWithGesView:(nullable UIView *)gesView;
+
+@end
+
+NS_ASSUME_NONNULL_END

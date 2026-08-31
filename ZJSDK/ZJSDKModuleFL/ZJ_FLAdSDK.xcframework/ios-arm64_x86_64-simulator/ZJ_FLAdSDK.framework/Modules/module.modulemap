@@ -1,0 +1,13 @@
+//
+//  module.modulemap
+//  ADSaasSDK
+//
+//  Created by YJoo on 2025/9/15.
+//
+
+framework module ZJ_FLAdSDK {
+  umbrella header "ZJ_FLAdSDK.h"
+
+  export *
+  module * { export * }
+}

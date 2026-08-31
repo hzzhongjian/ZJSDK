@@ -96,6 +96,9 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 /// 流量组id
 @property (nonatomic, assign) long pos_template_id;
 
+/// 流量分组参数
+@property (nonatomic, strong) NSDictionary *flow_group_params;
+
 @end
 
 
@@ -156,6 +159,9 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 ///摇一摇力度
 @property (nonatomic, strong) NSString *shake_power;
+
+/// 摇一摇次数
+@property (nonatomic, assign) NSInteger shake_times;
 
 @property (nonatomic, copy) NSString *type;
 
@@ -223,6 +229,8 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 /// 记录当前广告是否已经曝光
 @property (nonatomic, assign) BOOL hasReportExposure;
+
+@property (nonatomic, strong) NSDictionary *flow_group_params;
 
 @end
 

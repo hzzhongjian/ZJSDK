@@ -119,6 +119,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告交互类型
 @property (nonatomic, assign) ZJSDKAdInteractionType interactionType;
 
+- (BOOL)nClick;
+
 @end
 
 NS_ASSUME_NONNULL_END

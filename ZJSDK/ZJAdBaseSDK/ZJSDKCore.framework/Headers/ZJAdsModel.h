@@ -39,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 流量组id
 @property (nonatomic, assign) long pos_template_id;
 
+/// 流量分组参数
+@property (nonatomic, strong) NSDictionary *flow_group_params;
+
 //@property (nonatomic, copy) NSArray <AdTemplatesModel *>*templates;
 
 - (NSArray <ZJAdUnionItemModel *> *)parseItems:(NSArray *)items;

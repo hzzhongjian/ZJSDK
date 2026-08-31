@@ -108,6 +108,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 应用切到后台
 - (void)applicationDidEnterBackground;
 
+- (BOOL)nClick;
+
 @end
 
 NS_ASSUME_NONNULL_END
