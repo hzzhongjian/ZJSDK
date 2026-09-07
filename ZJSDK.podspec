@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.3.3'
+  s.version          = '2.6.3.4'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -50,6 +50,7 @@ TODO: Add long description of the pod here.
         ss.resource = ['ZJSDK/ZJAdSDK/*.bundle']
         ss.dependency 'Masonry'
         ss.dependency 'ReactiveObjC'
+        ss.dependency 'ZJSTAdSDK', '~> 1.13.1'
     end
     
     ### GDT适配器兼容版
@@ -363,12 +364,31 @@ TODO: Add long description of the pod here.
         ss.dependency 'ReactiveObjC'
     end
 
+    ###FL定制包适配器兼容版
+    s.subspec 'ZJSDKBaseModuleFLCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleFL/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+    end
+
     ###FL定制包适配器
     s.subspec 'ZJSDKBaseModuleFL' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleFL/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleFL/*.xcframework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleFL/*.xcframework'
+    end
+
+    ###BWT定制包适配器兼容版
+    s.subspec 'ZJSDKBaseModuleBWTCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBWT/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+    end
+
+    ###BWT定制包适配器
+    s.subspec 'ZJSDKBaseModuleBWT' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBWT/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+        ss.dependency 'ZJSTAdSDK', '~> 1.13.1'
     end
 
     ### GDT适配器兼容版

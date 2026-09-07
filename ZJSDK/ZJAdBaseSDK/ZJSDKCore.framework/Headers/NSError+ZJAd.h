@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define kZJBuLuKenErrorDomain @"COM.ZJ.BuLuKen.SDK"
 #define kZJYingShiErrorDomain @"COM.ZJ.YingShi.SDK"
 #define kZJFunLinkErrorDomain @"COM.ZJ.FunLink.SDK"
+#define kZJBWLXErrorDomain @"COM.ZJ.BWLX.SDK"
 
 typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
 {
@@ -62,6 +63,7 @@ typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
     ZJErrorCodeAd_NativeExpress_RepeatedExposure_ERROR = 1000905, // 信息流广告重复曝光的错误
     ZJErrorCodeAd_Native_RepeatedExposure_ERROR = 1000906, // 自渲染广告重复曝光的错误
     ZJErrorCodeAd_NOT_FULL = 100302, // 广告无填充
+    ZJErrorCodeAd_Load_Not_Valid = 100700, // 广告有填充，但广告不合法
 };
 
 

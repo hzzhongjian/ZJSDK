@@ -14,9 +14,6 @@
 #import "ZJ_YSAdSDKBannerView.h"
 #import "ZJ_YSAdSDKExpressFullscreenVideoAdManager.h"
 #import "ZJ_YSAdSDKSplashView.h"
-#import "ZJ_YSAdSDKNativeAdsManager.h"
-#import "ZJ_YSAdSDKMaterialMeta.h"
-#import "ZJ_YSAdSDKNativeAd.h"
 #import "ZJ_YSAdSDKExpressFeedAdManager.h"
 #import "ZJ_YSAdSDKExpressFeedAdView.h"
 

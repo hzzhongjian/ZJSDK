@@ -110,6 +110,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)nClick;
 
+/// 为True意味着要拦截，否则不拦截
+- (BOOL)validVerify;
+
 @end
 
 NS_ASSUME_NONNULL_END
