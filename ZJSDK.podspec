@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.3.4'
+  s.version          = '2.6.3.5'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -241,7 +241,6 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSDK/ZJAdSDK'
         ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
         ss.preserve_paths       = 'ZJSDK/ZJSDKModuleQiYun/*.xcframework'
-        ss.resource             = 'ZJSDK/ZJSDKModuleQiYun/*.bundle'
     end
 
     ###TaKu适配器兼容版
@@ -637,6 +636,11 @@ TODO: Add long description of the pod here.
     ### ZJ-Gromore的适配器
     s.subspec 'ZJSDKGromoreAdapter' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKGromoreAdapter/*.a'
+    end
+
+    ### ZJ-UBiX的适配器
+    s.subspec 'ZJSDKUBiXAdapter' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKUBiXAdapter/*.a'
     end
 
     ### 谷歌适配器

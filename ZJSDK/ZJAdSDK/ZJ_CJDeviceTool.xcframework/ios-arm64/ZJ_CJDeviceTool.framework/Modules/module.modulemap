@@ -1,0 +1,6 @@
+framework module ZJ_CJDeviceTool {
+  umbrella header "ZJ_CJDeviceTool.h"
+  export *
+
+  module * { export * }
+}

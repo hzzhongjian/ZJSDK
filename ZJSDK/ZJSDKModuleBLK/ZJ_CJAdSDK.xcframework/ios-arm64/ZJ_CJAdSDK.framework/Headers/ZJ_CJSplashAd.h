@@ -111,6 +111,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendBidResultNotificationWithInfo:(NSDictionary *)infoDic andResut:(BOOL)isSucc;
 
 /**
+ * 关闭并销毁广告
+ */
+- (void)destoryAd;
+
+/**
  * 获取图片素材地址
  */
 - (NSArray<NSString *> *)getImageFileUrls;
@@ -124,6 +129,13 @@ NS_ASSUME_NONNULL_BEGIN
  * 获取落地页地址
  */
 - (NSString *)getLandpageUrl;
+
+/**
+ * 获取广告素材信息（素材ID + 视频素材地址）。
+ * 仅当全局拓展字段 c_g_m_i=1（canGetMaterialInfo）时返回有效对象，否则返回 nil；
+ * 非视频广告时 videoUrl 为 nil。
+ */
+- (nullable ZJ_CJMaterialInfo *)getMaterialInfo;
 
 @end
 

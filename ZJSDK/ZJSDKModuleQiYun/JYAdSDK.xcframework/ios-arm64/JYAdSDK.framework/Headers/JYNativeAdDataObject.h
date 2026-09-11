@@ -41,10 +41,10 @@ typedef NS_ENUM(NSInteger, JYNativeAdCreativeType) {
     JYNativeAdCreativeType_KS_AdMaterialTypeVideo = (4 << 24) | 1,      // video
     JYNativeAdCreativeType_KS_AdMaterialTypeSingle = (4 << 24) | 2,      // single image
     JYNativeAdCreativeType_KS_AdMaterialTypeAtlas = (4 << 24) | 3,      // multiple image
-    
-    /// 原生自渲染-横版大图16：9
+
+    /// KLN 原生自渲染横版大图 16:9；仅为兼容历史接入保留，SDK 不再产生该类型。
     JYNativeAdCreativeType_KLN_HorBigImage = (5 << 24) | 1001,
-    /// 原生自渲染-横版视频16：9
+    /// KLN 原生自渲染横版视频 16:9；仅为兼容历史接入保留，SDK 不再产生该类型。
     JYNativeAdCreativeType_KLN_HorVideo = (5 << 24) | 1002,
     
     JYNativeAdCreativeType_BD_NORMAL = (6 << 24) | 0, // 一般图文或图片广告
@@ -84,6 +84,9 @@ typedef NS_ENUM(NSInteger, JYNativeAdCreativeType) {
 
     JYNativeAdCreativeType_JYIBG_IMAGE = (22 << 24) | 0,
     JYNativeAdCreativeType_JYIBG_VIDEO = (22 << 24) | 1,
+
+    JYNativeAdCreativeType_FL_IMAGE = (25 << 24) | 0,
+    JYNativeAdCreativeType_FL_VIDEO = (25 << 24) | 1,
 };
 
 typedef NS_ENUM(NSInteger, JYNativeAdInteractionType) {

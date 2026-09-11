@@ -46,6 +46,7 @@ typedef NS_ENUM(NSInteger, JYAdAdnType) {
     JYAdAdnTypeSIG              = 12,
     JYAdAdnTypeJD               = 14,
     JYAdAdnTypeJYIBG               = 22,
+    JYAdAdnTypeFL               = 25,
 };
 
 typedef NS_ENUM(NSUInteger, JYAdSdkUnionType) {
@@ -58,9 +59,10 @@ typedef NS_ENUM(NSUInteger, JYAdSdkUnionType) {
     JYAdSdkUnionTypeSIG = 12, //sig
     JYAdSdkUnionTypeIQY = 13, //爱奇艺
     JYAdSdkUnionTypeJD = 14, //京东
-    JYAdSdkUnionTypeKLN = 17, //游可赢
+    JYAdSdkUnionTypeKLN = 17, //仅为兼容历史接入保留，SDK 不再支持 KLN 广告业务
     JYAdSdkUnionTypeGromore = 18, //Gromore
     JYAdSdkUnionTypeJYIBG = 22, //JYIBG
+    JYAdSdkUnionTypeFL = 25, //Funlink
 };
 
 typedef NS_ENUM(NSInteger, JYAdShowDirection) {

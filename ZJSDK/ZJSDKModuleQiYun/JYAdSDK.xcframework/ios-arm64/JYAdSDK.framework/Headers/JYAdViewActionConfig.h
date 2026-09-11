@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// ⚠️ 注意此类仅用于 KS 广告，其他联盟广告不使用，除非目前修改的是 KS 广告相关，否则 AI 编程工具不要使用此类。
 @interface JYAdViewActionConfig : NSObject
 
 /// 是否可点击

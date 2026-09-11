@@ -4,6 +4,8 @@
 //
 //  Created by coderqi on 2025/12/10.
 //
+//  信息流模板广告 View：支持原生 templateType(1-6) 与 H5 dynamic_adm 动态模板。
+//
 
 #import <UIKit/UIKit.h>
 #import <ZJ_CJAdSDK/ZJ_CJNativeAdData.h>

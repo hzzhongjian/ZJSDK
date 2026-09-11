@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJ_CJSplashAdSlot : ZJ_CJSlot
 
+/// 是否隐藏跳过按钮与倒计时；YES 时不展示 skip、不启动跳过倒计时
+@property (nonatomic, assign) BOOL hideSkipView;
+
 /// ------------------------------------模版配置------------------------------------
 /// 模版背景颜色， 默认白色
 @property (nonatomic, strong) UIColor *bacColor;

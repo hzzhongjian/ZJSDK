@@ -50,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
 //获取时间戳（毫秒）
 + (NSString *)getTimestampSince1970;
 
+//获取时间戳（秒）
++ (NSString *)getTimestampSince1970UnitBeingSeconds;
+
 // 字典转字符串，去除字符串中的特殊字符
 + (NSString *)mapToString:(NSDictionary *)dict;
 
