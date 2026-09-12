@@ -18,6 +18,8 @@ target 'ZJSDKDemo' do
 
 #pod 'ZJSDK/ZJSDKModulePangle'
 
+pod 'PTGAdFramework', '2.3.18'
+
 pod 'DSPSDK', '1.0.4.5'
 
 pod 'ZJSDK/ZJSDKModuleDSP', :path => '../'
