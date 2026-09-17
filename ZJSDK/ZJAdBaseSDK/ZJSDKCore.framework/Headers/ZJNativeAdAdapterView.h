@@ -30,6 +30,24 @@ NS_ASSUME_NONNULL_BEGIN
 //广告曝光错误
 - (void)zjAdapter_nativeAdViewShowError:(ZJNativeAdAdapterView *)nativeAdView error:(NSError *)error;
 
+// 视频广告准备去播放
+- (void)zjAdapter_nativeAdVideoReadyToPlay:(ZJNativeAdAdapterView *)nativeAdView;
+
+// 视频广告开始播放
+- (void)zjAdapter_nativeAdVideoStartPlay:(ZJNativeAdAdapterView *)nativeAdView;
+
+// 视频广告播放完成
+- (void)zjAdapter_nativeAdVideoPlayFinished:(ZJNativeAdAdapterView *)nativeAdView;
+
+// 视频广告播放错误
+- (void)zjAdapter_nativeAdVideoPlayError:(ZJNativeAdAdapterView *)nativeAdView;
+
+// 视频广告停止播放
+- (void)zjAdapter_nativeAdVideoPause:(ZJNativeAdAdapterView *)nativeAdView;
+
+// 视频广告恢复播放
+- (void)zjAdapter_nativeAdVideoResume:(ZJNativeAdAdapterView *)nativeAdView;
+
 @end
 
 
@@ -108,6 +126,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 广告曝光错误
 - (void)zjAdapter_nativeAdViewShowError:(NSError *)error;
+
+// 视频广告准备去播放
+- (void)zjAdapter_nativeAdVideoReadyToPlay;
+
+// 视频广告开始播放
+- (void)zjAdapter_nativeAdVideoStartPlay;
+
+// 视频广告播放完成
+- (void)zjAdapter_nativeAdVideoPlayFinished;
+
+// 视频广告播放错误
+- (void)zjAdapter_nativeAdVideoPlayError;
+
+// 视频广告停止播放
+- (void)zjAdapter_nativeAdVideoPause;
+
+// 视频广告恢复播放
+- (void)zjAdapter_nativeAdVideoResume;
 
 
 @property (nonatomic, strong) UIView *superRenderView;

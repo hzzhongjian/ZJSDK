@@ -28,6 +28,24 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告曝光错误
 - (void)zj_nativeAdViewShowError:(ZJNativeAdView *)nativeAdView error:(NSError *)error;
 
+// 视频广告准备去播放
+- (void)zj_nativeAdVideoReadyToPlay:(ZJNativeAdView *)nativeAdView;
+
+// 视频广告开始播放
+- (void)zj_nativeAdVideoStartPlay:(ZJNativeAdView *)nativeAdView;
+
+// 视频广告播放完成
+- (void)zj_nativeAdVideoPlayFinished:(ZJNativeAdView *)nativeAdView;
+
+// 视频广告播放错误
+- (void)zj_nativeAdVideoPlayError:(ZJNativeAdView *)nativeAdView;
+
+// 视频广告停止播放
+- (void)zj_nativeAdVideoPause:(ZJNativeAdView *)nativeAdView;
+
+// 视频广告恢复播放
+- (void)zj_nativeAdVideoResume:(ZJNativeAdView *)nativeAdView;
+
 @end
 
 

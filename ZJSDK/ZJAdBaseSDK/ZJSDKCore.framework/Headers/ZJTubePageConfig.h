@@ -16,13 +16,14 @@ typedef NS_ENUM(NSInteger, ZJTubePageVideoProgressBarStyle) {//进度条样式
 
 // 需要展示的tab，默认全部展示
 typedef NS_ENUM(NSInteger, ZJTubePageDrawVideoVCTabOptions) {
-    ZJTubePageDrawVideoVCTabOptions_playlet       = 1 << 0, // 详情页Tab
-    ZJTubePageDrawVideoVCTabOptions_playlet_feed  = 1 << 1, // 推荐Tab
-    ZJTubePageDrawVideoVCTabOptions_theater       = 1 << 2, // 剧场Tab
+    ZJTubePageDrawVideoVCTabOptions_playlet       = 1 << 0, // 详情页Tab 1
+    ZJTubePageDrawVideoVCTabOptions_playlet_feed  = 1 << 1, // 推荐Tab 2
+    ZJTubePageDrawVideoVCTabOptions_theater       = 1 << 2, // 剧场Tab 4
 };
 
 // 广告类型
 typedef NS_ENUM(NSInteger, ZJTubePageADType) {
+    ZJTubePageADTypeDefault = -1,
     ZJTubePageADTypeInterstitial = 0,
     ZJTubePageADTypeRewardVideo = 1,
 };
