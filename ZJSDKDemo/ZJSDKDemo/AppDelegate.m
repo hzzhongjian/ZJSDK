@@ -52,7 +52,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 //    [ZJAdSDK registerAppId:@"Z4072098911"];
-    [ZJAdSDK registerAppId:ZJ_Appid];
+    NSLog(@"SDK--%@", [ZJCommon getTimestampSince1970]);
+    [ZJAdSDK registerAppId:ZJ_Appid callback:^(BOOL completed, NSDictionary * _Nonnull info) {
+        NSLog(@"SDK初始化%@", completed?@"成功":@"失败");
+        NSLog(@"SDK++%@", [ZJCommon getTimestampSince1970]);
+    }];
     [ZJAdSDK setLogLevel:ZJAdSDKLogLevelDebug];
     NSString *version = [ZJAdSDK SDKVersion];
     NSLog(@"ZJSDK版本号：%@",version);
