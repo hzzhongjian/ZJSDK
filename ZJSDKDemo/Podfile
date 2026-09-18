@@ -20,9 +20,9 @@ target 'ZJSDKDemo' do
 
 #pod 'PTGAdFramework', '2.3.18'
 
-pod 'DSPSDK', '1.0.4.5'
+pod 'DSPSDK', '1.0.4.6'
 
-pod 'ZJSDK/ZJSDKModuleDSP', '2.6.3.8' #:path => '../'
+pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #, '2.6.3.8'
 pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
 pod 'ZJSDK/ZJSDKModuleCSJ', :path => '../'
 pod 'ZJSDK/ZJSDKModuleKS', :path => '../'
@@ -36,12 +36,12 @@ pod 'ZJSDK/ZJSDKModuleMeiShu', :path => '../'
 pod 'ZJSDK/ZJSDKModuleFS', :path => '../'
 pod 'ZJSDK/ZJSDKModuleJuTui', :path => '../'
 pod 'ZJSDK/ZJSDKModuleTaKu', :path => '../'
-pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
+#pod 'ZJSDK/ZJSDKModuleBD', :path => '../'
 
-pod 'ZJSDK/ZJSDKTakuAdapter65', :path => '../'
-pod 'ZJSDK/ZJSDKToBidAdapter', :path => '../'
-pod 'ZJSDK/ZJSDKBeiZiAdapter', :path => '../'
-pod 'ZJSDK/ZJSDKGromoreAdapter', :path => '../'
+#pod 'ZJSDK/ZJSDKTakuAdapter65', :path => '../'
+#pod 'ZJSDK/ZJSDKToBidAdapter', :path => '../'
+#pod 'ZJSDK/ZJSDKBeiZiAdapter', :path => '../'
+#pod 'ZJSDK/ZJSDKGromoreAdapter', :path => '../'
 
 #pod 'ZJSDK/ZJSDKBaseModuleDSP', :path => '../'
 #pod 'ZJSDK/ZJSDKBaseModuleGDT', :path => '../'
