@@ -33,6 +33,7 @@
     config.JSONConfigPath = [[NSBundle mainBundle] pathForResource:@"SDK_Setting_5434885" ofType:@"json"];
     config.freeEpisodesCount = 2;
     config.unlockEpisodesCountUsingAD = 1;
+    config.userId = @"XXXXXXXX";
 //    用来指定加载ZJ广告，如果不设置，默认加载的穿山甲自带广告，不要同时设置下面两个字段的值
 //        config.adType = ZJTubePageADTypeRewardVideo;
 //        config.posId = @"KS90010001";

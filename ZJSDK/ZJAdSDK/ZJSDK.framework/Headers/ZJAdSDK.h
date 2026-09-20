@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJAdSDK : NSObject
 
+// 是否启动快速初始化SDK，需要在初始化sdk之前设置
+@property (nonatomic, assign, class) BOOL enableQuickInitSDK;
 
 /**
  SDK 注册接口，请在 app 初始化时调用。新版本对接请使用registerSDK方式初始化

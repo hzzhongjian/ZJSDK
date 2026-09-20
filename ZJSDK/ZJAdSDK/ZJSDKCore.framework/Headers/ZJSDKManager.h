@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^registrationCompleted)(BOOL completed, NSDictionary *info);
 
+// 是否启动快速初始化SDK
+@property (nonatomic, assign) BOOL enableQuickInitSDK;
+
 /// sdk初始化完成
 @property (nonatomic, assign, readonly) BOOL sdkInitComplete;
 

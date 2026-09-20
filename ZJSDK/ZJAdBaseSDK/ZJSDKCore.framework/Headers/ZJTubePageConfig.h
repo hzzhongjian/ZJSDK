@@ -89,6 +89,8 @@ typedef NS_ENUM(NSInteger, ZJTubePageADType) {
 /// 指定广告位ID
 @property (nonatomic, copy) NSString *posId;
 
+@property (nonatomic, copy) NSString *userId;
+
 @end
 
 NS_ASSUME_NONNULL_END
