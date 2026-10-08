@@ -1,0 +1,6 @@
+framework module ZJ_MJKAdSDK {
+  umbrella header "ZJ_MJKAdSDK.h"
+  export *
+
+  module * { export * }
+}

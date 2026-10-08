@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define kZJYingShiErrorDomain @"COM.ZJ.YingShi.SDK"
 #define kZJFunLinkErrorDomain @"COM.ZJ.FunLink.SDK"
 #define kZJBWLXErrorDomain @"COM.ZJ.BWLX.SDK"
+#define kZJMagicErrorDomain @"COM.ZJ.MAGIC.SDK"
 
 typedef NS_ENUM(NSInteger, ZJErrorCodeAd)
 {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.4.3'
+  s.version          = '2.6.4.4'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -63,7 +63,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'GDTMobSDK'
+        ss.dependency 'GDTMobSDK', '4.15.90'
     end
   
     ### 穿山甲适配器兼容版
@@ -390,6 +390,21 @@ TODO: Add long description of the pod here.
         ss.dependency 'ZJSTAdSDK', '~> 1.13.1'
     end
 
+    ###咩叽科定制包适配器兼容版
+    s.subspec 'ZJSDKBaseModuleMagicCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMagic/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+    end
+
+    ###咩叽科定制包适配器
+    s.subspec 'ZJSDKBaseModuleMagic' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleMagic/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleMagic/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleMagic/*.xcframework'
+        ss.resource             = 'ZJSDK/ZJSDKModuleMagic/*.bundle'
+    end
+
     ### GDT适配器兼容版
     s.subspec 'ZJSDKBaseModuleGDTCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
@@ -400,7 +415,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.dependency 'GDTMobSDK'
+        ss.dependency 'GDTMobSDK', '4.15.90'
     end
   
     ### 穿山甲适配器兼容版
