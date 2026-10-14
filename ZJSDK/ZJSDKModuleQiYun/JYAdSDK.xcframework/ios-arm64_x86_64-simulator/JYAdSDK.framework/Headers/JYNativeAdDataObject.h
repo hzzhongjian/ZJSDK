@@ -82,8 +82,11 @@ typedef NS_ENUM(NSInteger, JYNativeAdCreativeType) {
     JYNativeAdCreativeType_IQY_SmallImg = (13 << 24) | 4,
     JYNativeAdCreativeType_IQY_LargeImg = (13 << 24) | 5,
 
-    JYNativeAdCreativeType_JYIBG_IMAGE = (22 << 24) | 0,
-    JYNativeAdCreativeType_JYIBG_VIDEO = (22 << 24) | 1,
+    JYNativeAdCreativeType_JT_IMAGE = (22 << 24) | 0,
+    JYNativeAdCreativeType_JT_VIDEO = (22 << 24) | 1,
+
+    JYNativeAdCreativeType_YT_IMAGE = (23 << 24) | 0,
+    JYNativeAdCreativeType_YT_VIDEO = (23 << 24) | 1,
 
     JYNativeAdCreativeType_FL_IMAGE = (25 << 24) | 0,
     JYNativeAdCreativeType_FL_VIDEO = (25 << 24) | 1,

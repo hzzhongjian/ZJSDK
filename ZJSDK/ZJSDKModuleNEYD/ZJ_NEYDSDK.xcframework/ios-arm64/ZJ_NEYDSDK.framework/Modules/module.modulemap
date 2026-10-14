@@ -1,0 +1,5 @@
+framework module ZJ_NEYDSDK {
+    umbrella header "ZJ_NEYDSDKFramework.h"
+    export *
+    module * { export * }
+}

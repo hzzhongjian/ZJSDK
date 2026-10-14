@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZJSDK'
-  s.version          = '2.6.4.4'
+  s.version          = '2.6.4.5'
   s.summary          = 'ZJSDK广告'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -63,7 +63,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'GDTMobSDK', '4.15.90'
+        ss.dependency 'GDTMobSDK', '~> 4.16.11'
     end
   
     ### 穿山甲适配器兼容版
@@ -253,8 +253,8 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKModuleTaKu' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTaKu/*.a'
         ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.dependency 'AnyThinkiOS', '6.5.47'
-        ss.dependency 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.66.0'
+        ss.dependency 'AnyThinkiOS', '6.5.83'
+        ss.dependency 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.90.2.1'
     end
 
     ###美数适配器兼容版
@@ -300,6 +300,21 @@ TODO: Add long description of the pod here.
         ss.vendored_frameworks = ['ZJSDK/ZJAdBaseSDK/*.framework']
         ss.preserve_paths = ['ZJSDK/ZJAdBaseSDK/*.framework']
         ss.resource = ['ZJSDK/ZJAdBaseSDK/*.bundle']
+    end
+
+    ###网易有道适配器兼容包
+    s.subspec 'ZJSDKBaseModuleNEYDCompatible' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleNEYD/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+    end
+
+    ###网易有道适配器
+    s.subspec 'ZJSDKBaseModuleNEYD' do |ss|
+        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleNEYD/*.a'
+        ss.dependency 'ZJSDK/ZJAdBaseSDK'
+        ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleNEYD/*.xcframework'
+        ss.preserve_paths       = 'ZJSDK/ZJSDKModuleNEYD/*.xcframework'
+        ss.resource = 'ZJSDK/ZJSDKModuleNEYD/*.bundle'
     end
 
     ###布鲁肯适配器兼容版
@@ -415,7 +430,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleGDT' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleGDT/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.dependency 'GDTMobSDK', '4.15.90'
+        ss.dependency 'GDTMobSDK', '~> 4.16.11'
     end
   
     ### 穿山甲适配器兼容版
@@ -504,7 +519,7 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleBeiZi' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleBeiZi/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~> 4.90'
+        ss.dependency 'BeiZiSDK-iOS'
     end
 
     ###Tanx适配器兼容版  
@@ -587,8 +602,8 @@ TODO: Add long description of the pod here.
     s.subspec 'ZJSDKBaseModuleTaKu' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTaKu/*.a'
         ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.dependency 'AnyThinkiOS', '6.5.47'
-        ss.dependency 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.66.0'
+        ss.dependency 'AnyThinkiOS', '6.5.83'
+        ss.dependency 'AnyThinkMediationAdxSmartdigimktCNAdapter','6.5.90.2.1'
     end
 
     ###美数适配器兼容版

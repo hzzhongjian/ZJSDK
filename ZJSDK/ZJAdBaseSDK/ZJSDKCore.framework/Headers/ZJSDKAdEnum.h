@@ -60,6 +60,7 @@ typedef NS_ENUM(NSInteger, ZJAdPlatformType) {
     ZJAdPlatform_FunLink,
     ZJAdPlatform_BWT,
     ZJAdPlatform_Magic,
+    ZJAdPlatform_NEYD,
 };
 
 typedef NS_ENUM(NSInteger, ZJAdType){
