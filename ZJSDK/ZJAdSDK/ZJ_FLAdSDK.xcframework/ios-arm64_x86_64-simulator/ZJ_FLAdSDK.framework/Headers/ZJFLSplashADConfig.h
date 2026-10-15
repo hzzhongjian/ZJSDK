@@ -1,6 +1,6 @@
 //
 //  ZJFLSplashADConfig.h
-//  ZJ_FLAdSDK
+//  ZJFLAdSaas
 //
 //  Created by Lurich on 2023/11/6.
 //

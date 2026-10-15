@@ -1,6 +1,6 @@
 //
 //  ZJFLBannerView.h
-//  ZJ_FLAdSDKAdapter
+//  ZJFLAdSaasAdapter
 //
 //  Created by Lurich on 2023/3/28.
 //

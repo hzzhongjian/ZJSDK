@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) ZJFLVideoConfig *videoConfig;
 
 /**
- *  广告请求 ID，与 ZJ_FLAdSDKVideoFreePlayerName 通知配合使用。
+ *  广告请求 ID，与 ZJFLAdSaasVideoFreePlayerName 通知配合使用。
  *  同时作为 ZJFLVideoPlayer 的 playerID（若为空则使用 UUID）。
  */
 @property (nonatomic, copy) NSString *requestID;

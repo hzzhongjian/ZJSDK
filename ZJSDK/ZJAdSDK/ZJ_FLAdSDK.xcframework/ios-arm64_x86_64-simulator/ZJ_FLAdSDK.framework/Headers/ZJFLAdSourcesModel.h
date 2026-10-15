@@ -1,6 +1,6 @@
 //
 //  ZJFLAdSourcesModel.h
-//  ZJ_FLAdSDK
+//  ZJFLAdSaas
 //
 //  Created by lurich on 2022/2/23.
 //
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign)   double bidfloor;
 /// 自定义参数，json格式
 @property (nonatomic, copy)     NSString *ext;
-/// 插屏样式  0= 半插屏，1=插全屏
+/// 插屏样式 广告铺开大小 1=全屏 2=半屏
 @property (nonatomic, assign)   NSInteger is_full_screen;
 /// 请求的广告唯一Id
 @property (nonatomic, copy)     NSString *uniqueID;

@@ -1,6 +1,6 @@
 //
 //  ZJFLMediaInfo.h
-//  ZJ_FLAdSDK
+//  ZJFLAdSaas
 //
 //  Created by YJoo on 2026/04/15.
 //

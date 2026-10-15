@@ -5,8 +5,8 @@
 //  Created by YJoo on 2025/9/15.
 //
 
-framework module ZJ_FLAdSDK {
-  umbrella header "ZJ_FLAdSDK.h"
+framework module ZJFLAdSaas {
+  umbrella header "ZJFLAdSaas.h"
 
   export *
   module * { export * }

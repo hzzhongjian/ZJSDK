@@ -1,6 +1,6 @@
 //
 //  ZJFLVastModel.h
-//  ZJ_FLAdSDKAdapter
+//  ZJFLAdSaasAdapter
 //
 //  Created by YJoo on 2024/11/28.
 //

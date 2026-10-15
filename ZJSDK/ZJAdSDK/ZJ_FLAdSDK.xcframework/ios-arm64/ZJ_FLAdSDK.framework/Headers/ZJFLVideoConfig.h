@@ -1,6 +1,6 @@
 //
 //  ZJFLVideoConfig.h
-//  ZJ_FLAdSDK
+//  ZJFLAdSaas
 //
 //  Created by lurich on 2021/10/27.
 //
@@ -11,18 +11,18 @@
 @class ZJFLPlayModel;
 
 /// 视频声音控制宏
-#define ZJ_FLAdSDKVideoMuteEnable      @"ZJ_FLAdSDKVideoMuteEnable"
+#define ZJFLAdSaasVideoMuteEnable      @"ZJFLAdSaasVideoMuteEnable"
 /// 视频播放控制宏
-#define ZJ_FLAdSDKVideoPlayEnable      @"ZJ_FLAdSDKVideoPlayEnable"
+#define ZJFLAdSaasVideoPlayEnable      @"ZJFLAdSaasVideoPlayEnable"
 /// 获取 BOOL 值的Key
-#define ZJ_FLAdSDKVideoEnableSwitchKey @"ZJ_FLAdSDKVideoEnableSwitchKey"
+#define ZJFLAdSaasVideoEnableSwitchKey @"ZJFLAdSaasVideoEnableSwitchKey"
 /// 目标播放器唯一标识，用于精准静音/播放控制
-#define ZJ_FLAdSDKVideoPlayerIDKey     @"ZJ_FLAdSDKVideoPlayerIDKey"
+#define ZJFLAdSaasVideoPlayerIDKey     @"ZJFLAdSaasVideoPlayerIDKey"
 
 /// 释放指定播放器的Key（广告类请求ID）
-#define ZJ_FLAdSDKVideoFreePlayerKey   @"ZJ_FLAdSDKVideoFreePlayerKey"
+#define ZJFLAdSaasVideoFreePlayerKey   @"ZJFLAdSaasVideoFreePlayerKey"
 /// 释放视频播放器
-#define ZJ_FLAdSDKVideoFreePlayerName  @"ZJ_FLAdSDKVideoFreePlayerName"
+#define ZJFLAdSaasVideoFreePlayerName  @"ZJFLAdSaasVideoFreePlayerName"
 
 typedef NS_ENUM(NSInteger, ZJFLVideoAutoPlayPolicy) {
     ZJFLVideoAutoPlayPolicyWIFI   = 0, // WIFI 下自动播放
@@ -44,16 +44,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  视频自动播放策略，默认 ZJFLVideoAutoPlayPolicyAlways,
  *  选择 ZJFLVideoAutoPlayPolicyNever 策略时，需要开发者手动控制视频播放/暂停
  *
- *  播放控制 ZJ_FLAdSDKVideoPlayEnable  YES：播放； NO：暂停
- *  [[NSNotificationCenter defaultCenter] postNotificationName:ZJ_FLAdSDKVideoPlayEnable object:nil userInfo:@{ZJ_FLAdSDKVideoEnableSwitchKey:@(status)}];
+ *  播放控制 ZJFLAdSaasVideoPlayEnable  YES：播放； NO：暂停
+ *  [[NSNotificationCenter defaultCenter] postNotificationName:ZJFLAdSaasVideoPlayEnable object:nil userInfo:@{ZJFLAdSaasVideoEnableSwitchKey:@(status)}];
  */
 @property (nonatomic, assign) ZJFLVideoAutoPlayPolicy autoPlayPolicy;
 
 /**
  *  自动播放时，是否静音。默认 YES。loadAd 前设置。
  *
- *  声音实时控制 ZJ_FLAdSDKVideoMuteEnable  YES：静音； NO：有声
- *  [[NSNotificationCenter defaultCenter] postNotificationName:ZJ_FLAdSDKVideoMuteEnable object:nil userInfo:@{ZJ_FLAdSDKVideoEnableSwitchKey:@(status)}];
+ *  声音实时控制 ZJFLAdSaasVideoMuteEnable  YES：静音； NO：有声
+ *  [[NSNotificationCenter defaultCenter] postNotificationName:ZJFLAdSaasVideoMuteEnable object:nil userInfo:@{ZJFLAdSaasVideoEnableSwitchKey:@(status)}];
  */
 @property (nonatomic, assign) BOOL videoMuted;
 

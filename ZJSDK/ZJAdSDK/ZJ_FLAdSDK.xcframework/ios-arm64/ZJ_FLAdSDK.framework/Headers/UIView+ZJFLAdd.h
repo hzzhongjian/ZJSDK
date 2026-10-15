@@ -50,4 +50,6 @@ typedef struct ZJFLLayoutAnchor {
 - (BOOL)zjfl_isDisplayedInScreen;
 - (BOOL)isViewCompletelyCoveredBySampling;
 - (UIScrollView *)zjfl_enclosingScrollView;
+/// 沿 superview 链检查后添加的可见 sibling 是否盖住当前 View 中心点（可检出 userInteractionEnabled = NO 的视觉遮罩）
+- (BOOL)zjfl_isCenterCoveredByForegroundSibling;
 @end

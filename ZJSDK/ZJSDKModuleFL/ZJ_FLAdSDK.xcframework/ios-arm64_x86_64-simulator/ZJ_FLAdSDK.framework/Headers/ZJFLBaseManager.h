@@ -13,7 +13,7 @@
 #define ZJFL_Log(frmt, ...)                                                           \
 if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ZJFL_DEBUG_UNION"]) {         \
     NSString *_flga_log_msg = [NSString stringWithFormat:frmt, ##__VA_ARGS__];        \
-    NSLog(@"【ZJ_FLAdSDK】%@", _flga_log_msg);                                        \
+    NSLog(@"【ZJFLAdSaas】%@", _flga_log_msg);                                        \
 }
 
 @class ZJFLFeedAdData,ZJFLAdSourcesModel,ZJFLConfigModelAdplace,ZJFLLaunchView,ZJFLFullscreenVideoAdd,ZJFLSkipAdButton,ZJFLInterstitialView,ZJFLBannerView,ZJFLVideoConfig;

@@ -1,6 +1,6 @@
 //
 //  UIImageView+ZJFLAdd.h
-//  ZJ_FLAdSDKAdapter
+//  ZJFLAdSaasAdapter
 //
 //  Created by Lurich on 2023/4/21.
 //

@@ -41,6 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 大图片的展示样式，默认值为UIViewContentModeScaleAspectFit
 @property (nonatomic) UIViewContentMode contentMode;
 
+/// 广告视图上方有遮盖时，是否响应摇一摇   默认YES
+@property (nonatomic, assign) BOOL isAllowOverlap;
+
 /// 国内注册APP id
 + (BOOL)registerAppId:(NSString *)appId;
 /// 海外注册APP id

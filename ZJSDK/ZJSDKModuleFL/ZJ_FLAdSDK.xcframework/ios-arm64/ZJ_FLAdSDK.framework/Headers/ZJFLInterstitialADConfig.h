@@ -1,6 +1,6 @@
 //
 //  ZJFLInterstitialADConfig.h
-//  ZJ_FLAdSDK
+//  ZJFLAdSaas
 //
 //  Created by Lurich on 2024/6/24.
 //
