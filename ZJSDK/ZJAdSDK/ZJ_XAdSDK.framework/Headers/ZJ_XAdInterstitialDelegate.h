@@ -23,6 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter error: 错误信息
 - (void)interstitialOnError:(NSError *)error;
 
+///广告素材下载成功
+- (void)interstitialOnAdDownloadSuccess;
+
+///广告素材下载失败
+///@param error 错误信息
+- (void)interstitialOnAdDownloadFail:(NSError *)error;
+
+///曝光失败
+- (void)interstitialOnExposureFail:(NSError *)error;
+
 /// 曝光
 - (void)interstitialOnExposure;
 

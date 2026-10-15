@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setDeviceIDFA:(NSString *)idfa;
 
 /// 可传入设备号
-/// @param cdInfo 参数数组，数组内部为字典对象,Key为cd(参数)和version(版本号),对应的值均为字符串类型,示例:@{@"cd":@"",@"version":@""}
+/// @param cdInfo 参数数组，数组内部为字典对象,Key为cd(参数，传入原始值，勿加密)和version(版本号),对应的值均为字符串类型,示例:@{@"cd":@" 传入原始值 ",@"version":@""}
 /// @warning  初始化SDK前调用，否则有可能不生效
 - (void)setCdInfo:(NSArray *)cdInfo;
 
@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param enablePersonalized 开启个性化推荐广告
 /// @warning  初始化SDK前调用，否则有可能不生效
 - (void)enablePersonalized:(BOOL)enablePersonalized;
+
+/// 是否打印log
+/// @param log 日志启用状态  默认为NO
+/// @warning  初始化SDK前调用，否则有可能不生效
+- (void)enableLog:(BOOL)log;
 
 /// 设置本地默认配置
 /// @param fileName 文件名称

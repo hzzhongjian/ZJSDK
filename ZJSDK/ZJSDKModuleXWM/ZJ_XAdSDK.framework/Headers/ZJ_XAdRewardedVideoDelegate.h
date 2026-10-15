@@ -22,6 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter error: 错误信息
 - (void)rewardVideoOnError:(NSError *)error;
 
+///广告素材下载成功
+- (void)rewardVideoOnAdDownloadSuccess;
+
+///广告素材下载失败
+///@param error 错误信息
+- (void)rewardVideoOnAdDownloadFail:(NSError *)error;
+
+///曝光失败
+- (void)rewardVideoOnExposureFail:(NSError *)error;
+
 /// 展示
 - (void)rewardVideoOnExposure;
 

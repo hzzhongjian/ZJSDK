@@ -25,6 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param error 错误信息
 - (void)nativeAdOnError:(NSError *)error;
 
+/// 广告视频素材下载成功，图片素材直接调用
+- (void)nativeAdOnAdDownloadSuccess;
+
+/// 广告视频素材下载失败
+/// @param error 错误信息
+- (void)nativeAdOnAdDownloadFail:(NSError *)error;
+
 /// 广告展示
 - (void)nativeAdOnShow;
 

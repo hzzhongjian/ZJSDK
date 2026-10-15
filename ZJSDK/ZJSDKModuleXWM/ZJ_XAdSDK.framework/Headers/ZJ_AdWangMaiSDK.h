@@ -16,19 +16,19 @@ FOUNDATION_EXPORT const unsigned char AdWangMaiSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <ZJ_AdWangMaiSDK/PublicHeader.h>
 
 
-#import <ZJ_XAdSDK/ZJ_XAdWangMaiSDk.h>
-#import <ZJ_XAdSDK/ZJ_XAdSplashAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdSplashDelegate.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdWangMaiSDk.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdSplashAd.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdSplashDelegate.h>
 
-#import <ZJ_XAdSDK/ZJ_XAdRewardedVideoAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdRewardedVideoDelegate.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdRewardedVideoAd.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdRewardedVideoDelegate.h>
 
-#import <ZJ_XAdSDK/ZJ_XAdInterstitialAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdInterstitialDelegate.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdInterstitialAd.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdInterstitialDelegate.h>
 
-#import <ZJ_XAdSDK/ZJ_XAdNativeExpressAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdNativeExpressDelegete.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdNativeExpressAd.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdNativeExpressDelegete.h>
 
-#import <ZJ_XAdSDK/ZJ_XAdNativeAd.h>
-#import <ZJ_XAdSDK/ZJ_XAdNativeAdResponse.h>
-#import <ZJ_XAdSDK/ZJ_XAdNativeDelegete.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdNativeAd.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdNativeAdResponse.h>
+#import <ZJ_AdWangMaiSDK/ZJ_XAdNativeDelegete.h>

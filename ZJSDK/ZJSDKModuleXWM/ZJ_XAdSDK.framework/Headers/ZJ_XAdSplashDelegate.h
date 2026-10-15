@@ -19,15 +19,28 @@ NS_ASSUME_NONNULL_BEGIN
 ///加载成功
 - (void)splashAdOnAdReadyHasMiniView:(UIView *)splashMiniView;
 
-///曝光
-- (void)splashOnExposure;
-
 ///请求失败
 ///@param error 错误信息
 - (void)splashOnError:(NSError *)error;
 
+///广告素材下载成功
+- (void)splashOnAdDownloadSuccess;
+
+///广告素材下载失败
+///@param error 错误信息
+- (void)splashOnAdDownloadFail:(NSError *)error;
+
+///曝光失败
+- (void)splashOnExposureFail:(NSError *)error;
+
+///曝光
+- (void)splashOnExposure;
+
 ///点击
 - (void)splashOnClick;
+
+///将要关闭
+- (void)splashOnAdWillClose;
 
 ///关闭
 - (void)splashOnAdClose;

@@ -75,6 +75,9 @@ NS_ASSUME_NONNULL_BEGIN
 // crid:素材id/创意id
 - (NSDictionary *)getCurrentAdMaterialsInfo;
 
+/// 获取当前广告请求 ID，请求尚未发起时返回 nil。
+- (nullable NSString *)getRequestId;
+
 /// 广告销毁（仅脉盟预算支持）
 - (void)destroy;
 

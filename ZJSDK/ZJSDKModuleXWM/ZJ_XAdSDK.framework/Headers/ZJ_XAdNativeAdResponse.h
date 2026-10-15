@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <WebKit/WebKit.h>
 
 typedef NS_ENUM(NSInteger, NativeAdType) {
     NORMAL_NativeAD, // 一般图文或图片广告
     VIDEO_NativeAD, // 视频广告
-    HTML_NativeAD, // html模版广告
 };
 
 @interface ZJ_XAdNativeAdResponse : NSObject
@@ -21,8 +19,8 @@ typedef NS_ENUM(NSInteger, NativeAdType) {
 @property (nonatomic,strong) UIView *adContainerView;
 /// 视频视图
 @property (nonatomic,strong) UIView *adVideoView;
-/// HTML视图
-@property (nonatomic,strong) UIView *adHTMLView;
+/// HTML视图（仅为源码和二进制兼容保留，SDK 不再支持 HTML Native 广告）
+@property (nonatomic,strong) UIView *adHTMLView __attribute__((deprecated("HTML Native ads are no longer supported; use image or video native materials instead.")));
 // 素材id/创意id
 @property (nonatomic,copy) NSString *crid;
 /// 标题
@@ -53,9 +51,6 @@ typedef NS_ENUM(NSInteger, NativeAdType) {
 
 ///获取视频播放视图   [自定义frame]
 - (UIView *)buildVideoView;
-
-///获取HTML视图   [自定义frame]
-- (UIView *)buildHTMLView;
 
 /**
  返回广告的eCPM，单位：分
