@@ -45,6 +45,7 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <ZJTierAdAdapter *>* _Nul
 
 @property (nonatomic, assign) long timeout;
 
+@property (nonatomic, copy) NSString *uniqueUUID;
 
 @property (nonatomic, copy) NSString *promotion_params;
 

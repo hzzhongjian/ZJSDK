@@ -232,6 +232,9 @@ typedef NS_ENUM(NSInteger,ZJAdShowPriority){
 
 @property (nonatomic, strong) NSDictionary *flow_group_params;
 
+// 广告请求开始的时间
+@property (nonatomic, assign) CFTimeInterval startTS;
+
 @end
 
 NS_ASSUME_NONNULL_END

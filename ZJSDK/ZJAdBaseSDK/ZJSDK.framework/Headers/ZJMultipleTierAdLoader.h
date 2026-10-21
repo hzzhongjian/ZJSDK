@@ -61,6 +61,8 @@ typedef void(^MultipleRequestLevelCompleteBlk)( NSMutableArray <ZJMultipleAdAdap
 
 @property (nonatomic, assign) long timeout;
 
+@property (nonatomic, copy) NSString *uniqueUUID;
+
 // required. Image size.
 // 穿山甲联盟要求传加载图片尺寸
 @property (nonatomic, assign) ZJProposalSize imgSize;
