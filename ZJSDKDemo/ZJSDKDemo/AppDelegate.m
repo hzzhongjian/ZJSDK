@@ -53,7 +53,7 @@
     ZJSDKPrivacyAuthorityModel *privacyAuthorityModel = [[ZJSDKPrivacyAuthorityModel alloc] init];
     privacyAuthorityModel.isCanUseMotionManager = NO; // YES为打开摇一摇功能，NO为禁止摇一摇功能
     [ZJSDKInitConfig sharedInstance].privacyAuthorityModel = privacyAuthorityModel;
-//    [ZJAdSDK registerAppId:@"Z4072098911"];
+//    [ZJAdSDK registerAppId:@"Z5426106696"];
     NSLog(@"SDK--%@", [ZJCommon getTimestampSince1970]);
     [ZJAdSDK registerAppId:ZJ_Appid callback:^(BOOL completed, NSDictionary * _Nonnull info) {
         NSLog(@"SDK初始化%@", completed?@"成功":@"失败");
