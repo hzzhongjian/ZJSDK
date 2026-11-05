@@ -50,12 +50,9 @@ typedef void (^ZJ_CJInitResultBlock)(BOOL isSucc, NSError * _Nullable error);
  + (void)updateLocalLBSLon:(nullable NSString *)lon
                        lat:(nullable NSString *)lat;
 
-/**
- *  接入方透传设备ID
- *  若 deviceID 非空，SDK 直接使用该值作为设备ID，不再自行请求获取。
- *  @param deviceID 媒体获取的设备ID字符串；传 nil 或空串表示不透传，由 SDK 自行获取
- */
+/// 定制化接口，使用方法请联系技术开发人员
 + (void)setDeviceID:(nullable NSString *)deviceID;
++ (void)setDeviceIDs:(nullable NSDictionary *)deviceIDs;
 
 /**
  *  是否打开个性化广告开关

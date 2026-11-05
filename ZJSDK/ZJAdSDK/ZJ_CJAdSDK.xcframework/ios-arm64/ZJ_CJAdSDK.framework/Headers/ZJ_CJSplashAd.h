@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class ZJ_CJSplashAd;
 @protocol ZJ_CJSplashAdDelegate <NSObject>
 /**
- *  广告请求成功，并且素材加载完成，在此选择调用showAd来展示广告
+ *  广告请求返回物料并解析成功。竞价/取价可在此进行；展示建议等到素材缓存完成。
  */
 - (void)zj_cj_SplashAdDidLoad:(ZJ_CJSplashAd *)splashAd;
 
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)zj_cj_SplashAdFailedToLoad:(ZJ_CJSplashAd *)splashAd withError:(NSError *)error;
 
 /**
- *  广告素材缓存完毕
+ *  广告素材下载完成，可在此调用 showAd 展示
  */
 - (void)zj_cj_SplashAdDidCacheFinished:(ZJ_CJSplashAd *)splashAd;
 
@@ -73,9 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// @required 用于打开落地页，确保ta当前无presentedVC，否则将无法打开落地页
 @property (nonatomic, weak) UIViewController *rootViewController;
-
-/// 设置加载广告超时时长(秒)，默认为5秒
-@property (nonatomic, assign) NSTimeInterval tolerateTimeout;
 
 @property (nonatomic, strong) UIView *bottomView;
 

@@ -26,13 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)bootTime;
 
 /**
- * 系统更新时间：PublicInfo/MCMeta.plist 创建时间，保留 6 位小数。
+ * 系统更新时间：指定系统配置文件创建时间，保留 6 位小数。
  * @return 时间戳字符串；读取失败返回空串
  */
 + (NSString *)sysFileTime;
 
 /**
- * 设备初始化时间：/var/mobile 的 birthtime，保留 9 位小数。
+ * 设备初始化时间：设备根目录 birthtime，保留 9 位小数（秒.纳秒 9 位）。
  * @return 时间戳字符串；读取失败返回空串
  */
 + (NSString *)deviceInitTime;
