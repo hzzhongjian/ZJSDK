@@ -190,23 +190,6 @@ TODO: Add long description of the pod here.
         ss.preserve_paths       = ['ZJSDK/ZJSDKModuleTanX/*.framework','ZJSDK/ZJSDKModuleTanX/*.xcframework']
     end
 
-    ###趣盟适配器兼容版
-    s.subspec 'ZJSDKModuleQMCompatible' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-    end
-
-    ###趣盟适配器
-    s.subspec 'ZJSDKModuleQM' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
-        ss.dependency 'ZJSDK/ZJAdSDK'
-        ss.vendored_frameworks = 'ZJSDK/ZJSDKModuleQM/QMAdSDK/*.xcframework'
-        ss.preserve_paths      = 'ZJSDK/ZJSDKModuleQM/QMAdSDK/*.xcframework'
-        ss.dependency 'AFNetworking'
-        ss.dependency 'YYWebImage'
-        ss.dependency 'YYImage/WebP'
-    end
-
     ###章鱼适配器兼容版
     s.subspec 'ZJSDKModuleOCTOPUSCompatible' do |ss|
         ss.vendored_libraries = 'ZJSDK/ZJSDKModuleOCTOPUS/*.a'
@@ -537,23 +520,6 @@ TODO: Add long description of the pod here.
         ss.vendored_frameworks  = ['ZJSDK/ZJSDKModuleTanX/*.framework','ZJSDK/ZJSDKModuleTanX/*.xcframework']
         ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
         ss.preserve_paths       = ['ZJSDK/ZJSDKModuleTanX/*.framework','ZJSDK/ZJSDKModuleTanX/*.xcframework']
-    end
-
-    ###趣盟适配器兼容版
-    s.subspec 'ZJSDKBaseModuleQMCompatible' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
-        ss.dependency 'ZJSDK/ZJAdBaseSDK'
-    end
-
-    ###趣盟适配器
-    s.subspec 'ZJSDKBaseModuleQM' do |ss|
-        ss.vendored_libraries = 'ZJSDK/ZJSDKModuleQM/*.a'
-        ss.dependency 'ZJSDK/ZJAdBaseSDK'
-        ss.vendored_frameworks = 'ZJSDK/ZJSDKModuleQM/QMAdSDK/*.xcframework'
-        ss.preserve_paths      = 'ZJSDK/ZJSDKModuleQM/QMAdSDK/*.xcframework'
-        ss.dependency 'AFNetworking'
-        ss.dependency 'YYWebImage'
-        ss.dependency 'YYImage/WebP'
     end
 
     ###章鱼适配器兼容版

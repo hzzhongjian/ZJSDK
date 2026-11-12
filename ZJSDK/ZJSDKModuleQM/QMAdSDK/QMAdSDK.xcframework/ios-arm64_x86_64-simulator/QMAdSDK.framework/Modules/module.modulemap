@@ -1,6 +1,0 @@
-framework module QMAdSDK {
-  umbrella header "QMAdSDK.h"
-  export *
-
-  module * { export * }
-}
