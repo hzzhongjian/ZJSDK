@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)bootTime;
 
+/// Tanx boot_mark：KERN_BOOTTIME 的秒.微秒原值，不补零；失败返回空串。
++ (NSString *)tanxBootMark;
+
+/// Tanx update_mark：/var/mobile 的 st_ctimespec 秒.纳秒原值，不缓存、不补零；失败返回 0.0。
++ (NSString *)tanxUpdateMark;
+
 /**
  * 系统更新时间：指定系统配置文件创建时间，保留 6 位小数。
  * @return 时间戳字符串；读取失败返回空串

@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '12.0'
 
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
 
 #source 'https://gitee.com/jyadteam/JYSpecs.git'
 
@@ -21,7 +21,7 @@ target 'ZJSDKDemo' do
 
 #pod 'PTGAdFramework', '2.3.18'
 
-#pod 'DSPSDK', '1.0.4.6'
+pod 'DSPSDK', '1.0.4.8'
 
 pod 'ZJSDK/ZJSDKModuleDSP', :path => '../' #, '2.6.3.8'
 pod 'ZJSDK/ZJSDKModuleGDT', :path => '../'
